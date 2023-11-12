@@ -27,6 +27,7 @@ category = "categories"
 tag = "tags"
 series = "series"
 
+
 [privacy]
 
   [privacy.vimeo]
