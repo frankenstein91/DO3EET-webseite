@@ -1,8 +1,7 @@
 +++
 title = 'About'
-date = 2023-11-12T17:17:22+01:00
 draft = false
-aliases = ["about-us", "contact"]
+aliases = ["about-me", "contact", "impressum"]
 author = "Frank Tornack"
 menu = 'main'
 +++
@@ -25,6 +24,11 @@ Der Quellcode dieser privaten Website liegt auf Github und kann dort eingesehen 
 Die Kommentarfunktion auf dieser privaten Website wird über Github bereitgestellt. Für die Verarbeitung von personenbezogenen Daten im Rahmen der Kommentarfunktion ist der Betreiber der Github-Plattform verantwortlich. Bitte beachten Sie die Datenschutzbestimmungen von Github unter:
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
 - [Data protection policy English](https://docs.github.com/en/site-policy/privacy-policies)
+
+# Chatfunktion
+Die Chatfunktion dieser Website basiert auf der Matrix-Chat-Technologie und wird durch die Software Cactus.Chat bereitgestellt. Matrix ist ein offener Standard für dezentrale, sichere und interoperable Echtzeitkommunikation über das Internet. Cactus.Chat nutzt diese fortschrittliche Matrix-Infrastruktur, um eine sichere und benutzerfreundliche Chat-Umgebung zu schaffen. Matrix ermöglicht die Verschlüsselung von Ende zu Ende, was bedeutet, dass die Kommunikation zwischen den Nutzern vertraulich und geschützt ist. Darüber hinaus bietet die Matrix-Plattform die Möglichkeit, über verschiedene Chat-Clients zu interagieren, was eine flexible und vielseitige Nutzung ermöglicht. Wir legen großen Wert auf Datenschutz und Sicherheit und empfehlen den Nutzern, sich mit den Datenschutzrichtlinien von Matrix und Cactus.Chat vertraut zu machen, um ein umfassendes Verständnis darüber zu erhalten, wie ihre Daten geschützt werden.
+
+Matrix ist ein dezentrales Kommunikationsprotokoll, bei dem die Nutzer ihre eigenen Server (Homeserver) wählen können. Jeder Homeserver-Betreiber kann seine eigenen Datenschutzrichtlinien und Sicherheitsmaßnahmen festlegen. Da es keine zentrale Instanz gibt, die die Datenschutzrichtlinien für alle Homeserver vorgibt, ist es schwierig, eine einheitliche Datenschutzinformation anzubieten. Jeder Nutzer, der sich mit deinem Matrix-Server verbindet, unterliegt den Datenschutzrichtlinien des spezifischen Homeservers, den er wählt. Es wird empfohlen, dass Nutzer, die die Datenschutzrichtlinien ihres Matrix-Heimservers kennenlernen möchten, sich direkt an den Betreiber des jeweiligen Homeservers wenden oder die entsprechenden Informationen auf der Website des Homeservers suchen.
 
 # Hosting
 Cloudflare dient als Content Delivery Network (CDN), Hosting und bietet Sicherheits- und Performance-Verbesserungen für die Bereitstellung dieser Website. Beachten Sie, dass die Hosting-Infrastruktur von Cloudflare genutzt wird, um die Verfügbarkeit und Geschwindigkeit der Website zu optimieren. Cloudflare erhebt dabei möglicherweise anonymisierte statistische Daten über den Zugriff auf diese Website. Für weitere Informationen zu den Datenschutzpraktiken von Cloudflare verweise ich auf deren Datenschutzrichtlinien: 
