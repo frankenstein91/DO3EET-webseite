@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'de-DE'
 efaultContentLanguage = 'de-DE'
-title = 'The Blog of Do3EET'
+title = 'The Blog of DO3EET'
 
 theme = "risotto"
 paginate = 3
