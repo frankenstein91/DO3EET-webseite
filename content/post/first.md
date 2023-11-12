@@ -18,7 +18,7 @@ Der erste Schritt besteht darin, Hugo auf meinem Rechner zu installieren und die
 Einen schönen "Chat" habe ich auch. Ist zwar nicht live für die Website, aber ihr landet schnell bei mir.
 {{< chat firstChat >}}
 
-Wie immer sind die ersten Beträge eher für das Testing. Ich hoffe es wird hier aber auch bald guter Inhalt.
+Wie immer sind die ersten Beträge eher für das Testing. Ich hoffe es wird hier aber auch bald guten Inhalt geben.
 
 P.S.: Wenn ihr selbst Erfahrungen mit Hugo oder dem Erstellen von Webseiten habt, würde ich mich über eure Tipps und Kommentare freuen.
 *sobald es hier eine Funktion dafür gibt*
