@@ -27,25 +27,27 @@ category = "categories"
 tag = "tags"
 series = "series"
 
-
 [privacy]
-
-  [privacy.vimeo]
-    disabled = false
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.disqus]
+    disable = true
+  [privacy.instagram]
+    disable = false
     simple = true
-
   [privacy.twitter]
-    disabled = false
+    disable = false
     enableDNT = true
     simple = true
-
-  [privacy.instagram]
-    disabled = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
     simple = true
-
   [privacy.youtube]
-    disabled = false
+    disable = false
     privacyEnhanced = true
+
+
 
 [services]
 

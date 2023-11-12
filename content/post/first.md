@@ -3,6 +3,9 @@ title = 'First'
 date = 2023-11-12T19:37:06+01:00
 draft = true
 author = "Frank Tornack"
+tags = [
+    "Website",
+]
 +++
 
 Hallo liebe Leser,
