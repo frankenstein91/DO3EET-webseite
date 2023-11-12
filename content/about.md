@@ -6,7 +6,7 @@ author = "Frank Tornack"
 menu = 'main'
 +++
 
-Verantwortlich für den Inhalt dieser privaten Website mit Außname der Kommentare:
+Verantwortlich für den Inhalt dieser privaten Website mit Ausnahme der Kommentare:
 
     Frank Tornack
     Badstraße 7
