@@ -61,3 +61,8 @@ series = "series"
 icon = "fa-solid fa-envelope"
 title = "Email"
 url = "mailto:planung@dreamofjapan.de?subject=DO3EET%20Blog%3A%20%3CYour%20Topic%3E"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-comment-dots"
+title = "Matrix Chat"
+url = "https://matrix.to/#/@bollerwagenpicard:tchncs.de"

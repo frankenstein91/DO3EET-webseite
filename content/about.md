@@ -37,7 +37,7 @@ Auf unserer Website verwende ich eingebettete YouTube-Videos, um Ihnen multimedi
 
 Bitte beachten Sie, dass YouTube eigene Datenschutzrichtlinien hat, auf die ich keinen Einfluss haben. Wenn Sie ein YouTube-Video abspielen, können von YouTube Cookies auf Ihrem Endgerät gespeichert werden. Ich habe jedoch keinen Einfluss auf die Art und den Umfang der durch YouTube erhobenen Daten.
 
-Um Ihre Privatsphäre zu schützen, habe ich die Einbettung von YouTube-Videos so konfiguriert, dass sie den erweiterten Datenschutzmodus von YouTube verwenden.Bitte beachten Sie, dass der erweiterte Datenschutzmodus von YouTube möglicherweise erst dann aktiviert wird, wenn Sie das Video abspielen. Die Datenübertragung an YouTube kann jedoch auch ohne aktive Video-Wiedergabe stattfinden.
+Um Ihre Privatsphäre zu schützen, habe ich die Einbettung von YouTube-Videos so konfiguriert, dass sie den erweiterten Datenschutzmodus von YouTube verwenden. Bitte beachten Sie, dass der erweiterte Datenschutzmodus von YouTube möglicherweise erst dann aktiviert wird, wenn Sie das Video abspielen. Die Datenübertragung an YouTube kann jedoch auch ohne aktive Video-Wiedergabe stattfinden.
 
 # Hosting
 Cloudflare dient als Content Delivery Network (CDN), Hosting und bietet Sicherheits- und Performance-Verbesserungen für die Bereitstellung dieser Website. Beachten Sie, dass die Hosting-Infrastruktur von Cloudflare genutzt wird, um die Verfügbarkeit und Geschwindigkeit der Website zu optimieren. Cloudflare erhebt dabei möglicherweise anonymisierte statistische Daten über den Zugriff auf diese Website. Für weitere Informationen zu den Datenschutzpraktiken von Cloudflare verweise ich auf deren Datenschutzrichtlinien: 
