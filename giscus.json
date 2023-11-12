@@ -1,3 +1,4 @@
 {
-  "origins": ["https://do3eet.pages.dev"]
+  "origins": ["https://do3eet.pages.dev"],
+  "defaultCommentOrder": "newest"
 }
