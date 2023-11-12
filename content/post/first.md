@@ -15,6 +15,9 @@ heute ist ein besonderer Tag für mich, denn ich starte ein neues Projekt, das m
 
 Der erste Schritt besteht darin, Hugo auf meinem Rechner zu installieren und die Grundstruktur meiner Webseite festzulegen. Dabei werde ich mich auch für ein passendes Theme entscheiden, das meinen Vorstellungen entspricht. *Wir sind nerdig im Terminal unterwegs.*
 
+Einen schönen Chat habe ich auch.
+{{< chat firstChat >}}
+
 Wie immer sind die ersten Beträge eher für das Testing. Ich hoffe es wird hier aber auch bald guter Inhalt.
 
 P.S.: Wenn ihr selbst Erfahrungen mit Hugo oder dem Erstellen von Webseiten habt, würde ich mich über eure Tipps und Kommentare freuen.
