@@ -66,3 +66,16 @@ url = "mailto:planung@dreamofjapan.de?subject=DO3EET%20Blog%3A%20%3CYour%20Topic
 icon = "fa-solid fa-comment-dots"
 title = "Matrix Chat"
 url = "https://matrix.to/#/@bollerwagenpicard:tchncs.de"
+
+[params.giscus]
+repo = "frankenstein91/DO3EET-webseite"
+repoID = "R_kgDOKsmxqw"
+category = "Announcements"
+categoryID = "DIC_kwDOKsmxq84Ca5h5"
+mapping = "pathname"
+reactionsEnabled = "1"
+emitMetadata = "1"
+inputPosition = "top"
+theme = "dark_protanopia"
+lang = "de"
+loading = "lazy"
