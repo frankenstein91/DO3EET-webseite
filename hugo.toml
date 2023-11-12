@@ -1,3 +1,23 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'de-DE'
+efaultContentLanguage = 'de-DE'
+title = 'The Blog of Do3EET'
+
+theme = "risotto"
+paginate = 3
+enableInlineShortcodes = true
+sectionPagesMenu = "main"
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "tokyo-night-dark"
+
+[params.about]
+title = "DO3EET"
+description = "Ich bin Frank. Ein Informatiker und Funkamateur aus Deutschland. Außerdem reise ich gern nach Japan."
+
+[markup.goldmark.renderer]
+unsafe = true
+
