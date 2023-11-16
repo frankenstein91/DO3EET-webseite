@@ -8,6 +8,6 @@ tags = [
 ]
 +++
 
-Heute war ich mal wieder mit dem PicoAPRS unterwegs. Ich nutze die Gelegenheit um hier das einbinden von Bildern zu testen. Hier also das Bild meiner heutigen Antenne.
+Heute war ich mal wieder mit dem PicoAPRS unterwegs. Ich nutze die Gelegenheit um hier das Einbinden von Bildern zu testen. Hier also das Bild meiner heutigen Antenne.
 
 ![Antenne auf dem Turm](PXL_20231116_160815841.NIGHT.jpg?fit=800x600)
