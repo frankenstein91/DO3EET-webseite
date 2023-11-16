@@ -79,3 +79,10 @@ inputPosition = "top"
 theme = "dark_protanopia"
 lang = "de"
 loading = "lazy"
+
+[module]
+
+[[module.imports]]
+
+    path = 'github.com/hugomods/images'
+
