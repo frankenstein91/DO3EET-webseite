@@ -17,4 +17,4 @@ Meine Nachrichten sind von diesem Antennenstandort gut versendet wurden und beim
 
 Insgesamt war dieser Tag eine gelungene Kombination aus technischem Interesse, Fahrspaß und kreativer Lösungsfindung. Es hat mir nicht nur ermöglicht, die Möglichkeiten meines APRS Funkgeräts zu erkunden, sondern auch gezeigt, dass mit ein wenig Kreativität und Improvisation erstaunliche Dinge möglich sind. Manchmal braucht es eben nur ein Fotografiestativ und die Bereitschaft, die Dinge aus einem anderen Blickwinkel zu betrachten.
 
-PS: Das Auto wurde für die Bilder extrag geputzt.
+PS: Das Auto wurde für die Bilder extra geputzt.
