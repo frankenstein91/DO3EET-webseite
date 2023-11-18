@@ -1,0 +1,10 @@
+{{ $imgPath := .Get "src" }}
+{{ $altText := .Get "alt" }}
+{{ $width := .Get "width" | default "800" | int}}
+{{ $height := .Get "height" | default "600" | int}}
+
+{{ with .Page.Resources.Get $imgPath }}
+{{ with .Fit (printf "%dx%d webp" $width $height) }}
+<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+{{ end }}
+{{ end }}
