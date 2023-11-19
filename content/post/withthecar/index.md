@@ -2,6 +2,11 @@
 title = 'Unterwegs mit PicoAPRS und eGolf'
 date = 2023-11-18T20:45:51+01:00
 draft = false
+tags = [
+    "Website",
+    "Funk",
+    "Auto",
+]
 +++
 
 Mit meinem APRS Funkgerät und meinem eGolf machte ich mich auf den Weg, um eine einzigartige Erfahrung zu erleben. Doch was diesen Ausflug besonders machte, war die ungewöhnliche Antennenlösung, die ich gewählt habe. Mein Ziel für heute war es, die Reichweite meines APRS Geräts zu testen und gleichzeitig die wunderschöne Landschaft zu genießen. Außerdem nach meiner Rückkehr wieder etwas an dieser Seite zu basteln.
