@@ -38,4 +38,4 @@ Den SSD und Festplattenspeicher habe ich mit Absicht weggelassen.
 Ich nutze ArchLinux als Betriebsystem und BTRFS als Dateisystem. Soll ich dazu mal etwas schreiben?
 
 Hier noch mein aktuelles Hintergrundbild:
-{{< imgwebp src="DSC_0305_upload.png" alt="Bild der AN225 beim Landen in Leipzig" width="800" height="600" >}}
+{{< imgwebp src="DSC_0305_upload.jpg" alt="Bild der AN225 beim Landen in Leipzig" width="800" height="600" >}}
