@@ -2,6 +2,11 @@
 title = 'Ausflug zum Nord-Ostsee-Kanal'
 date = 2023-11-25T16:40:20+01:00
 draft = false
+tags = [
+    "Deutschland",
+    "Reisen",
+    "Schiffe",
+]
 +++
 
 Ich war mal wieder in Deutschland unterwegs, aber nicht nur mit Zügen der deutschen Bahn. Meine Fahrt von der Heimat nach Rendsburg beinhaltete auch ca. 110 km mit dem  IC384 mit der Endhaltestelle Aarhus. Die Zugsoftware zeige die Herkunft des Rollmaterial in schönem Retro-Orange.
