@@ -16,6 +16,10 @@ Wer in Japan den RailPass für die spontane Sitzplatzreservierung nutzt, hat gru
 
 Ihr ladet euch zuerst die Android App PassAndroid ([Google Play Store](https://play.google.com/store/apps/details?id=org.ligi.passandroid&pcampaignid=web_share) oder [F-Droid](https://f-droid.org/de/packages/org.ligi.passandroid/)). Nach der Installation erstellt ihr in der App einen neuen Pass. Den Titel könnt ihr hier frei wählen, ich empfehle, aber für Reisende etwas zu nutzen, wie railpass und deren eigenen Namen. Fügt nun als Vorderseitenfeld eure Personalausweisnummer hinzu. Im Anschluss fügt den QR-Code des RailPass zum Pass hinzu. Im Anschluss speichert ihr. Dies könnt ihr für eure gesamte Reisegruppe tun. Damit hat der am Automaten arbeitet sofort alle Daten beisammen.
 
+So schaut es dann aus (hier keine echten Daten):
+{{< imgwebp src="Screenshot_20240103-201136.png" alt="Screenshot der App" width="800" height="600" >}}
+
+
 Noch ein kleiner Hinweis zum Schluss… den so erstellten Pass könnt ihr nicht an den Ticketgates nutzen,Er dient einfach für die Sitzplatzreservierung. 
 
 Hier noch ein paar Links für euch. Zu weiteren Informationen rund um den RailPass:
