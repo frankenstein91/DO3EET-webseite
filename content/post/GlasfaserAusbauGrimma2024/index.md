@@ -10,6 +10,10 @@ Der Baubeginn auf dem Grundstück soll schon am nächsten Tag sein, doch kein Ar
 
 Ebenfalls ist es durch die ungenaue Absprache unmöglich die Tage im Homeoffice zu planen, manche müssen Zugang zum Keller eröffnen. Andere können sich vielleicht nicht konzentieren durch den Lärm und wären lieber ins Büro gefahren.
 
+Kommunikation von der Stadt zu den Krankentransporten gab es anscheinend auch nicht, denn diese Standen in der verengten Ortsdurchfahrt ohne Ampel anderen Verkehrsteilnehmern Kotflügel an Kotflügel entgegen. Leider war die Länge der Baustelle durch die Kurve am Ortseingang für die Fahrer nicht überschaubar.
+
+{{< imgwebp src="PXL_20240326_165538594.jpg" alt="rankenwagen in der Baustelle, stillstand" width="800" height="600" >}}
+
 Auch heute am 3 Tag des Ausbaus wird man nicht durch den Wecker geweckt, sondern durch das Geräusch von Schaufeln an der Hauswand.
 
 Bis jetzt sehr positiv, die Bauarbeiter haben noch keine der Zuleitungen für Gas, Wasser, Strom, Telefon und SAT-TV beschädigt. Auch die Geschwindigkeit und der Fleiß der Bauarbeiter ist vergleichbar mit einem Ameisenstaat. 
