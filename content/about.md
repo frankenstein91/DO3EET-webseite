@@ -47,16 +47,5 @@ Cloudflare dient als Content Delivery Network (CDN), Hosting und bietet Sicherhe
 Die Verwendung von Cloudflare SSL-Zertifikaten dient dem Schutz der übermittelten Daten zwischen dem Nutzer und dieser Website. SSL (Secure Sockets Layer) gewährleistet eine verschlüsselte Kommunikation, die die Vertraulichkeit und Integrität der übertragenen Informationen sicherstellt. Cloudflare verpflichtet sich in der Regel dazu, die Privatsphäre der Nutzer zu respektieren und die geltenden Datenschutzbestimmungen einzuhalten. Bei der Nutzung von Cloudflare SSL-Zertifikaten können jedoch bestimmte anonymisierte Informationen über den Datenverkehr erfasst werden, um die Performance, Sicherheit und Analyse der Website zu verbessern. Es ist ratsam, die Datenschutzbestimmungen von Cloudflare zu konsultieren, um detaillierte Informationen darüber zu erhalten, welche Daten erfasst werden, wie sie verarbeitet werden und welche Schutzmaßnahmen getroffen sind.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 
-# ISS-Positionsanzeige: Datenschutzinformationen
-Die ISS-Positionsanzeige auf dieser Website verwendet JavaScript, um Daten von http://open-notify.org abzurufen. Diese Daten zeigen die aktuelle Position der Internationalen Raumstation (ISS) in Echtzeit an.
-
-- Die Funktion ist standardmäßig deaktiviert.
-- Sie können die Funktion durch Aktivieren des Opt-In-Kästchens aktivieren.
-- Sie können die Funktion jederzeit durch Deaktivieren des Opt-In-Kästchens wieder deaktivieren.
-
-Wenn Sie die Funktion aktvieren, übermittelt Ihr Browser Daten an einen anderen Server. Dies ist abhänig von Ihrem Browser und den Browsereinstellungen. 100%ig sieht der Betreiber von http://open-notify.org Ihre IP-Adresse und den genutzen Browser.
-Den Quellcode können Sie auf https://github.com/open-notify/Open-Notify-API einsehen.
-
-
 # Haftungsausschluss
 Die Inhalte dieser privaten Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Ich als Betreiber bin nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich die betreffenden Inhalte umgehend entfernen.
