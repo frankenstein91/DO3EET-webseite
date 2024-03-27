@@ -8,6 +8,8 @@ Logbuch... Sternzeit -298776.4116575593 auf einem blauen Planeten... alles began
 
 Der Baubeginn auf dem Grundstück soll schon am nächsten Tag sein, doch kein Arbeiter in Sicht. Eigentlicher Baubeginn am nächsten Montag um 14Uhr... ohne erneute Anmeldung oder Absprache. Die Grundstücke werden einfach betreten und Bflastersteine entfernt bzw. Zuwege aufgegraben. Wer jetzt erst die Bauarbeiter bemerkt und nicht vorgesort hat, kann das Grundstück mit dem Auto die folgenden Tage nicht verlassen. Besitzer von Elektrofahrzeugen kommen ebenfalls nicht mehr zu Ihrer privaten Ladeinfrastruktur und die nächste öffentliche Ladesäule ist ca. 8 km entfernt. Aber auch Verbrennerfahrer kommen nicht zu Ihrem Wocheneinkauf, inklusive älterer Menschen die man mit zum Einkauf nehmen würde.
 
+{{< imgwebp src="Bild2.png" alt="Die Glasfasern im Boden als Symbolbild." width="800" height="600" >}}
+
 Ebenfalls ist es durch die ungenaue Absprache unmöglich die Tage im Homeoffice zu planen, manche müssen Zugang zum Keller eröffnen. Andere können sich vielleicht nicht konzentieren durch den Lärm und wären lieber ins Büro gefahren.
 
 Kommunikation von der Stadt zu den Krankentransporten gab es anscheinend auch nicht, denn diese Standen in der verengten Ortsdurchfahrt ohne Ampel anderen Verkehrsteilnehmern Kotflügel an Kotflügel entgegen. Leider war die Länge der Baustelle durch die Kurve am Ortseingang für die Fahrer nicht überschaubar.
