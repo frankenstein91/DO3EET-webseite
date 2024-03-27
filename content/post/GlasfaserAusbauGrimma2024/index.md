@@ -2,6 +2,12 @@
 title = 'Der Glasfaserausbau in meinem Ort'
 date = 2024-03-27T07:46:46+01:00
 draft = false
+tags = [
+    "Glasfaser",
+    "Glasfaserausbau",
+    "Internet",
+    "Grimma",
+]
 +++
 
 Logbuch... Sternzeit -298776.4116575593 auf einem blauen Planeten... alles began mit einem Gespräch mit einem polnischen Bauarbeiter. Auf unserem Dorf soll nun der Glasfaserausbau beginnen. Und alles läuft anders, als es geplant ist. Es fängt schon im Gespräch an, es sind auf einmal nur noch 15 Meter Glasfaserkabel auf dem eigenen Grundstück kostenlos. Die minimal invasive Routenführung über das Grundstück also leider keine Option mehr. Und damit doch Pflaster öffnen. Das Kabelverlegen per Spülbohrung wird nur in Ausnahmefällen genutzt.
