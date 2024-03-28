@@ -51,5 +51,19 @@ Das VFS[^2] ist als Baumstruktur aufgebaut und verwendet keine Laufwerksbuchstab
 Als eine Besonderheit von BTRFS sehe ich den Betrieb von BTRFS im partitionless Modus. Hier wird das Blockdevice nicht wie üblich in Partitionen aufgeteilt, sondern das Dateisystem direkt auf dem Gerät abgelegt. Das heißt kein GPT oder MBR.
 Damit nimmt man mögliche Kompatibilitätsprobleme mit einigen älteren Systemen und Software in Kauf. Gewinnt aber auch effiziente Speichernutzung und Flexibilität. Besonders in virtuellen Umgebungen, wo eine Festplatte einfach vergrößert werden kann, muss man so keine Partitionen schieben um einen Bereich zu vergrößern.
 
+Anlegen eines BTRFS Laufwerks mit Partitionierung:
+```bash
+sfdisk --wipe=always --clear-label /dev/sdx
+sfdisk /dev/sdx << EOF
+n
+p
+1
+,,
+
+
+EOF
+mkfs.btrfs --csum xxhash /dev/sdx1
+```
+
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
