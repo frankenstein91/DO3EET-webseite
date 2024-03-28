@@ -68,7 +68,12 @@ Und nun ohne Overhead:
 ```bash
 mkfs.btrfs --csum xxhash /dev/sdx
 ```
+Man kann sich also hier immer Zeilen sparen, wenn man die gesamte Disk nutzen möchte und keine kleine Partition zum Booten braucht.
 
+# Subvolumelayout
+Eine weitere Funktion die ich sehr viel auf meinen Systemnen nutze, sind die Subvolumes. Damit ist es möglich ein BTRFS in viele logische Einheiten zu teilen, die den Speicherplatz aber gemeinsam nutzen. Für den Nutzer und die Anwendungen erscheinen die Subvolumes wie normale Ordner bzw. Mountpoints (man kann einzelne Subvolumes an verschiedene Orte im VFS mounten).
+
+Die wie bei der Linuxfilesystemhierarchy gibt es hier nur Vorschläge, wie man sein BTRFS aufbauen kann. Nach meinem Wissen haben sich hier zwei Hauptlager neben dem "Chaos" durchgesetzt. Da wäre auf der einen Seite die @-Benennungskonvention und auf der anderen Seite (meiner Seite) das __-Layout (zwei Unterstriche). Also hier nun wie ich mein BTRFS-Laufwerk aufteile und die Befehle, wie man an dieses Ziel kommt.
 
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
