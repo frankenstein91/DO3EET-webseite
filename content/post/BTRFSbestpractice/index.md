@@ -76,6 +76,36 @@ mkdir /run/btrfs-sdx
 mount /dev/sdx /run/btrfs-sdx -o compress-force=zstd:5,autodefrag,subvolid=5
 mkdir /run/btrfs-sdx/__current /run/btrfs-sdx/__snapshot /run/btrfs-sdx/__documentation
 ```
+In diesen Zeilen beginnen wir mit dem Formatting der gesamten Disk und mounten diese danach, die Optionen sorgen für eine Komprimierung aller Blöcke und einer automatischen Performance verbesserungen durch Defragmentierung. Zum Schluss lege ich auf diesem Speicher drei Ordner an.
+- **__current**: hier werden später alle Subvolumes abgelegt
+- **__snapshot**: ein Ort für alle read only Snapshots
+- **__documentation**: ein Ort für die Dokumentation über die Einrichtung und Änderungen. Somit kann man seine Arbeit gut nachvollziehen.
+
+```bash
+btrfs subvolume create /run/btrfs-sdx/__documentation/btrfs
+date +"%Y-%m-%d %T" > /run/btrfs-sdx/__documentation/btrfs/creation.txt
+```
+Nachdem ich die Grundstrucktur aufgebaut habe, fange ich gleich mit der Dokumentation an. Das Erstellungsdatum schreibe ich per Befehl in die Datei, den Rest würde ich mit `nano` oder `vi` in der Datei beschreiben. Dazu zählt zum Beispiel, welche Subvolumes ich unter `__documentation` für welchen Zweck anlegen werde.
+Nachdem ich die Dokumentation geschrieben und umgesetzt habe, mache ich immer einen Snapshot von diesem Subvolume. 
+```bash
+btrfs subvolume snapshot -r /run/btrfs-sdx/__documentation/btrfs /run/btrfs-sdx/__snapshot/doc_btrfs_$(date +"%Y-%m-%d")
+```
+Am Ende kann ein solches Layout zum Beispiel so aussehen:
+```
+.
+├── __current
+│   ├── home
+│   ├── rootfilesystem
+│   └── var
+├── __documentation
+│   └── btrfs
+└── __snapshot
+    └── doc_btrfs_2024-03-28
+```
+Da Snapshots aber kein Backup ersetzen... auf zum nächsten Punkt...
+
+# FWDW
+
 
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
