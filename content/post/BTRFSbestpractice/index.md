@@ -137,5 +137,13 @@ Rate:             2.36GiB/s
 Error summary:    no errors found
 ```
 
+## RAID
+BTRFS teilt die Daten in 3 Container
+1. Data
+2. Metadata
+3. Systemdata
+
+Für diese Kategorien kann man jeweils Ablagekonfigurationen hinterlegen. Default sind single für Data und Metadata/Systemdata im Dup-Modus.
+
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
