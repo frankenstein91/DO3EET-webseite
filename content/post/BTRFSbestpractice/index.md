@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-BTRFS ist ein modernes Dateisystem, das für seine Vielseitigkeit, Fehlertoleranz und Leistung bekannt ist. Es wird stark weiterentwickelt. Mir bekannte Betriebsysteme mit BTRFS-Support sind GNU/Linux und ReactOS. Meine Begeisterung zielt aber eher auf Linux ab.
+BTRFS[^1] ist ein modernes Dateisystem, das für seine Vielseitigkeit, Fehlertoleranz und Leistung bekannt ist. Es wird stark weiterentwickelt. Mir bekannte Betriebsysteme mit BTRFS-Support sind GNU/Linux und ReactOS. Meine Begeisterung zielt aber eher auf Linux ab.
 
 In diesem Guide werden wir einige Best Practices für die Verwendung von BTRFS vorstellen. Diese sind nur ein Vorschlag und wie üblich in der OpenSource-Welt nur meine Erfahrung und damit mein Hinweis. Wir besprechen Themen wie:
 - Partitionierung vs partitionless
@@ -20,7 +20,7 @@ In diesem Guide werden wir einige Best Practices für die Verwendung von BTRFS v
 # Linuxfilesystemhierarchygrundverständnis
 Der Filesystem Hierarchy Standard beschreibt eine Verzeichnisstruktur für Linux-Dateisysteme. Er sorgt dafür, dass wichtige Dateien und Verzeichnisse an einem bestimmten Ort zu vermuten sind, was die Systemverwaltung und -nutzung vereinfacht. Die meisten Entwickler halten sich an diesen Vorschlag, um sich auch darauf verlassen zu können.
 
-Das VFS[^1] ist als Baumstruktur aufgebaut und verwendet keine Laufwerksbuchstaben wie unter Windows üblich. Das Dateisystem beginnt mit dem Root-Verzeichnis (`/`), von dem aus alle anderen Verzeichnisse abzweigen.
+Das VFS[^2] ist als Baumstruktur aufgebaut und verwendet keine Laufwerksbuchstaben wie unter Windows üblich. Das Dateisystem beginnt mit dem Root-Verzeichnis (`/`), von dem aus alle anderen Verzeichnisse abzweigen.
 
 - **Standardverzeichnisse:** Wichtige Verzeichnisse wie `/bin`, `/etc`, `/home`, `/usr` und `/var` haben jeweils einen bestimmten Zweck.
 - **Konsistenz:** Die Verzeichnisstruktur ist auf allen Linux-Distributionen gleich, sofern sie den FHS einhalten.
@@ -47,5 +47,9 @@ Das VFS[^1] ist als Baumstruktur aufgebaut und verwendet keine Laufwerksbuchstab
 * `/usr`: Enthält die meisten Programmdateien und Bibliotheken.
 * `/var`: Enthält variable Daten, z. B. Protokolldateien und Datenbanken.
 
+# Partitionierung vs partitionless
+Als eine Besonderheit von BTRFS sehe ich den Betrieb von BTRFS im partitionless Modus. Hier wird das Blockdevice nicht wie üblich in Partitionen aufgeteilt, sondern das Dateisystem direkt auf dem Gerät abgelegt. Das heißt kein GPT oder MBR.
+Damit nimmt man mögliche Kompatibilitätsprobleme mit einigen älteren Systemen und Software in Kauf. Gewinnt aber auch effiziente Speichernutzung und Flexibilität. Besonders in virtuellen Umgebungen, wo eine Festplatte einfach vergrößert werden kann, muss man so keine Partitionen schieben um einen Bereich zu vergrößern.
 
-[^1] Virtual Filesystem Switch
+[^1] B-tree Filesystem
+[^2] Virtual Filesystem Switch
