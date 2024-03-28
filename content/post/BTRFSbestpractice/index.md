@@ -105,7 +105,37 @@ Am Ende kann ein solches Layout zum Beispiel so aussehen:
 Da Snapshots aber kein Backup ersetzen... auf zum nächsten Punkt...
 
 # FWDW
+Da BTRFS in den Metadaten auch Prüfsummen hält, kann man Hardwarefehler schnell, leicht und trotzdem zu spät (außer man nutzt die RAID-Funktionen von BTRFS) finden. In meinen Beispielen habe ich die Checksum übrigens von 32 bit CRC32C auf 64 bit xxhash geändert. Damit reduziert sich die Wahrscheinlichkeit von Hashkollisionen sehr.
 
+Unser Filesystem der Wahl liefert für das Monitoring der Fehler entsprechende Counter mit `btrfs device stats /run/btrfs-sdx/`. Diese sollten wie in meinem Beispiel alle 0 sein, sonst gibt es Probleme.
+```
+[/dev/sdx].write_io_errs    0
+[/dev/sdx].read_io_errs     0
+[/dev/sdx].flush_io_errs    0
+[/dev/sdx].corruption_errs  0
+[/dev/sdx].generation_errs  0
+```
+Auch der Befehl `btrfs scrub start /run/btrfs-sdx/` und `btrfs scrub status /run/btrfs-sdx/`helfen das Dateisystem in einem guten Zustand zu halten. Dieser Befehl startet einen Durchlauf über alle Daten und Metadaten und gleicht die Prüfsummen ab. Der Prozess läuft im Hingergrund, daher kann man sich mit Status die aktuellen Informationen abholen. Wenn der Scrub noch läuft, sieht es so aus...
+```
+Scrub started:    Thu Mar 28 16:05:02 2024
+Status:           running
+Duration:         0:00:15
+Time left:        0:00:49
+ETA:              Thu Mar 28 16:06:08 2024
+Total to scrub:   139.03GiB
+Bytes scrubbed:   32.08GiB  (23.08%)
+Rate:             2.14GiB/s
+Error summary:    no errors found
+```
+und wenn das ganze beendet ist, sieht es hoffentlich so aus und ist damit fehlerfrei...
+```
+Scrub started:    Thu Mar 28 16:05:02 2024
+Status:           finished
+Duration:         0:00:59
+Total to scrub:   139.03GiB
+Rate:             2.36GiB/s
+Error summary:    no errors found
+```
 
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
