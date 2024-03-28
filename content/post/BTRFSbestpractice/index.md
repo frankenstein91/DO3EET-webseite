@@ -1,0 +1,51 @@
++++
+title = 'BTRFS best practice'
+date = 2024-03-28T13:04:18+01:00
+draft = false
+tags = [
+    "Linux",
+    "Dateisystem",
+    "BTRFS",
+]
++++
+
+BTRFS ist ein modernes Dateisystem, das für seine Vielseitigkeit, Fehlertoleranz und Leistung bekannt ist. Es wird stark weiterentwickelt. Mir bekannte Betriebsysteme mit BTRFS-Support sind GNU/Linux und ReactOS. Meine Begeisterung zielt aber eher auf Linux ab.
+
+In diesem Guide werden wir einige Best Practices für die Verwendung von BTRFS vorstellen. Diese sind nur ein Vorschlag und wie üblich in der OpenSource-Welt nur meine Erfahrung und damit mein Hinweis. Wir besprechen Themen wie:
+- Partitionierung vs partitionless
+- Struktur von Subvolumes
+- Komprimierung
+- Fehlerbehebung, Wartung, Datensicherung und Wiederherstellung
+
+# Linuxfilesystemhierarchygrundverständnis
+Der Filesystem Hierarchy Standard beschreibt eine Verzeichnisstruktur für Linux-Dateisysteme. Er sorgt dafür, dass wichtige Dateien und Verzeichnisse an einem bestimmten Ort zu vermuten sind, was die Systemverwaltung und -nutzung vereinfacht. Die meisten Entwickler halten sich an diesen Vorschlag, um sich auch darauf verlassen zu können.
+
+Das VFS[^1] ist als Baumstruktur aufgebaut und verwendet keine Laufwerksbuchstaben wie unter Windows üblich. Das Dateisystem beginnt mit dem Root-Verzeichnis (`/`), von dem aus alle anderen Verzeichnisse abzweigen.
+
+- **Standardverzeichnisse:** Wichtige Verzeichnisse wie `/bin`, `/etc`, `/home`, `/usr` und `/var` haben jeweils einen bestimmten Zweck.
+- **Konsistenz:** Die Verzeichnisstruktur ist auf allen Linux-Distributionen gleich, sofern sie den FHS einhalten.
+- **Erweiterbarkeit:** Der FHS kann durch zusätzliche Verzeichnisse und Dateien erweitert werden.
+- **Empfehlung:** Man muss sich nicht an die Hierarchy halten, muss dann aber mit Problemen rechnen.
+
+## Wichtige Verzeichnisse im FHS
+
+* `/bin`: Enthält ausführbare Dateien, die für alle Benutzer verfügbar sind.
+* `/boot`: Enthält die Boot-Dateien des Systems und auf modernen Systemen auch EFI-Stubs. Meist nutzt man hier FAT32 als Dateisystem.
+* `/dev`: Enthält Gerätetreiber und Gerätedateien.
+* `/etc`: Enthält Konfigurationsdateien für das System und die Anwendungen.
+* `/home`: Enthält die Home-Verzeichnisse der Benutzer.
+* `/lib`: Enthält Bibliotheken, die von Anwendungen verwendet werden. Für Systeme die mehrere CPU-Architekturen unterstüzen, kann es hier mehrere Ordner geben bzw. lib32 und lib64
+* `/media`: Enthält Einhängepunkte für externe Medien wie CDs und DVDs.
+* `/mnt`: Enthält temporäre Einhängepunkte für Dateisysteme.
+* `/opt`: Enthält optionale Softwarepakete.
+* `/proc`: Enthält Informationen über laufende Prozesse.
+* `/root`: Das Home-Verzeichnis des Root-Benutzers.
+* `/run`: Enthält Dateien, die für den laufenden Systembetrieb benötigt werden und die sich dynamisch ändern können.
+* `/sbin`: Enthält ausführbare Dateien für Systemadministratoren.
+* `/sys`: Enthält Informationen über das System, z. B. Kernel-Module und Geräte.
+* `/tmp`: Enthält temporäre Dateien.
+* `/usr`: Enthält die meisten Programmdateien und Bibliotheken.
+* `/var`: Enthält variable Daten, z. B. Protokolldateien und Datenbanken.
+
+
+[^1] Virtual Filesystem Switch
