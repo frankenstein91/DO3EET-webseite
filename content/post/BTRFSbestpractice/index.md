@@ -70,5 +70,12 @@ Eine weitere Funktion die ich sehr viel auf meinen Systemnen nutze, sind die Sub
 
 Die wie bei der Linuxfilesystemhierarchy gibt es hier nur Vorschläge, wie man sein BTRFS aufbauen kann. Nach meinem Wissen haben sich hier zwei Hauptlager neben dem "Chaos" durchgesetzt. Da wäre auf der einen Seite die @-Benennungskonvention und auf der anderen Seite (meiner Seite) das __-Layout (zwei Unterstriche). Also hier nun wie ich mein BTRFS-Laufwerk aufteile und die Befehle, wie man an dieses Ziel kommt.
 
+```bash
+mkfs.btrfs --csum xxhash /dev/sdx
+mkdir /run/btrfs-sdx
+mount /dev/sdx /run/btrfs-sdx -o compress-force=zstd:5,autodefrag,subvolid=5
+mkdir /run/btrfs-sdx/__current /run/btrfs-sdx/__snapshot /run/btrfs-sdx/__documentation
+```
+
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
