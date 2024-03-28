@@ -171,5 +171,5 @@ Weiterhin ist es sehr wichtig für das Backup zuerst einen Snapshot anzulegen. D
 
 Da Backups sehr wichtig sind und man sich genau damit beschäftigen sollte, verweise ich hier nur auf die beiden Befehle `btrfs send` und `btrfs receive`. Diese arbeiten im Team und können auch über SSH zu auf unterschiedlichen Systemen laufen.
 
-[^1] B-tree Filesystem
-[^2] Virtual Filesystem Switch
+[^1]: B-tree Filesystem
+[^2]: Virtual Filesystem Switch
