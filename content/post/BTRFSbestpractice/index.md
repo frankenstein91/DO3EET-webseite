@@ -64,6 +64,11 @@ p
 EOF
 mkfs.btrfs --csum xxhash /dev/sdx1
 ```
+Und nun ohne Overhead:
+```bash
+mkfs.btrfs --csum xxhash /dev/sdx
+```
+
 
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
