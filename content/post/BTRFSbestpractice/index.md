@@ -53,14 +53,9 @@ Damit nimmt man mögliche Kompatibilitätsprobleme mit einigen älteren Systemen
 
 Anlegen eines BTRFS Laufwerks mit Partitionierung:
 ```bash
-sfdisk --wipe=always --clear-label /dev/sdx
-sfdisk /dev/sdx << EOF
-n
-p
-1
-,,
-
-
+sfdisk --wipe=always /dev/sdx << EOF
+type=83
+write
 EOF
 mkfs.btrfs --csum xxhash /dev/sdx1
 ```
