@@ -145,5 +145,19 @@ BTRFS teilt die Daten in 3 Container
 
 Für diese Kategorien kann man jeweils Ablagekonfigurationen hinterlegen. Default sind single für Data und Metadata/Systemdata im Dup-Modus.
 
+| **RAID Level** | **Beschreibung** |
+|:---:|:---:|
+| Single | Inhalte werden ohne Kopie abgelegt |
+| DUP | Inhalte werden mit einer weiteren Kopie auf das Laufwerk geschrieben |
+| RAID1 | Ihalte werden doppelt auf unterschiedliche Laufwerke abgelegt |
+| RAID1C3 | Ihalte werden 3-fach auf unterschiedliche Laufwerke abgelegt |
+| RAID1C4 | Ihalte werden 4-fach auf unterschiedliche Laufwerke abgelegt |
+| RAID0 | Inhalte werden auf zwei unterschiedliche Laufwerke verteilt um die Geschwindikeit zu erhöhen |
+| RAID10 | Kombination aus RAID1 und RAID0 |
+
+Alle RAID*-Level außer RAID0 brauchen einen Verbund von BTRFS-Geräten. Dafür bietet das System `btrfs device add` als Befehl.
+
+
+
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
