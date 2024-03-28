@@ -157,7 +157,19 @@ Für diese Kategorien kann man jeweils Ablagekonfigurationen hinterlegen. Defaul
 
 Alle RAID*-Level außer RAID0 brauchen einen Verbund von BTRFS-Geräten. Dafür bietet das System `btrfs device add` als Befehl.
 
+Möchte man das System zum Beispiel nach dem hinzufügen einer weiteren Disk auf BTRFS-RAID1 umstellen, nutzt man diese Zeile:
+```bash
+btrfs balance start -draid1 -mraid1 -sraid1 /run/btrfs-sdx/
+```
 
+Aber ein RAID schützt nicht vor Verschlüsselungstrojanern...
+
+## BTRFS Backup
+Für ein Backup auf die Art, stellen Sie sicher, dass Ihr System und Ihre Backupspeicher btrfs-Dateisysteme verwenden... anders Funktioniert es leider nicht.
+
+Weiterhin ist es sehr wichtig für das Backup zuerst einen Snapshot anzulegen. Dadurch kopiert man einen konsistenten Zustand. Der Snapshot kann nach einem erfolgreichen Backup vernichtet werden.
+
+Da Backups sehr wichtig sind und man sich genau damit beschäftigen sollte, verweise ich hier nur auf die beiden Befehle `btrfs send` und `btrfs receive`. Diese arbeiten im Team und können auch über SSH zu auf unterschiedlichen Systemen laufen.
 
 [^1] B-tree Filesystem
 [^2] Virtual Filesystem Switch
