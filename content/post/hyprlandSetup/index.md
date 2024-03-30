@@ -31,6 +31,16 @@ Wichtig das Keyboardlayout zu `kb_layout = de` ändern.
 ### Keybinds
 ```
 bind = $mainMod, T, exec, $terminal
+bind = $mainMod ALT, 1, focusworkspaceoncurrentmonitor, 1
+bind = $mainMod ALT, 2, focusworkspaceoncurrentmonitor, 2
+bind = $mainMod ALT, 3, focusworkspaceoncurrentmonitor, 3
+bind = $mainMod ALT, 4, focusworkspaceoncurrentmonitor, 4
+bind = $mainMod ALT, 5, focusworkspaceoncurrentmonitor, 5
+bind = $mainMod ALT, 6, focusworkspaceoncurrentmonitor, 6
+bind = $mainMod ALT, 7, focusworkspaceoncurrentmonitor, 7
+bind = $mainMod ALT, 8, focusworkspaceoncurrentmonitor, 8
+bind = $mainMod ALT, 9, focusworkspaceoncurrentmonitor, 9
+bind = $mainMod ALT, 0, focusworkspaceoncurrentmonitor, 10
 ```
 
 ## Anwendungen
