@@ -14,7 +14,7 @@ Wayland ist moderner geschrieben und bietet mit einigen Applikationen vorteile, 
 # Installation
 Wie immer gehe ich von meinem default System aus. Dabei nutze ich ArchLinux und pikaur. Wer pikaur nicht kennt, es ist ein Paketmanager für das ArchLinux AUR.
 ```bash
-pikaur -Sy hyprland wofi xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swaync waybar
+pikaur -Sy hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swaync nwg-panel nwg-menu nwg-shell-config
 ```
 Damit sollte Hyprland und alle Abhänigkeiten installiert werden.
 
@@ -42,7 +42,7 @@ $fileManager = nemo
 ```
 exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once=swaync
-exec-once=waybar
+exec-once=
 exec-once=nm-applet
 exec-once=blueberry-tray
 ```
