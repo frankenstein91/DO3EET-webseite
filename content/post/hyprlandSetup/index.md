@@ -11,3 +11,10 @@ tags = [
 Seit vielen Jahren nutzt Linux den X11-Server für die grafische Ausgabe, seit einiger Zeit gibt es aber Wayland als Alternative.
 Wayland ist moderner geschrieben und bietet mit einigen Applikationen vorteile, nur leider gab es bis jetzt keine Desktop Environments die mir auf Wayland gefallen haben. Mein Favorit Cinnamon baut seit einigen Wochen an einer Wayland-Version, doch leider ist diese ziemlich unnutzbar. Bei Cinnamon-Wayland kann man zum Beispiel das Keyboardlayout noch nicht anpassen und es ist auf ENG-US festeingestellt. Nun habe ich aber Hyprland gefunden und will es auf meinem Framework-Notebook installieren. Diesen Artikel schreibe ich in Parallelität zur Installation. Ich hoffe er wird Zukunftsfrank helfen diese Installation erneut durchzuführen und auch anderen Lesern einen Einblick geben
 
+# Installation
+Wie immer gehe ich von meinem default System aus. Dabei nutze ich ArchLinux und pikaur. Wer pikaur nicht kennt, es ist ein Paketmanager für das ArchLinux AUR.
+```bash
+pikaur -Sy hyprland
+```
+Damit sollte Hyprland und alle Abhänigkeiten installiert werden.
+
