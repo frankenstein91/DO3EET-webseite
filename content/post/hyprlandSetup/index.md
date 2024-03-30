@@ -52,8 +52,13 @@ $fileManager = nemo
 ```
 exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once=swaync
-exec-once=
+exec-once=swww-daemon -f xrgb
 exec-once=nm-applet
 exec-once=blueberry-tray
 ```
 
+# offene Punkte
+- Notebookdeckel Aktion
+- blueberry-tray wird nicht angezeigt
+- Wenn das Display die Auflösung ändert, bleibt es schwarz
+- Lockscreen and Standby
