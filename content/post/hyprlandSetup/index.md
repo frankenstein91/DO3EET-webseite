@@ -57,6 +57,26 @@ exec-once=nm-applet
 exec-once=blueberry-tray
 ```
 
+# Waydroid
+```bash
+pikaur -S binder_linux-dkms waydroid
+```
+den Kernelparameter `ibt=off` setzen, sonst gibt es Probleme und das Kernelmodule `binder_linux` laden.
+
+Danach ein `reboot`!
+
+Diese Zeile löst Netzwerkprobleme mit Docker
+```bash
+sudo sed -i~ -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' /usr/lib/waydroid/data/scripts/waydroid-net.sh
+```
+
+```bash
+waydroid init
+systemctl enable waydroid-container.service
+waydroid session start
+```
+and `waydroid app install F-Droid.apk`.
+
 # offene Punkte
 - Notebookdeckel Aktion
 - blueberry-tray wird nicht angezeigt
