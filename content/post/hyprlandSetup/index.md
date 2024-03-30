@@ -14,7 +14,7 @@ Wayland ist moderner geschrieben und bietet mit einigen Applikationen vorteile, 
 # Installation
 Wie immer gehe ich von meinem default System aus. Dabei nutze ich ArchLinux und pikaur. Wer pikaur nicht kennt, es ist ein Paketmanager für das ArchLinux AUR.
 ```bash
-pikaur -Sy hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swaync nwg-panel nwg-menu nwg-shell-config
+pikaur -Sy hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swaync nwg-panel nwg-menu nwg-shell-config swww
 ```
 Damit sollte Hyprland und alle Abhänigkeiten installiert werden.
 
