@@ -51,8 +51,10 @@ $fileManager = nemo
 
 ```
 exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec-once=swaync
+#exec-once=waypaper --restore
 exec-once=swww-daemon -f xrgb
+exec-once=swaync
+exec-once=nwg-panel
 exec-once=nm-applet
 exec-once=blueberry-tray
 ```
