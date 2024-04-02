@@ -98,7 +98,7 @@ else
 fi
 
 # Concatenate the output of zgrep XZ_DEC /proc/config.gz and zgrep LZMA /proc/config.gz
-config_output=$(zgrep XZ_DEC /proc/config.g && zgrep LZMA /proc/config.gz)
+config_output=$(zgrep XZ_DEC /proc/config.gz && zgrep LZMA /proc/config.gz)
 
 if [[ $? -eq 0 ]]; then
     config_array=()
