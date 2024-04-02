@@ -7,7 +7,7 @@ draft = false
 Geschockt, misstrauisch und erschöpft geht die OpenSource-Community aus dem verlängerten Osterwochenende. Es gab einen "Maulwurf" in einem der verbreitesten Projekte xz und damit auch indirekt in sshd. Die genauen Informationen sind im Internet weit verbreitet und werden sicher noch regemäßig mit Updates versehen...
 
 Ich möchte aber mein erstes Erkennungsskript teilen, es scheckt einfach alle mir bekannten Infos zum Problem ab.
-
+<!--more-->
 ```bash
 #! /bin/bash
 
