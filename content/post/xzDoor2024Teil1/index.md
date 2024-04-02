@@ -98,24 +98,29 @@ else
 fi
 
 # Concatenate the output of zgrep XZ_DEC /proc/config.gz and zgrep LZMA /proc/config.gz
-config_output=$(zgrep XZ_DEC /proc/config.gz && zgrep LZMA /proc/config.gz)
-config_array=()
-kernel_status=false
-while IFS= read -r line; do
-    config_array+=("$line")
-done <<< "$config_output"
-# print all array elements
-for element in "${config_array[@]}"
-do
-    if [[ ! $element =~ ^# ]]; then
-        if [[ $element =~ =y$ ]]; then
-            kernel_status=true
+config_output=$(zgrep XZ_DEC /proc/config.g && zgrep LZMA /proc/config.gz)
+
+if [[ $? -eq 0 ]]; then
+    config_array=()
+    kernel_status=false
+    while IFS= read -r line; do
+        config_array+=("$line")
+    done <<< "$config_output"
+    # print all array elements
+    for element in "${config_array[@]}"
+    do
+        if [[ ! $element =~ ^# ]]; then
+            if [[ $element =~ =y$ ]]; then
+                kernel_status=true
+            fi
         fi
+    done
+    if $kernel_status; then
+        echo -e "Kernel is compiled with XZ_DEC and/or LZMA support  \e[31m⚠ Jia Tan worked on it\e[0m"
+    else
+        echo -e "Kernel is not compiled with XZ_DEC and/or LZMA support  \e[32m🗹\e[0m"
     fi
-done
-if $kernel_status; then
-    echo -e "Kernel is compiled with XZ_DEC and/or LZMA support  \e[31m⚠ Jia Tan worked on it\e[0m"
 else
-    echo -e "Kernel is not compiled with XZ_DEC and/or LZMA support  \e[32m🗹\e[0m"
+    echo -e "Kernel check failed  \e[33m☠\e[0m"
 fi
 ```
