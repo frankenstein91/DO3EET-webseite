@@ -25,12 +25,23 @@ for file in $(find / -type f -name "xz" -perm /u+x 2> /dev/zero); do
         # check if xz is a newer version than 5.2.5
         # check if xz is a version than 5.2.*
         if [[ $line =~ (5\.2\.[6-9]) ]]; then
-            echo -e "xz is a newer version than 5.2.5  \e[31m⚠ worked on it\e[0m"
+            echo -e "xz is a newer version than 5.2.5  \e[31m⚠ Jia Tan worked on it\e[0m"
         elif [[ $line =~ (5\.[3-9]\.[0-9]) ]]; then
-            echo -e "xz is a newer version than 5.2.5  \e[31m⚠ worked on it\e[0m"
+            echo -e "xz is a newer version than 5.2.5  \e[31m⚠ Jia Tan worked on it\e[0m"
         else
             echo -e "xz is not a newer version than 5.2.5  \e[32m🗹\e[0m"
         fi
+
+        # check if xz is a newer version than 5.4.4
+        # check if xz is a version than 5.4.*
+        if [[ $line =~ (5\.4\.[5-9]) ]]; then
+            echo -e "xz is a newer version than 5.4.4  \e[31m⚠ Hans Jansen worked on it\e[0m"
+        elif [[ $line =~ (5\.[5-9]\.[0-9]) ]]; then
+            echo -e "xz is a newer version than 5.4.4  \e[31m⚠ Hans Jansen worked on it\e[0m"
+        else
+            echo -e "xz is not a newer version than 5.4.4  \e[32m🗹\e[0m"
+        fi
+
     done <<< "$version"
 done
 
@@ -73,7 +84,6 @@ if [[ -z $LD_PROFILE ]]; then
 else
     echo -e "LD_PROFILE environment variable set  \e[32m🗹\e[0m"
 fi
-
 
 if [[ -z $TERM ]]; then
     echo -e "TERM environment variable not set  \e[31m⚠\e[0m"
