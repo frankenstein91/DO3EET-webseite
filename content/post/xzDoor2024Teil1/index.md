@@ -62,6 +62,19 @@ else
     echo -e "LD_BIND_NOT is not 1  \e[31m⚠\e[0m"
 fi
 
+if [[ -z $LD_DEBUG ]]; then
+    echo -e "LD_DEBUG environment variable not set  \e[31m⚠\e[0m"
+else
+    echo -e "LD_DEBUG environment variable set  \e[32m🗹\e[0m"
+fi
+
+if [[ -z $LD_PROFILE ]]; then
+    echo -e "LD_PROFILE environment variable not set  \e[31m⚠\e[0m"
+else
+    echo -e "LD_PROFILE environment variable set  \e[32m🗹\e[0m"
+fi
+
+
 if [[ -z $TERM ]]; then
     echo -e "TERM environment variable not set  \e[31m⚠\e[0m"
 else
