@@ -11,7 +11,7 @@ Ich möchte aber mein erstes Erkennungsskript teilen, es scheckt einfach alle mi
 ```bash
 #! /bin/bash
 
-for file in $(find / -type f -name "xz" -perm /u+x 2> /dev/zero); do
+for file in $(find / -type f -name "xz" -perm /u+x 2> /dev/null); do
     echo "Testing $file"
     version=$($file --version)
     while IFS= read -r line; do
@@ -45,7 +45,7 @@ for file in $(find / -type f -name "xz" -perm /u+x 2> /dev/zero); do
     done <<< "$version"
 done
 
-for file in $(find / -type f -name "sshd" -perm /u+x 2> /dev/zero); do
+for file in $(find / -type f -name "sshd" -perm /u+x 2> /dev/null); do
     echo "Testing $file"
     ldd_output=$(ldd "$file")
     if [[ $ldd_output == *liblzma* ]]; then
