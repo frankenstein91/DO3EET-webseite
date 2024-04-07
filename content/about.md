@@ -4,7 +4,6 @@ draft = false
 aliases = ["about-me", "contact", "impressum"]
 author = "Frank Tornack"
 menu = 'main'
-disableKinds = ["RSS"]
 +++
 
 Verantwortlich für den Inhalt dieser privaten Website mit Ausnahme der Kommentare:
