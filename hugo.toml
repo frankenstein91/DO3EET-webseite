@@ -67,6 +67,11 @@ icon = "fa-solid fa-comment-dots"
 title = "Matrix Chat"
 url = "https://matrix.to/#/@bollerwagenpicard:tchncs.de"
 
+[[params.socialLinks]]
+icon = "fa-solid fa-rss"
+title = "RSS"
+url = "https://do3eet.pages.dev/index.xml"
+
 [params.giscus]
 repo = "frankenstein91/DO3EET-webseite"
 repoID = "R_kgDOKsmxqw"
@@ -86,3 +91,9 @@ loading = "lazy"
 
     path = 'github.com/hugomods/images'
 
+[outputs]
+section = ['html', 'rss', 'amp']
+page = ['html', 'rss', 'amp']
+
+[Author]
+name = "Frank Tornack"
