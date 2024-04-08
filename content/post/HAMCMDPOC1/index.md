@@ -12,4 +12,17 @@ python -m venv venv
 . ./venv/bin/activate
 pip install pyotp
 ```
-Damit steht uns ein unabhäniges Python mit den notwendigen Programmbibliotheken zur Verfügung.
+Damit steht uns ein unabhäniges Python mit den notwendigen Programmbibliotheken zur Verfügung. 
+
+Ich schlage folgenden Ablauf vor:
+| Amateurfunker                           | Richtung | Amateurfunkrelais                                          |
+|-----------------------------------------|----------|------------------------------------------------------------|
+| Sendet Befehl mit OTP                   | -->      | Speichert Befehl in Datenbank                              |
+| Vergleicht Hash                         | <--      | Sendet Befehl und Hash zurück                              |
+| Trifft Entscheidung über die Ausführung |          |                                                            |
+| Sendet Hash und neuen OTP               | -->      |                                                            |
+|                                         | <--      | sendet Befehl zum Hash (damit es keine Verschleierung ist) |
+| freut sich                              | <--      | sendet Ausgabe des Befehls                                 |
+|                                         |          | kennzeichnet Befehl als ausgeführt                         |
+
+Um eine Kollsion bei mehreren Admins zu vermeiden sollte man sicherstellen, dass nur der letzte Befehl ausführbar ist.
