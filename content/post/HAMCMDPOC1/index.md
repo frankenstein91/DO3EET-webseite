@@ -26,3 +26,22 @@ Ich schlage folgenden Ablauf vor:
 |                                         |          | kennzeichnet Befehl als ausgeführt                         |
 
 Um eine Kollsion bei mehreren Admins zu vermeiden sollte man sicherstellen, dass nur der letzte Befehl ausführbar ist. Die Übergabe sollte zwischen den zwei Hälften des OTP erfolgen. Für meine Idee braucht es die beiden Protokollbefehle `set` und `run`. Damit hätten wir `123 set shutdown -h now 428` und `979 run ae50c4f2a02f198c09e1f9575b7fe2ef9cae2c70 333`. Der erste Befehl würde bei einer Übereinstimmung mit dem OTP `123428` den Befehl in der Datenbank hinterlegen und entspechend `shutdown -h now ae50c4f2a02f198c09e1f9575b7fe2ef9cae2c70` zurück geben. Somit kann man Übertragunsfehler ausschleißen. Mit dem zweiten Befehl kann der Betreiber den Befehl nun starten und bekommt mindestens `shutdown -h now` zurück.
+
+In Python ist ein solcher OTP schneller erstellt.
+```python
+import pyotp
+key = pyotp.random_base32()
+print(pyotp.totp.TOTP(key).provisioning_uri(name='DO3EET', issuer_name='Amateurfunkrelais'))
+```
+Diesen Key sollte sich die Applikation natürlich merken, aber mit der ausgegeben URL `otpauth://totp/Amateurfunkrelais:DO3EET?secret=OX6TY44W2MMGF3PTHM5DOY7YJ2ZRMFZ7&issuer=Amateurfunkrelais` kann man die meisten OTP-Generatoren füttern.
+
+Die Überprüfung sollte ca. auf diese Art erfolgen. Wir nehmen an der Input kommt in der Variable `HamBefehl`.
+```python
+import pyotp
+import hashlib
+totp = pyotp.TOTP(key)
+HamTOTP = f"{HamBefehl.split(' ')[0]}{HamBefehl.split(' ')[-1]}"
+if totp.verify(HamTOTP):
+    befehl = " ".join(HamBefehl.split(" ")[1:-1])
+    print(f"{befehl} {hashlib.sha1(befehl.encode()).hexdigest()}")
+```
