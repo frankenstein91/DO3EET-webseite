@@ -2,6 +2,10 @@
 title = 'CVE-2024-3094 xz/sshd Backdoor'
 date = 2024-04-02T09:56:58+02:00
 draft = false
+tags = [
+    "Linux",
+    "Sicherheit",
+]
 +++
 
 Geschockt, misstrauisch und erschöpft geht die OpenSource-Community aus dem verlängerten Osterwochenende. Es gab einen "Maulwurf" in einem der verbreitesten Projekte xz und damit auch indirekt in sshd. Die genauen Informationen sind im Internet weit verbreitet und werden sicher noch regemäßig mit Updates versehen...
