@@ -42,6 +42,8 @@ import hashlib
 totp = pyotp.TOTP(key)
 HamTOTP = f"{HamBefehl.split(' ')[0]}{HamBefehl.split(' ')[-1]}"
 if totp.verify(HamTOTP):
-    befehl = " ".join(HamBefehl.split(" ")[1:-1])
-    print(f"{befehl} {hashlib.sha1(befehl.encode()).hexdigest()}")
+    if HamBefehl.split(" ")[1] == "set":
+        befehl = " ".join(HamBefehl.split(" ")[2:-1])
+        print(f"{befehl} {hashlib.sha1(befehl.encode()).hexdigest()}")
+        # in Datenbank speichern...
 ```
