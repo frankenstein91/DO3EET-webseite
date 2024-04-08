@@ -25,4 +25,4 @@ Ich schlage folgenden Ablauf vor:
 | freut sich                              | <--      | sendet Ausgabe des Befehls                                 |
 |                                         |          | kennzeichnet Befehl als ausgeführt                         |
 
-Um eine Kollsion bei mehreren Admins zu vermeiden sollte man sicherstellen, dass nur der letzte Befehl ausführbar ist.
+Um eine Kollsion bei mehreren Admins zu vermeiden sollte man sicherstellen, dass nur der letzte Befehl ausführbar ist. Die Übergabe sollte zwischen den zwei Hälften des OTP erfolgen. Für meine Idee braucht es die beiden Protokollbefehle `set` und `run`. Damit hätten wir `123 set shutdown -h now 428` und `979 run ae50c4f2a02f198c09e1f9575b7fe2ef9cae2c70 333`. Der erste Befehl würde bei einer Übereinstimmung mit dem OTP `123428` den Befehl in der Datenbank hinterlegen und entspechend `shutdown -h now ae50c4f2a02f198c09e1f9575b7fe2ef9cae2c70` zurück geben. Somit kann man Übertragunsfehler ausschleißen. Mit dem zweiten Befehl kann der Betreiber den Befehl nun starten und bekommt mindestens `shutdown -h now` zurück.
