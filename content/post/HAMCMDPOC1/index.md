@@ -53,3 +53,6 @@ if totp.verify(HamTOTP):
         print(f"{befehl} {hashlib.sha1(befehl.encode()).hexdigest()}")
         # in Datenbank speichern...
 ```
+
+Ein Nachteil ist auf jeden Fall: Man braucht auf beiden Seiten eine genaue Uhrzeit. Mit GPS, GLONASS und GALILEO sicherlich kein Problem, aber es sind zusätzliche Kosten.
+<!-- ToDo: hier fehlen noch ein paar abschließende Worte zur Idee. -->
