@@ -1,6 +1,6 @@
 +++
 title = 'Befehle über HAM'
-date = 2024-04-09T21:24:20+02:00
+date = 2024-04-09T08:50:20+02:00
 draft = false
 tags = [
     "Linux",
@@ -54,5 +54,14 @@ if totp.verify(HamTOTP):
         # in Datenbank speichern...
 ```
 
+Meine Idee kann man nach belieben weiter ausbauen... so wären zum Beispiel unterschiedliche Schlüssel für `set` und `run` denkbar und man könnte damit das Vieraugenprinzip erzwingen. Außerdem müsste man noch überlegen, ob jeder Berechtigte seinen eigenen Key bekommt oder ob man für jede Funkstelle einen shared Key nutzt.
+
 Ein Nachteil ist auf jeden Fall: Man braucht auf beiden Seiten eine genaue Uhrzeit. Mit GPS, GLONASS und GALILEO sicherlich kein Problem, aber es sind zusätzliche Kosten.
-<!-- ToDo: hier fehlen noch ein paar abschließende Worte zur Idee. -->
+
+Außerdem gibt es im Verlaufe des Jahres 2024 eine [Änderung der Amateurfunkverordnung](https://www.recht.bund.de/bgbl/1/2023/160/VO). In diesem Dokument gibt es auf der Seite 5 eine zum Thema passende Änderung des § 16 Abschnitt 8. Der neue Text erlaubt eine Ausnahme des Verschlüsslungsverbotes für Steuersignale für Erd- und Weltraumfunkstellen, Steuersignale, Remote-Betrieb, anderen fernbedienten oder automatisch arbeitenden Stationen.
+
+## Warum kein fertiger Code?
+Bei meiner Idee geht es mir um die Idee. Ich habe selbst keine Amateurfunkrelais und plane auch keinen Betieb solcher Technik. Ob meine Idee mit der neuen Verordnung noch einen Nutzen hat, weiß ich nicht. Außerdem fehlt mir das Wissen, wie ich meine Idee an die entsprechende Technik anbinden könnte. Eine Übertragung über das HamNet, TCP und Telnet wäre aber denkbar.
+
+## Ist die Idee sicher?
+Ich bin kein Experte für alle Sicherheitsfragen. Aber da die TOTPs oft auch für die Mehrfaktor-Authentisierung genutzt werden, sind diese geprüft und vertraut. Mit etwas Aufmerksamkeit bei der Hash-Prüfung sollte es wenig Angriffspunkte geben. Da die OTPs einer Hashfunktion ähnlich sind, gibt es natürlich auch hier Kollisionen und ein Angreifer könnte Glück haben. Außerdem wäre es sicherlich möglich den TOTP-Key mit genug öffentlichen Zahlenfolgen zu berechnen oder ihn zu erraten. Dagegen gibt es aber auch wie bei normalen Passwörtern eine einfache Lösung... ab und an wechseln.
