@@ -30,6 +30,17 @@ Da ich den USB-Stick schon exFAT formatiert hatte, entschloss ich mich für den 
 
 Nach dem Aufstehen ging ich gleich zum Laptop und entfernte den USB-Stick auf "sichere" Weise mit sync und mit Information an das Betriebsystem. Den USB-Stick legte ich neben den Notebook und machte einen Reboot, damit wollte ich sicher gehen das ich nur Daten aus dem Flash-Speicher teste und keine Daten aus einem Cache.
 
-Nach etwa 10 Minuten ging es dann mit dem Teil zwei weiter. Den Notebook wieder an den Rechner angeschlossen und das automatissche Mounting machte seinen Job. Dann wieder in das Hauptverzeichnis und mit `f3read .` den Lesetest gestartet. Hier bei werden alle Dateien geprüft und leider wieder mit USB2-Geschwindigkeit. Ab der Datei `51.h2w` gab es in der Ausgabe nur noch Datenteile mit dem Status `corrupted`.
+Nach etwa 10 Minuten ging es dann mit dem Teil zwei weiter. Den Notebook wieder an den Rechner angeschlossen und das automatissche Mounting machte seinen Job. Dann wieder in das Hauptverzeichnis und mit `f3read .` den Lesetest gestartet. Hier bei werden alle Dateien geprüft und leider wieder mit USB2-Geschwindigkeit. Ab der Datei `51.h2w` gab es in der Ausgabe nur noch Datenteile mit dem Status `corrupted`. In der Datei `491.h2w` drehte sich das ganze nicht nur um, sondern ein paar Blöcke wurden auch als `overwritten` erkannt.
+
+Das Ende vom Test:
+```
+Data OK:          59.92 GB (125666348 sectors)
+Data LOST:       440.06 GB (922871252 sectors)
+Corrupted:       440.00 GB (922755780 sectors)
+Slightly changed:  0.00 Byte (0 sectors)
+Overwritten:      56.38 MB (115472 sectors)
+```
+Damit wird der Stick auf jeden Fall zurück geschickt und schlecht bewertet.
+
 
 [^1]: [Fight Flash Fraud](https://fight-flash-fraud.readthedocs.io)
