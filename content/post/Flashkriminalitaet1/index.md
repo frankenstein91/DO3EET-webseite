@@ -42,5 +42,6 @@ Overwritten:      56.38 MB (115472 sectors)
 ```
 Damit wird der Stick auf jeden Fall zurück geschickt und schlecht bewertet.
 
+<sub><sup>Ich werde den USB-Stick nicht verlinken und auch den Produktnamen nicht nennen. Damit will ich verhindern, dass die Betrüger einen SEO-Vorteil mit diesem Beitrag bekommen.</sup></sub>
 
 [^1]: [Fight Flash Fraud](https://fight-flash-fraud.readthedocs.io)
