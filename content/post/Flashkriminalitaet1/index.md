@@ -1,6 +1,6 @@
 +++
 title = 'Flashkriminalität'
-date = 2024-04-11T12:32:55+02:00
+date = 2024-04-11T16:32:55+02:00
 draft = false
 tags = [
     "Linux",
