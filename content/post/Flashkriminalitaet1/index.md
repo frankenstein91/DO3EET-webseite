@@ -15,7 +15,7 @@ tags = [
 Ich möchte meine aktuellen negativen Erfahrungen gern mit der Welt teilen. Damit möchte ich den Betrügern mögliche Opfer abnehmen und dazu beitragen diese Betrugsart aus der Welt zu schaffen. Leider lohnt sie sich immer noch viel zu oft.
 
 # Geschichte
-Ich habe vor einigen Tagen einen USB3-Stick mit 512GB auf Amazon gekauft. Mir sagte der USB-Stick hauptsächlich durch sein Design zu. Als ich den USB-Stick wie üblich vormatierte, kam mir auch noch nichts merkwürdig vor. Da ich aber zwei USB-Sticks bestellt hatte (für einen Freund), wollte ich noch (keine Ahnung wie mein Kopf darauf kam), den USB-Stick genauer prüfen. Dabei viel mir die langsame Geschwindigkeit von USB2 auf.
+Ich habe vor einigen Tagen einen USB3-Stick mit 512GB auf Amazon gekauft. Mir sagte der USB-Stick hauptsächlich durch sein Design zu. Als ich den USB-Stick wie üblich formatierte, kam mir auch noch nichts merkwürdig vor. Da ich aber zwei USB-Sticks bestellt hatte (für einen Freund), wollte ich noch (keine Ahnung wie mein Kopf darauf kam), den USB-Stick genauer prüfen. Dabei viel mir die langsame Geschwindigkeit von USB2 auf.
 
 # Analyse
 ## USB-Version
