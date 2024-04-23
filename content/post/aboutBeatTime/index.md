@@ -13,3 +13,13 @@ In vielen Bereichen unseres Lebens ist die Uhrzeit ein wichtiges Merkmal. Sehr a
 
 Unsere meistgenutzten babylonischen Uhrzeit, haben wir aber noch zwei andere Probleme selbstverschuldet hinzugefügt... Zeitzonen und Zeitumstellung. Bei internationalen Treffen ist also eine sonnenabhänige Uhrzeit schwer gleichzusetzen. 8 Uhr in Japan ist nicht 8 Uhr in Berlin. Hier setzte die Firma Swatch aus der Schweiz 1998 an und stellte eine neue Uhrzeiteinteilung vor.
 
+Ich sehe in der Swatch Internet Time oder kurz .beat Time einige Vorteile:
+
+- keine Zeitzonen
+- keine Sommerzeit
+- es ist eine metrische Uhrzeit bzw. Dezimalzeit
+- es gibt nur eine Einheit (.beat).. wobei eine Sekunde 0.011574 .beats sind und damit 1 k.beat ein Tag entsprechen
+
+Einen Nachteil sehe ich nur bei unseren aktuellen Formeln die durch die Geschichte auf der Sekunde als SI-Einheit aufbauen.
+
+Damit ist es aktuell **{{< beattime >}}**
