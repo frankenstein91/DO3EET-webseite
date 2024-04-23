@@ -1,0 +1,19 @@
+<p id="swatchTime">Loading...</p>
+<script>
+  const swatchTimeElement = document.getElementById("swatchTime");
+  function getSwatchInternetTime() {
+    const date = new Date();
+    const hours = (date.getUTCHours() + 1) % 24; // Add 1 and handle overflow for next day
+    const minutes = date.getUTCMinutes() / 60;
+    const seconds = date.getUTCSeconds() / 3600;
+    const beats = (hours + minutes + seconds) / (24 / 1000);
+    return beats.toFixed(2);
+  }
+  function updateSwatchTime() {
+    const beats = getSwatchInternetTime();
+    swatchTimeElement.textContent = `${beats}`;
+  }
+
+  updateSwatchTime();
+  setInterval(updateSwatchTime, 1000); // Update every second
+</script>
