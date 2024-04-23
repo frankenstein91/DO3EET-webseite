@@ -22,4 +22,4 @@ Ich sehe in der Swatch Internet Time oder kurz .beat Time einige Vorteile:
 
 Einen Nachteil sehe ich nur bei unseren aktuellen Formeln die durch die Geschichte auf der Sekunde als SI-Einheit aufbauen.
 
-Damit ist es aktuell **{{< beattime >}}**
+Damit ist es aktuell **{{< beattime >}}**.
