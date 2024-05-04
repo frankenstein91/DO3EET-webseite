@@ -50,3 +50,6 @@ Jeder Windows-Benutzer kennt Ihn, ReactOS-Nutzer kopieren Ihn und Linux-User lac
 [Marius Tivadar](https://github.com/mtivadar) hat vor einigen Jahren eine spannende Möglichkeit gefunden Windows-Systeme zum Bluescreen zu führen. Der Angriff besteht darin, den Namen des Stammverzeichnisses sowie dessen INDEX_ALLOCATION an drei Stellen zu ändern.
 Die automatische Wiedergabe ist standardmäßig aktiviert und führt beim Einstecken des USB-Sticks zum Absturz. Selbst wenn die automatische Wiedergabe deaktiviert ist, stürzt das System beim Zugriff auf eine Datei auf dem Stick ab, hier hilft der Virenscanner zum Absturz.
 Den PoC und eine ausführliche Anleitung gibt es auf GitHub [windows10_ntfs_crash_dos](https://github.com/mtivadar/windows10_ntfs_crash_dos/tree/master).
+
+## Reaktion von Amazon
+Meine Bewertung zum USB-Stick wurde zweimal mit einem Hinweis auf einen ungenannten Regelverstoß nicht veröffentlicht. Das Produkt haben wir gemeldet und es ist zum aktuellen Zeitpunt immer noch im Verkauf unter dem selben Link. 
