@@ -16,8 +16,11 @@ Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vo
 
 ## USB3-Pins
 Wir erinnern uns an das Bild des blauen USB2-Anschluss? Nein, okay dann hier nochmal:
+
 {{< imgwebp src="PXL_20240411_055122297~3.jpg" alt="USB-Anschluss blau" width="800" height="600" >}}
+
 Und hier nun von einem guten USB-3 auf USB-C Kabel aus meiner Sammlung ein Bild wie es aussehen müsste:
+
 {{< imgwebp src="USB3.jpg" alt="USB3-Anschluss" width="800" height="600" >}}
 
 Sehr deutlich sieht man in der Tiefe (?) des Anschlusses die 5 weiteren Kontakte. Die USB 3.0-Spezifikation fügt zusätzliche Kontakte im Vergleich zu USB 2.0 hinzu, um die Leistung zu verbessern und neue Funktionen zu ermöglichen. Das sind ein zusätzlicher Erdungskontakt, ein paar für die Stromversorgung und ein paar für die SuperSpeed-Datenleitung. Die alten Kontakte bleiben in der Spezifikation für USB3 aber bestehen, daher zusätzliche Pins/Kontakte.
