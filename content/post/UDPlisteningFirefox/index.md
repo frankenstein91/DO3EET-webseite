@@ -14,7 +14,7 @@ tags = [
 +++
 
 Ich habe mir heute das Tool [osquery](https://osquery.io/) angeschaut, da ich dies als Toolvorstellung im Blog unterbringen wollte. Dabei war ich besonders auf die Möglichkeiten im Bereich Netzwerk interessiert. Angefangen hatte ich eine Möglichkeit zu finden `netstat -tulpen` zu ersetzen. Und habe mir dafür folgende SQL-Abfrage erstellt...
-
+<!--more-->
 ```sql
 SELECT p.path,(CASE protocol WHEN 6 THEN 'TCP' WHEN 17 THEN 'UDP' ELSE protocol END) AS protocol,(CASE family WHEN 2 THEN 'IP4' WHEN 10 THEN 'IP6' ELSE family END) AS family,address,port from listening_ports as lpor INNER JOIN processes AS p ON p.pid = lpor.pid where port != 0;
 ```
