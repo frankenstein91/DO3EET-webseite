@@ -12,7 +12,7 @@ tags = [
 ]
 +++
 
-Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vom [Erklärbär Marcel Waldvogel ](https://dnip.ch/) [verlink](https://waldvogel.family/@marcel/112262847793273940) wurde, gehe ich hier etwas auf die Fragen zu meinem Artikel [Flashkriminalität]({{< ref "/post/Flashkriminalitaet1" >}}) unter seiner Verlinkung ein.
+Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vom [Erklärbär Marcel Waldvogel ](https://dnip.ch/) [verlinkt](https://waldvogel.family/@marcel/112262847793273940) wurde, gehe ich hier etwas auf die Fragen zu meinem Artikel [Flashkriminalität]({{< ref "/post/Flashkriminalitaet1" >}}) unter seiner Verlinkung ein.
 
 ## USB3-Pins
 Wir erinnern uns an das Bild des blauen USB2-Anschluss? Nein, okay dann hier nochmal:
