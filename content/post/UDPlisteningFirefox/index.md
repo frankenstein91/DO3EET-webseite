@@ -36,7 +36,7 @@ WHERE port != 0;
 
 ```
 
-Ich weiß `netstat -tulpen` und `ss -tulpn` sind viel kürzer. Aber der Befehl `netstat` ist **deprecate** bzw. **obsolete**. Das Kürzel `ss` hat in der nationalsozialistischen Vergangenheit von Deutschland eine negative Bedeutung als Bezeichnung für die Schutzstaffel. Bei GIT wurde die Bezeichnung des Hauptzweigs von `master` auf `main` geändert, da man sich bewusst war das die Bennenung für bestimmte Personen beleidigend sein könnte.[^1] Das Aussprechen des Befehls `ss` könnte im Büroalltag (zumindest in Deutschland)[^2] für komische Blicke sorgen, weshalb ich Alternativen zu diesem Befehl sehr gern nutze. 
+Ich weiß `netstat -tulpen` und `ss -tulpn` sind viel kürzer. Aber der Befehl `netstat` ist **deprecate** bzw. **obsolete**.[^3] Das Kürzel `ss` hat in der nationalsozialistischen Vergangenheit von Deutschland eine negative Bedeutung als Bezeichnung für die Schutzstaffel. Bei GIT wurde die Bezeichnung des Hauptzweigs von `master` auf `main` geändert, da man sich bewusst war das die Bennenung für bestimmte Personen beleidigend sein könnte.[^1] Das Aussprechen des Befehls `ss` könnte im Büroalltag (zumindest in Deutschland)[^2] für komische Blicke sorgen, weshalb ich Alternativen zu diesem Befehl sehr gern nutze. 
 
 Nun ist mir beim Testen etwas sehr interessantes aufgefallen... Mein Firefox lauscht auf 2 UDP-Ports, auch wenn noch keine Website oder ähnliches geöffnet ist.
 
@@ -49,3 +49,4 @@ Die Ports sind nicht fest und sich nur ein Snapshot wie es zum aktuellen Zeitpun
 
 [^1]: https://sfconservancy.org/news/2020/jun/23/gitbranchname/
 [^2]: https://www.meinauto.de/lp/ratgeber/verbotene-kennzeichen
+[^3]: https://lists.debian.org/debian-devel/2009/03/msg00780.html
