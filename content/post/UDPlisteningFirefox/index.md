@@ -36,7 +36,7 @@ WHERE port != 0;
 
 ```
 
-Ich weiß `netstat -tulpen` und `ss -tulpn` sind viel kürzer. Aber der Befehl `netstat` ist **deprecate** bzw. **obsolete**. Das Kürzel `ss` hat in der nationalsozialistischen Vergangenheit von Deutschland eine negative Bedeutung als Bezeichnung für die Schutzstaffel. Bei GIT wurde die Bezeichnung des Hauptzweigs von `master` auf `main` geändert, da man sich bewusst war das die Bennenung für bestimmte Personen beleidigend sein könnte.[^1] Das Aussprechen des Befehls `ss` könnte im Büroalltag (zumindest in Deutschland) für komische Blicke sorgen, weshalb ich Alternativen zu diesem Befehl sehr gern nutze. 
+Ich weiß `netstat -tulpen` und `ss -tulpn` sind viel kürzer. Aber der Befehl `netstat` ist **deprecate** bzw. **obsolete**. Das Kürzel `ss` hat in der nationalsozialistischen Vergangenheit von Deutschland eine negative Bedeutung als Bezeichnung für die Schutzstaffel. Bei GIT wurde die Bezeichnung des Hauptzweigs von `master` auf `main` geändert, da man sich bewusst war das die Bennenung für bestimmte Personen beleidigend sein könnte.[^1] Das Aussprechen des Befehls `ss` könnte im Büroalltag (zumindest in Deutschland)[^2] für komische Blicke sorgen, weshalb ich Alternativen zu diesem Befehl sehr gern nutze. 
 
 Nun ist mir beim Testen etwas sehr interessantes aufgefallen... Mein Firefox lauscht auf 2 UDP-Ports, auch wenn noch keine Website oder ähnliches geöffnet ist.
 
@@ -48,3 +48,4 @@ Nun ist mir beim Testen etwas sehr interessantes aufgefallen... Mein Firefox lau
 Die Ports sind nicht fest und sich nur ein Snapshot wie es zum aktuellen Zeitpunkt war. Die Ports verschwinden wenn man in der `about:config` den Parameter `network.http.http3.enable` auf `false` setzt und damit HTTP/3 **deaktiviert**. Ich vermute also es handelt sich hier um Quick UDP Internet Connections, die von HTTP/3 genutzt werden.
 
 [^1]: https://sfconservancy.org/news/2020/jun/23/gitbranchname/
+[^2]: https://www.meinauto.de/lp/ratgeber/verbotene-kennzeichen
