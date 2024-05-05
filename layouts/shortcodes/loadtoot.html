@@ -34,10 +34,10 @@
                             style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto;"
 						/>
 					</a>
-					<div class="toot-author">
+					<span class="toot-author">
 						<a class="toot-author-name" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $json.account.display_name }}</a>
 						<a class="toot-author-handle" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $handleInst }}</a>
-					</div>
+                    </span>
 				</div>
 				{{ $json.content | safeHTML }}
 				{{ with $json.media_attachments }}
