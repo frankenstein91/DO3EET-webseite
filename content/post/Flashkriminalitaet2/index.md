@@ -12,7 +12,7 @@ tags = [
 ]
 +++
 
-Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vom [Erklärbär Marcel Waldvogel ](https://dnip.ch/) verlinkt wurde, gehe ich hier etwas auf die Fragen zu meinem Artikel [Flashkriminalität]({{< ref "/post/Flashkriminalitaet1" >}}) unter seiner Verlinkung ein.
+Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vom [Erklärbär Marcel Waldvogel](https://dnip.ch/) verlinkt wurde, gehe ich hier etwas auf die Fragen zu meinem Artikel [Flashkriminalität]({{< ref "/post/Flashkriminalitaet1" >}}) unter seiner Verlinkung ein.
 
 <!--more-->{{< loadtoot instance="waldvogel.family" id="112262847793273940" >}}
 
