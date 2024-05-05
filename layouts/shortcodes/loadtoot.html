@@ -24,13 +24,14 @@
 		{{ end }}
 
 		{{ if isset $json "content" }}
-			<blockquote class="toot-blockquote" cite="{{ $tootLink }}" style="box-shadow: 3px 3px 2px 0px rgba(255, 255, 255, 1);">
+			<blockquote class="toot-blockquote" cite="{{ $tootLink }}">
 				<div class="toot-header">
 					<a class="toot-profile" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">
 						<img
 							src="{{ $json.account.avatar }}"
 							alt="Mastodon avatar for {{ $handleInst }}"
 							loading="lazy"
+                            style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto;"
 						/>
 					</a>
 					<div class="toot-author">
