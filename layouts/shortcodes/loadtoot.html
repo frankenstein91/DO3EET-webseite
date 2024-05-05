@@ -8,7 +8,7 @@
 {{ $votesCount := 0 }}
 {{ $urlToGet := print "https://" $masIns "/api/v1/statuses/" $id }}
 
-{{% summary-ignore %}}
+
 {{- with resources.GetRemote $urlToGet  -}}
 	{{ if (resources.GetRemote $urlToGet).Err }}
 		<blockquote class="toot-blockquote">
@@ -48,4 +48,3 @@
 		{{ end }}
 	{{ end }}
 {{- end -}}
-{{% /summary-ignore %}}
