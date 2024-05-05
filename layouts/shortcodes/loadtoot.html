@@ -24,7 +24,7 @@
 		{{ end }}
 
 		{{ if isset $json "content" }}
-			<blockquote class="toot-blockquote" cite="{{ $tootLink }}">
+			<blockquote class="toot-blockquote" cite="{{ $tootLink }}" style="border: 4px;">
 				<div class="toot-header">
 					<a class="toot-profile" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">
 						<img
