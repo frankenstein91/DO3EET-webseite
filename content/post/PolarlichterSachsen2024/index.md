@@ -25,6 +25,10 @@ Die ersten Fotos habe ich schon fertig und schreibe nun einen kurzen Beitrag.
 
 {{< imgwebp src="FRA_3056.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
+{{< rawhtml >}}
+<iframe title="Polarlichter über Sachsen" width="560" height="315" src="https://tube.tchncs.de/videos/embed/5100a398-587c-4da3-9474-48aa16062d2c?warningTitle=0&amp;p2p=0" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+{{< /rawhtml >}}
+
 Die Nikon D5600 hatte ich auf ISO 1600 und 2 Sekunden bei offener Blende belichtet.
 
 Ich wünsche euch einen erfolgreichen Abend.

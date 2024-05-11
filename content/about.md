@@ -39,6 +39,17 @@ Bitte beachten Sie, dass YouTube eigene Datenschutzrichtlinien hat, auf die ich 
 
 Um Ihre Privatsphäre zu schützen, habe ich die Einbettung von YouTube-Videos so konfiguriert, dass sie den erweiterten Datenschutzmodus von YouTube verwenden. Bitte beachten Sie, dass der erweiterte Datenschutzmodus von YouTube möglicherweise erst dann aktiviert wird, wenn Sie das Video abspielen. Die Datenübertragung an YouTube kann jedoch auch ohne aktive Video-Wiedergabe stattfinden.
 
+# PeerTube-Einbettung
+Auf dieser Website werden Videos von der Plattform PeerTube eingebettet. PeerTube ist eine dezentrale Videoplattform, die auf dem Peer-to-Peer-Prinzip basiert. Das bedeutet, dass die Videos nicht auf einem zentralen Server gespeichert werden, sondern auf einem Netzwerk von Computern, die von den Nutzern der Plattform betrieben werden. Diese Funktion ist nach besten Wissen und Gewissen abgeschaltet. Der PeerTube-Server-Betreiber sieht aber trotzdem Ihre IP und Browserdaten.
+## Datenverarbeitung durch PeerTube
+- Ihre IP-Adresse
+- Ihr Browsertyp und Ihre Browsereinstellungen
+- Das Betriebssystem Ihres Geräts
+- Die Referrer-URL (die URL der Website, von der Sie auf das Video gekommen sind)
+- Datum und Uhrzeit des Abrufs des Videos
+- Die Dauer der Wiedergabe des Videos
+- Ob Sie das Video vollständig angesehen haben
+
 # Hosting
 Cloudflare dient als Content Delivery Network (CDN), Hosting und bietet Sicherheits- und Performance-Verbesserungen für die Bereitstellung dieser Website. Beachten Sie, dass die Hosting-Infrastruktur von Cloudflare genutzt wird, um die Verfügbarkeit und Geschwindigkeit der Website zu optimieren. Cloudflare erhebt dabei möglicherweise anonymisierte statistische Daten über den Zugriff auf diese Website. Für weitere Informationen zu den Datenschutzpraktiken von Cloudflare verweise ich auf deren Datenschutzrichtlinien: 
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
