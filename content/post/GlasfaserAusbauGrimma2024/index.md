@@ -2,6 +2,7 @@
 title = 'Der Glasfaserausbau in meinem Ort'
 date = 2024-03-27T07:46:46+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Glasfaser",
     "Glasfaserausbau",

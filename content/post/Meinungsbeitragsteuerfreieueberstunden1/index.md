@@ -2,6 +2,7 @@
 title = '[Meine Meinung] steuerfreie Überstunden'
 date = 2024-05-07T08:50:00+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Deutschland",
     "Politik",

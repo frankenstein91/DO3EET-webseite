@@ -2,6 +2,7 @@
 title = 'Linux sudo Tipp für Umsteiger'
 date = 2024-04-26T21:52:52+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Security",

@@ -2,6 +2,7 @@
 title = 'Flashkriminalität'
 date = 2024-04-11T16:32:55+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Sicherheit",

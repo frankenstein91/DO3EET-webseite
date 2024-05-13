@@ -2,6 +2,7 @@
 title = 'Flashkriminalität - es geht weiter...'
 date = 2024-05-04T22:00:00+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Sicherheit",
