@@ -2,7 +2,7 @@
 title = 'First'
 date = 2023-11-12T19:37:06+01:00
 draft = false
-author = "Frank Tornack"
+authors = ["Frank Tornack"]
 tags = [
     "Website",
 ]
