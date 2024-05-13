@@ -2,6 +2,7 @@
 title = 'ISS QSL Antwort'
 date = 2024-04-17T22:32:00+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "ISS",
     "Space",

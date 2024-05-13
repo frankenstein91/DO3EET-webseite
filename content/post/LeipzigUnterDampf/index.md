@@ -2,6 +2,7 @@
 title = 'Leipzig unter Dampf'
 date = 2023-12-02T18:34:29+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Bahn",
     "Reisen",
