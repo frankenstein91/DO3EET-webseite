@@ -2,6 +2,7 @@
 title = 'Firefox lauscht auf UDP'
 date = 2024-05-04T18:25:59+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Security",

@@ -2,6 +2,7 @@
 title = 'Befehle über HAM'
 date = 2024-04-09T08:50:20+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Sicherheit",

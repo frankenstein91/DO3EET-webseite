@@ -2,6 +2,7 @@
 title = 'Funken auf den CLT2024'
 date = 2024-03-19T14:15:48+01:00
 draft = false
+author = "Frank Tornack"
 +++
 
 Nach einem schönen Wochenende auf dem Event [Chemnitzer Linux-Tage](https://chemnitzer.linux-tage.de/2024/de), startet nun wieder das "normale" Leben. Doch ich möchte noch kurz von dem Event berichten.

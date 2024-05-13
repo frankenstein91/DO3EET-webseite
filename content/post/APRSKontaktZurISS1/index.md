@@ -2,6 +2,7 @@
 title = 'APRS Kontakt zur ISS'
 date = 2024-03-27T20:51:19+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "ISS",
     "Space",

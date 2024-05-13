@@ -2,6 +2,7 @@
 title = 'Polarlichter über Sachsen'
 date = 2024-05-10T23:15:13+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Fotografie",
     "Nachthimmel",
