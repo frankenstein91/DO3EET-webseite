@@ -2,6 +2,7 @@
 title = 'grafische Oberfläsche mit Hyprland'
 date = 2024-03-30T15:07:44+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Wayland",

@@ -2,6 +2,7 @@
 title = 'CVE-2024-3094 xz/sshd Backdoor'
 date = 2024-04-02T09:56:58+02:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Sicherheit",
