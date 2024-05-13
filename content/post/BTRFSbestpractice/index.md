@@ -2,6 +2,7 @@
 title = 'BTRFS best practice'
 date = 2024-03-28T13:04:18+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Linux",
     "Dateisystem",

@@ -2,6 +2,7 @@
 title = 'Ausflug zum Nord-Ostsee-Kanal'
 date = 2023-11-25T16:40:20+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Deutschland",
     "Reisen",
