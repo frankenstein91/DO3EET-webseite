@@ -18,6 +18,10 @@ palette = "tokyo-night-dark"
 title = "DO3EET"
 description = "Ich bin Frank. Ein Informatiker und Funkamateur aus Deutschland. Außerdem reise ich gern nach Japan."
 
+[params.author]
+name = 'DO3EET'
+
+
 [markup.goldmark.renderer]
 unsafe = true
 
