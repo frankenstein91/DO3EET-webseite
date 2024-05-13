@@ -2,6 +2,7 @@
 title = 'Unterwegs mit PicoAPRS und eGolf'
 date = 2023-11-18T20:45:51+01:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Website",
     "Funk",

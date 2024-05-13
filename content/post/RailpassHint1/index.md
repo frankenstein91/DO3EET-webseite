@@ -2,6 +2,7 @@
 title = 'Railpass in Japan schneller nutzen'
 date = 2024-01-03T11:25:50+01:00
 draft = false
+author = "Frank Tornack"
 +++
 
 Hallo aus Japan
