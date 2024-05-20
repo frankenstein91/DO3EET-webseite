@@ -60,5 +60,7 @@ Where=/home/funker/.backups/googlemount
 Options=rw,_netdev,args2env,vfs-cache-mode=writes,config=/home/funker/.config/rclone/rclone.conf,cache-dir=/home/funker/.backups/.cache-dir/googlemount
 ```
 
+# Dateien verschlüsseln
+Sensible Daten sollten auf einer Cloud nicht unverschlüsselt abgelgt werden, auch wenn es sich um eine vertrauenswürdige Cloud handelt. Dafür bieten sich Systeme wie gocryptfs an. Unter ArchLinux ist gocryptfs leicht mit `gocryptfs` instaliert.
 
 [^1]: Arch User Repository
