@@ -1,6 +1,6 @@
 +++
 title = 'Datenbackup in die Cloud'
-date = 2024-05-17T18:40:35+02:00
+date = 2024-05-20T16:40:35+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -169,7 +169,7 @@ What=spiegel:
 Where=/home/funker/OnlineBackup
 Options=rw,_netdev,args2env,config=/home/funker/.config/rclone/rclone.conf
 ```
-Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.mount` nutzen und mit `systemctl --user stop home-funker-OnlineBackup.mount` wieder trennen.
+Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.mount` nutzen und mit `systemctl --user stop home-funker-OnlineBackup.mount` wieder trennen. Beim Trennen bleiben die autoamtisch gestarteten Mountpunte aktiv, was zwar nicht optimal ist... aber villeicht beim Debug hilft.
 
 
 [^1]: Arch User Repository
