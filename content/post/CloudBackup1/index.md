@@ -90,6 +90,15 @@ Ab hier kann man sein Backup für den ersten Test mit `systemctl --user start ho
 # Fazit bis hier
 Mit diesen Zeilen hat man ein verschlüsseltes Backup auf dem Cloud-Provider Google. Solange der Account nicht gehackt, gelöscht oder beschädigt wird, ist nur die Gefahr das Google Drive auf dem [Google Friedhof](https://gcemetery.co/) landet oder Google den Betrieb ganz einstellt. Beide Probleme sind zwar extremst unwahrscheinlich, aber ich hätte es auch nicht bei Google Cloud Print vermutet.
 
+# zweite Cloud als Spiegel
+Um auch diese Gefahr zu bannen, lohnt es sich eine zweite Cloud anzubinden. Es würde sich auch eine NAS oder ähnliches lohnen. Im Beispiel machen wir mit einem S3-Speicher weiter. Dafür starte ich mir fix einen MinIO-Server in Docker:
+```bash
+docker run -p 9000:9000 -p 9001:9001 --name minio -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=toortoor123" quay.io/minio/minio server /data --console-address ":9001"
+```
+Der Docker-Container ist nur für den Test und nicht für den späteren Betrieb.
+
+Das Setup findet man wieder im `rclone config` unter dem Punkt 4 und dann 18. Wieder ganz normal die Fragen beantworten.
+Dann legt man sich einen Bucket im S3 mit `rclone mkdir MinIO1:/backup1` an.
 
 
 [^1]: Arch User Repository
