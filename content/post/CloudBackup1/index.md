@@ -29,9 +29,10 @@ rm -rf pikaur
 ```
 
 # Google Drive Zugriff
-Für de Zugriff auf die Cloud-Umgebung habe ich mich für das Projekt [google-drive-ocamlfuse](https://astrada.github.io/google-drive-ocamlfuse/) entschieden. Bei der Installation kommt pikaur das gleich das erste mal richtig zum Einsatz... 
+Für de Zugriff auf die Cloud-Umgebung habe ich mich für das Projekt [rclone](https://rclone.org/) entschieden. Eigentlich wollte ich [google-drive-ocamlfuse](https://astrada.github.io/google-drive-ocamlfuse/) nutzen, bin aber bei der Installation immer wieder gescheitert.
+Bei der Installation kommt pikaur gleich das erste Mal richtig zum Einsatz... 
 ```bash
-pikaur -Sy google-drive-ocamlfuse
+pikaur -Sy rclone
 ```
 
 
