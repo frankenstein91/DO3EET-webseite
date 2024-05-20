@@ -48,6 +48,17 @@ mkdir -p .cache-dir/googlemount
 ```
 Optional, aber sehr hilfreich ist der Befehl `loginctl enable-linger`. Mit dieser kleinen Änderung am User kann sich systemd auch ohne Nutzeranmeldung als der Nutzer ausgeben und Dinge im Hintergrund ausführen.
 
+Danach hüpfen wir in den Texteditor und legen uns eine Datei für systemd an. Diese Datei wird Google Drive in unser Filesystem einbinden.
+`code .config/systemd/user/home-funker-.backups-googlemount.mount`... den Dateinamen kann man sich leicht mit `systemd-escape -p --suffix=mount "/home/funker/.backups/googlemount"` erstellen.
+```
+[Unit]
+Description=Mount for /home/funker/.backups/googlemount
+[Mount]
+Type=rclone
+What=GoogleDrive1:Backup1
+Where=/home/funker/.backups/googlemount
+Options=rw,_netdev,args2env,vfs-cache-mode=writes,config=/home/funker/.config/rclone/rclone.conf,cache-dir=/home/funker/.backups/.cache-dir/googlemount
+```
 
 
 [^1]: Arch User Repository
