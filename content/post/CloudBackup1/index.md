@@ -34,7 +34,7 @@ Bei der Installation kommt pikaur gleich das erste Mal richtig zum Einsatz...
 ```bash
 pikaur -Sy rclone
 ```
-
+Für die Einrichtung der Verbindung zur Google Cloud braucht das System einen Browser. Es ist im Grunde egal welchen Browser man nutzt, ich habe für mein Beispiel Google Chrome mit `pikaur -Sy google-chrome` installiert. 
 
 
 
