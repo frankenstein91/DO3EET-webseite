@@ -171,5 +171,7 @@ Options=rw,_netdev,args2env,config=/home/funker/.config/rclone/rclone.conf
 ```
 Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.mount` nutzen und mit `systemctl --user stop home-funker-OnlineBackup.mount` wieder trennen. Beim Trennen bleiben die autoamtisch gestarteten Mountpunte aktiv, was zwar nicht optimal ist... aber villeicht beim Debug hilft.
 
+# Schluss
+Wie immer sind Fragen gern gesehen...
 
 [^1]: Arch User Repository
