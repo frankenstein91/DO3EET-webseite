@@ -49,7 +49,7 @@ mkdir -p .cache-dir/googlemount
 Optional, aber sehr hilfreich ist der Befehl `loginctl enable-linger`. Mit dieser kleinen Änderung am User kann sich systemd auch ohne Nutzeranmeldung als der Nutzer ausgeben und Dinge im Hintergrund ausführen.
 
 Danach hüpfen wir in den Texteditor und legen uns eine Datei für systemd an. Diese Datei wird Google Drive in unser Filesystem einbinden.
-`code .config/systemd/user/home-funker-.backups-googlemount.mount`... den Dateinamen kann man sich leicht mit `systemd-escape -p --suffix=mount "/home/funker/.backups/googlemount"` erstellen.
+`code /home/funker/.config/systemd/user/home-funker-.backups-googlemount.mount`... den Dateinamen kann man sich leicht mit `systemd-escape -p --suffix=mount "/home/funker/.backups/googlemount"` erstellen.
 ```
 [Unit]
 Description=Mount for /home/funker/.backups/googlemount
@@ -61,6 +61,28 @@ Options=rw,_netdev,args2env,vfs-cache-mode=writes,config=/home/funker/.config/rc
 ```
 
 # Dateien verschlüsseln
-Sensible Daten sollten auf einer Cloud nicht unverschlüsselt abgelgt werden, auch wenn es sich um eine vertrauenswürdige Cloud handelt. Dafür bieten sich Systeme wie gocryptfs an. Unter ArchLinux ist gocryptfs leicht mit `gocryptfs` instaliert.
+Sensible Daten sollten auf einer Cloud nicht unverschlüsselt abgelgt werden, auch wenn es sich um eine vertrauenswürdige Cloud handelt. Dafür bieten sich Systeme wie gocryptfs, cryfs und Tomb an. Unter ArchLinux ist gocryptfs leicht mit `gocryptfs` instaliert.
+Die Arbeit geht weiter im Ordner `/home/funker/.backups`. Hier legen wir uns noch einen `.config` Ordner an.
+Da wir das Mounting automatesieren wollen, erzeugen wir uns gleich ein Passwortfile und erzeugen den Verschlüsslungscontainer.
+```bash
+pikaur -Sy pwgen
+pwgen -ys 256 1 > .config/fs1.passwd
+gocryptfs -init -config /home/funker/.backups/.config/fs1.conf -passfile /home/funker/.backups/.config/fs1.passwd /home/funker/.backups/googlemount
+```
+Der Masterkey und die Config Datei sollten auf einen externen Speichermedium gespeichert werden (als Backup) und sicher aufbewahrt werden.
+```bash
+mkdir /home/funker/.backups/googledecry
+code /home/funker/.config/systemd/user/home-funker-.backups-googledecry.mount
+```
+```
+[Unit]
+Description=Mount for /home/funker/.backups/googledecry
+After=home-funker-.backups-googlemount.mount
+[Mount]
+Type=fuse./usr/bin/gocryptfs
+What=/home/funker/.backups/googlemount
+Where=/home/funker/.backups/googledecry
+Options=passfile=/home/funker/.backups/.config/fs1.passwd,config=/home/funker/.backups/.config/fs1.conf
+```
 
 [^1]: Arch User Repository
