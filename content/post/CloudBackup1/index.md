@@ -85,4 +85,6 @@ Where=/home/funker/.backups/googledecry
 Options=passfile=/home/funker/.backups/.config/fs1.passwd,config=/home/funker/.backups/.config/fs1.conf
 ```
 
+Ab hier kann man sein Backup für den ersten Test mit `systemctl --user start home-funker-.backups-googledecry.mount` anbinden und mit `systemctl --user stop home-funker-.backups-googledecry.mount` wieder trennen.
+
 [^1]: Arch User Repository
