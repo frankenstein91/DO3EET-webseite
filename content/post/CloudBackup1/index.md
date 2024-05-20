@@ -87,6 +87,9 @@ Options=passfile=/home/funker/.backups/.config/fs1.passwd,config=/home/funker/.b
 
 Ab hier kann man sein Backup für den ersten Test mit `systemctl --user start home-funker-.backups-googledecry.mount` anbinden und mit `systemctl --user stop home-funker-.backups-googledecry.mount` wieder trennen.
 
+# Fazit bis hier
+Mit diesen Zeilen hat man ein verschlüsseltes Backup auf dem Cloud-Provider Google. Solange der Account nicht gehackt, gelöscht oder beschädigt wird, ist nur die Gefahr das Google Drive auf dem [Google Friedhof](https://gcemetery.co/) landet oder Google den Betrieb ganz einstellt. Beide Probleme sind zwar extremst unwahrscheinlich, aber ich hätte es auch nicht bei Google Cloud Print vermutet.
+
 
 
 [^1]: Arch User Repository
