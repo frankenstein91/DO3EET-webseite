@@ -60,7 +60,7 @@ Where=/home/funker/.backups/googlemount
 Options=rw,_netdev,args2env,vfs-cache-mode=writes,config=/home/funker/.config/rclone/rclone.conf,cache-dir=/home/funker/.backups/.cache-dir/googlemount
 ```
 
-# Dateien verschlüsseln
+# Dateien verschlüsseln auf Google
 Sensible Daten sollten auf einer Cloud nicht unverschlüsselt abgelgt werden, auch wenn es sich um eine vertrauenswürdige Cloud handelt. Dafür bieten sich Systeme wie gocryptfs, cryfs und Tomb an. Unter ArchLinux ist gocryptfs leicht mit `gocryptfs` instaliert.
 Die Arbeit geht weiter im Ordner `/home/funker/.backups`. Hier legen wir uns noch einen `.config` Ordner an.
 Da wir das Mounting automatesieren wollen, erzeugen wir uns gleich ein Passwortfile und erzeugen den Verschlüsslungscontainer.
@@ -86,5 +86,7 @@ Options=passfile=/home/funker/.backups/.config/fs1.passwd,config=/home/funker/.b
 ```
 
 Ab hier kann man sein Backup für den ersten Test mit `systemctl --user start home-funker-.backups-googledecry.mount` anbinden und mit `systemctl --user stop home-funker-.backups-googledecry.mount` wieder trennen.
+
+
 
 [^1]: Arch User Repository
