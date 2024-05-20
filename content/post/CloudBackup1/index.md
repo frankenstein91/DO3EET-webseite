@@ -67,6 +67,7 @@ Da wir das Mounting automatesieren wollen, erzeugen wir uns gleich ein Passwortf
 ```bash
 pikaur -Sy pwgen
 pwgen -ys 256 1 > .config/fs1.passwd
+systemctl --user start home-funker-.backups-googlemount.mount
 gocryptfs -init -config /home/funker/.backups/.config/fs1.conf -passfile /home/funker/.backups/.config/fs1.passwd /home/funker/.backups/googlemount
 ```
 Der Masterkey und die Config Datei sollten auf einen externen Speichermedium gespeichert werden (als Backup) und sicher aufbewahrt werden.
@@ -100,5 +101,46 @@ Der Docker-Container ist nur für den Test und nicht für den späteren Betrieb.
 Das Setup findet man wieder im `rclone config` unter dem Punkt 4 und dann 18. Wieder ganz normal die Fragen beantworten.
 Dann legt man sich einen Bucket im S3 mit `rclone mkdir MinIO1:/backup1` an.
 
+Und nun kommen wieder ein paar Zeilen für die Bash:
+```bash
+mkdir /home/funker/.backups/s3mount/
+mkdir /home/funker/.backups/s3decry/
+mkdir /home/funker/.backups/.cache-dir/s3mount/
+pwgen -ys 256 1 > /home/funker/.backups/.config/fs2.passwd
+code /home/funker/.config/systemd/user/$(systemd-escape -p --suffix=mount "/home/funker/.backups/s3mount/")
+```
+Im Texteditor geht es dann weiter mit:
+```
+[Unit]
+Description=Mount for /home/funker/.backups/s3mount
+[Mount]
+Type=rclone
+What=MinIO1:backup1
+Where=/home/funker/.backups/s3mount
+Options=rw,_netdev,args2env,vfs-cache-mode=writes,config=/home/funker/.config/rclone/rclone.conf,cache-dir=/home/funker/.backups/.cache-dir/s3mount
+```
+Damit sollte der Zugriff auf den S3-Bucket kein Problem mehr sein und wir können hier auch mit Sicherheit weiter machen.
+
+# Dateien verschlüsseln auf der zweiten Seite
+Auch hier müssen wir ein Container für die Verschlüsslung einrichten.
+```bash
+systemctl --user start home-funker-.backups-s3mount.mount
+gocryptfs -init -config /home/funker/.backups/.config/fs2.conf -passfile /home/funker/.backups/.config/fs2.passwd /home/funker/.backups/s3mount
+code /home/funker/.config/systemd/user/$(systemd-escape -p --suffix=mount "/home/funker/.backups/s3decry/")
+```
+Auch in diesem Texteditor muss etwas geschrieben werden:
+```
+[Unit]
+Description=Mount for /home/funker/.backups/googledecry
+After=home-funker-.backups-s3mount.mount
+[Mount]
+Type=fuse./usr/bin/gocryptfs
+What=/home/funker/.backups/s3mount
+Where=/home/funker/.backups/s3decry
+Options=passfile=/home/funker/.backups/.config/fs2.passwd,config=/home/funker/.backups/.config/fs2.conf
+```
+
+# Weiteres Zwischenfazit
+Mit dieser Umsetzung hat man zwei verschlüsselte Orte für sein Backup. Die Verschlüsslung erfolgt mit unterschiedlichen Passwörtern zu unterschiedlichen Anbietern. Im aktuellen Status, muss man sich aber noch selbst darum kümmern die Daten gleich zu halten.
 
 [^1]: Arch User Repository
