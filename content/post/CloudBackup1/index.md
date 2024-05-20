@@ -12,7 +12,7 @@ tags = [
 +++
 
 Für mein Beispiel nutze ich eine neue frische ArchLinux VM. Mein Ziel ist es eine gute Startanleitung für ein sicheres Backup in die Cloud anzubieten. Natürlich nur nach bestem Wissen und Gewissen und ohne Garantie auf Richtigkeit. 
-
+<!--more-->
 # Zugriff auf das AUR
 Auch wenn der Zugriff auf das AUR[^1] auch ohne zusätliche Programme möglich ist, machen es Hilfsprogramme doch sehr leicht. Ich nutze gern [pikaur](https://github.com/actionless/pikaur), welches in Python geschrieben ist. Die Installation ist sehr leicht und geht mit wenigen Zeilen auf der Komandozeile.
 ```bash
