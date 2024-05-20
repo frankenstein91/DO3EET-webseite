@@ -36,6 +36,17 @@ pikaur -Sy rclone
 ```
 Für die Einrichtung der Verbindung zur Google Cloud braucht das System einen Browser. Es ist im Grunde egal welchen Browser man nutzt, ich habe für mein Beispiel Google Chrome mit `pikaur -Sy google-chrome` installiert. 
 
+Nun kann man seine Verbindung zu Google mit ` rclone config` einrichten. Dieses Tool ist ein geführter Setup und eine genauere Erklärung ist nicht notwendig. Ich empfehle für die sichere Konfiguration den Scope `3` bei Google Drive zu nutzen, damit sieht rclone nur die eigenen Dateien und Ordner. Einen Ordner für das Backup würde ich gleich nach der Einrichtung der Verbindung mit `rclone mkdir GoogleDrive1:/Backup1` anlegen.
+
+Auf dem lokalen System braucht es noch einen Ordner zum Mounten und den Ordner für die Config-Dateien
+```bash
+mkdir -p ~/.config/systemd/user/
+mkdir .backups
+cd .backups/
+mkdir googlemount
+mkdir -p .cache-dir/googlemount
+```
+Optional, aber sehr hilfreich ist der Befehl `loginctl enable-linger`. Mit dieser kleinen Änderung am User kann sich systemd auch ohne Nutzeranmeldung als der Nutzer ausgeben und Dinge im Hintergrund ausführen.
 
 
 
