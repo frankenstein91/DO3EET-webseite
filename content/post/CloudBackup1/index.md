@@ -78,7 +78,7 @@ code /home/funker/.config/systemd/user/home-funker-.backups-googledecry.mount
 ```
 [Unit]
 Description=Mount for /home/funker/.backups/googledecry
-After=home-funker-.backups-googlemount.mount
+Requires=home-funker-.backups-googlemount.mount
 [Mount]
 Type=fuse./usr/bin/gocryptfs
 What=/home/funker/.backups/googlemount
@@ -133,7 +133,7 @@ Auch in diesem Texteditor muss etwas geschrieben werden:
 ```
 [Unit]
 Description=Mount for /home/funker/.backups/googledecry
-After=home-funker-.backups-s3mount.mount
+Requires=home-funker-.backups-s3mount.mount
 [Mount]
 Type=fuse./usr/bin/gocryptfs
 What=/home/funker/.backups/s3mount
@@ -161,13 +161,15 @@ Auch dafür baut man sich am besten wieder ein Systemd-File:
 ```
 [Unit]
 Description=Mount for /home/funker/OnlineBackup
-After=home-funker-.backups-s3decry.mount
-After=home-funker-.backups-googledecry.mount
+Requires=home-funker-.backups-s3decry.mount
+Requires=home-funker-.backups-googledecry.mount
 [Mount]
 Type=rclone
 What=spiegel:
 Where=/home/funker/OnlineBackup
 Options=rw,_netdev,args2env,config=/home/funker/.config/rclone/rclone.conf
 ```
+Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.mount` nutzen und mit `systemctl --user stop home-funker-OnlineBackup.mount` wieder trennen.
+
 
 [^1]: Arch User Repository
