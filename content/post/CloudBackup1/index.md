@@ -105,6 +105,7 @@ Und nun kommen wieder ein paar Zeilen für die Bash:
 ```bash
 mkdir /home/funker/.backups/s3mount/
 mkdir /home/funker/.backups/s3decry/
+mkdir /home/funker/OnlineBackup
 mkdir /home/funker/.backups/.cache-dir/s3mount/
 pwgen -ys 256 1 > /home/funker/.backups/.config/fs2.passwd
 code /home/funker/.config/systemd/user/$(systemd-escape -p --suffix=mount "/home/funker/.backups/s3mount/")
@@ -142,5 +143,31 @@ Options=passfile=/home/funker/.backups/.config/fs2.passwd,config=/home/funker/.b
 
 # Weiteres Zwischenfazit
 Mit dieser Umsetzung hat man zwei verschlüsselte Orte für sein Backup. Die Verschlüsslung erfolgt mit unterschiedlichen Passwörtern zu unterschiedlichen Anbietern. Im aktuellen Status, muss man sich aber noch selbst darum kümmern die Daten gleich zu halten.
+
+# Spiegel mit union
+Für diesen Schritt erweitern wir die `/home/funker/.config/rclone/rclone.conf` von Hand:
+```
+[spiegel]
+type = union
+upstreams = /home/funker/.backups/s3decry:writeback /home/funker/.backups/googledecry
+action_policy = all
+create_policy = all
+search_policy = ff
+```
+
+Auch dafür baut man sich am besten wieder ein Systemd-File:
+
+`code /home/funker/.config/systemd/user/$(systemd-escape -p --suffix=mount "/home/funker/OnlineBackup")`
+```
+[Unit]
+Description=Mount for /home/funker/OnlineBackup
+After=home-funker-.backups-s3decry.mount
+After=home-funker-.backups-googledecry.mount
+[Mount]
+Type=rclone
+What=spiegel:
+Where=/home/funker/OnlineBackup
+Options=rw,_netdev,args2env,config=/home/funker/.config/rclone/rclone.conf
+```
 
 [^1]: Arch User Repository
