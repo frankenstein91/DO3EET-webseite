@@ -176,7 +176,7 @@ Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.
 ```goat
 .--------------.
 | Backupfolder |
-'--------------'
+'------+-------'
        |
    .---+---.
    |       |
