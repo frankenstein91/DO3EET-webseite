@@ -174,12 +174,15 @@ Den Spiegel kann man jetzt mit `systemctl --user start home-funker-OnlineBackup.
 # Backup Path
 
 ```goat
-.--------------.
-| Backupfolder |
-'------+-------'
-       |
-   .---+---.
-   |       |
+                .--------------.
+                | Backupfolder |
+                '------+-------'
+                       |
+       .---------------+---------------.
+       |                               |
+.------+-----------.            .------+---------------.
+| S3 entschlüsselt |            | Google entschlüsselt |
+'------------------'            '----------------------'
 ```
 
 # Schluss
