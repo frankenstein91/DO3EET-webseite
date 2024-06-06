@@ -75,6 +75,7 @@ Für Deutschland fügen wir an das Ende der Konfig folgende Zeilen hinzu, um üb
   txpower = 7
   mode=roaming
 ```
+Danach ist die Software im lokalen Netzwerk und über Lora nutzbar. Der Start erfolgt mit `nomadnet` auf der CLI.
 
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
