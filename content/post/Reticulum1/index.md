@@ -75,6 +75,7 @@ Für Deutschland fügen wir an das Ende der Konfig folgende Zeilen hinzu, um üb
   txpower = 7
   mode=roaming
 ```
+Wer eine LoRa-Antenne für viele Rechner nutzen will, kann `enable_transport = Yes` am Anfang der Config setzen und braucht diesen Config-Block nicht auf den anderen Systemen. Die Nachrichten werden über das Mesh vom LAN auf LoRa übertragen.
 Danach ist die Software im lokalen Netzwerk und über Lora nutzbar. Der Start erfolgt mit `nomadnet` auf der CLI.
 
 [^1]: Graphical User Interface
