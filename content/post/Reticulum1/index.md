@@ -40,9 +40,13 @@ Nomad Network ermöglicht den Aufbau privater und robuster Kommunikation, die vo
 Sideband ist eine Applikation mit GUI[^1], welche die selben Funktionen wie NomandNet bietet. Dabei läuft Sideband auf Android, Linux, macOS und Windows.
 
 # Anwendungsfall
-Die aktuelle Situation mit starken Regenfällen und Überflutungen zeigt erneut die Bedeutung von infrastrukturunabhäniger Kommunikation. Für eine Nutzung von Hard- und Software im K-Fall[^2], muss diese leicht beschaffbar, herstellerunabhängig und übergreifend funktionieren, leicht bedienbar und wenige Anforderungen haben und dabei flexibel bleiben.  
+Die aktuelle Situation mit starken Regenfällen und Überflutungen zeigt erneut die Bedeutung von infrastrukturunabhäniger Kommunikation. Für eine Nutzung von Hard- und Software im K-Fall[^2], muss diese leicht beschaffbar, herstellerunabhängig und übergreifend funktionieren, leicht bedienbar und wenige Anforderungen haben und dabei flexibel bleiben. Durch LoRa könnten große Entfernungen überbrückt werden und das Meshing verstärkt diesen Vorteil weiter.
+
+# Nutzung
+## Installation
+Ausgehend von einer neuen ArchLinux installation mit installiertem pikaur, sind folgende Schritte notwendig:
+
 
 
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
- 
