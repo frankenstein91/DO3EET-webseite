@@ -44,9 +44,11 @@ Die aktuelle Situation mit starken Regenfällen und Überflutungen zeigt erneut 
 
 # Nutzung
 ## Installation
-Ausgehend von einer neuen ArchLinux installation mit installiertem pikaur, sind folgende Schritte notwendig:
-
-
+Ausgehend von einer neuen ArchLinux installation mit installiertem pikaur, ist der folgende Schritt notwendig:
+```bash
+pikaur -S nomadnet
+```
+Damit wird das Tool mit allen nötigen Abhänigkeiten auf dem System installiert.
 
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
