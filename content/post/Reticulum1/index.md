@@ -50,5 +50,31 @@ pikaur -S nomadnet
 ```
 Damit wird das Tool mit allen nötigen Abhänigkeiten auf dem System installiert.
 
+## LoRa Hardware
+Um die Frimware auf der LoRa Hardware zu installieren, sind die nötigen tools schon installiert.
+```bash
+rnodeconf /dev/ttyACM0 --autoinstall
+```
+Dabei muss man nur wenige Fragen beantworten und der Rest läuft automatisch.
+
+## Konfig für LoRa
+Um eine gute Ausgangsdatei zu bekommen, startet man einmal `rnstatus` und es wird die Konfig unter `~/.reticulum/config` erzeugt. Mit dieser Einstellungsdatei kann man schon über die lokalen Netzwerke , heißt Subnetz beschränkt.
+
+Für Deutschland fügen wir an das Ende der Konfig folgende Zeilen hinzu, um über das LoRa Mesh arbeiten zu können:
+```ini
+[[RNode LoRa Interface]]
+  type = RNodeInterface
+  # Enable interface if you want use it!
+  interface_enabled = True
+  # Serial port for the device
+  port = /dev/ttyACM0
+  frequency = 867200000
+  bandwidth = 125000
+  spreadingfactor = 9
+  codingrate = 7
+  txpower = 7
+  mode=roaming
+```
+
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
