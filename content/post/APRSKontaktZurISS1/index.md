@@ -24,8 +24,8 @@ Mit diesen Einstellungen habe ich nun ca. 10 Minuten auf die 国际空间站 gew
 
 {{< imgwebp src="LuckyHamRadio.jpg" alt="Bildschrim mit Datenpaket von der ISS" width="1400" height="1400" >}}
 
-Nach dem Kontakt wollen die meisten auch einen QSL in den Händen halten. Daher habe ich mich gleich wieder nach Hause gemacht und mit der Beweissicherung begonnen. Dafür habe ich mir einen Ausdruck der Website [ariss.net/](http://ariss.net/) angefertig und diese zusätlich auf [archive.org](https://archive.org/) sichern lassen. Außerdem ist die RS0ISS auch auf [aprs.fi](https://aprs.fi) in der Sektion "Stationen welche DO3EET-9 direkt über Funk gehört haben" aufgetaucht. 
+Nach dem Kontakt wollen die meisten auch einen QSL in den Händen halten. Daher habe ich mich gleich wieder nach Hause gemacht und mit der Beweissicherung begonnen. Dafür habe ich mir einen Ausdruck der Website [ariss.net/](http://ariss.net/) angefertig und diese zusätzlich auf [archive.org](https://archive.org/) sichern lassen. Außerdem ist die RS0ISS auch auf [aprs.fi](https://aprs.fi) in der Sektion "Stationen welche DO3EET-9 direkt über Funk gehört haben" aufgetaucht. 
 
-Nun werde ich in Ruhe einen Umschlag an F1MOJ (den QSL-Manager der ISS in Europa) vorbereiten. In diesen kommen eine QSL-Karte von mir, die Ausdrucke der beiden Informationswebsiten mit dem sichtbaren Rufzeichen, ein Rückumschlag mit meiner Adresse und zwei Internationaler Antwortscheine. Und dann heißt es geduldig Warten auf die Antwort.
+Nun werde ich in Ruhe einen Umschlag an F1MOJ (den QSL-Manager der ISS in Europa) vorbereiten. In diesen kommen eine QSL-Karte von mir, die Ausdrucke der beiden Informationswebsiten mit dem sichtbaren Rufzeichen, ein Rückumschlag mit meiner Adresse und zwei Internationale Antwortscheine. Und dann heißt es geduldig Warten auf die Antwort.
 
 Mein Dank geht an DK3ML und seine großartige Webseite [dk3ml.de](https://dk3ml.de/) und an DF6KAI mit seiner Geduld und seinem Wissen.
