@@ -11,11 +11,11 @@ tags = [
     "Telegram",
     "Threema",
     "Signal",
-    "Verschlüsslung",
+    "Verschlüsselung",
 ]
 +++
 
-Immer mehr Newsportale berichten von Plänen einer Arbeitsgruppe in der EU[^1], welche sich für eine stärkere Überwachung von Chats aufstellt. Dabei geht es oft auch um die Ende-zu-Ende-Verschlüsslung moderner Chatapplikationen. Dabei geht es den Mitgliedern die Herrsteller zu einer Access-by-Design-Lösung zu zwingen. Die Überwachungsorgane wollen den Bildflug durch starke Verschlüsslung vermeiden. Bei diesen Dingen ging es der Politik in der Vergangenheit meist nur um Chats, doch nun sollen alle digitalen Geräte (auch Autos und IoT-Geräte wie Bewegungsmelder) mit einem beim Hersteller hinterlegten Generalschlüssel hinterlegt werden.
+Immer mehr Newsportale berichten von Plänen einer Arbeitsgruppe in der EU[^1], welche sich für eine stärkere Überwachung von Chats aufstellt. Dabei geht es oft auch um die Ende-zu-Ende-Verschlüsselung moderner Chatapplikationen. Dabei geht es den Mitgliedern die Herrsteller zu einer Access-by-Design-Lösung zu zwingen. Die Überwachungsorgane wollen den Blindflug durch starke Verschlüsselung vermeiden. Bei diesen Dingen ging es der Politik in der Vergangenheit meist nur um Chats, doch nun sollen alle digitalen Geräte (auch Autos und IoT-Geräte wie Bewegungsmelder) mit einem beim Hersteller hinterlegten Generalschlüssel hinterlegt werden.
 
 Da sich in dem veröffentlichten Papier die Mitglieder der Expertengruppe auch eine Echtzeitzugriffslösung "wünschen", wird damit die bis jetzt fast vertrauenswürdige Kommunikation zur Postkarte. Mit jedem von Dritten hinterlegten Zusatzschlüssel, wird die Kommunikation für die Gesprächspartner zum Glashaus. Verdeutlicht durch dieses Linux-Kommando:
 
