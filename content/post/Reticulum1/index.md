@@ -1,6 +1,6 @@
 +++
 title = 'NomadNet, LXMF und Reticulum'
-date = 2024-06-06T11:08:39+02:00
+date = 2024-06-10T09:40:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -77,6 +77,9 @@ Für Deutschland fügen wir an das Ende der Konfig folgende Zeilen hinzu, um üb
 ```
 Wer eine LoRa-Antenne für viele Rechner nutzen will, kann `enable_transport = Yes` am Anfang der Config setzen und braucht diesen Config-Block nicht auf den anderen Systemen. Die Nachrichten werden über das Mesh vom LAN auf LoRa übertragen.
 Danach ist die Software im lokalen Netzwerk und über Lora nutzbar. Der Start erfolgt mit `nomadnet` auf der CLI.
+
+## Nutzung
+Die Nutzung der Software ist mit der Tastatur möglich, aber auch eine Mausuntersützung ist eingebaut. Die Hilfedatei findet man auch gleich im Tool, was ich praktisch finde. Da es eine einfache Software zum Chatten ist, denke ich man kommt ohne weitere Erklärungen klar... sollte es Fragen geben, ist aber ein Folgeartikel nicht ausgeschlossen.
 
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
