@@ -81,5 +81,7 @@ Danach ist die Software im lokalen Netzwerk und über Lora nutzbar. Der Start er
 ## Nutzung
 Die Nutzung der Software ist mit der Tastatur möglich, aber auch eine Mausuntersützung ist eingebaut. Die Hilfedatei findet man auch gleich im Tool, was ich praktisch finde. Da es eine einfache Software zum Chatten ist, denke ich man kommt ohne weitere Erklärungen klar... sollte es Fragen geben, ist aber ein Folgeartikel nicht ausgeschlossen.
 
+[Kontakt zur Entwicklung](https://matrix.to/#/#reticulum:matrix.org)
+
 [^1]: Graphical User Interface
 [^2]: Katastrophenfall
