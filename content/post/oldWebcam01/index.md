@@ -11,7 +11,7 @@ tags = [
 ]
 +++
 
-# Nugriff auf die Kamera
+# Zugriff auf die Kamera
 In meiner ersten Ausbildung habe ich mir eine Hootoo HT-IP206 gekauft, um etwas mit Live-Streaming zu experimentieren. Diese habe ich nun staubig auf dem Dachboden wieder gefunden. Auch wenn die Kamera eigentlich steinalt ist, habe ich mich dran gemacht um sie wieder in Betrieb zu nehmen.
 
 {{< imgwebp src="PXL_20240615_173019869.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
