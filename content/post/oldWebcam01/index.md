@@ -11,7 +11,7 @@ tags = [
 ]
 +++
 
-# Nugriff auf die Kamera
+# Zugriff auf die Kamera
 In meiner ersten Ausbildung habe ich mir eine Hootoo HT-IP206 gekauft, um etwas mit Live-Streaming zu experimentieren. Diese habe ich nun staubig auf dem Dachboden wieder gefunden. Auch wenn die Kamera eigentlich steinalt ist, habe ich mich dran gemacht um sie wieder in Betrieb zu nehmen.
 
 {{< imgwebp src="PXL_20240615_173019869.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
@@ -31,4 +31,14 @@ Im Webinterface gab es eine Möglichkeit die Firmware auf einen neueren Stand zu
 Die Firmware und die Weboberfläche sind bei dem Gerät getrennte Dateien, daher habe ich auch noch die Datei unter dem Punkt "Upgrade package of web UI (MJ745)" geladen. Auch hier habe ich erstmal nur geraten durch das "J" im Namen. In der RAR-Datei konnte ich im Pfad `/MJ745_WEBUI通用升级包_20131104/j011-1/` eine WebUI Version finden, die zum Gerät passt. Hier habe ich am Ordnernamen geraten und richtig getippt. Damit ist die Kamera nun auf der neusten Version des Herstellers. 
 
 # Information aus der Firmware
-So ganz bin ich mit dem bin-File nicht klar gekommen, doch ich habe gesehen es ist `Upgrade package of web UI (MJ745)` beim Linux Kernel angegeben. Außerdem scheint er für armv3 erstellt wurden zu sein. Auch ein romfs-Image ist in der Datei, doch leider war es mir nicht möglich dieses Image zu öffnen.
+So ganz bin ich mit dem bin-File nicht klar gekommen, doch ich habe gesehen es ist `Linux version 2.4.20-uc0 (root@maverick-linux) (gcc version 3.0) #1924` beim Linux Kernel angegeben. Außerdem scheint er für armv3 erstellt wurden zu sein. Auch ein romfs-Image ist in der Datei, doch leider war es mir nicht möglich dieses Image zu öffnen.
+
+# Update 17. Juni 2024
+Ich habe noch ein paar Bilder aus dem inneren der Kamera gemacht.
+
+{{< imgwebp src="IMG_9901.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9902.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9903.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9904.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9905.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9907.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
