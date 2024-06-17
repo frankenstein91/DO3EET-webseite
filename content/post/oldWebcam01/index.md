@@ -32,3 +32,13 @@ Die Firmware und die Weboberfläche sind bei dem Gerät getrennte Dateien, daher
 
 # Information aus der Firmware
 So ganz bin ich mit dem bin-File nicht klar gekommen, doch ich habe gesehen es ist `Linux version 2.4.20-uc0 (root@maverick-linux) (gcc version 3.0) #1924` beim Linux Kernel angegeben. Außerdem scheint er für armv3 erstellt wurden zu sein. Auch ein romfs-Image ist in der Datei, doch leider war es mir nicht möglich dieses Image zu öffnen.
+
+# Update 17. Juni 2024
+Ich habe noch ein paar Bilder aus dem inneren der Kamera gemacht.
+
+{{< imgwebp src="IMG_9901.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9902.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9903.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9904.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9905.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="IMG_9907.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
