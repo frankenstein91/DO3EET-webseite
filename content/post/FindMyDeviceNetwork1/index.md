@@ -1,6 +1,6 @@
 +++
 title = 'Find My Device Network erste Erfahrung'
-date = 2024-07-04T11:17:00+02:00
+date = 2024-07-05T16:00:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -34,3 +34,6 @@ Später schaute ich weitere Male in die App und konnte auch eine Ortung erkennen
 {{< imgwebp src="Screenshot_20240702-151402.png" alt="Schreenshot der Ortung" width="800" height="600" >}}
 
 Ich kann mir also nur Vorstellen, dass nur aktiv genutzte Smartphones zur Ortung beitragen und nicht Telefone in Hosen- und Handtaschen.
+
+# Empfehlung
+Klar ist, man muss abwarten wie sich das Netzwerk von Google hier entwickelt. Aber aktuell ist es noch nicht da, wo ich es erhofft hätte.
