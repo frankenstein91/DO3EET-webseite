@@ -159,7 +159,7 @@ Alle RAID*-Level außer RAID0 brauchen einen Verbund von BTRFS-Geräten. Dafür 
 
 Möchte man das System zum Beispiel nach dem hinzufügen einer weiteren Disk auf BTRFS-RAID1 umstellen, nutzt man diese Zeile:
 ```bash
-btrfs balance start -draid1 -mraid1 -sraid1 /run/btrfs-sdx/
+btrfs balance start -dconvert=raid1 -mconvert=raid1 /run/btrfs-sdx/
 ```
 
 Aber ein RAID schützt nicht vor Verschlüsselungstrojanern...
