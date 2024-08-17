@@ -19,3 +19,4 @@ Hier das beste Bild, was mir kurz vor dem Ende gelungen ist.
 
 und ein kleines Video
 
+{{< video src="PXL_20240817_210644497.mp4" >}}
