@@ -1,6 +1,6 @@
 +++
 title = 'Spannende API-Projekte'
-date = 2024-08-20T17:00:+02:00
+date = 2024-08-20T17:00:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
