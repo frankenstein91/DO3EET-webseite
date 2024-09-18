@@ -59,3 +59,9 @@ Cobit ist ein Framework für IT-Governance. Es zielt darauf ab IT an den Geschä
  - SIAM
  - USMBOK
  - VeriSM
+
+# Wo wird Service-Management wichtig?
+Unternehmen können sich nach internationalen Standards überprüfen und zertifizieren lassen. Auch wenn mir die ISO 20000 als Dokument nicht vorliegt, bekommt man im Arbeitsalltag deren Auswirkungen mit. Die ISO 20000 stellt Mindestanforderungen an das Servicemanagement. Wie jede Norm besteht sie aus mehreren Teilen. 
+
+Anders als bei ITIL, bei dem Einzelpersonen betrachtet werden, ermöglicht ISO 20000 eine Zertifizierung des gesamten Unternehmens.
+
