@@ -28,7 +28,19 @@ Das klingt auf den ersten Blick alles sehr gut und umsetzungswert, doch jedes Mi
 Eine rein technische Implementierung von ITIL ohne Berücksichtigung der Unternehmenskultur und der Mitarbeiter ist zum Scheitern verurteilt. In den letzten Jahren hat sich gezeigt, dass der Fokus nicht auf der Einhaltung von Prozessen liegen sollte, sondern auf der Erreichung der gewünschten Ergebnisse (Stichwort: Agiles Arbeiten).
 
 # ITIL Module
+
 ## Changemanagement
 Das Changemanagement befasst sich mit der Verwaltung und Kontrolle von Veränderungen an der IT-Infrastruktur und den dazugehörigen Services und Schnittstellen. Es zielt darauf ab, die negativen Auswirkungen dieser Veränderungen auf die operativen Services so gering wie möglich zu halten. Dies wird durch einen klar definierten und kontrollierten Prozess erreicht, der die Planung, Genehmigung, Implementierung und Dokumentation von Changes umfasst. Dies ermöglicht eine bessere Kontrolle über die IT-Infrastruktur und erhöht die Transparenz im Hinblick auf durchgeführte und geplante Veränderungen. So wird auch das Ziel der Reduzierung von Risiken und der besseren Zusammenarbeit erfüllt.
 
 ## Incidentmanagement
+Das Störungsmanagement, ist ein Prozess, der darauf abzielt, IT-Störungen schnellstmöglich zu beheben und die negativen Auswirkungen auf Geschäftsprozesse so gering wie möglich zu halten. Es umfasst die notwendigen Werkzeuge, Konzepte und Verfahren, um eine schnelle und effiziente Störungsbeseitigung im Rahmen der vereinbarten Service Levels zu gewährleisten.
+
+## Problemmanagement
+Das Problemmanagement zielt darauf ab, wiederkehrende Störungen (Incidents) dauerhaft zu lösen. Es unterscheidet zwischen reaktivem und präventivem Problemmanagement. Wobei man in meinem Umfeld eher das reaktive Problemmanagement sieht und nutzt.
+
+Das reaktive Problemmanagement analysiert die Ursachen von Incidents und entwickelt Vorschläge, um weitere Incidents aufgrund dieser Ursachen zu verhindern bzw. vorzubeugen.
+
+Incidents im Vorfeld zu verhindern ist hingegen Aufgabe des präventiven Problemmanagement, was oft bei Experten unbewusst abläuft.
+
+Im Problemmanagement identifiziert die Grundursachen, die oft Rootcause genannt werden. Der Fachbegriff ist hier Root cause analysis (RCA).
+
