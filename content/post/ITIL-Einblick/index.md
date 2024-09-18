@@ -44,3 +44,18 @@ Incidents im Vorfeld zu verhindern ist hingegen Aufgabe des präventiven Problem
 
 Im Problemmanagement identifiziert die Grundursachen, die oft Rootcause genannt werden. Der Fachbegriff ist hier Root cause analysis (RCA).
 
+# Gibt es nur ITIL?
+Obwohl ITIL ein weit verbreiteter Standard im IT-Service-Management ist, gibt es auch alternative Handreichungen. Und besonders für Nachwuchsexperten ist es wichtig über den bekannten Tellerrand zu Blicken.
+
+## YaSM
+Eine ähnliche Wortschöpfung wie die Suchmaschine YaCy ist der Begriff YaSM, er steht für Yet another Service Management. Es handelt sich um ein praxisorientiertes Framework für Service Management, das eine schlankere und intuitivere Alternative zu ITIL darstellen soll. YaSM bietet eine einfachere Prozessstruktur und kommt mit weniger Begriffen und Konzepten aus.
+
+## COBIT
+Cobit ist ein Framework für IT-Governance. Es zielt darauf ab IT an den Geschäftszielen auszurichten. Die Abkürzung steht für Control Objectives for Information and Related Technologies.
+
+## Others...
+ - CMMI-SVC
+ - FitSM
+ - SIAM
+ - USMBOK
+ - VeriSM
