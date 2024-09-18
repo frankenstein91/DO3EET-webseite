@@ -1,6 +1,6 @@
 +++
 title = 'ITIL Einblick'
-date = 2024-09-18T15:57:21+02:00
+date = 2024-09-18T19:58:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -65,3 +65,8 @@ Unternehmen können sich nach internationalen Standards überprüfen und zertifi
 
 Anders als bei ITIL, bei dem Einzelpersonen betrachtet werden, ermöglicht ISO 20000 eine Zertifizierung des gesamten Unternehmens.
 
+# Hinweis
+Da ich aus meinen eigenen Erfahrungen schreibe und diese Handbücher sehr anpassbar sind, müssen die Beschreibungen und Hinweise nicht für jeden Leser passen. Ich arbeite seit 2012 mit ITIL in verschiedenen Teams.
+
+# Beipackzettel
+Das Thema ist langweilig und kann einschläfernd wirken... aber es ist für die moderen IT-Arbeitsumgebung unverzichtbar.
