@@ -20,6 +20,23 @@ Hugo ist ein statisches Webseiten-Framework, das auf Golang basiert. Eine statis
 # Quellcode
 Der Quellcode dieser privaten Website liegt auf Github und kann dort eingesehen werden. Die Umsetzung der Website erfolgt mithilfe von Hugo, einem Open-Source-Statiksite-Generator. Hugo wandelt den auf Github hinterlegten Quellcode in statische HTML-, CSS- und JavaScript-Dateien um, die für die Anzeige im Webbrowser optimiert sind. Dieser Prozess ermöglicht eine effiziente und schnelle Bereitstellung der Inhalte, während gleichzeitig eine klare Trennung von Inhalt und Darstellung gewährleistet wird. In Hinblick auf den HTML-Quellcode möchten wir darauf hinweisen, dass der Inhaltsverantwortliche keinen direkten Einfluss auf den generierten HTML-Quellcode hat, da dieser durch den Hugo-Generator automatisch erstellt wird. Der Fokus des Inhaltsverantwortlichen liegt vorrangig auf der Erstellung und Pflege der inhaltlichen Komponenten der Website. Bei Fragen oder Anmerkungen bezüglich des HTML-Quellcodes empfehlen wir, sich direkt an den Entwickler oder Maintainer des Hugo-Themas zu wenden.
 
+# HTTP Header
+Zusammenfassend lässt sich sagen, dass diese Header zusammenarbeiten, um ein sichereres Browsing-Erlebnis zu schaffen, indem sie Clickjacking-Angriffe verhindern, die Zugriffsrechte für Geräte kontrollieren, vor XSS-Angriffen schützen und einschränken, von wo die Website Ressourcen laden kann.
+## X-Frame-Options: DENY
+Diese Kopfzeile teilt dem Browser mit, dass diese Website nicht innerhalb eines Frames auf einer anderen Website geladen werden soll. Dies hilft, Clickjacking-Angriffe zu verhindern, bei denen eine böswillige Website Sie dazu verleitet, auf etwas zu klicken, indem sie die legitime Website in ihren Frame einbettet. Sollten Sie meine Website trotzdem in einem Frame sehen, würde ich mich über eine Meldung freuen. Ausgenommen von dieser Meldebitte ist [Archive.org](https://web.archive.org/).
+
+## Permissions-Policy: camera=(), microphone=(), geolocation=()
+Dieser Header gibt die Berechtigungsrichtlinie des Browsers für den Zugriff auf bestimmte Funktionen auf Ihrem Gerät an. In diesem Fall wird der Zugriff auf die Kamera, das Mikrofon und die Geolokalisierung für diese Website verweigert. Damit stelle ich sicher keinen Zugriff auf diese Informationen zu haben.
+
+## Referrer-Policy: strict-origin-when-cross-origin
+Diese Kopfzeile steuert, wie die von Ihnen besuchte Website auf die Referrer-Informationen zugreifen kann. Die Referrer-Informationen teilen der Website mit, woher Sie kommen (die zuvor besuchte Website). Mit dieser Einstellung wird sichergestellt, dass die Referrer-Informationen nur dann an den Server zurückgesendet werden, wenn Sie die Website vom selben Ursprung aus besuchen. Dies trägt zum Schutz der Privatsphäre der Nutzer bei, indem die Menge der Informationen, die Websites über Ihren Browserverlauf verfolgen können, begrenzt wird. Die Origin, also die Domain bleibt sichtbar.
+
+## X-XSS-Protection: 1; mode=block
+Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen bösartige Skripte in eine Website eingeschleust werden. Mit dieser Einstellung wird der Browser angewiesen, den XSS-Schutz im „Block“-Modus zu aktivieren. Das bedeutet, dass der Browser **versuchen wird**, potenzielle XSS-Angriffe zu erkennen und zu blockieren.
+
+## Content-Security-Policy
+Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. 
+
 # Kommentarfunktion
 Die Kommentarfunktion auf dieser privaten Website wird über Github bereitgestellt. Für die Verarbeitung von personenbezogenen Daten im Rahmen der Kommentarfunktion ist der Betreiber der Github-Plattform verantwortlich. Bitte beachten Sie die Datenschutzbestimmungen von Github unter:
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
