@@ -1,5 +1,5 @@
 +++
-title = 'Tokyo2024'
+title = 'Tokyo 2024'
 date = 2024-11-09T14:54:19+01:00
 draft = false
 author = "Frank Tornack"
