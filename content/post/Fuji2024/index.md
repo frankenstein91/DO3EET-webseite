@@ -1,5 +1,5 @@
 +++
-title = 'Fuji2024'
+title = 'Fuji 2024'
 date = 2024-11-12T14:08:19+01:00
 draft = false
 author = "Frank Tornack"
