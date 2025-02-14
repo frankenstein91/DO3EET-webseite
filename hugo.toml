@@ -3,7 +3,7 @@ languageCode = 'de-DE'
 efaultContentLanguage = 'de-DE'
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
-paginate = 3
+pagination.pagerSize = 3
 enableInlineShortcodes = true
 sectionPagesMenu = "main"
 
