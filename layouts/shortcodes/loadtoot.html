@@ -8,14 +8,13 @@
 {{ $votesCount := 0 }}
 {{ $urlToGet := print "https://" $masIns "/api/v1/statuses/" $id }}
 
-
-{{- with resources.GetRemote $urlToGet  -}}
-	{{ if (resources.GetRemote $urlToGet).Err }}
+{{ with try (resources.GetRemote $urlToGet) }}
+	{{ with .Err }}
 		<blockquote class="toot-blockquote">
 			<p class="ctr legal">[Source not online<br />
 			at time of site build.]</p>
 		</blockquote>
-	{{ else }}
+	{{ else with .Value }}
 		{{ $json := unmarshal .Content }}
 		{{ $jsonHolder := $json }}{{/* Being safe */}}
 
@@ -32,13 +31,13 @@
 							src="{{ $json.account.avatar }}"
 							alt="Mastodon avatar for {{ $handleInst }}"
 							loading="lazy"
-                            style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto; float: left;"
+							style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto; float: left;"
 						/>
 					</a>
 					<span class="toot-author">
 						<a class="toot-author-name" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $json.account.display_name }}</a>
 						<a class="toot-author-handle" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $handleInst }}</a>
-                    </span>
+					</span>
 				</div>
 				{{ $json.content | safeHTML }}
 				<div class="toot-footer">
@@ -47,4 +46,4 @@
 			</blockquote>
 		{{ end }}
 	{{ end }}
-{{- end -}}
+{{ end }}
