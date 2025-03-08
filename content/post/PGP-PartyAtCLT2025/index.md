@@ -12,7 +12,7 @@ tags = [
     ]
 +++
 
-Dieses Jahr biete sich zusätzlich zu einem Stand auf den Chemnitzer Linuxtagen, auch die Herausforderung die Keysigning-Party zu übernehmen. Diese war zwischenzeitlich abgesagt, was wir (Martin und ich) sehr schade fanden und die Organisation übernommen haben.
+Dieses Jahr biete sich zusätzlich zu einem Stand auf den [Chemnitzer Linuxtagen](https://chemnitzer.linux-tage.de/), auch die Herausforderung die [Keysigning-Party](https://chemnitzer.linux-tage.de/2025/de/addons/pgp) zu übernehmen. Diese war zwischenzeitlich abgesagt, was wir (Martin und ich) sehr schade fanden und die Organisation übernommen haben.
 Auch wenn im Amateurfunkverkehr die Verschlüsslung nicht erlaubt ist, so ist es im Internet eine wichtige Möglichkeit zum Datenschutz. Und unter uns Amateurfunkern ist zumindest die digitale Signatur erlaubt.
 
 ## Was ist dieses PGP/GPG?
