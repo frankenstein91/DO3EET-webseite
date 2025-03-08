@@ -1,23 +1,11 @@
-{{/* Split the inner content by newlines */}}
-{{ $lines := split .Inner "\n" }}
-
 <span id="random-output">JavaScript is needed</span>
-
 <script>
   (function() {
     // Build the JavaScript array from the shortcode content.
-    var items = [
-      {{- range $index, $line := $lines -}}
-        {{- $trimmed := trim $line " \t\n\r" -}}
-        {{- if ne $trimmed "" -}}
-          {{- if gt $index 0 }},{{ end -}}
-          "{{ $trimmed | safeJS }}"
-        {{- end -}}
-      {{- end -}}
-    ];
+    var lines = "{{ .Inner }}".split('\n').filter(line => line.trim() !== "");;
 
     // Pick a random item.
-    var randomItem = items[Math.floor(Math.random() * items.length)];
+    var randomItem = lines[Math.floor(Math.random() * lines.length)];
     // Insert the random item into the span.
     document.getElementById("random-output").innerText = randomItem;
   })();
