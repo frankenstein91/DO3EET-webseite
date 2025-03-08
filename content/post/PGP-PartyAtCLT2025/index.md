@@ -105,9 +105,9 @@ Bitte wählen Sie, wie lange der Schlüssel gültig bleiben soll.
       <n>y = Schlüssel verfällt nach n Jahren
 Wie lange bleibt der Schlüssel gültig?
 ```
-Hier sollte man sich nicht für eine Laufzeit bis in die ∞ entscheiden. Nach dieser Enscheidung werden noch der Name, die E-Mail und ein möglicher Kommentar abgefragt. Sobald diese Informationen zur eigenen Zufriedenheit befüllt sind, wird noch das Passwort zu Schlüsselschutz vergeben.
+Hier sollte man sich nicht für eine Laufzeit bis in die ∞ entscheiden. Nach dieser Entscheidung werden noch der Name, die E-Mail und ein möglicher Kommentar abgefragt. Sobald diese Informationen zur eigenen Zufriedenheit befüllt sind, wird noch das Passwort zum Schlüsselschutz vergeben.
 
-Wer möchte kann diesem Key auch noch einen Authentication-Subkey hinzufügen und diesen damit auch für SSH-Anmeldungen nutzen. Hier suche ich übrigens eine Möglichkeit allen Schlüssel die Anmeldung zu erlauben, welche von einem bestimmten Schlüssel signiert sind. Wer daür eine Lösung kennt, unten gibt es einen Bereich für Kommentare.
+Wer möchte kann diesem Key auch noch einen Authentication-Subkey hinzufügen und diesen damit auch für SSH-Anmeldungen nutzen. Hier suche ich übrigens eine Möglichkeit allen Schlüssel die Anmeldung zu erlauben, welche von einem bestimmten Schlüssel signiert sind. Wer dafür eine Lösung kennt, unten gibt es einen Bereich für Kommentare.
 
 Hier ein kleines Quiz... Auflösung am Yacy-Stand auf den CLT2025 (es gibt keinen Gewinn): `Czelo zjk jlgvi`
 
