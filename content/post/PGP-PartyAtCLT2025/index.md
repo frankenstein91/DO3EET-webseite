@@ -110,7 +110,8 @@ Hier sollte man sich nicht für eine Laufzeit bis in die ∞ entscheiden. Nach d
 Wer möchte kann diesem Key auch noch einen Authentication-Subkey hinzufügen und diesen damit auch für SSH-Anmeldungen nutzen. Hier suche ich übrigens eine Möglichkeit allen Schlüssel die Anmeldung zu erlauben, welche von einem bestimmten Schlüssel signiert sind. Wer dafür eine Lösung kennt, unten gibt es einen Bereich für Kommentare.
 
 Hier ein kleines Quiz... Auflösung am Yacy-Stand auf den CLT2025 (es gibt keinen Gewinn):  
-`{{< randomfromlist >}}Ejf Mjovy Ubhf jo Difnojua xfsefo vot xjfefs wjfm Xjttfo wfsnjuufmo
+`{{< randomfromlist >}}
+Ejf Mjovy Ubhf jo Difnojua xfsefo vot xjfefs wjfm Xjttfo wfsnjuufmo
 Fkg Nkpwz Vcig kp Ejgopkvb ygtfgp wpu ykgfgt xkgn Ykuugp xgtokvvgnp
 Glh Olqxa Wdjh lq Fkhpqlwc zhughq xqv zlhghu ylho Zlvvhq yhuplwwhoq
 Hmi Pmryb Xeki mr Gliqrmxd aivhir yrw amihiv zmip Amwwir zivqmxxipr
@@ -134,6 +135,7 @@ Ydz Gdips Ovbz di Xczhidou rzmyzi pin rdzyzm qdzg Rdnnzi qzmhdoozgi
 Zea Hejqt Pwca ej Ydaijepv sanzaj qjo seazan reah Seooaj ranieppahj
 Afb Ifkru Qxdb fk Zebjkfqw tboabk rkp tfbabo sfbi Tfppbk sbojfqqbik
 Bgc Jglsv Ryec gl Afcklgrx ucpbcl slq ugcbcp tgcj Ugqqcl tcpkgrrcjl
-Chd Khmtw Szfd hm Bgdlmhsy vdqcdm tmr vhdcdq uhdk Vhrrdm udqlhssdkm{{< /randomfromlist >}}`
+Chd Khmtw Szfd hm Bgdlmhsy vdqcdm tmr vhdcdq uhdk Vhrrdm udqlhssdkm
+{{< /randomfromlist >}}`
 
 [^1]: Der Begriff Kleptographie ist ein Bindewort der griechischen Wörter "klepto" und "graphie" und beschreibt das heimliche Stehlen von Informationen aus manipulierten kryptografische Methoden.
