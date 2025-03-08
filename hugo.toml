@@ -1,6 +1,6 @@
 baseURL = 'https://do3eet.pages.dev'
 languageCode = 'de-DE'
-efaultContentLanguage = 'de-DE'
+defaultContentLanguage = 'de'
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
 pagination.pagerSize = 3
@@ -38,7 +38,7 @@ series = "series"
   [privacy.instagram]
     disable = false
     simple = true
-  [privacy.twitter]
+  [privacy.x]
     disable = false
     enableDNT = true
     simple = true
@@ -57,7 +57,7 @@ series = "series"
   [services.instagram]
     disableInlineCSS = true
 
-  [services.twitter]
+  [services.x]
     disableInlineCSS = true
 
 [[params.socialLinks]]
