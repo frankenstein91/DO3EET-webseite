@@ -109,6 +109,31 @@ Hier sollte man sich nicht für eine Laufzeit bis in die ∞ entscheiden. Nach d
 
 Wer möchte kann diesem Key auch noch einen Authentication-Subkey hinzufügen und diesen damit auch für SSH-Anmeldungen nutzen. Hier suche ich übrigens eine Möglichkeit allen Schlüssel die Anmeldung zu erlauben, welche von einem bestimmten Schlüssel signiert sind. Wer dafür eine Lösung kennt, unten gibt es einen Bereich für Kommentare.
 
-Hier ein kleines Quiz... Auflösung am Yacy-Stand auf den CLT2025 (es gibt keinen Gewinn): `Czelo zjk jlgvi`
+Hier ein kleines Quiz... Auflösung am Yacy-Stand auf den CLT2025 (es gibt keinen Gewinn):  
+`{{< randomfromlist >}}Ejf Mjovy Ubhf jo Difnojua xfsefo vot xjfefs wjfm Xjttfo wfsnjuufmo
+Fkg Nkpwz Vcig kp Ejgopkvb ygtfgp wpu ykgfgt xkgn Ykuugp xgtokvvgnp
+Glh Olqxa Wdjh lq Fkhpqlwc zhughq xqv zlhghu ylho Zlvvhq yhuplwwhoq
+Hmi Pmryb Xeki mr Gliqrmxd aivhir yrw amihiv zmip Amwwir zivqmxxipr
+Inj Qnszc Yflj ns Hmjrsnye bjwijs zsx bnjijw anjq Bnxxjs ajwrnyyjqs
+Jok Rotad Zgmk ot Inkstozf ckxjkt aty cokjkx bokr Coyykt bkxsozzkrt
+Kpl Spube Ahnl pu Joltupag dlyklu buz dplkly cpls Dpzzlu clytpaalsu
+Lqm Tqvcf Biom qv Kpmuvqbh emzlmv cva eqmlmz dqmt Eqaamv dmzuqbbmtv
+Mrn Urwdg Cjpn rw Lqnvwrci fnamnw dwb frnmna ernu Frbbnw enavrccnuw
+Nso Vsxeh Dkqo sx Mrowxsdj gobnox exc gsonob fsov Gsccox fobwsddovx
+Otp Wtyfi Elrp ty Nspxytek hpcopy fyd htpopc gtpw Htddpy gpcxteepwy
+Puq Xuzgj Fmsq uz Otqyzufl iqdpqz gze iuqpqd huqx Iueeqz hqdyuffqxz
+Qvr Yvahk Gntr va Purzavgm jreqra haf jvrqre ivry Jvffra irezvggrya
+Rws Zwbil Hous wb Qvsabwhn ksfrsb ibg kwsrsf jwsz Kwggsb jsfawhhszb
+Sxt Axcjm Ipvt xc Rwtbcxio ltgstc jch lxtstg kxta Lxhhtc ktgbxiitac
+Tyu Bydkn Jqwu yd Sxucdyjp muhtud kdi myutuh lyub Myiiud luhcyjjubd
+Uzv Czelo Krxv ze Tyvdezkq nviuve lej nzvuvi mzvc Nzjjve mvidzkkvce
+Vaw Dafmp Lsyw af Uzwefalr owjvwf mfk oawvwj nawd Oakkwf nwjeallwdf
+Wbx Ebgnq Mtzx bg Vaxfgbms pxkwxg ngl pbxwxk obxe Pbllxg oxkfbmmxeg
+Xcy Fchor Nuay ch Wbyghcnt qylxyh ohm qcyxyl pcyf Qcmmyh pylgcnnyfh
+Ydz Gdips Ovbz di Xczhidou rzmyzi pin rdzyzm qdzg Rdnnzi qzmhdoozgi
+Zea Hejqt Pwca ej Ydaijepv sanzaj qjo seazan reah Seooaj ranieppahj
+Afb Ifkru Qxdb fk Zebjkfqw tboabk rkp tfbabo sfbi Tfppbk sbojfqqbik
+Bgc Jglsv Ryec gl Afcklgrx ucpbcl slq ugcbcp tgcj Ugqqcl tcpkgrrcjl
+Chd Khmtw Szfd hm Bgdlmhsy vdqcdm tmr vhdcdq uhdk Vhrrdm udqlhssdkm{{< /randomfromlist >}}`
 
 [^1]: Der Begriff Kleptographie ist ein Bindewort der griechischen Wörter "klepto" und "graphie" und beschreibt das heimliche Stehlen von Informationen aus manipulierten kryptografische Methoden.
