@@ -21,7 +21,7 @@ Wenn von **PGP** (Pretty Good Privacy) die Rede ist, meint man oft fälschlicher
 
 Um eine offene und standardisierte Lösung zu schaffen, wurde später der **OpenPGP**-Standard eingeführt. Dieser definiert ein einheitliches Format für die Verschlüsselung und Signierung von Daten, welche von verschiedenen Programmen genutzt werden kann.
 
-Eine der bekanntesten Implementierungen dieses Standards ist **GPG** (GNU Privacy Guard). GPG ist quelloffen und besonders in der Linux-Welt weit verbreitet. Aufgrund dieser Popularität wird der Begriff "GPG" oft als Synonym für das gesamte OpenPGP-Kryptosystem verwendet, obwohl es sich dabei eigentlich nur um eine spezifische Implementierung handelt.
+Eine der bekanntesten Implementierungen dieses Standards ist **GPG** (GNU Privacy Guard). GPG ist quelloffen und besonders in der Linux-Welt weit verbreitet. Aufgrund dieser Popularität wird der Begriff "GPG" oft als ein Synonym für das gesamte OpenPGP-Kryptosystem verwendet, obwohl es sich dabei eigentlich nur um eine spezifische Implementierung handelt.
 
 ## Was ist ein PGP-Key?
 
