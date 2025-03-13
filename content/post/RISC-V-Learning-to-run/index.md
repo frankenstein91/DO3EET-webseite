@@ -30,4 +30,9 @@ Um das Image von auf die SD-Karte zu bringen, nutze ich die sehr einfache Softwa
 
 Da ich noch kein Gehäuse und ATX-Netzteil beim ersten Boot hatte, nutze ich ein USB-C Laptop-Ladegerät. Der Monitor ist über HDMI angeschlossen und Tastatur/Maus über die USB2-Anschlüsse. Die SSD hat weiter keine Daten. Anders als "normale" PCs bootet das System beim Verbinden der Stromversorgung sofort. 
 
-Der erste Versuch mit einer 512GB Karte schulg leider fehl. 
+Der erste Versuch mit einer 512GB Karte schulg leider fehl. Der zweite Versuch mit Fedora leider auch:
+```
+try sd...
+bm:3
+sys: 0x200
+```
