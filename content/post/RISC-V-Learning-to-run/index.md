@@ -47,3 +47,7 @@ try sd...
 bm:3
 sys: 0x200
 ```
+
+# Verdacht USB-C PD
+
+Nun vermute ich die Probleme beim USB-C PD. 
