@@ -18,3 +18,4 @@ Wie einigen vielleicht bekannt ist, habe ich eine Kwumsy K3 Tastatur mit SSD. Di
 
 Danach die SSD in den Anschluss im Motherboard eingebaut. Dabei hatte ich das erste Problem, die Schraube passte nicht in die Mutter... nachden ich die Schraube einmal von der anderen Seite durch das Board geschraubt hatte, löste sich das Problem sschnell.
 
+{{< imgwebp src="PXL_20250313_173415561.jpg" alt="Milk-V Jupiter mit SSD und Lüfter" width="1024" height="1024" >}}
