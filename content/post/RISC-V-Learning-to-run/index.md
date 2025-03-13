@@ -36,3 +36,6 @@ try sd...
 bm:3
 sys: 0x200
 ```
+# Ubuntu Boot
+
+Also geht es weiter mit den Images von Ubuntu... [GitHub](https://github.com/milkv-jupiter/jupiter-ubuntu-build/issues). Auch hier nutze ich wieder [BalenaEtcher](https://github.com/balena-io/etcher).
