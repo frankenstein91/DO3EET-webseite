@@ -50,4 +50,11 @@ sys: 0x200
 
 # Verdacht USB-C PD
 
-Nun vermute ich die Probleme beim USB-C PD. 
+Nun vermute ich die Probleme beim USB-C PD.
+
+Nach dem Test mit einem ATX-Netzteil einen Tag später, konnte ich diesen Verdacht bestätigen. Mit diesem Netzteil booted das System.
+
+# Der erste Fehler
+
+Auch ich scheine einen Fehler mit der WiFi-Hardware zu haben, wie auch der Youtuber geerlingguy auf seinem GitHub berichtet. Der Funkchip scheint durch das System nicht gefunden zu werden.
+Am Freitag (14. März) schrieb auch ich eine Mail zu diesem Thema an den Support.
