@@ -58,3 +58,19 @@ Nach dem Test mit einem ATX-Netzteil einen Tag später, konnte ich diesen Verdac
 
 Auch ich scheine einen Fehler mit der WiFi-Hardware zu haben, wie auch der Youtuber geerlingguy auf seinem GitHub berichtet. Der Funkchip scheint durch das System nicht gefunden zu werden.
 Am Freitag (14. März) schrieb auch ich eine Mail zu diesem Thema an den Support.
+
+# am nächsten Tag
+
+Der Fehler mit dem WiFi ist ein Problem für später, es scheint doch kein Hardware-Problem zu sein.
+Mit der Linux-Variante Irradium konnte ich das System nun vollständig zum laufen bekommen. Das Image dafür bekommt man über [dl.irradium.org/irradium/images/](https://dl.irradium.org/irradium/images/milk_v_jupiter/).
+
+Das Betriebsystem habe ich nun auf einer SD-Karte und möchte die SSD später als Datenlaufwerk nutzen.
+
+# Update des Irradium
+
+das Update läuft nach meinem Wissen mit diesen beiden Befehlen, da es aber für mich ein neues System ist... muss ich noch lernen.
+
+```shell
+ports -u
+prt-get sysup
+```
