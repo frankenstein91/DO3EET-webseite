@@ -115,4 +115,5 @@ ant clean all
 ./startYACY.sh
 ```
 
-Und damit bleibt nur noch ein Punkt übrig, System runterfahren und RTC-Batterie einbauen.
+Und damit bleibt nur noch ein Punkt übrig, System runterfahren und RTC-Batterie einbauen.  
+{{< imgwebp src="HTOP.png" alt="htop auf dem Milk-V Jupiter" width="1024" height="1024" >}}
