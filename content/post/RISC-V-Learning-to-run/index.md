@@ -81,3 +81,38 @@ Für mein Projekt brauche ich auf dem System noch Java und Apache ant.
 Dafür habe ich erst alle `prtdir` in der `/etc/prt-get.conf` aktiviert. Und dann noch eine eine Runde `ports -u`. 
 
 Meine Wunschpakete habe ich mit `PIP_ROOT_USER_ACTION=ignore prt-get depinst ntp git btrfs-progs htop screen openjdk21-jdk` installiert. Und anschließend hieß es wieder lange warten.
+
+Danach habe ich ant aus den Quellcodepaket installieren müssen:  
+Den Anfang macht ein neues Anmelden über SSH um die ENV neu zu laden...
+```shell
+export ANT_HOME=/usr/local/ant
+export PATH=${PATH}:${ANT_HOME}/bin
+mkdir /usr/local/ant
+mkdir antsrc
+curl "https://dlcdn.apache.org//ant/source/apache-ant-1.10.15-src.tar.xz" --output apache-ant-1.10.15-src.tar.xz
+unxz apache-ant-1.10.15-src.tar.xz
+cd antsrc/
+tar xvf ../apache-ant-1.10.15-src.tar
+sh build.sh -Ddist.dir=/usr/local/ant dist
+ant -diagnostics
+```
+
+# Build and use Yacy
+
+Nun da alles für den Yacy-Server vorbereitet ist, geht es damit auch schon weiter.
+Die Daten sollen auf einer NVME-SSD mit BTRFS liegen, daher nutze ich den Befehl `mkfs.btrfs -f /dev/nvme0n1` um die einzige NVME mit BTRFS zu überschreiben. Und dann wird das ganze noch ins VFS eingebunden.
+
+```shell
+mkdir /yacyDisk
+mount /dev/nvme0n1 /yacyDisk/
+```
+
+Im Anschluss folgt Download, Build und Start von Yacy, was durch Java echt easy war.
+```shell
+git clone --depth 1 https://github.com/yacy/yacy_search_server.git
+cd yacy_search_server
+ant clean all
+./startYACY.sh
+```
+
+Und damit bleibt nur noch ein Punkt übrig, System runterfahren und RTC-Batterie einbauen.
