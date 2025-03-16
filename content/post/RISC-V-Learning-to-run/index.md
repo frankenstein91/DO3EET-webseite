@@ -74,3 +74,10 @@ das Update läuft nach meinem Wissen mit diesen beiden Befehlen, da es aber für
 ports -u
 prt-get sysup
 ```
+
+# nach einer Nacht Updates abwarten
+
+Für mein Projekt brauche ich auf dem System noch Java und Apache ant.
+Dafür habe ich erst alle `prtdir` in der `/etc/prt-get.conf` aktiviert. Und dann noch eine eine Runde `ports -u`. 
+
+Meine Wunschpakete habe ich mit `PIP_ROOT_USER_ACTION=ignore prt-get depinst ntp git btrfs-progs htop screen openjdk21-jdk` installiert. Und anschließend hieß es wieder lange warten.
