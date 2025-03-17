@@ -24,7 +24,7 @@ Danach die SSD in den Anschluss im Motherboard eingebaut. Dabei hatte ich das er
 # Vorbereitung erster Boot
 
 Für den ersten Boot möchte ich Fedora 41 auf einer SD-Karte nutzen, weil es laut der Anleitung über eine leichteren Wege ist. Dafür nutze ich das Image von [Fedoravforce](https://images.fedoravforce.org/Jupiter). Das Passwort für den `root`-Account ist `riscv`.  
-Um das Image von auf die SD-Karte zu bringen, nutze ich die sehr einfache Software [BalenaEtcher](https://github.com/balena-io/etcher). Nachdem Flashing wandert die SD-Karte vom Laptop in das neue Board.
+Um das Image auf die SD-Karte zu bringen, nutze ich die sehr einfache Software [BalenaEtcher](https://github.com/balena-io/etcher). Nachdem Flashing wandert die SD-Karte vom Laptop in das neue Board.
 
 # erster Boot
 
