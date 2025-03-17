@@ -78,7 +78,7 @@ prt-get sysup
 # nach einer Nacht Updates abwarten
 
 Für mein Projekt brauche ich auf dem System noch Java und Apache ant.
-Dafür habe ich erst alle `prtdir` in der `/etc/prt-get.conf` aktiviert. Und dann noch eine eine Runde `ports -u`. 
+Dafür habe ich erst alle `prtdir` in der `/etc/prt-get.conf` aktiviert. Und dann noch eine Runde `ports -u`. 
 
 Meine Wunschpakete habe ich mit `PIP_ROOT_USER_ACTION=ignore prt-get depinst ntp git btrfs-progs htop screen openjdk21-jdk` installiert. Und anschließend hieß es wieder lange warten.
 
@@ -114,6 +114,10 @@ cd yacy_search_server
 ant clean all
 ./startYACY.sh
 ```
+
+# WiFi Hardware
+
+Im Verlauf des Bastelns war ich ziemlich erschrocken, weil das WiFi unter Fedora, Ubuntu und Bianbu nicht gefunden wurde. Der erste Verdacht war die Hardware, aber aktuell läuft WiFi unter Irradium. Ich frage mich, ob es bei [geerlingguy](https://www.youtube.com/watch?v=YxtFctEsHy0) ein ähnliches Problem war und er eigentlich kein neues Board brauchte...
 
 Und damit bleibt nur noch ein Punkt übrig, System runterfahren und RTC-Batterie einbauen.  
 {{< imgwebp src="HTOP.png" alt="htop auf dem Milk-V Jupiter" width="1024" height="1024" >}}
