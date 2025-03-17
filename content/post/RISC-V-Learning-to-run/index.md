@@ -1,6 +1,6 @@
 +++
 title = 'RISC-V Learning to Run'
-date = 2025-03-13T16:26:01+01:00
+date = 2025-03-17T23:48:01+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
