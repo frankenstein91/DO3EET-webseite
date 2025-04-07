@@ -44,6 +44,8 @@ Wie bei jedem IT-System sind Denial of Service an der Tagesordnung für NTP-Serv
 Aber auch wie bei GPS gibt es Angreifer die NTP-Pakete ab fangen und die Zeitstempel darin ändern. Der Client berechnet auf Basis der manipulierten Daten eine falsche Zeit.
 
 # Mein Versuch Angriffe zu erkennen...
+Meine Idee ist es einen möglichen Angriff auf eines dieser Signale zu erkennen, in dem man den Drift zum anderen Signal überwacht. Natürlich braucht man dafür viele Daten, um für seinen Standort und seine Internetverbindung eine normale Schwankung im Drift von einem Angriff zu unterscheiden. Aber den Anfang habe ich schon geamcht und möchte ihn nicht verstecken.
+
 ## Grafische Anzeige
 {{< imgwebp src="1.jpg" alt="Die GUI" width="1024" height="1024" >}}
 Ganz oben wird die aktuelle Uhrzeit angezeigt, die direkt von einem GPS-Empfänger stammt. Darunter listet das Tool die Uhrzeiten auf, die es von verschiedenen NTP-Servern (Network Time Protocol) erhalten hat. Untenstehend wird die Differenz zwischen der GPS-Zeit und der Zeit jedes einzelnen NTP-Servers berechnet und in Millisekunden (ms) angezeigt. Ein kleiner Drift ist normal und entsteht durch Netzwerklaufzeiten und die Verarbeitungsgeschwindigkeit der Systeme.
