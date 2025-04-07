@@ -31,3 +31,11 @@ Dein GPS-Empfänger ließt diese Signale von mehreren Satelliten gleichzeitig. E
 
 Die genaue Positionierung durch GPS ist also untrennbar mit einer extrem genauen Zeitmessung verbunden. Es ist die Fähigkeit, Zeitintervalle im Nanosekundenbereich zu messen und zu verarbeiten, die es uns ermöglicht, unseren Standort so präzise zu bestimmen.
 
+# Welche Angriffe gibt es?
+## GPS
+Gerade weil die präzise Zeit für GPS so fundamental ist, stellt sie auch ein attraktives Ziel für Angreifer dar. Die Störung oder Manipulation dieser Zeitsignale kann erhebliche Auswirkungen haben.
+
+Jamming... Die einfachste und wahrscheinlich häufigste Form der Störung. Ein Angreifer verwendet einen Sender, um auf den GPS-Frequenzen starkes Rauschen oder Störsignale zu senden. Der Empfänger verliert den Satellitenkontakt und kann keine Position oder genaue Zeit mehr bestimmen. Es handelt sich um einen "Denial of Service"-Angriff. 
+
+Richtig fies ist aber das GPS-Spoofing... Dies ist eine wesentlich raffiniertere Angriffsmethode auf das GPS-Signal. Statt die Signale nur zu blockieren, sendet der Angreifer gefälschte GPS-Signale. Diese Signale imitieren echte Satellitensignale, enthalten aber falsche Informationen – insbesondere eine falsche Zeit und/oder falsche Satellitenpositionen. Der Empfänger berechnet eine falsche Position und/oder eine falsche Uhrzeit, ohne es zu merken. Das System glaubt, es sei woanders oder es sei eine andere Zeit. Dies kann dazu führen, dass Schiffe bzw. Flugzeuge vom Kurs abkommen, Drohnen in falsche Gebiete explodieren oder zeitkritische Systeme gestört werden.
+
