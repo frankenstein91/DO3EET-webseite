@@ -173,7 +173,7 @@ Ganz oben wird die aktuelle Uhrzeit angezeigt, die direkt von einem GPS-Empfäng
 Dieser HTML-Code redet mit Flask im Backend um die Informationen dem User zu zeigen.
 
 ## Backend
-Mein Backend ist in Python geschrieben. Es ist so ziemlich für alles mein Favorit, kann mir aber vorstellen es gäbe bessere Sprachen für dieses Projekt. 
+Mein Backend ist in Python geschrieben. Es ist so ziemlich für alles mein Favorit, kann mir aber vorstellen es gäbe bessere Sprachen für dieses Projekt. Normalerweise hätte ich `argargparse` von Python genutzt, um die Configuration zu ermöglichen. Für diesen Blog habe ich mich für den Zweck der Nachvollziehbarkeit dagegen entschieden. Gleichzeitig ist es mein erstes Skript mit `asyncio`.
 
 ```python
 import asyncio
@@ -456,3 +456,13 @@ if __name__ == "__main__":
     # Starte die Flask-App
     app.run(debug=True, host="0.0.0.0")
 ```
+### GPS-Daten lesen
+Die Funktion `get_gps_time` liest Daten von einer seriellen Schnittstelle, extrahiert die Zeitinformationen aus einem GPS-Datensatz im NMEA-Format und konvertiert diese in ein `datetime`-Objekt. Sie ist darauf ausgelegt, mit GPS-Modulen zu arbeiten, die über serielle Kommunikation Daten senden. Die Funktion verwendet globale Variablen wie `latest_gps_time` und `gps_serial`, um den zuletzt erfassten Zeitstempel und die serielle Verbindung zu verwalten.
+
+Zu Beginn überprüft die Funktion, ob die serielle Verbindung (`gps_serial`) bereits initialisiert ist. Falls nicht, wird versucht, eine Verbindung mit den in den Variablen `serial_port`, `baud_rate` und `timeout` definierten Parametern herzustellen. Bei einem Fehler während der Initialisierung wird eine Fehlermeldung protokolliert, und die Funktion gibt `None` zurück.
+
+Die Funktion liest anschließend eine Zeile von der seriellen Schnittstelle, dekodiert sie als UTF-8 und entfernt unerwünschte Leerzeichen. Wenn die Zeile mit `$GPRMC` beginnt, wird sie in ihre Bestandteile zerlegt. Der dritte Teil des Datensatzes (`parts[2]`) gibt an, ob die GPS-Daten gültig sind. Nur wenn dieser Wert `A` ist, werden die Zeit- und Datumsinformationen weiterverarbeitet. Die Zeit (`parts[1]`) und das Datum (`parts[9]`) werden extrahiert und in ihre jeweiligen Komponenten (Stunde, Minute, Sekunde, Tag, Monat, Jahr) zerlegt. Falls die Zeitangabe Millisekunden enthält, werden diese ebenfalls berücksichtigt. Mit diesen Informationen wird ein `datetime`-Objekt erstellt, das die UTC-Zeitzone verwendet, und in der globalen Variable `latest_gps_time` gespeichert.
+
+Falls während der Verarbeitung ein Fehler auftritt, wie z. B. ein ungültiges Zeitformat (`ValueError`), wird eine Fehlermeldung protokolliert, und die Funktion gibt `None` zurück. Ähnliche Fehlerbehandlungsmechanismen existieren für Probleme beim Lesen der seriellen Schnittstelle (`serial.SerialException`), Dekodierungsfehler (`UnicodeDecodeError`) und andere unerwartete Ausnahmen. Bei einem Verbindungsfehler versucht die Funktion, die serielle Verbindung neu zu initialisieren.
+
+Auch sehr wichtig, diese Funktion funktioniert nicht mehr wenn GPSd läuft. Dieses Tool ändert die Ausgabe des GPS-Empfänger in ein anderes Format, welches ich nicht verstehe...
