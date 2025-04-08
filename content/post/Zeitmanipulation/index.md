@@ -1,6 +1,6 @@
 +++
 title = 'Zeitmanipulation'
-date = 2025-04-07T13:58:56+02:00
+date = 2025-04-08T10:07:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
