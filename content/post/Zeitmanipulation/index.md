@@ -466,3 +466,6 @@ Die Funktion liest anschließend eine Zeile von der seriellen Schnittstelle, dek
 Falls während der Verarbeitung ein Fehler auftritt, wie z. B. ein ungültiges Zeitformat (`ValueError`), wird eine Fehlermeldung protokolliert, und die Funktion gibt `None` zurück. Ähnliche Fehlerbehandlungsmechanismen existieren für Probleme beim Lesen der seriellen Schnittstelle (`serial.SerialException`), Dekodierungsfehler (`UnicodeDecodeError`) und andere unerwartete Ausnahmen. Bei einem Verbindungsfehler versucht die Funktion, die serielle Verbindung neu zu initialisieren.
 
 Auch sehr wichtig, diese Funktion funktioniert nicht mehr wenn GPSd läuft. Dieses Tool ändert die Ausgabe des GPS-Empfänger in ein anderes Format, welches ich nicht verstehe...
+
+### NTP-Zeit abrufen
+Die Funktion `get_ntp_time` ist dafür gebaut über entsprechende Python Bibliotheken mit den NTP-Servern zu sprechen. Für mein Tool wollte ich mich dabei nicht auf die Systemzeit und die Systemkonfiguration verlassen, ich hoffe es war kein Fehler. Da es für NTP schon fertige Tools gibt, fällt dieser Code natürlich viel kürzer aus als die GPS-Ecke des Code.
