@@ -469,3 +469,14 @@ Auch sehr wichtig, diese Funktion funktioniert nicht mehr wenn GPSd läuft. Dies
 
 ### NTP-Zeit abrufen
 Die Funktion `get_ntp_time` ist dafür gebaut über entsprechende Python Bibliotheken mit den NTP-Servern zu sprechen. Für mein Tool wollte ich mich dabei nicht auf die Systemzeit und die Systemkonfiguration verlassen, ich hoffe es war kein Fehler. Da es für NTP schon fertige Tools gibt, fällt dieser Code natürlich viel kürzer aus als die GPS-Ecke des Code.
+
+### Datenbank
+TinyFlux ist eine Open-Source-Datenbankbibliothek, die speziell für die Speicherung und Abfrage von Zeitreihendaten in Python entwickelt wurde. Man kann sie als eine stark vereinfachte, dateibasierte Alternative zu größeren Zeitreihendatenbanken wie InfluxDB verstehen. Statt eines komplexen Servers speichert TinyFlux die Daten in einer einzelnen Datei, typischerweise im JSON-Format. Dies vereinfacht das Setup und die Verwaltung erheblich, insbesondere für kleinere Projekte oder lokale Anwendungen.
+
+## Weitere Ideen...
+Ich würde gern das Script vernetzen... Damit meine ich eine zentrale Datenbank schaffen für den Zeitdrift. Vielleicht wäre es auch möglich dieses Tool in Zukunpft in die Honeypot der Deutsche Telekom Security GmbH bauen zu können. Diese Überwachungslösung für Angriffe ist bereits offen unter [GitHub](https://github.com/telekom-security/tpotce) verfügbar.  
+Eine Andere Idee für eine solche Lösung wäre ein verteilte Datenbank, ähnlich wie die Suchmaschiene Yacy oder andere P2P-Dienste.
+
+Die Unterstützung mehrerer GPS-Empfänger klingt auch noch verlockend, doch fehlt mir dafür die Hardware.
+
+Meine letzte Zukunftsidee, ist das ganze für Handys bereitzustellen. Oft liegen alte Handys nur rum, bieten aber eine große Anzahl an Schnitstellen und Sensoren. Darunter meist auch einen sehr guten GPS-Empfänger, welcher gut für dieses Projekt wäre.
