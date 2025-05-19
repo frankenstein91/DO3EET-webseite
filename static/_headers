@@ -3,4 +3,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: font-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://ipfs.io https://giscus.app; style-src-attr 'self' 'unsafe-inline'; upgrade-insecure-requests;
+  Content-Security-Policy: object-src 'none'; font-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://ipfs.io https://giscus.app; style-src-attr 'self' 'unsafe-inline'; upgrade-insecure-requests;
+  X-Content-Type-Options: nosniff
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: same-origin
