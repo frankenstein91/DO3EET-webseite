@@ -35,7 +35,16 @@ Diese Kopfzeile steuert, wie die von Ihnen besuchte Website auf die Referrer-Inf
 Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen bösartige Skripte in eine Website eingeschleust werden. Mit dieser Einstellung wird der Browser angewiesen, den XSS-Schutz im „Block“-Modus zu aktivieren. Das bedeutet, dass der Browser **versuchen wird**, potenzielle XSS-Angriffe zu erkennen und zu blockieren.
 
 ## Content-Security-Policy
-Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. 
+Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann.
+
+## X-Content-Type-Options: nosniff
+Der HTTP-Header `X-Content-Type-Options: nosniff` ist eine Sicherheitsmaßnahme, die Webserver einsetzen können, um Browser anzuweisen, den deklarierten Content-Type einer Ressource nicht zu "erraten" oder zu ändern.
+
+## Cross-Origin-Opener-Policy: same-origin
+Der HTTP-Header `Cross-Origin-Opener-Policy: same-origin` ist eine Sicherheitsmaßnahme, die Webseitenbetreibern mehr Kontrolle darüber gibt, wie ihre Webseite mit anderen Webseiten interagiert, die sie möglicherweise geöffnet haben oder die sie geöffnet haben. Im Wesentlichen hilft dieser Header, eine Webseite von potenziell bösartigen externen Webseiten zu isolieren.
+
+## Cross-Origin-Resource-Policy: same-origin
+Der HTTP-Header `Cross-Origin-Resource-Policy: same-origin` ist eine Sicherheitsrichtlinie, die Webserver verwenden können, um zu kontrollieren, welche Ursprünge (Websites) ihre Ressourcen einbetten oder laden dürfen. Wenn dieser Header auf `same-origin` gesetzt ist, bedeutet das, dass die Ressource nur von Webseiten geladen werden darf, die exakt denselben Ursprung haben (gleiches Schema, gleicher Hostname und gleicher Port).
 
 # Kommentarfunktion
 Die Kommentarfunktion auf dieser privaten Website wird über Github bereitgestellt. Für die Verarbeitung von personenbezogenen Daten im Rahmen der Kommentarfunktion ist der Betreiber der Github-Plattform verantwortlich. Bitte beachten Sie die Datenschutzbestimmungen von Github unter:

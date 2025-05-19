@@ -38,6 +38,15 @@ This header relates to Cross-Site Scripting (XSS) attacks, where malicious scrip
 ## Content-Security-Policy
 This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from.
 
+## X-Content-Type-Options: nosniff
+The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.
+
+## Cross-Origin-Opener-Policy: same-origin
+The HTTP header `Cross-Origin-Opener-Policy: same-origin` is a security measure that gives website operators more control over how their website interacts with other websites that it may have opened or that may have opened it. Essentially, this header helps to isolate a website from potentially malicious external websites.
+
+## Cross-Origin-Resource-Policy: same-origin
+The HTTP header `Cross-Origin-Resource-Policy: same-origin` is a security policy that web servers can use to control which origins (websites) are allowed to embed or load their resources. When this header is set to `same-origin`, it means that the resource can only be loaded by websites that have the exact same origin (same scheme, same hostname, and same port).
+
 # Comment Function
 The comment function on this private website is provided via Github. The operator of the Github platform is responsible for the processing of personal data within the scope of the comment function. Please note Github's privacy policy at:
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
