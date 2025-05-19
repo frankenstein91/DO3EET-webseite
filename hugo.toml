@@ -1,6 +1,7 @@
 baseURL = 'https://do3eet.pages.dev'
 languageCode = 'de-DE'
 defaultContentLanguage = 'de'
+enableMissingTranslationPlaceholders = true
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
 pagination.pagerSize = 3
@@ -9,6 +10,7 @@ sectionPagesMenu = "main"
 
 [params]
 noindex = false
+defaultFallbackLanguage = "de"
 
 [params.theme]
 palette = "tokyo-night-dark"
