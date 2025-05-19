@@ -6,4 +6,3 @@
   Content-Security-Policy: object-src 'none'; font-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://ipfs.io https://giscus.app; style-src-attr 'self' 'unsafe-inline'; upgrade-insecure-requests;
   X-Content-Type-Options: nosniff
   Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
