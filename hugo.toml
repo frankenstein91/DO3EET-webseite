@@ -100,3 +100,12 @@ page = ['html', 'rss', 'amp']
 
 [Author]
 name = "Frank Tornack"
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 10
+
+  [languages.en]
+    languageName = "English"
+    weight = 20
