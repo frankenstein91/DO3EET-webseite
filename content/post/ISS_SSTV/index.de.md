@@ -1,6 +1,6 @@
 +++
 title = 'SSTV der ISS'
-date = 2025-06-05T08:40:20+02:00
+date = 2025-06-05T09:30:00+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
