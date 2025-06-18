@@ -31,15 +31,12 @@ jobs:
             if [ ! -f "$en_file" ]; then
               
               # --- NEUER TEIL: TITEL AUS DER DATEI AUSLESEN ---
-              # Wir suchen nach der Zeile 'title = "..."' und extrahieren den Inhalt der Anführungszeichen.
-              # Das '^' stellt sicher, dass die Zeile damit beginnt.
               ARTICLE_TITLE=$(grep '^title = ' "$de_file" | cut -d '"' -f 2)
 
               # Fallback: Wenn kein Titel gefunden wurde, den Dateinamen verwenden.
               if [ -z "$ARTICLE_TITLE" ]; then
                 ISSUE_TITLE="Übersetzung fehlt: $(basename "$de_file")"
               else
-                # Anführungszeichen im Titel selbst könnten Probleme machen, daher bereinigen wir sie hier nicht extra.
                 ISSUE_TITLE="Übersetzung fehlt: \"$ARTICLE_TITLE\""
               fi
               # --- ENDE NEUER TEIL ---
@@ -53,7 +50,7 @@ Eine englische Übersetzung wird für die folgende Datei benötigt:
 
 Sobald die Übersetzungsdatei unter \`$en_file\` existiert, wird dieses Issue automatisch geschlossen.
 EOF
-)
+                ) # <-- DIESE ZEILE WURDE KORRIGIERT (eingerückt)
                 gh issue create --title "$ISSUE_TITLE" --body "$ISSUE_BODY" --label "translation"
               else
                 echo "An open issue with title \"$ISSUE_TITLE\" already exists. Skipping."
