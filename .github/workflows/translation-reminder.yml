@@ -5,7 +5,7 @@ name: 'Manage Translation Issues'
 on:
   push:
     branches:
-      - main # Ändern Sie dies zu Ihrem Standard-Branch, falls nötig
+      - main
   workflow_dispatch:
 
 jobs:
@@ -30,27 +30,26 @@ jobs:
             en_file="${de_file%.de.md}.en.md"
             if [ ! -f "$en_file" ]; then
               
-              # --- NEUER TEIL: TITEL AUS DER DATEI AUSLESEN ---
               ARTICLE_TITLE=$(grep '^title = ' "$de_file" | cut -d '"' -f 2)
 
-              # Fallback: Wenn kein Titel gefunden wurde, den Dateinamen verwenden.
               if [ -z "$ARTICLE_TITLE" ]; then
                 ISSUE_TITLE="Übersetzung fehlt: $(basename "$de_file")"
               else
                 ISSUE_TITLE="Übersetzung fehlt: \"$ARTICLE_TITLE\""
               fi
-              # --- ENDE NEUER TEIL ---
 
               if ! gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number | grep -q "number"; then
                 echo "Creating new issue with title: $ISSUE_TITLE"
-                ISSUE_BODY=$(cat <<EOF
-Eine englische Übersetzung wird für die folgende Datei benötigt:
+                
+                # --- DIESER BLOCK WURDE GEÄNDERT ---
+                # Wir verwenden eine einfache, mehrzeilige Zeichenkette statt eines HEREDOC.
+                ISSUE_BODY="Eine englische Übersetzung wird für die folgende Datei benötigt:
 
 **Quelldatei:** \`$de_file\`
 
-Sobald die Übersetzungsdatei unter \`$en_file\` existiert, wird dieses Issue automatisch geschlossen.
-EOF
-                ) # <-- DIESE ZEILE WURDE KORRIGIERT (eingerückt)
+Sobald die Übersetzungsdatei unter \`$en_file\` existiert, wird dieses Issue automatisch geschlossen."
+                # --- ENDE DER ÄNDERUNG ---
+
                 gh issue create --title "$ISSUE_TITLE" --body "$ISSUE_BODY" --label "translation"
               else
                 echo "An open issue with title \"$ISSUE_TITLE\" already exists. Skipping."
@@ -59,7 +58,7 @@ EOF
           done
 
           echo ""
-          # TEIL 2: ISSUES FÜR ERSTELLTE ÜBERSETZUNGEN SCHLIESSEN (unverändert)
+          # TEIL 2: ISSUES FÜR ERSTELLTE ÜBERSETZUNGEN SCHLIESSEN
           echo "--- Checking for completed translations to close issues ---"
           gh issue list --state open --label "translation" --json number,body | \
             jq -c '.[]' | \
