@@ -1,0 +1,86 @@
+# .github/workflows/translation-reminder.yml
+
+name: 'Manage Translation Issues'
+
+on:
+  push:
+    branches:
+      - main # Ändern Sie dies zu Ihrem Standard-Branch, falls nötig
+  workflow_dispatch:
+
+jobs:
+  translation-management:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v4
+
+      - name: 'Create and close translation issues'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # TEIL 1: ISSUES FÜR FEHLENDE ÜBERSETZUNGEN ERSTELLEN
+          echo "--- Checking for missing translations to create issues ---"
+          find . -type f -name "*.de.md" | while read de_file; do
+            en_file="${de_file%.de.md}.en.md"
+            if [ ! -f "$en_file" ]; then
+              
+              # --- NEUER TEIL: TITEL AUS DER DATEI AUSLESEN ---
+              # Wir suchen nach der Zeile 'title = "..."' und extrahieren den Inhalt der Anführungszeichen.
+              # Das '^' stellt sicher, dass die Zeile damit beginnt.
+              ARTICLE_TITLE=$(grep '^title = ' "$de_file" | cut -d '"' -f 2)
+
+              # Fallback: Wenn kein Titel gefunden wurde, den Dateinamen verwenden.
+              if [ -z "$ARTICLE_TITLE" ]; then
+                ISSUE_TITLE="Übersetzung fehlt: $(basename "$de_file")"
+              else
+                # Anführungszeichen im Titel selbst könnten Probleme machen, daher bereinigen wir sie hier nicht extra.
+                ISSUE_TITLE="Übersetzung fehlt: \"$ARTICLE_TITLE\""
+              fi
+              # --- ENDE NEUER TEIL ---
+
+              if ! gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number | grep -q "number"; then
+                echo "Creating new issue with title: $ISSUE_TITLE"
+                ISSUE_BODY=$(cat <<EOF
+Eine englische Übersetzung wird für die folgende Datei benötigt:
+
+**Quelldatei:** \`$de_file\`
+
+Sobald die Übersetzungsdatei unter \`$en_file\` existiert, wird dieses Issue automatisch geschlossen.
+EOF
+)
+                gh issue create --title "$ISSUE_TITLE" --body "$ISSUE_BODY" --label "translation"
+              else
+                echo "An open issue with title \"$ISSUE_TITLE\" already exists. Skipping."
+              fi
+            fi
+          done
+
+          echo ""
+          # TEIL 2: ISSUES FÜR ERSTELLTE ÜBERSETZUNGEN SCHLIESSEN (unverändert)
+          echo "--- Checking for completed translations to close issues ---"
+          gh issue list --state open --label "translation" --json number,body | \
+            jq -c '.[]' | \
+            while read -r issue_json; do
+              issue_number=$(echo "$issue_json" | jq '.number')
+              issue_body=$(echo "$issue_json" | jq -r '.body')
+
+              de_filepath=$(echo "$issue_body" | grep -o '\`.*\.de\.md\`' | tr -d '\`')
+              
+              if [ -z "$de_filepath" ]; then
+                  echo "Could not find a file path in the body of issue #$issue_number. Skipping."
+                  continue
+              fi
+
+              en_filepath="${de_filepath%.de.md}.en.md"
+              
+              if [ -f "$en_filepath" ]; then
+                echo "Translation found for issue #$issue_number ($de_filepath). Closing issue."
+                gh issue close "$issue_number" --comment "✅ Übersetzung für \`$de_filepath\` wurde gefunden. Dieses Issue wird automatisch geschlossen."
+              fi
+            done
