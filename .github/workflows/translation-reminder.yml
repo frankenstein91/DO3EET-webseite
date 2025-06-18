@@ -41,11 +41,14 @@ jobs:
               if ! gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number | grep -q "number"; then
                 echo "Creating new issue with title: $ISSUE_TITLE"
                 
-                # --- DIESER BLOCK WURDE GEÄNDERT ---
-                # Wir verwenden eine einfache, mehrzeilige Zeichenkette statt eines HEREDOC.
+                # --- DIESER BLOCK WURDE ERNEUT GEÄNDERT ---
+                # 1. Wir lagern die problematische Zeile mit dem Doppelpunkt in eine eigene Variable aus.
+                QUELLE_LINE="**Quelldatei:** \`$de_file\`"
+
+                # 2. Wir setzen den Body zusammen und fügen nur die Variable ein.
                 ISSUE_BODY="Eine englische Übersetzung wird für die folgende Datei benötigt:
 
-**Quelldatei:** \`$de_file\`
+$QUELLE_LINE
 
 Sobald die Übersetzungsdatei unter \`$en_file\` existiert, wird dieses Issue automatisch geschlossen."
                 # --- ENDE DER ÄNDERUNG ---
