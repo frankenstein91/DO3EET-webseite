@@ -9,7 +9,7 @@ tags = [
     "Satelliten",
     "5G",
     "FCC",
-    "70cm-Band"
+    "70cm-Band",
     "Interferenz",
     "Regulierung",
 ]
