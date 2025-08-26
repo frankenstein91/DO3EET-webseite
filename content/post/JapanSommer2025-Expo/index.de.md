@@ -1,6 +1,6 @@
 +++
 title = 'Expo 2025 Osaka: Zwischen Zukunfts-Vision und Warteschlangen-Wahnsinn'
-date = 2025-08-26T19:36:37+09:00
+date = 2025-08-26T20:05:00+09:00
 draft = false
 author = "Frank Tornack"
 tags = [
