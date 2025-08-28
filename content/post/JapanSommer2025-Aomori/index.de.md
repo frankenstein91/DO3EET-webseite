@@ -1,0 +1,87 @@
++++
+title = 'Aomori im Sommer 2025: Ein Abenteuer zwischen Thunfisch, tausend Äpfeln und einem treuen Burger-Freund'
+date = 2025-08-28T20:20:53+09:00
+author = "Frank Tornack"
+tags = [
+    "Japan",
+    "Reisen",
+    "Food",
+    "Tempel",
+    "Aomori",
+]
++++
+
+Da war ich also wieder. Aomori. Zwei volle Tage plus An- und Abreisetag, eingeklemmt zwischen dem Rauschen der Züge und dem Duft von Salzwasser. Es war mein zweites Mal in dieser Stadt an der Nordspitze von Honshu, und um ganz ehrlich zu sein, trug ich eine leise Befürchtung im Herzen. Mein erstes Mal war vor ein paar Jahren, im tiefsten Winter, als die Welt unter einer meterdicken, gnädigen Schneedecke begraben lag. Und ich fand es wunderschön. Der Schnee in Aomori ist nicht einfach nur gefrorenes Wasser; er ist der beste Make-up-Artist der Welt. Ein Weichzeichner, der jede Kante glättet, jedes Geräusch dämpft und der Stadt eine Aura von zeitloser Schönheit verleiht.
+
+{{< imgwebp src="PXL_20250826_091904606~2.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_012426855.jpg" alt="" width="1000" height="1000" >}}
+
+Jetzt, im Spätsommer, stand ich vor einem ungeschminkten Aomori. Und ja, ich bleibe bei meiner kontroversen Meinung: Ich finde die Stadt im Winter schöner. Der Schnee überdeckt doch die ein oder andere architektonische Beschädugung, die eine Stadt mit sich bringt, die sich nach dem Krieg fast vollständig neu erfinden musste. Rund 88% von Aomori wurden 1945 zerstört, und was danach kam, war modern, funktional und von einer ehrlichen, schnörkellosen Ästhetik. Im Sommer sieht man das alles. Leider auch die einen oder anderen abgeschlagenen Kanten und Ecken.  
+Es ist, als würde man einen guten Freund zum ersten Mal ohne seine stylische Winterjacke sehen – immer noch derselbe tolle Kerl, aber man bemerkt plötzlich, dass er ein etwas seltsames T-Shirt trägt. Aber genau das, so sollte ich lernen, war vielleicht der wahre Charme dieser zweiten Begegnung.
+
+## Das tägliche Ritual: Mein kulinarisches Abenziel, Mos Burger
+Jeder Reisende hat seine Rituale. Manche meditieren bei Sonnenaufgang, andere schreiben Tagebuch. Ich gehe zu Mos Burger. Jeden Abend. Ohne Ausnahme. Meine Basis in Aomori war der Mos Burger in Yanakawa, und dieser Ort wurde schnell zu **mehr als nur einer Burgerbude**. Er war mein Anker, mein Leuchtturm in der kulinarischen Brandung, mein zuverlässiger Freund nach einem langen Tag voller neuer Eindrücke.
+
+Man mag mich für einen **Kulturbanausen** halten. Hier bin ich, in einer Präfektur, die für ihre unfassbar frischen Meeresfrüchte und ihre legendären Äpfel bekannt ist, und was tue ich? Ich pilgere zu einer Fast-Food-Kette. Aber Mos Burger ist nicht irgendeine Kette. Hier wird der Burger erst nach der Bestellung zubereitet, man bekommt eine kleine Nummer und wartet andächtig, bis das frisch gebratene Patty, die knackigen Zwiebeln und die legendäre Tomaten-Fleisch-Sauce zu einem Kunstwerk vereint werden.  
+
+Doch der wahre Grund meiner täglichen Wallfahrt, das eiegentlich Ziel meiner Quest, war nicht der Burger. Es war der **Nachtisch**. Jedes Mal war ich vom **Nachtisch** begeistert. An einem Abend war es der *アイスドルチェ カップ ショコラ風ムースケーキ*, ein schokoladiger Mousse-Kuchen im Becher, dessen cremige Dichte jeden Philosophen zum Schweigen gebracht hätte. An einem anderen Abend gönnte ich mir den *プレミアムスフレパンケーキ バターで味わう ふわしゅわスフレ＜ハニーメープル＆ホイップ＞* – ein himmlisch fluffiger Soufflé-Pfannkuchen mit Butter, Honig-Ahornsirup und Sahne, der, wie Kenner berichten, mehr ein zarter Kuchen als ein Pfannkuchen ist. Ein perfekter, verlässlicher Abschluss für Tage voller Abenteuer. Mein kleines, köstliches Geheimnis im Herzen von Aomori.
+
+## Im Rausch der Äpfel
+Um meine abendlichen **Eskapaden** bei Mos Burger moralisch auszugleichen, unterwarf ich mich tagsüber einem strengen Regiment. Einer Diät, die ausschließlich aus dem heiligsten aller Güter Aomoris bestand: dem Apfel. Ich trank den berühmten Apfelsaft, als gäbe es kein Morgen. Ich aß Äpfel in allen Formen und Farben, direkt aus der Hand. Ich gönnte mir ein Stück Apfelkuchen, das so saftig war, dass es unter seinem eigenen Gewicht fast zusammenbrach. Es war eine Art Buße, ein Versuch, mich mit der Seele der Präfektur zu versöhnen.
+
+Und je mehr ich konsumierte, desto mehr verstand ich, dass der Apfel hier nicht nur eine Frucht ist. Er ist eine Religion. Er ist das Ergebnis einer sturen, unnachgiebigen Leidenschaft, die die Einheimischen **Joppari** nennen. Das ist dieser besondere Geist, der die Bauern dazu bringt, im tiefsten Schnee im Januar die Äste zu beschneiden, **jede einzelne Blüte von Hand zu bestäuben**, die kleinen Früchte auszudünnen, damit die verbleibenden größer werden, und **jeden einzelnen Apfel von Hand zu drehen, damit er von allen Seiten Sonne bekommt**. Man sagt, es dauert 223 Stunden, um 10 Apfelbäume zu bewirtschaften.  
+
+Die extreme Temperaturdifferenz zwischen Tag und Nacht sorgt dafür, dass die Äpfel tagsüber wachsen und nachts Zucker einlagern, um sich vor der Kälte zu schützen – ein cleverer Frostschutz, der sie unglaublich süß und saftig macht. Und die Vielfalt an Produkten, die aus diesen Wundern der Natur hergestellt werden, ist schier endlos.  
+Ich habe versucht, Aomori zu werden, Bissen für Bissen, Schluck für Schluck.
+
+{{< imgwebp src="PXL_20250827_062220991.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_121425666.jpg" alt="" width="1000" height="1000" >}}
+
+## Die hohe Kunst des Nokkedon
+Wenn meine Abende bei Mos Burger der Inbegriff von Komfort und Verlässlichkeit waren, dann war mein Mittagessen im Aomori Gyosai Center das genaue Gegenteil: ein aufregendes, strategisches Abenteuer. Hier wartete das große Highlight meiner Reise: Nokkedon. Das Konzept ist genial einfach und doch unendlich komplex. Man kauft ein Ticketheft – quasi die Währung/Essensmarken für dieses kulinarische Spiel –, sucht sich einen Stand mit einer orangefarbenen Flagge, um eine Schüssel mit dampfendem Reis zu bekommen, und zieht dann los, um an den Ständen mit den dunkelblauen Flaggen seine eigenen Beläge auszuwählen.
+
+Für mich gab es nur eine Mission, ein Ziel, das alle anderen Verlockungen – Seeigel, Jakobsmuscheln, gegrilltes Fleisch – in den Schatten stellte: Thunfisch. In allen Fettgraden. Ich war ein Spezialist auf einer heiligen Mission. Der Markt war ein Labyrinth aus Gerüchen, Geräuschen und den Rufen der Verkäufer im charmanten Tsugaru-Dialekt. Ich navigierte durch die Gänge wie ein Jäger, meine Augen fixiert auf die verschiedenen Rottöne des Maguro. Ein Ticket für Chutoro, den mittelfetten Thunfisch. Zwei Tickets für Otoro, den herrlich fetten Bauch, der auf der Zunge zergeht wie Butter. Noch ein Ticket für Akami, das magere, tiefrote Rückenstück. Ich baute mir eine Schüssel, die eine Hommage an diesen einen Fisch war, eine Symphonie in Thunfisch (und etwas Kopffüßler).
+
+{{< imgwebp src="PXL_20250827_035328992.jpg" alt="" width="1000" height="1000" >}}
+
+Dieses Erlebnis war die perfekte Antithese zu Mos Burger. Dort war alles vorgegeben, hier war alles meine Entscheidung. Dort saß ich passiv und wartete, hier war ich der aktive Gestalter meines Glücks. Es war die ultimative Form des personalisierten Essens, ein Dialog zwischen mir, dem Markt und den Schätzen des Meeres. Und als ich in der kleinen Rast-Ecke saß und meinen selbst kreierten Thunfisch-Turm aß, wusste ich: Das ist Aomori. 
+
+## Kulturelle Schwergewichte
+Aomoris Hafenviertel ist nicht nur ein Ort für Fähren und Fischerboote, sondern auch eine Art Freilichtmuseum für die Seele der Stadt. Zwei meiner wichtigsten Besuche fanden hier statt, nur wenige Gehminuten voneinander entfernt, und beide waren auf ihre Weise Zeitreisen.
+
+### Die Geister des Sommers im Nebuta Museum WA RASSE
+
+Direkt am Bahnhof gelegen, ist das **Nebuta Museum** ein architektonisches Statement aus roten Stahlträgern, das an die Buchenwälder der Region erinnern soll. Im Inneren wird es dunkel und still. Und dann sieht man sie: vier der riesigen, kunstvollen Nebuta-Wagen, die erst wenige Wochen zuvor beim berühmten Sommerfestival durch die Straßen getanzt sind. In der Dunkelheit der Halle, von innen beleuchtet, wirken sie wie schlafende Riesen. Man kann die unglaubliche Detailarbeit bewundern, die Gesichter der Krieger, die verschlungenen Drachen, alles aus Draht, Holz und Papier gefertigt.
+
+{{< imgwebp src="PXL_20250825_094131140.jpg" alt="" width="1000" height="1000" >}}
+
+Es ist ein seltsam melancholischer Ort. Man spürt die Energie, die diese Wagen ausstrahlen, aber man erlebt sie in Abwesenheit des eigentlichen Festes – ohne die ohrenbetäubende Musik, die Tänzer und die Millionen von Zuschauern. Es ist, als würde man den Geist des Festivals treffen. Um diese Lücke zu füllen, gibt es dreimal am Tag die "Haneto"-Experience, bei der Besucher zu den traditionellen Klängen selbst tanzen können. Ich habe das Spektakel aus sicherer Entfernung (beim Essen) beobachtet, während andere sich natülich todesmutig in die tanzende Menge stürzten. Meine eigenen tänzerischen Fähigkeiten blieben an diesem Tag lieber ein gut gehütetes Geheimnis. Ein besonderer Moment war die "Hands-on Nebuta"-Ecke, wo man tatsächlich ein Stück eines echten Wagens anfassen darf. Man spürt die raue Textur des Papiers und die Stabilität des Drahtgerüsts und bekommt eine Ahnung davon, wie viel Arbeit in diesen vergänglichen Kunstwerken steckt. Nicht zu vergessen ist auch das hervorragende Thunfisch-Curry, das man im Museumsrestaurant bekommt – eine unerwartete, aber willkommene Stärkung.
+
+### Eine Fähre voller Züge
+Nur einen Steinwurf entfernt liegt die "Hakkoda Maru" im Wasser, ein leuchtend gelbes Relikt aus einer anderen Zeit. Bis zur Eröffnung des Seikan-Tunnels 1988 war diese Fähre eine der Hauptlebensadern zwischen Japans Hauptinsel Honshu und Hokkaido. Heute ist sie ein Museumsschiff und ein Rundgang an Bord ist eine Reise zurück in die Showa-Zeit. Man kann durch die alten Passagierkabinen schlendern, auf der Brücke stehen und sich vorstellen, wie der Kapitän das Schiff durch die Tsugaru-Straße navigierte.
+
+{{< imgwebp src="PXL_20250826_051611241.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250826_052345968.jpg" alt="" width="1000" height="1000" >}}
+
+Aber der absolut unglaublichste, bizarrste und faszinierendste Teil des Schiffes befindet sich in seinem Bauch. Man geht eine Treppe hinunter und betritt das riesige Fahrzeugdeck. Und dort stehen sie: echte Eisenbahnwaggons. Ein alter Expresswagen, ein Postwaggon, sogar eine Diesellok. Es ist ein surreales Bild. Züge in einem Schiff. Die Hakkoda Maru war eine Eisenbahnfähre, die bis zu 48 Waggons auf vier Gleisen transportieren konnte. Diese technologische Meisterleistung ist heute obsolet, ein Denkmal für eine Ära, die vom Fortschritt überholt wurde. Genau wie das Nebuta Museum bewahrt die Hakkoda Maru etwas, das es in seiner ursprünglichen Funktion nicht mehr gibt. Beide Orte erzählen von Aomoris Vergangenheit, von flüchtigen Festen und überholter Technologie, und beide hinterlassen einen tiefen, nachdenklichen Eindruck.
+
+{{< imgwebp src="PXL_20250826_052716042.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_100118257.NIGHT.jpg" alt="" width="1000" height="1000" >}}
+
+## Schrein-Hopping
+An einem Tag beschloss ich, mich auf eine spirituelle Reise zu begeben und gleich vier Schreine zu besuchen. Diese Tour entwickelte sich schnell zu einer Reise von einer perfekt kuratierten Touristenattraktion zu den mysteriösen, unbeschriebenen Blättern auf der Landkarte Aomoris.
+
+Mein erster Halt war der Hirota-Schrein, den man als den "einsteigerfreundlichen" Schrein bezeichnen könnte. Er ist einzigartig, denn er gilt als der einzige Schrein in ganz Japan, der seit jeher dem Schutz vor Krankheiten und Unheil gewidmet ist. Aber er ist auch einfach unterhaltsam. Hier gibt es Omikuji (Wahrsagezettel) in Form von Äpfeln und Jakobsmuscheln, den Symbolen der Region. Besonders faszinierend fand ich die "Mizu-mikuji": Man zieht einen leeren Zettel und legt ihn ins Wasser, woraufhin die Weissagung wie von Geisterhand erscheint. Überall hängen niedliche Goldfisch-Nebuta-Laternen, die durch Crowdfunding finanziert wurden und eine unglaublich fotogene Atmosphäre schaffen. Der Hirota-Schrein weiß, wie man Besucher begeistert.
+
+Danach wurde es... seltsam. Meine Liste führte mich zum Shoichii Kinseiinaka Schrein, zum Okidateinari Schrein und zum Kusushi Schrein. Und hier endeten die Informationen. Es gab keine bunten Broschüren, keine englischen Schilder, keine Apfel-Omikuji. Es gab nur Stille. Ich stand vor kleinen, bescheidenen Schreinen, umgeben von Wohnhäusern, und fühlte mich wie ein Eindringling. Waren das öffentliche Orte? Oder war ich versehentlich in den privaten Schrein von Herrn Tanaka aus der Nachbarschaft gestolpert? Ich lief umher, versuchte, die Bedeutung der steinernen Laternen und der stillen Hallen zu ergründen, aber sie gaben ihr Gehemniss nicht preis. 
+
+## Leuchtturm am Nachmittag
+Am Nachmittag des 27. August, genauer gesagt gegen 14:10 Uhr, machte ich mich auf den Weg zum Aomori Port North Breakwater West Lighthouse. Anders als die verspielte, nachts bunt leuchtende Bay Bridge, die ich später noch überqueren sollte, war der Leuchtturm das genaue Gegenteil: stoisch, funktional, zeitlos. Er ist kein reines Dekorationsobjekt, sondern ein aktiver Leuchtturm, der den Schiffen sicher den Weg in den Hafen weist. Dort am Ende der Mole zu stehen, war ein Moment der Ruhe.
+
+{{< imgwebp src="PXL_20250827_050648450.jpg" alt="Leutturm von Aomori" width="1000" height="1000" >}}
+
+## Ein Abend im leichten Regen
+Am Abend des 27. August begann es leicht zu regnen. Kein Unwetter, nur ein feiner, fast sanfter Nieselregen, der die Luft kühlte und die Lichter der Stadt in ein impressionistisches Gemälde verwandelte. Es war der perfekte Abend für einen Spaziergang über die Aomori Bay Bridge. Die Brücke ist bei Tag schon ein beeidruckendes Bauwerk, aber bei Nacht wird sie zu einem Spektakel. Ihre Pylonen, die bewusst die Form des Buchstabens "A" für Aomori nachbilden, werden angestrahlt, und die Lichter wechseln sanft ihre Farbe. Nur dieses Mal war sie leider dunkel. Der Regen ließ den Asphalt glänzen, und jede Lichtquelle spiegelte sich darin, was der Szene eine fast futuristische, Blade-Runner-artige Atmosphäre verlieh. Ich ging auf der breiten Fußgängerpromenade, die von Einheimischen liebevoll "Aomori Love Bridge" genannt wird, und blickte auf den Hafen, wo die Hakkoda Maru still vor Anker lag. Der Spaziergang auf der Brücke, mit dem Glitzern der Lichter um mich herum und dem Blick auf das dunkle Wasser der Bucht. 
+
+{{< imgwebp src="PXL_20250826_085323135.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_100049018.NIGHT.jpg" alt="" width="1000" height="1000" >}}
