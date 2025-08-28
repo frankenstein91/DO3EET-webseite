@@ -13,6 +13,9 @@ tags = [
 
 Da war ich also wieder. Aomori. Zwei volle Tage plus An- und Abreisetag, eingeklemmt zwischen dem Rauschen der Züge und dem Duft von Salzwasser. Es war mein zweites Mal in dieser Stadt an der Nordspitze von Honshu, und um ganz ehrlich zu sein, trug ich eine leise Befürchtung im Herzen. Mein erstes Mal war vor ein paar Jahren, im tiefsten Winter, als die Welt unter einer meterdicken, gnädigen Schneedecke begraben lag. Und ich fand es wunderschön. Der Schnee in Aomori ist nicht einfach nur gefrorenes Wasser; er ist der beste Make-up-Artist der Welt. Ein Weichzeichner, der jede Kante glättet, jedes Geräusch dämpft und der Stadt eine Aura von zeitloser Schönheit verleiht.
 
+{{< imgwebp src="PXL_20250826_091904606~2.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_012426855.jpg" alt="" width="1000" height="1000" >}}
+
 Jetzt, im Spätsommer, stand ich vor einem ungeschminkten Aomori. Und ja, ich bleibe bei meiner kontroversen Meinung: Ich finde die Stadt im Winter schöner. Der Schnee überdeckt doch die ein oder andere architektonische Beschädugung, die eine Stadt mit sich bringt, die sich nach dem Krieg fast vollständig neu erfinden musste. Rund 88% von Aomori wurden 1945 zerstört, und was danach kam, war modern, funktional und von einer ehrlichen, schnörkellosen Ästhetik. Im Sommer sieht man das alles. Leider auch die einen oder anderen abgeschlagenen Kanten und Ecken.  
 Es ist, als würde man einen guten Freund zum ersten Mal ohne seine stylische Winterjacke sehen – immer noch derselbe tolle Kerl, aber man bemerkt plötzlich, dass er ein etwas seltsames T-Shirt trägt. Aber genau das, so sollte ich lernen, war vielleicht der wahre Charme dieser zweiten Begegnung.
 
@@ -31,10 +34,15 @@ Und je mehr ich konsumierte, desto mehr verstand ich, dass der Apfel hier nicht 
 Die extreme Temperaturdifferenz zwischen Tag und Nacht sorgt dafür, dass die Äpfel tagsüber wachsen und nachts Zucker einlagern, um sich vor der Kälte zu schützen – ein cleverer Frostschutz, der sie unglaublich süß und saftig macht. Und die Vielfalt an Produkten, die aus diesen Wundern der Natur hergestellt werden, ist schier endlos.  
 Ich habe versucht, Aomori zu werden, Bissen für Bissen, Schluck für Schluck.
 
+{{< imgwebp src="PXL_20250827_062220991.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_121425666.jpg" alt="" width="1000" height="1000" >}}
+
 ## Die hohe Kunst des Nokkedon
 Wenn meine Abende bei Mos Burger der Inbegriff von Komfort und Verlässlichkeit waren, dann war mein Mittagessen im Aomori Gyosai Center das genaue Gegenteil: ein aufregendes, strategisches Abenteuer. Hier wartete das große Highlight meiner Reise: Nokkedon. Das Konzept ist genial einfach und doch unendlich komplex. Man kauft ein Ticketheft – quasi die Währung/Essensmarken für dieses kulinarische Spiel –, sucht sich einen Stand mit einer orangefarbenen Flagge, um eine Schüssel mit dampfendem Reis zu bekommen, und zieht dann los, um an den Ständen mit den dunkelblauen Flaggen seine eigenen Beläge auszuwählen.
 
 Für mich gab es nur eine Mission, ein Ziel, das alle anderen Verlockungen – Seeigel, Jakobsmuscheln, gegrilltes Fleisch – in den Schatten stellte: Thunfisch. In allen Fettgraden. Ich war ein Spezialist auf einer heiligen Mission. Der Markt war ein Labyrinth aus Gerüchen, Geräuschen und den Rufen der Verkäufer im charmanten Tsugaru-Dialekt. Ich navigierte durch die Gänge wie ein Jäger, meine Augen fixiert auf die verschiedenen Rottöne des Maguro. Ein Ticket für Chutoro, den mittelfetten Thunfisch. Zwei Tickets für Otoro, den herrlich fetten Bauch, der auf der Zunge zergeht wie Butter. Noch ein Ticket für Akami, das magere, tiefrote Rückenstück. Ich baute mir eine Schüssel, die eine Hommage an diesen einen Fisch war, eine Symphonie in Thunfisch (und etwas Kopffüßler).
+
+{{< imgwebp src="PXL_20250827_035328992.jpg" alt="" width="1000" height="1000" >}}
 
 Dieses Erlebnis war die perfekte Antithese zu Mos Burger. Dort war alles vorgegeben, hier war alles meine Entscheidung. Dort saß ich passiv und wartete, hier war ich der aktive Gestalter meines Glücks. Es war die ultimative Form des personalisierten Essens, ein Dialog zwischen mir, dem Markt und den Schätzen des Meeres. Und als ich in der kleinen Rast-Ecke saß und meinen selbst kreierten Thunfisch-Turm aß, wusste ich: Das ist Aomori. 
 
@@ -43,14 +51,22 @@ Aomoris Hafenviertel ist nicht nur ein Ort für Fähren und Fischerboote, sonder
 
 ### Die Geister des Sommers im Nebuta Museum WA RASSE
 
-Direkt am Bahnhof gelegen, ist das **Nebuta Museum** ein architektonisches Statement aus roten Stahlträgern, das an die Buchenwälder der Region erinnern soll. Im Inneren wird es dunkel und still. Und dann sieht man sie: vier der riesigen, kunstvollen Nebuta-Wagen, die erst wenige Wochen zuvor beim berühmten Sommerfestival durch die Straßen getanzt sind. In der Dunkelheit der Halle, von innen beleuchtet, wirken sie wie schlafende Riesen. Man kann die unglaubliche Detailarbeit bewundern, die Gesichter der Krieger, die verschlungenen Drachen, alles aus Draht, Holz und Papier gefertigt.  
+Direkt am Bahnhof gelegen, ist das **Nebuta Museum** ein architektonisches Statement aus roten Stahlträgern, das an die Buchenwälder der Region erinnern soll. Im Inneren wird es dunkel und still. Und dann sieht man sie: vier der riesigen, kunstvollen Nebuta-Wagen, die erst wenige Wochen zuvor beim berühmten Sommerfestival durch die Straßen getanzt sind. In der Dunkelheit der Halle, von innen beleuchtet, wirken sie wie schlafende Riesen. Man kann die unglaubliche Detailarbeit bewundern, die Gesichter der Krieger, die verschlungenen Drachen, alles aus Draht, Holz und Papier gefertigt.
+
+{{< imgwebp src="PXL_20250825_094131140.jpg" alt="" width="1000" height="1000" >}}
 
 Es ist ein seltsam melancholischer Ort. Man spürt die Energie, die diese Wagen ausstrahlen, aber man erlebt sie in Abwesenheit des eigentlichen Festes – ohne die ohrenbetäubende Musik, die Tänzer und die Millionen von Zuschauern. Es ist, als würde man den Geist des Festivals treffen. Um diese Lücke zu füllen, gibt es dreimal am Tag die "Haneto"-Experience, bei der Besucher zu den traditionellen Klängen selbst tanzen können. Ich habe das Spektakel aus sicherer Entfernung (beim Essen) beobachtet, während andere sich natülich todesmutig in die tanzende Menge stürzten. Meine eigenen tänzerischen Fähigkeiten blieben an diesem Tag lieber ein gut gehütetes Geheimnis. Ein besonderer Moment war die "Hands-on Nebuta"-Ecke, wo man tatsächlich ein Stück eines echten Wagens anfassen darf. Man spürt die raue Textur des Papiers und die Stabilität des Drahtgerüsts und bekommt eine Ahnung davon, wie viel Arbeit in diesen vergänglichen Kunstwerken steckt. Nicht zu vergessen ist auch das hervorragende Thunfisch-Curry, das man im Museumsrestaurant bekommt – eine unerwartete, aber willkommene Stärkung.
 
 ### Eine Fähre voller Züge
 Nur einen Steinwurf entfernt liegt die "Hakkoda Maru" im Wasser, ein leuchtend gelbes Relikt aus einer anderen Zeit. Bis zur Eröffnung des Seikan-Tunnels 1988 war diese Fähre eine der Hauptlebensadern zwischen Japans Hauptinsel Honshu und Hokkaido. Heute ist sie ein Museumsschiff und ein Rundgang an Bord ist eine Reise zurück in die Showa-Zeit. Man kann durch die alten Passagierkabinen schlendern, auf der Brücke stehen und sich vorstellen, wie der Kapitän das Schiff durch die Tsugaru-Straße navigierte.
 
+{{< imgwebp src="PXL_20250826_051611241.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250826_052345968.jpg" alt="" width="1000" height="1000" >}}
+
 Aber der absolut unglaublichste, bizarrste und faszinierendste Teil des Schiffes befindet sich in seinem Bauch. Man geht eine Treppe hinunter und betritt das riesige Fahrzeugdeck. Und dort stehen sie: echte Eisenbahnwaggons. Ein alter Expresswagen, ein Postwaggon, sogar eine Diesellok. Es ist ein surreales Bild. Züge in einem Schiff. Die Hakkoda Maru war eine Eisenbahnfähre, die bis zu 48 Waggons auf vier Gleisen transportieren konnte. Diese technologische Meisterleistung ist heute obsolet, ein Denkmal für eine Ära, die vom Fortschritt überholt wurde. Genau wie das Nebuta Museum bewahrt die Hakkoda Maru etwas, das es in seiner ursprünglichen Funktion nicht mehr gibt. Beide Orte erzählen von Aomoris Vergangenheit, von flüchtigen Festen und überholter Technologie, und beide hinterlassen einen tiefen, nachdenklichen Eindruck.
+
+{{< imgwebp src="PXL_20250826_052716042.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_100118257.NIGHT.jpg" alt="" width="1000" height="1000" >}}
 
 ## Schrein-Hopping
 An einem Tag beschloss ich, mich auf eine spirituelle Reise zu begeben und gleich vier Schreine zu besuchen. Diese Tour entwickelte sich schnell zu einer Reise von einer perfekt kuratierten Touristenattraktion zu den mysteriösen, unbeschriebenen Blättern auf der Landkarte Aomoris.
@@ -62,5 +78,10 @@ Danach wurde es... seltsam. Meine Liste führte mich zum Shoichii Kinseiinaka Sc
 ## Leuchtturm am Nachmittag
 Am Nachmittag des 27. August, genauer gesagt gegen 14:10 Uhr, machte ich mich auf den Weg zum Aomori Port North Breakwater West Lighthouse. Anders als die verspielte, nachts bunt leuchtende Bay Bridge, die ich später noch überqueren sollte, war der Leuchtturm das genaue Gegenteil: stoisch, funktional, zeitlos. Er ist kein reines Dekorationsobjekt, sondern ein aktiver Leuchtturm, der den Schiffen sicher den Weg in den Hafen weist. Dort am Ende der Mole zu stehen, war ein Moment der Ruhe.
 
-## Ein Abend im leichten Regen: Brückenlichter-Melancholie
+{{< imgwebp src="PXL_20250827_050648450.jpg" alt="Leutturm von Aomori" width="1000" height="1000" >}}
+
+## Ein Abend im leichten Regen
 Am Abend des 27. August begann es leicht zu regnen. Kein Unwetter, nur ein feiner, fast sanfter Nieselregen, der die Luft kühlte und die Lichter der Stadt in ein impressionistisches Gemälde verwandelte. Es war der perfekte Abend für einen Spaziergang über die Aomori Bay Bridge. Die Brücke ist bei Tag schon ein beeidruckendes Bauwerk, aber bei Nacht wird sie zu einem Spektakel. Ihre Pylonen, die bewusst die Form des Buchstabens "A" für Aomori nachbilden, werden angestrahlt, und die Lichter wechseln sanft ihre Farbe. Nur dieses Mal war sie leider dunkel. Der Regen ließ den Asphalt glänzen, und jede Lichtquelle spiegelte sich darin, was der Szene eine fast futuristische, Blade-Runner-artige Atmosphäre verlieh. Ich ging auf der breiten Fußgängerpromenade, die von Einheimischen liebevoll "Aomori Love Bridge" genannt wird, und blickte auf den Hafen, wo die Hakkoda Maru still vor Anker lag. Der Spaziergang auf der Brücke, mit dem Glitzern der Lichter um mich herum und dem Blick auf das dunkle Wasser der Bucht. 
+
+{{< imgwebp src="PXL_20250826_085323135.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="PXL_20250827_100049018.NIGHT.jpg" alt="" width="1000" height="1000" >}}
