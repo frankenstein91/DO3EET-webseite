@@ -71,3 +71,14 @@ Der Anblick, der sich mir bot, war atemberaubend und der perfekte Abschluss mein
 Es war der Moment, in dem die Karte zum Territorium wurde und die einzelnen Stationen meiner Reise zur Identität einer einzigen, faszinierenden Stadt verschmolzen.
 
 ## Quiz Time...
+Denkst du, du kennst Kōriyama jetzt? Teste dein Wissen mit diesen Fragen für Fortgeschrittene!
+
+### Der „21st Century Memorial Park Hayama no Mori“ ist nicht nur eine Grünfläche. Welche besondere Funktion hat er im Notfall?
+a) Er dient als Hubschrauberlandeplatz.
+b) Er ist als Katastrophenschutz-Basis konzipiert, mit Wasserspeichern und erdbebensicheren Bauten.
+c) Unter dem Park befindet sich ein großer Luftschutzbunker.
+
+### Die Schreinanlage des Kaiseizan Daijingu wurde 1876 für eine bestimmte Gruppe von Menschen gegründet. Für wen?
+a) Für die Samurai-Familien der Region
+b) Für die Siedler, die zur Erschließung des Landes in die Gegend kamen
+c) Für die kaiserliche Familie als Sommerresidenz
