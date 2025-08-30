@@ -69,10 +69,7 @@ Nur einen kurzen Spaziergang entfernt wartete gleich das nächste Juwel: der Shi
 # Quiztime
 Du stehst an einem sonnigen Nachmittag im Kyu-Shiba-rikyu Garden in Tokio, befindest dich aber im kühlen Schatten eines großen Hochhauses. Trotzdem siehst du, wie vor dir auf dem Rasen dein eigener, klarer Schatten entsteht. Der Schatten fällt nach Südwesten... wie ist das möglich?
 
-A) Es handelt sich um ein seltenes atmosphärisches Phänomen, bei dem die hohe Luftfeuchtigkeit in Tokio das Sonnenlicht wie eine Linse bricht und um das Gebäude herumleitet.
-
-B) Die Stahlträger in den nahen Hochhäusern erzeugen ein lokales Magnetfeld, das die Photonen des Sonnenlichts ablenkt und diese optische Täuschung verursacht.
-
-C) Du stehst im Schatten eines Gebäudes, das die direkte Sonne blockiert. Dein Schatten wird jedoch von einer extrem hellen Spiegelung der Sonne an der Glasfassade eines anderen Gebäudes erzeugt, das wie eine zweite, lokale Lichtquelle wirkt.
-
+A) Es handelt sich um ein seltenes atmosphärisches Phänomen, bei dem die hohe Luftfeuchtigkeit in Tokio das Sonnenlicht wie eine Linse bricht und um das Gebäude herumleitet.  
+B) Die Stahlträger in den nahen Hochhäusern erzeugen ein lokales Magnetfeld, das die Photonen des Sonnenlichts ablenkt und diese optische Täuschung verursacht.  
+C) Du stehst im Schatten eines Gebäudes, das die direkte Sonne blockiert. Dein Schatten wird jedoch von einer extrem hellen Spiegelung der Sonne an der Glasfassade eines anderen Gebäudes erzeugt, das wie eine zweite, lokale Lichtquelle wirkt.  
 D) Die Weitwinkel-Objektive moderner Smartphones verzerren die Perspektive so stark, dass es nur auf dem Foto so aussieht, als würdest du im Schatten stehen, obwohl die Sonne direkt auf dich scheint.
