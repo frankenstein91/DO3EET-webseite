@@ -48,3 +48,12 @@ Doch während ich die ruhige Schönheit auf mich wirken ließ, begann am Horizon
 {{< imgwebp src="PXL_20250902_100205058.NIGHT.jpg" alt="" width="1000" height="1000" >}}
 *Ja, das links in den Wolken ist ein Blitz bzw. nahes Wetterleuchten*
 
+Der Epilog dieser himmlischen Inszenierung folgte später im Hotel. Plötzlich erloschen alle Lichter. Für zwei Minuten herrschte absolute Dunkelheit und Stille, bevor der Strom zurückkehrte. Dieser kurze Stromausfall war die direkte, greifbare Konsequenz des Schauspiels, das ich aus der Ferne beobachtet hatte. Er holte das epische Ereignis vom Himmel herunter und brachte es direkt in mein Zimmer, machte die Erfahrung komplett und schuf eine nachhaltige, persönliche Verbindung zu der rohen Kraft, die ich an diesem Abend über Utsunomiya hatte aufziehen sehen. Der Onsen im Außenbereich auf dem Dach, habe ich natürlich erst weit in die Nacht nach dem Gewitter genutzt.
+
+## Eine Gyoza-Offenbarung im Kirasse
+Nach all den historischen und meteorologischen Eindrücken war es Zeit für den kulinarischen Höhepunkt, die Pilgerreise zum Herzstück der städtischen Identität. Das Ziel war der Utsunomiya Gyōza-kai Kirasse Store, der sich, fast wie ein Geheimtipp, im Keller eines MEGA Don Quijote Kaufhauses verbirgt.  
+Kirasse ist weniger ein Restaurant als vielmehr ein „Gyoza-Themenpark“. Das Konzept ist so einfach wie genial: Anstatt Besucher auf eine mühsame Suche durch die über 300 Gyoza-Restaurants der Stadt zu schicken, versammelt Kirasse eine kuratierte Auswahl der besten Läden unter einem Dach. Fünf Restaurants sind permanent vertreten, ergänzt durch täglich wechselnde Anbieter. So kann man an einem einzigen Ort eine unglaubliche Vielfalt probieren...
+
+Die Atmosphäre ist lebhaft und unkompliziert, eine Mischung aus Einheimischen und Touristen, die sich alle dem gleichen Genuss hingeben. Man bestellt an den verschiedenen Ständen und stellt sich sein eigenes Degustationsmenü zusammen. Kirasse ist die perfekte Lösung für das „Paradox of Choice“, das einen als Besucher sonst überfordern würde. Es ist eine Art kulinarische Botschaft der Stadt, die sicherstellt, dass jeder Gast Utsunomiya mit einer klaren und köstlichen Vorstellung davon verlässt, warum dieser Ort seinen Titel als Gyoza-Hauptstadt zu Recht trägt.
+
+{{< imgwebp src="PXL_20250831_095450906.jpg" alt="" width="1000" height="1000" >}}
