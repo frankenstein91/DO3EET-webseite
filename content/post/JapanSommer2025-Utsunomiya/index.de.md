@@ -17,3 +17,9 @@ Was man schnell merkt, ist, dass diese Identität kein Zufallsprodukt der Geschi
 
 ## Die Burg Utsunomiya und die Last der Geschichte
 Mein erster Weg führte mich zum Utsunomiya Castle Site Park, einem Ort, der die komplexe Seele der Stadt perfekt widerspiegelt. Heute ist das Areal eine grüne Oase der Ruhe, ein Ort der Entspannung für die Bürger. Doch unter dem friedlichen Rasen und den sorgfältig restaurierten Mauern liegt eine Geschichte voller Macht, Intrigen und brutaler Zerstörung. 
+
+{{< imgwebp src="PXL_20250831_025552795.jpg" alt="" width="1000" height="1000" >}}
+
+Die Ursprünge der Burg reichen bis in die Heian-Zeit um das Jahr 1063 zurück. Über die Jahrhunderte wuchs sie zu einer der sieben großen Festungen der Kanto-Region heran und diente als wichtiger Stützpunkt für die Tokugawa-Shogune auf ihrer Reise zum heiligen Nikko. Doch ihr Schicksal besiegelte der Boshin-Krieg im Jahr 1868. In einer verheerenden Schlacht zwischen kaiserlichen Truppen und den letzten Anhängern des Shogunats wurde die Burg fast vollständig niedergebrannt.  
+Was heute zu sehen ist, ist keine original erhaltene Anlage, sondern eine Rekonstruktion – und genau das macht den Ort so besonders. Die beiden Wachtürme, Seimeidai und Fujimi Yagura, die mächtigen Erd- und Steinwälle sowie der teilweise wiederhergestellte Burggraben sind nicht nur historische Nachbildungen. Sie sind ein Denkmal für den Willen der Gemeinschaft. Nach dem Krieg und einer Phase städtischer Expansion, in der Teile des Geländes einfach zugeschüttet wurden, war es der „Enthusiasmus der Bürger“, der in der Heisei-Ära die Wiederherstellung vorantrieb. Ein Spaziergang über die Erd-Wälle ist daher mehr als nur Sightseeing. Es ist das Erleben eines Stücks zurückeroberter Identität, ein Zeugnis dafür, wie eine Gemeinschaft ihre Geschichte aus den Trümmern von Krieg und Fortschritt wiederauferstehen lässt.
+
