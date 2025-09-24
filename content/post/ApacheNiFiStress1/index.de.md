@@ -18,3 +18,12 @@ Beim Aufruf der NiFi-Oberfläche erscheint statt des Login-Fensters nur eine fru
 
 > **Unauthorized**  
 Unable to load authentication configuration. Please contact your system administrator.
+
+Die Entwicklertools im Browser *(F12)* zeigen oft nur ungenaue Fehlermeldungen. Man sieht vielleicht einen **HTTP 404** `Not Found` für eine Ressource, gefolgt von einem **HTTP 400** `Bad Request`, die auf ein Problem hindeuten, aber nicht verraten, wo der eigentliche Fehler liegt. Man prüft Zertifikate, Firewalls und die NiFi-Konfiguration...  
+doch oft liegt die Ursache an einer winzigen, leicht zu übersehenden Stelle in der Apache-Konfiguration.
+
+## Die Konfiguration: So sollte es aussehen
+Um **NiFi** korrekt über einen **Reverse Proxy** zu betreiben, sind an **zwei Stellen** Anpassungen nötig: 
+ - `nifi.properties` 
+ - Konfiguration des Apache-VirtualHost
+
