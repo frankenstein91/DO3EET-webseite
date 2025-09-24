@@ -1,11 +1,13 @@
 +++
 title = 'ISS, hörst du mich? Ein Bericht ohne Antwort'
 date = 2025-08-18T18:13:30+02:00
+author = "Frank Tornack"
 tags = [
     "ISS",
     "Space",
     "Funk",
     "Mailbox",
+    "Linux",
 ]
 +++
 
