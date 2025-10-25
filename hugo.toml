@@ -6,12 +6,15 @@ title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
 pagination.pagerSize = 3
 enableInlineShortcodes = true
-sectionPagesMenu = "main"
 [menu]
 [[menu.main]]
-name = "Tags"
-url = "/tags/"
-weight = 20
+  name = "posts"
+  url = "/posts/"
+  weight = 20
+[[menu.main]]
+  name = "tags"
+  url = "/tags/"
+  weight = 30
 
 [params]
 noindex = false
