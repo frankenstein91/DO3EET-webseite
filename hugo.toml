@@ -7,6 +7,11 @@ theme = ["hugo-video", "risotto"]
 pagination.pagerSize = 3
 enableInlineShortcodes = true
 sectionPagesMenu = "main"
+[menu]
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 20
 
 [params]
 noindex = false
