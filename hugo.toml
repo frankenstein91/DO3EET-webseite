@@ -9,7 +9,7 @@ enableInlineShortcodes = true
 [menu]
 [[menu.main]]
   name = "posts"
-  url = "/posts/"
+  url = "/post/"
   weight = 20
 [[menu.main]]
   name = "tags"
