@@ -8,42 +8,77 @@
 {{ $votesCount := 0 }}
 {{ $urlToGet := print "https://" $masIns "/api/v1/statuses/" $id }}
 
+{{/* --- Stufe 1: Versuche, die Remote-Ressource zu laden --- */}}
 {{ with try (resources.GetRemote $urlToGet) }}
-	{{ with .Err }}
-		<blockquote class="toot-blockquote">
-			<p class="ctr legal">[Source not online<br />
-			at time of site build.]</p>
-		</blockquote>
-	{{ else with .Value }}
-		{{ $json := unmarshal .Content }}
-		{{ $jsonHolder := $json }}{{/* Being safe */}}
 
-		{{ if isset $json "account" }}
-			{{ $tootLink = print "https://" $masIns "@" $json.account.acct "/status/" $id }}
-			{{ $handleInst = print "@" $json.account.acct "@" $masIns }}
-		{{ end }}
+    {{/* --- Fehler 1: Verbindungsfehler (Server offline, 404, etc.) --- */}}
+    {{ with .Err }}
+        <blockquote class="toot-blockquote">
+            <p class="ctr legal">[Source ({{ $masIns }}) not online<br />
+            at time of site build. Connection error.]</p>
+        </blockquote>
 
-		{{ if isset $json "content" }}
-			<blockquote class="toot-blockquote" cite="{{ $tootLink }}" style="border: 2px solid #deddda;border-radius: 20px; padding: 5px;">
-				<div class="toot-header">
-					<a class="toot-profile" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">
-						<img
-							src="{{ $json.account.avatar }}"
-							alt="Mastodon avatar for {{ $handleInst }}"
-							loading="lazy"
-							style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto; float: left;"
-						/>
-					</a>
-					<span class="toot-author">
-						<a class="toot-author-name" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $json.account.display_name }}</a>
-						<a class="toot-author-handle" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $handleInst }}</a>
-					</span>
-				</div>
-				{{ $json.content | safeHTML }}
-				<div class="toot-footer">
-					<a href="https://{{ $masIns }}/@{{ $json.account.acct }}/{{ $json.id }}" class="toot-date" rel="noopener">{{ dateFormat "3:04 PM • January 2, 2006" $json.created_at }}</a>&nbsp;<span class="pokey">(UTC)</span>
-				</div>
-			</blockquote>
-		{{ end }}
-	{{ end }}
-{{ end }}
+    {{/* --- Verbindung war erfolgreich (HTTP 200), .Value enthält die Antwort --- */}}
+    {{ else with .Value }}
+        {{/* Hier speichern wir den rohen JSON-Text, BEVOR wir parsen */}}
+        {{ $rawContent := .Content }}
+
+        {{/* --- Stufe 2: Versuche, die Antwort (das .Content) zu parsen --- */}}
+        {{ with try (unmarshal $rawContent) }} {{/* <-- Parse the stored $rawContent */}}
+
+            {{/* --- Fehler 2: JSON-Parsing-Fehler (Ungültige Daten, so wie heute!) --- */}}
+            {{ with .Err }}
+                <blockquote class="toot-blockquote">
+                    <p class="ctr legal">[Source ({{ $masIns }}) online,<br />
+                    but API returned invalid JSON data. Build continues.]</p>
+                </blockquote>
+                
+                {{/* --- HIER IST DEIN DEBUG-KOMMENTAR --- */}}
+                {{ print "" | safeHTML }}
+            
+            {{/* --- Erfolg: Daten sind gültig, .Value ist jetzt das $json Objekt --- */}}
+            {{ else with .Value }}
+                {{ $json := . }}{{/* Das .Value aus dem unmarshal-Try ist unser $json */}}
+                
+                {{ if isset $json "account" }}
+                    {{ $tootLink = print "https://" $masIns "@" $json.account.acct "/status/" $id }}
+                    {{ $handleInst = print "@" $json.account.acct "@" $masIns }}
+                {{ end }}
+
+                {{ if isset $json "content" }}
+                    <blockquote class="toot-blockquote" cite="{{ $tootLink }}" style="border: 2px solid #deddda;border-radius: 20px; padding: 5px;">
+                        <div class="toot-header">
+                            <a class="toot-profile" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">
+                                <img
+                                    src="{{ $json.account.avatar }}"
+                                    alt="Mastodon avatar for {{ $handleInst }}"
+                                    loading="lazy"
+                                    style="display: block; max-width: 50px; max-height: 50px; width: auto; height: auto; float: left;"
+                                />
+                            </a>
+                            <span class="toot-author">
+                                <a class="toot-author-name" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $json.account.display_name }}</a>
+                                <a class="toot-author-handle" href="https://{{ $masIns }}/@{{ $json.account.acct }}" rel="noopener">{{ $handleInst }}</a>
+                            </span>
+                        </div>
+                        {{ $json.content | safeHTML }}
+                        <div class="toot-footer">
+                            <a href="https://{{ $masIns }}/@{{ $json.account.acct }}/{{ $json.id }}" class="toot-date" rel="noopener">{{ dateFormat "3:04 PM • January 2, 2006" $json.created_at }}</a>&nbsp;<span class="pokey">(UTC)</span>
+                        </div>
+                    </blockquote>
+                {{ else }}
+                    {{/* Fallback, falls JSON gültig, aber ohne "content"-Feld */}}
+                    <blockquote class="toot-blockquote">
+                        <p class="ctr legal">[Source ({{ $masIns }}) online,<br />
+                        but JSON data was incomplete.]</p>
+                    </blockquote>
+                    
+                    {{/* --- DEBUG-KOMMENTAR, falls JSON gültig ist, aber der Inhalt fehlt --- */}}
+                    {{ print "" | safeHTML }}
+                {{ end }}
+                
+            {{ end }}{{/* /Ende Try 2 (unmarshal) .Value */}}
+        {{ end }}{{/* /Ende Try 2 (unmarshal) */}}
+
+    {{ end }}{{/* /Ende Try 1 (GetRemote) .Value */}}
+{{ end }}{{/* /Ende Try 1 (GetRemote) */}}
