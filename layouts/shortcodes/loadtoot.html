@@ -34,7 +34,7 @@
                 </blockquote>
                 
                 {{/* --- HIER IST DEIN DEBUG-KOMMENTAR --- */}}
-                {{ print "" | safeHTML }}
+                {{ print $rawContent | safeHTML }}
             
             {{/* --- Erfolg: Daten sind gültig, .Value ist jetzt das $json Objekt --- */}}
             {{ else with .Value }}
@@ -73,8 +73,8 @@
                         but JSON data was incomplete.]</p>
                     </blockquote>
                     
-                    {{/* --- DEBUG-KOMMENTAR, falls JSON gültig ist, aber der Inhalt fehlt --- */}}
-                    {{ print "" | safeHTML }}
+                    {{/* --- DEBUG-KOMMENTAR, falls JSON gültig ist, aber der Inhalt fehlWt --- */}}
+                    {{ print $rawContent | safeHTML }}
                 {{ end }}
                 
             {{ end }}{{/* /Ende Try 2 (unmarshal) .Value */}}
