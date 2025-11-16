@@ -81,6 +81,11 @@ title = "Matrix Chat"
 url = "https://matrix.to/#/@bollerwagenpicard:tchncs.de"
 
 [[params.socialLinks]]
+icon = "fa-brands fa-mastodon"
+title = "Mastodon"
+url = "https://mastodon.hams.social/@DO3EET"
+
+[[params.socialLinks]]
 icon = "fa-solid fa-rss"
 title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
