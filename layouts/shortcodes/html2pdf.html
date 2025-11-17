@@ -30,7 +30,7 @@
 
         // Replace placeholder
         const contentClone = content.cloneNode(true);
-        contentClone.innerHTML = contentClone.innerHTML.replace(/{{CALLSIGN}}/g, callsign);
+        contentClone.innerHTML = contentClone.innerHTML.replace(/{{`{{`}}CALLSIGN}}/g, callsign);
 
         html2canvas(contentClone).then(canvas => {
             const imgData = canvas.toDataURL('image/png');

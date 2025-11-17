@@ -7,7 +7,7 @@ draft: true
 This is a test post to demonstrate the HTML to PDF shortcode.
 
 {{< html2pdf >}}
-    <h1>Hello, {{CALLSIGN}}!</h1>
+    <h1>Hello, {{`{{`}}CALLSIGN}}!</h1>
     <p>This content will be converted to a PDF document.</p>
     <ul>
         <li>Item 1</li>
