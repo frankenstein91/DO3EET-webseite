@@ -38,6 +38,23 @@
         
         const clonedContent = template.content.cloneNode(true);
         contentToPrint.appendChild(clonedContent);
+        
+        const style = document.createElement('style');
+        let css = '';
+        for (let i = 0; i < document.styleSheets.length; i++) {
+            const sheet = document.styleSheets[i];
+            try {
+                const rules = sheet.cssRules;
+                for (let j = 0; j < rules.length; j++) {
+                    css += rules[j].cssText;
+                }
+            } catch (e) {
+                console.warn("Can't read the css rules of: " + sheet.href, e);
+            }
+        }
+        style.appendChild(document.createTextNode(css));
+        contentToPrint.insertBefore(style, contentToPrint.firstChild);
+
         document.body.appendChild(contentToPrint);
 
         // Replace placeholder
