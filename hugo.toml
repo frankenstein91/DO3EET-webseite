@@ -124,7 +124,3 @@ name = "Frank Tornack"
   [languages.en]
     languageName = "English"
     weight = 20
-
-[mediaTypes]
-  [mediaTypes."application/javascript"]
-    suffixes = ["js"]
