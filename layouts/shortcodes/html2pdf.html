@@ -1,0 +1,45 @@
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/jspdf.umd.min.js"></script>
+
+<style>
+    .pdf-button {
+        background-color: #000;
+        color: #0f0;
+        border: 1px solid #0f0;
+        padding: 10px 20px;
+        font-family: monospace;
+        cursor: pointer;
+    }
+</style>
+
+<div id="pdf-content-{{ .Inner | md5 }}" style="padding: 20px; background-color: #fff; color: #000;">
+    {{ .Inner | markdownify }}
+</div>
+
+<div style="margin-top: 20px;">
+    <label for="callsign-{{ .Inner | md5 }}">Rufzeichen:</label>
+    <input type="text" id="callsign-{{ .Inner | md5 }}" name="callsign" style="font-family: monospace; background-color: #000; color: #0f0; border: 1px solid #0f0;">
+    <button id="generate-pdf-{{ .Inner | md5 }}" class="pdf-button">PDF generieren</button>
+</div>
+
+<script>
+    document.getElementById('generate-pdf-{{ .Inner | md5 }}').addEventListener('click', function () {
+        const { jsPDF } = window.jspdf;
+        const content = document.getElementById('pdf-content-{{ .Inner | md5 }}');
+        const callsign = document.getElementById('callsign-{{ .Inner | md5 }}').value;
+
+        // Replace placeholder
+        const contentClone = content.cloneNode(true);
+        contentClone.innerHTML = contentClone.innerHTML.replace(/{{CALLSIGN}}/g, callsign);
+
+        html2canvas(contentClone).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF();
+            const imgProps= pdf.getImageProperties(imgData);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.output('dataurlnewwindow');
+        });
+    });
+</script>
