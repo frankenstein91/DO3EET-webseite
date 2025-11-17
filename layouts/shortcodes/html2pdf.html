@@ -10,15 +10,33 @@
         font-family: monospace;
         cursor: pointer;
     }
+    #pdf-modal-{{ .Inner | md5 }} {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    #pdf-modal-content-{{ .Inner | md5 }} {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
 </style>
 
 <template id="pdf-template-{{ .Inner | md5 }}">
-    <div style="padding: 20px; background-color: #fff; color: #000;">
-        {{ .Inner | markdownify }}
-    </div>
+    {{ .Inner | markdownify }}
 </template>
 
-<div id="pdf-content-{{ .Inner | md5 }}" style="position: absolute; left: -9999px;"></div>
+<div id="pdf-modal-{{ .Inner | md5 }}">
+    <div id="pdf-modal-content-{{ .Inner | md5 }}"></div>
+</div>
 
 <div style="margin-top: 20px;">
     <label for="callsign-{{ .Inner | md5 }}">Rufzeichen:</label>
@@ -31,47 +49,30 @@
         const { jsPDF } = window.jspdf;
         const template = document.getElementById('pdf-template-{{ .Inner | md5 }}');
         const callsign = document.getElementById('callsign-{{ .Inner | md5 }}').value;
+        const modal = document.getElementById('pdf-modal-{{ .Inner | md5 }}');
+        const modalContent = document.getElementById('pdf-modal-content-{{ .Inner | md5 }}');
 
-        const contentToPrint = document.createElement('div');
-        contentToPrint.style.position = 'absolute';
-        contentToPrint.style.left = '-9999px';
-        
         const clonedContent = template.content.cloneNode(true);
-        contentToPrint.appendChild(clonedContent);
-        
-        const style = document.createElement('style');
-        let css = '';
-        for (let i = 0; i < document.styleSheets.length; i++) {
-            const sheet = document.styleSheets[i];
-            try {
-                const rules = sheet.cssRules;
-                for (let j = 0; j < rules.length; j++) {
-                    css += rules[j].cssText;
-                }
-            } catch (e) {
-                console.warn("Can't read the css rules of: " + sheet.href, e);
-            }
-        }
-        style.appendChild(document.createTextNode(css));
-        contentToPrint.insertBefore(style, contentToPrint.firstChild);
-
-        document.body.appendChild(contentToPrint);
+        modalContent.innerHTML = '';
+        modalContent.appendChild(clonedContent);
 
         // Replace placeholder
-        const walker = document.createTreeWalker(contentToPrint, NodeFilter.SHOW_TEXT, null, false);
+        const walker = document.createTreeWalker(modalContent, NodeFilter.SHOW_TEXT, null, false);
         let node;
         while(node = walker.nextNode()) {
             node.nodeValue = node.nodeValue.replace(/{{`{{`}}CALLSIGN}}/g, callsign);
         }
+        
+        modal.style.display = 'block';
 
-        html2canvas(contentToPrint).then(canvas => {
+        html2canvas(modalContent).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF();
             const pdfWidth = pdf.internal.pageSize.getWidth();
             const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
             pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
             pdf.output('dataurlnewwindow');
-            document.body.removeChild(contentToPrint);
+            modal.style.display = 'none';
         });
     });
 </script>
