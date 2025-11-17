@@ -1,7 +1,7 @@
 ---
 title: "Test HTML to PDF Shortcode"
 date: 2025-11-17T10:00:00+01:00
-draft: true
+draft: false
 ---
 
 This is a test post to demonstrate the HTML to PDF shortcode.
