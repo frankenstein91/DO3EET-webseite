@@ -18,7 +18,7 @@
     </div>
 </template>
 
-<div id="pdf-content-{{ .Inner | md5 }}" style="display: none;"></div>
+<div id="pdf-content-{{ .Inner | md5 }}" style="position: absolute; left: -9999px;"></div>
 
 <div style="margin-top: 20px;">
     <label for="callsign-{{ .Inner | md5 }}">Rufzeichen:</label>
