@@ -96,9 +96,10 @@ Zu guter Letzt noch ein persönliches Ärgernis, bei dem sich mir als Techniker 
 
 Der Vorschlag „600 Stunden Gratis-Strom“ ist physikalischer Unsinn. Eine Stunde, in der ich mein E-Auto mit 22 kW lade, ist energetisch und finanziell eine völlig andere Liga als eine Stunde, in der nur meine LED-Nachttischlampe mit 5 Watt brennt. Mir „Stunden“ zu schenken, ist so präzise wie das Angebot „10 Minuten Tanken zum Festpreis“ – völlig egal, ob ich dabei mit einer Pipette tröpfle oder einen Feuerwehrschlauch in den Tank halte. 
 
-Wer den Unterschied zwischen der Zeitachse und der Fläche unter der Kurve (Arbeit W=P⋅t) nicht verstanden hat, sollte vielleicht nochmal das Physikbuch der 7. Klasse aufschlagen, bevor er Gesetze für die Energiewende schreibt.
+Wer den Unterschied zwischen der Zeitachse und der Fläche unter der Kurve (Arbeit W=P⋅t) nicht verstanden hat, sollte vielleicht nochmal das Physikbuch[^5] der 7. Klasse aufschlagen, bevor er Gesetze für die Energiewende schreibt.
 
 [^1]: [Tagesspiegel: Vorschlag vor Parteitag: Grüne wollen 600 Stunden Gratis-Strom für alle](https://www.tagesspiegel.de/politik/vorschlag-vor-parteitag-grune-wollen-600-stunden-gratis-strom-fur-alle-14854589.html)
 [^2]: [OutdoorChiemgau: Systemstabilitätsbericht Stromnetz 2025 - Der Killer für Solar und Wind?](https://youtu.be/RZN0aGpCB4I?si=9xrIJOudrW7pW1pf)
 [^3]: [Photovoltaik raymann: Erklärung des Begriffs Brownout](https://youtu.be/FoZiAq-oMH4?si=50v9uL0L4LAGCLFg)
 [^4]: [Ankundigung 2017 Transformatoralterung](https://ront.info/ankundigung-transformatoralterung/)
+[^5]: [Strippenstrolch: Ein spannender Tag Elektrizitätslehre in der Grundschule](https://www.strippenstrolch.de/downloads/Ein_Spannender_Tag.pdf)
