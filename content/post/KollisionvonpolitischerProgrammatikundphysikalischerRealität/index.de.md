@@ -55,6 +55,13 @@ Man hört oft, Leitungen seien passiv. Das ist falsch. Ihre Lebensdauer hängt a
 ### Ortsnetztransformator
 Der Transformator in meiner Straße ist meist ölgekühlt. Seine Lebensdauer[^4] halbiert sich bei ca. 6 Kelvin Temperaturerhöhung. Der Solarbonus legt die Lastspitzen genau in den Sommermittag. Das ist thermodynamisch der denkbar schlechteste Zeitpunkt. Wenn ich nun durch den „Gratis-Strom“-Anreiz den Trafo genau dann maximal belaste, riskiere ich Gasblasen im Öl und die Hydrolyse des Isolierpapiers. Ich sehe hier, wie wir für ein kurzfristiges Preissignal die Lebensdauer unserer teuersten Assets opfern.
 
+### unsichtbare Last
+Dazu kommen Blindleistung und Oberschwingungen. Meine Leistungselektronik (EV-Lader, Wechselrichter) belastet das Netz auch, wenn ich rechnerisch (Wirkleistung) bei Null bin.
+\[
+S = \sqrt{P^2 + Q^2}
+\]
+
+## informationstechnische Leere
 
 
 [^1]: [Tagesspiegel: Vorschlag vor Parteitag: Grüne wollen 600 Stunden Gratis-Strom für alle](https://www.tagesspiegel.de/politik/vorschlag-vor-parteitag-grune-wollen-600-stunden-gratis-strom-fur-alle-14854589.html)
