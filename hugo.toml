@@ -6,11 +6,20 @@ title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
 pagination.pagerSize = 3
 enableInlineShortcodes = true
-sectionPagesMenu = "main"
+[menu]
+[[menu.main]]
+  name = "posts"
+  url = "/post/"
+  weight = 20
+[[menu.main]]
+  name = "tags"
+  url = "/tags/"
+  weight = 30
 
 [params]
 noindex = false
 defaultFallbackLanguage = "de"
+math = true
 
 [params.theme]
 palette = "tokyo-night-dark"
@@ -73,6 +82,11 @@ title = "Matrix Chat"
 url = "https://matrix.to/#/@bollerwagenpicard:tchncs.de"
 
 [[params.socialLinks]]
+icon = "fa-brands fa-mastodon"
+title = "Mastodon"
+url = "https://mastodon.hams.social/@DO3EET"
+
+[[params.socialLinks]]
 icon = "fa-solid fa-rss"
 title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
@@ -111,3 +125,13 @@ name = "Frank Tornack"
   [languages.en]
     languageName = "English"
     weight = 20
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
