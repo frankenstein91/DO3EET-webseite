@@ -1,6 +1,6 @@
 +++
 title = 'Kollision von politischer Programmatik und physikalischer Realität'
-date = 2025-11-24T09:55:45+01:00
+date = 2025-11-24T12:15:00+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
