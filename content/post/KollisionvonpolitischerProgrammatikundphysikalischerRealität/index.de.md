@@ -81,6 +81,13 @@ Mein größtes **Sicherheitsbedenken** ist aber cyber-kinetischer Natur. Wir ver
 
 Zwar ist das Smart Meter Gateway "sicher" (BSI-zertifiziert). Aber meine 20-Euro-WLAN-Steckdose ist es nicht. Der Solarbonus incentiviert billige Vernetzung. Ich erwarte eine Flut **unsicherer IoT-Geräte** plus die vom Staat als sicher betrachteten Smart Meter, die als Einfallstor dienen.
 
+## Der Deadlock
+Ich sehe einen logischen Fehler im Design, wenn ich den §14a EnWG betrachte...
+Der §14a erlaubt dem Netzbetreiber, mich auf 4,2 kW zu dimmen, wenn es eng wird. Hier kollidieren zwei Welten:
+1. Markt (Solarbonus): „Lade jetzt voll! Es ist umsonst!“
+2. Physik (§14a): „Halt! Überlastung! Dimmen!“
+3. Jeder Informatiker: Ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh! Fuck!!!!
+
 
 
 
