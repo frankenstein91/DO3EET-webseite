@@ -32,6 +32,32 @@ P(t) = \frac{dE}{dt}
 
 Das ist keine Haarspalterei meinerseits. Ein Kabel hat keine Energiekapazität, sondern eine Leistungskapazität. Die Belastungsgrenzen der Infrastruktur werden durch die momentane Leistung bestimmt. Wenn der Solarbonus mir 600 Stunden Energie verspricht, interessiert das mein Netz nicht. Das Netz spürt nur die Amplitude der Leistung. Ich sehe hier die Gefahr, dass wir die Maximierung der Leistung in einem engen Zeitfenster incentivieren – Gift für ein Netz, das auf Statistik ausgelegt ist.
 
+### Gleichzeitigkeitsfaktor
+In der Netzplanung rechnet man mit dem Gleichzeitigkeitsfaktor (Simultaneity Factor, SF).
+\[
+SF = \frac{P_{max, \text{gleichzeitig}}}{\sum P_{nenn}}
+\]
+Normalerweise liegt dieser Faktor unter `0,1`, weil man davon ausgeht, dass nicht alle meine Nachbarn gleichzeitig den Herd einschalten oder die Kreissäge starten. Der Solarbonus zerstört diese Statistik. Er synchronisiert das Verhalten. Wenn ich und Millionen andere unsere E-Autos so programmieren, dass sie beim Preis **Zero** laden, mache ich aus Zufall Determinismus. Der SF nähert sich `1` an. Viele Analysen zeigen: Das Netz ist dafür nicht ausgelegt. Andere[^2] und ich sehen hier nicht nur eine theoretische Überlastung, sondern eine reale Gefahr für die Komponenten.
+
+### Die Ohmsche Realität
+Ich muss auch an das Ohmsche Gesetz erinnern.
+\[
+\Delta U \approx I \cdot R \cdot \cos \phi + I \cdot X \cdot \sin \phi
+\]
+Wenn durch den Solarbonus alle in meiner Straße gleichzeitig laden (hohe Stromstärke), fällt die Spannung massiv ab (Brownout[^3]). Scheint die Sonne und alle speisen ein, steigt die Spannung, und meine Wechselrichter schalten wegen Überspannung (Spannung > 253 V) ab.
+
+- Szenario A: Spannung zu hoch \(\rightarrow\) Mein Wechselrichter schaltet ab \(\rightarrow\) Kein „Gratis-Strom“.
+- Szenario B: Signal „Gratis“ kommt \(\rightarrow\) Last springt an \(\rightarrow\) Spannung bricht ein \(\rightarrow\) Geräteausfall.
+
+## Thermodynamik
+Man hört oft, Leitungen seien passiv. Das ist falsch. Ihre Lebensdauer hängt an der Temperatur.
+
+### Ortsnetztransformator
+Der Transformator in meiner Straße ist meist ölgekühlt. Seine Lebensdauer[^4] halbiert sich bei ca. 6 Kelvin Temperaturerhöhung. Der Solarbonus legt die Lastspitzen genau in den Sommermittag. Das ist thermodynamisch der denkbar schlechteste Zeitpunkt. Wenn ich nun durch den „Gratis-Strom“-Anreiz den Trafo genau dann maximal belaste, riskiere ich Gasblasen im Öl und die Hydrolyse des Isolierpapiers. Ich sehe hier, wie wir für ein kurzfristiges Preissignal die Lebensdauer unserer teuersten Assets opfern.
+
 
 
 [^1]: [Tagesspiegel: Vorschlag vor Parteitag: Grüne wollen 600 Stunden Gratis-Strom für alle](https://www.tagesspiegel.de/politik/vorschlag-vor-parteitag-grune-wollen-600-stunden-gratis-strom-fur-alle-14854589.html)
+[^2]: [OutdoorChiemgau: Systemstabilitätsbericht Stromnetz 2025 - Der Killer für Solar und Wind?](https://youtu.be/RZN0aGpCB4I?si=9xrIJOudrW7pW1pf)
+[^3]: [Photovoltaik raymann: Erklärung des Begriffs Brownout](https://youtu.be/FoZiAq-oMH4?si=50v9uL0L4LAGCLFg)
+[^4]: [Ankundigung 2017 Transformatoralterung](https://ront.info/ankundigung-transformatoralterung/)
