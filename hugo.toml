@@ -19,6 +19,7 @@ enableInlineShortcodes = true
 [params]
 noindex = false
 defaultFallbackLanguage = "de"
+math = true
 
 [params.theme]
 palette = "tokyo-night-dark"
@@ -124,3 +125,13 @@ name = "Frank Tornack"
   [languages.en]
     languageName = "English"
     weight = 20
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
