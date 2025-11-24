@@ -62,6 +62,26 @@ S = \sqrt{P^2 + Q^2}
 \]
 
 ## informationstechnische Leere
+Wechseln wir die Disziplin. Damit ich 600 Stunden im Jahr abrechnen kann, brauche ich Daten. Ich habe mir den Status Quo angesehen.
+
+### Smart Meter
+Ich brauche zwingend intelligente Messsysteme (iMSys). Die Zahlen der Bundesnetzagentur (Stand 2024/2025) sind ernüchternd.  
+Das heißt für mich: Für über 95% der Haushalte ist der Vorschlag technisch nicht umsetzbar. Ohne Messung keine Steuerung. Eine Schätzung über Standardlastprofile (SLP) wäre für mich reines Voodoo und würde den physikalischen Zweck der Netzstabilisierung verfehlen.
+Angenommen, wir hätten 40 Millionen Smart Meter.
+\[40.000.000 \times 96 \text{ Werte/Tag} \approx 4 \text{ Milliarden Datensätze/Tag}\]
+Ich kenne die IT-Landschaft der Versorger. Viele laufen auf alten SAP IS-U Systemen. Ein solcher Datenstrom käme einem DDoS-Angriff gleich. Ich bezweifle stark, dass die Backend-Systeme diese Latenzzeiten bewältigen können, um eine Echtzeit-Steuerung zu ermöglichen.
+Ich sehe hier das „Thundering Herd“ Problem. Wenn eine zentrale App das Signal „JETZT GRATIS“ sendet, stürmen Millionen Anfragen auf die API der Wallbox-Hersteller ein. Ich prophezeie API-Crashes. Schlimmer noch: Wenn das Netz überlastet ist, kommt der „Stop“-Befehl wegen der Latenz zu spät. **Und wer bezahlt dann die falschen Messungen?**
+
+### Cybersecurity
+Der Solarbonus zwingt mich in ein System der totalen Überwachung. Grüße an die EU: **erwischt!**
+
+Ich weiß, dass hochauflösende Lastgänge verraten, welches Fernsehprogramm ich schaue. Das ist ein Side-Channel Attack. Der Solarbonus zwingt mich ökonomisch dazu, diese Daten preiszugeben. Ich sehe hier riesige zentrale Datenbanken entstehen.
+
+Mein größtes **Sicherheitsbedenken** ist aber cyber-kinetischer Natur. Wir vernetzen Millionen leistungsstarke Verbraucher. Wenn es einem Angreifer gelingt, das zentrale Preissignal zu fälschen („Strom gratis“), erzeugt er eine Flash Crowd. Millionen Geräte schalten gleichzeitig ein. Ich sehe das Risiko eines Frequenzabfalls und regionaler Blackouts. **Wir bauen hier die perfekte Waffe für einen Angreifer**. Hier gehen meine Grüße an Russland, China und Nord Korea...  
+
+Zwar ist das Smart Meter Gateway "sicher" (BSI-zertifiziert). Aber meine 20-Euro-WLAN-Steckdose ist es nicht. Der Solarbonus incentiviert billige Vernetzung. Ich erwarte eine Flut **unsicherer IoT-Geräte** plus die vom Staat als sicher betrachteten Smart Meter, die als Einfallstor dienen.
+
+
 
 
 [^1]: [Tagesspiegel: Vorschlag vor Parteitag: Grüne wollen 600 Stunden Gratis-Strom für alle](https://www.tagesspiegel.de/politik/vorschlag-vor-parteitag-grune-wollen-600-stunden-gratis-strom-fur-alle-14854589.html)
