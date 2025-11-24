@@ -88,7 +88,8 @@ Der §14a erlaubt dem Netzbetreiber, mich auf 4,2 kW zu dimmen, wenn es eng wird
 2. Physik (§14a): „Halt! Überlastung! Dimmen!“
 3. Jeder Informatiker: Ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh! Fuck!!!!
 
-
+Ich sehe ein Oszillations-Problem (Hunting) auf uns zukommen: Preis 0 --> Last hoch --> Netz voll --> Dimmung an --> Last runter --> Netz frei --> Dimmung aus --> Last hoch.
+Das ist ein instabiler Regelkreis.
 
 
 [^1]: [Tagesspiegel: Vorschlag vor Parteitag: Grüne wollen 600 Stunden Gratis-Strom für alle](https://www.tagesspiegel.de/politik/vorschlag-vor-parteitag-grune-wollen-600-stunden-gratis-strom-fur-alle-14854589.html)
