@@ -98,3 +98,6 @@ Aber: Die Profile sind im NetworkManager hinterlegt und priorisiert. Mein Laptop
 Der Plan für nachher ist simpel: Ich werde das Hotel verlassen und Richtung Bus Terminal Toyako Onsen oder zum nächsten Seicomart spazieren. Das sind in Japan klassische Hotspots für cityroam und Wi2. Die Theorie steht: Sobald mein Framework-Laptop ein Beacon mit dem richtigen Identifier empfängt, sollte er sich ohne mein Zutun einbuchen und verschlüsselt verbinden.
 
 Ob der "XML-Hack" auch in der freien Wildbahn funktioniert und ich mein erstes Datenpaket über OpenRoaming schicken kann? Das werde ich gleich beim Spaziergang am See herausfinden.
+
+# Ende
+Der Scan vor Ort hat gezeigt: Die Karten hatten recht. Abseits der großen Metropolen wie Sapporo ist OpenRoaming noch nicht angekommen. Statt der nahtlosen, verschlüsselten Einwahl via Zertifikat musste ich auf das klassische laketoya_free_wifi zurückgreifen – unverschlüsselt und mit nerviger Login-Seite. Ein Hoch auf das VPN!
