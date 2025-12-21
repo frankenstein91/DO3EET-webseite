@@ -73,6 +73,17 @@ nmcli con add \
   802-1x.anonymous-identity "anonymous@idp.openroamingconnect.org" \
   802-1x.password "blabla" \
   802-1x.domain-suffix-match "idp.openroamingconnect.org"
+nmcli con add \
+  type wifi \
+  con-name "Wi2eap" \
+  ssid "Wi2eap" \
+  wifi-sec.key-mgmt wpa-eap \
+  802-1x.eap ttls \
+  802-1x.phase2-auth mschapv2 \
+  802-1x.identity "blabla@idp.openroamingconnect.org" \
+  802-1x.anonymous-identity "anonymous@idp.openroamingconnect.org" \
+  802-1x.password "blabla" \
+  802-1x.domain-suffix-match "idp.openroamingconnect.org"
 ```
 
 Hinweis: Beim ersten Verbinden fragt der NetworkManager eventuell nach dem CA-Zertifikat. Da wir das Root-Zertifikat nicht extrahiert haben, kann man das für den Urlaubszweck ignorieren (Checkbox "Kein CA-Zertifikat erforderlich" in der GUI).
