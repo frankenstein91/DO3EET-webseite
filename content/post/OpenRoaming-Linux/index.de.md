@@ -2,6 +2,7 @@
 title = 'Toyako: Zwischen Vulkankratern, Linux-Terminals und freiem WLAN'
 date = 2025-12-21T16:15:00+09:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Japan",
     "Linux",
