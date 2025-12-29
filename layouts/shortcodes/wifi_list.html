@@ -1,0 +1,385 @@
+{{/* layouts/shortcodes/wifi_list.html */}}
+
+<!-- Externe Bibliothek für QR Codes laden -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+    /* Container & Header */
+    .wifi-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    /* RSS Button */
+    .rss-btn {
+        background-color: #ee802f;
+        color: white !important;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9em;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.2s;
+    }
+    .rss-btn:hover {
+        background-color: #d36b1f;
+    }
+
+    /* Arch Linux Box */
+    .arch-install-box {
+        background: #333;
+        color: #eee;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-family: monospace;
+        font-size: 0.85em;
+        margin-bottom: 20px;
+        border-left: 4px solid #1793d1; /* Arch Blue */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .arch-cmd {
+        background: #000;
+        padding: 4px 8px;
+        border-radius: 3px;
+        user-select: all;
+        color: #50fa7b; /* Terminal Green */
+        white-space: nowrap;
+    }
+
+    /* Tabelle */
+    .wifi-table-container {
+        overflow-x: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .wifi-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        font-size: 0.95em;
+        min-width: 600px;
+    }
+    .wifi-table th, .wifi-table td {
+        border: 1px solid #444;
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: top;
+    }
+    .wifi-table th {
+        background-color: #2a2a2a;
+        color: #f0f0f0;
+        border-bottom: 2px solid #555;
+    }
+    .wifi-table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    /* Badges & Text */
+    .roaming-badge {
+        display: inline-block;
+        background: #6f42c1;
+        color: white;
+        font-size: 0.75em;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-top: 4px;
+    }
+    .contact-links {
+        margin-top: 8px;
+    }
+    .contact-links a {
+        font-size: 0.8em;
+        color: #aaa;
+        text-decoration: none;
+        margin-right: 12px;
+        display: inline-block;
+    }
+    .contact-links a:hover { color: #fff; text-decoration: underline; }
+
+    /* Action Buttons */
+    .wifi-actions {
+        white-space: nowrap;
+    }
+    .wifi-actions button {
+        background: #007bff;
+        border: none;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        transition: filter 0.2s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wifi-actions button:hover {
+        filter: brightness(115%);
+    }
+    .wifi-actions button.dl-btn {
+        background: #28a745; /* Linux Grün */
+    }
+    .wifi-actions button.apple-btn {
+        background: #888; /* Apple Grau */
+    }
+
+    /* Modal */
+    .qr-modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+    .qr-content { background-color: #fff; padding: 25px; border-radius: 12px; text-align: center; color: #000; box-shadow: 0 10px 25px rgba(0,0,0,0.5); max-width: 90%; }
+</style>
+
+<div class="wifi-header">
+    <span><strong>{{ len $.Site.Data.wifi_hotspots }}</strong> Netzwerke in der Datenbank</span>
+    {{ with .OutputFormats.Get "WIFI_RSS" }}
+    <a href="{{ .Permalink }}" class="rss-btn" target="_blank">
+        <i class="fa-solid fa-rss"></i> Feed abonnieren
+    </a>
+    {{ end }}
+</div>
+
+<!-- Arch Linux Install Section -->
+<div class="arch-install-box">
+    <div>
+        <i class="fa-brands fa-linux"></i> <strong>Arch Linux Auto-Sync</strong><br>
+        <span style="font-size:0.8em; color:#aaa;">Synchronisiert diese Liste automatisch in deinen NetworkManager.</span>
+    </div>
+    <div style="text-align:right;">
+        <code class="arch-cmd">curl -O {{ .Site.BaseURL }}tools/wifi-sync/PKGBUILD && makepkg -si</code>
+    </div>
+</div>
+
+<div class="wifi-table-container">
+    <table class="wifi-table">
+        <thead>
+            <tr>
+                <th>Ort / Beschreibung</th>
+                <th>SSID & Roaming</th>
+                <th>Details</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{/* Wir sortieren nach ID absteigend, damit neue Einträge oben stehen */}}
+            {{ range sort $.Site.Data.wifi_hotspots "id" "desc" }}
+            <tr id="wifi-{{ .id }}">
+                <td>
+                    <strong>{{ .description }}</strong><br>
+                    {{ if and .latitude .longitude }}
+                    <small>
+                        <a href="https://www.openstreetmap.org/?mlat={{.latitude}}&mlon={{.longitude}}#map=18/{{.latitude}}/{{.longitude}}" target="_blank" style="color:#88ccff">
+                            <i class="fa-solid fa-map-location-dot"></i> Karte
+                        </a>
+                    </small>
+                    <br>
+                    {{ end }}
+                    <small style="color: #777;">Added: {{ .created_at | time.Format "02.01.2006" }}</small>
+                </td>
+                <td>
+                    <code>{{ .ssid }}</code>
+                    {{ if .roaming }}
+                        <br>
+                        {{ range .roaming }}
+                            <span class="roaming-badge" title="{{ .domain }}">{{ .name }}</span>
+                        {{ end }}
+                    {{ end }}
+                </td>
+                <td>
+                    {{ if .password }}
+                    <i class="fa-solid fa-lock"></i> {{ .encryption }}
+                    {{ else }}
+                    <i class="fa-solid fa-lock-open"></i> Open / Enterprise
+                    {{ end }}
+                    <div class="contact-links">
+                        <a href="mailto:planung@dreamofjapan.de?subject=Fehler%20Hotspot%20{{ .ssid | urlize }}">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Fehler
+                        </a>
+                        <a href="mailto:planung@dreamofjapan.de?subject=Löschen%20Hotspot%20{{ .ssid | urlize }}">
+                            <i class="fa-solid fa-trash"></i> Löschen
+                        </a>
+                    </div>
+                </td>
+                <td class="wifi-actions">
+                    {{ if .password }}
+                    <!-- QR Code -->
+                    <button onclick="showQR('{{ .ssid }}', '{{ .password }}', '{{ .encryption }}')" title="QR Code anzeigen">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </button>
+                    <!-- Linux Config -->
+                    <button class="dl-btn" onclick="downloadConfig('{{ .ssid }}', '{{ .password }}')" title="Linux NetworkManager Config">
+                        <i class="fa-brands fa-linux"></i>
+                    </button>
+                    <!-- Apple Config -->
+                    <button class="apple-btn" onclick="downloadAppleConfig('{{ .ssid }}', '{{ .password }}', '{{ .encryption }}')" title="Apple Profile (iOS/macOS)">
+                        <i class="fa-brands fa-apple"></i>
+                    </button>
+                    {{ else }}
+                        <span style="font-size:0.8em; color:#aaa;">Kein PSK Key</span>
+                    {{ end }}
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>
+
+<!-- QR Code Modal -->
+<div id="qrModal" class="qr-modal" onclick="this.style.display='none'">
+    <div class="qr-content" onclick="event.stopPropagation()">
+        <h3 id="qrTitle" style="margin-top:0; color:#333;">WLAN Scan</h3>
+        <div id="qrcode" style="display:flex; justify-content:center; margin: 15px 0;"></div>
+        <p style="color:#666; font-size:0.9em; margin-bottom:15px;">Scanne dies mit der Kamera-App.</p>
+        <button onclick="document.getElementById('qrModal').style.display='none'" style="padding:8px 20px; border:none; background:#333; color:white; border-radius:4px; cursor:pointer;">Schließen</button>
+    </div>
+</div>
+
+<script>
+    // QR Code Funktion
+    function showQR(ssid, password, encryption) {
+        const modal = document.getElementById('qrModal');
+        const qrContainer = document.getElementById('qrcode');
+        const title = document.getElementById('qrTitle');
+        
+        qrContainer.innerHTML = "";
+        title.innerText = ssid;
+        
+        // WPA2 und WPA3 werden im QR Standard meist als "WPA" behandelt
+        let encType = encryption === 'WPA2' || encryption === 'WPA3' ? 'WPA' : encryption;
+        if (encType === 'NONE') encType = '';
+        
+        const wifiString = `WIFI:S:${ssid};T:${encType};P:${password};;`;
+        
+        new QRCode(qrContainer, {
+            text: wifiString,
+            width: 200,
+            height: 200,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        
+        modal.style.display = 'flex';
+    }
+
+    // Linux NetworkManager Config Generator
+    function downloadConfig(ssid, password) {
+        const configContent = `[connection]
+id=${ssid}
+uuid=${crypto.randomUUID()}
+type=wifi
+interface-name=wlan0
+
+[wifi]
+mode=infrastructure
+ssid=${ssid}
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk=${password}
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+`;
+        const blob = new Blob([configContent], { type: 'text/plain' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${ssid}.nmconnection`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    // Apple MobileConfig Generator
+    function downloadAppleConfig(ssid, password, encryption) {
+        // Apple erwartet "WPA" für Personal Networks, "None" für offen
+        let appleEnc = "WPA";
+        if (encryption === "NONE") appleEnc = "None";
+        if (encryption === "WEP") appleEnc = "WEP";
+        
+        const payloadUUID = crypto.randomUUID();
+        const profileUUID = crypto.randomUUID();
+        
+        const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AutoJoin</key>
+            <true/>
+            <key>EncryptionType</key>
+            <string>${appleEnc}</string>
+            <key>HIDDEN_NETWORK</key>
+            <false/>
+            <key>PayloadDescription</key>
+            <string>Konfiguriert WLAN Einstellungen für ${ssid}</string>
+            <key>PayloadDisplayName</key>
+            <string>WLAN: ${ssid}</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.wifi.managed.${payloadUUID}</string>
+            <key>PayloadType</key>
+            <string>com.apple.wifi.managed</string>
+            <key>PayloadUUID</key>
+            <string>${payloadUUID}</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>ProxyType</key>
+            <string>None</string>
+            <key>SSID_STR</key>
+            <string>${ssid}</string>
+            <key>Password</key>
+            <string>${password}</string>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>WLAN Profil vom DO3EET Blog</string>
+    <key>PayloadDisplayName</key>
+    <string>${ssid}</string>
+    <key>PayloadIdentifier</key>
+    <string>de.do3eet.wifi.${profileUUID}</string>
+    <key>PayloadOrganization</key>
+    <string>DO3EET Blog</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>${profileUUID}</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>`;
+
+        const blob = new Blob([xmlContent], { type: 'application/x-apple-aspen-config' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${ssid}.mobileconfig`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+
+        alert("Die .mobileconfig Datei wurde heruntergeladen.\n\nFÜR iOS NUTZER:\nBitte gehe jetzt in 'Einstellungen' -> 'Profil geladen' (ganz oben), um es zu installieren.");
+    }
+</script>
