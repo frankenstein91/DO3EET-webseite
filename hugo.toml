@@ -110,9 +110,20 @@ loading = "lazy"
 
     path = 'github.com/hugomods/images'
 
+[mediaTypes]
+  [mediaTypes."application/rss+xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.WIFI_RSS]
+    mediaType = "application/rss+xml"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
 section = ['html', 'rss', 'amp']
-page = ['html', 'rss', 'amp']
+page = ['html', 'rss', 'amp', 'WIFI_RSS']
 
 [Author]
 name = "Frank Tornack"
