@@ -144,7 +144,7 @@
 
 <div class="wifi-header">
     <span><strong>{{ len $.Site.Data.wifi_hotspots }}</strong> Netzwerke in der Datenbank</span>
-    {{ with .OutputFormats.Get "WIFI_RSS" }}
+    {{ with .Page.OutputFormats.Get "WIFI_RSS" }}
     <a href="{{ .Permalink }}" class="rss-btn" target="_blank">
         <i class="fa-solid fa-rss"></i> Feed abonnieren
     </a>
