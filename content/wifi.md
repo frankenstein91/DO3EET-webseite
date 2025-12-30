@@ -19,4 +19,6 @@ Features
 
  - Linux: .nmconnection Datei für NetworkManager oder Auto-Sync (siehe Box unten).
 
+ - OpenRoaming Profile Download: https://nttbpor.air-compass.net/
+
 {{< wifi_list >}}
