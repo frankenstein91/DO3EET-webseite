@@ -1,0 +1,48 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wifi="http://do3eet.pages.dev/ns/wifi">
+  <channel>
+    <title>WLAN Updates @ {{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Neue Hotspots und OpenRoaming Standorte von DO3EET</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ site.Language.LanguageCode }}</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- with .OutputFormats.Get "WIFI_RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    {{- end }}
+    
+    {{/* Iteriere über die JSON Daten, sortiert nach ID absteigend (neueste zuerst) */}}
+    {{ range sort $.Site.Data.wifi_hotspots "id" "desc" }}
+    <item>
+      <title>WLAN: {{ .ssid }} ({{ .description }})</title>
+      <link>{{ $.Permalink }}#wifi-{{ .id }}</link>
+      <pubDate>{{ .created_at | time.AsTime | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ $.Permalink }}#wifi-{{ .id }}</guid>
+      
+      {{/* Maschinenlesbare Daten für den Sync-Client (do3eet-wifi-sync) */}}
+      <wifi:ssid>{{ .ssid }}</wifi:ssid>
+      <wifi:encryption>{{ .encryption }}</wifi:encryption>
+      {{ if .password }}<wifi:password>{{ .password }}</wifi:password>{{ end }}
+      <wifi:id>{{ .id }}</wifi:id>
+
+      <description>
+        <![CDATA[
+        <p><strong>Ort:</strong> {{ .description }}</p>
+        <p><strong>SSID:</strong> {{ .ssid }}</p>
+        {{ if .password }}
+        <p><strong>Verschlüsselung:</strong> {{ .encryption }}</p>
+        {{ end }}
+        {{ if .roaming }}
+        <p><strong>Roaming Support:</strong> 
+          {{ range $index, $element := .roaming }}{{ if $index }}, {{ end }}{{ $element.name }}{{ end }}
+        </p>
+        {{ end }}
+        {{ if and .latitude .longitude }}
+        <p><a href="https://www.openstreetmap.org/?mlat={{.latitude}}&mlon={{.longitude}}">Auf der Karte zeigen</a></p>
+        {{ end }}
+        ]]>
+      </description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
