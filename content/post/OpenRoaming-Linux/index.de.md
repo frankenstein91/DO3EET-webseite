@@ -2,6 +2,7 @@
 title = 'Toyako: Zwischen Vulkankratern, Linux-Terminals und freiem WLAN'
 date = 2025-12-21T16:15:00+09:00
 draft = false
+author = "Frank Tornack"
 tags = [
     "Japan",
     "Linux",
@@ -22,6 +23,8 @@ Hier ist mein "Field Report" und die Anleitung, wie ihr das nachbauen könnt.
 
 # Schritt 1: Die Quelle
 Ich habe eine Seite gefunden, die kostenlose Demo-Profile für die Wireless Broadband Alliance (WBA) erstellt: https://www.openroamingconnect.org/
+
+Eine weitere Quelle für OpenRoaming Profile Downloads ist: https://nttbpor.air-compass.net/
 
 # Schritt 2: Die Blackbox knacken
 Jetzt hatte ich diese .mobileconfig Datei. Das ist eigentlich eine XML-Datei, in der Apple Konfigurationen speichert. Aber wenn man sie mit cat oder vim öffnet, sieht man oft nur Datensalat. Der Grund: Die Datei ist meist binär signiert (signed CMS/DER).
