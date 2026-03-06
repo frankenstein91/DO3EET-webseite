@@ -35,6 +35,16 @@ Ein Beispiel für die Umsetzung mit GnuPG (im `gpg --edit-key` Modus):
 Dies ergänzt den Schlüssel um einen Nachweis, der meiner eigenen Konfiguration entspricht:
 `callsign@do3eet.pages.dev=DO3EET`
 
+### Verweis auf die GPG-Policy (Notation)
+Um die Auffindbarkeit meiner Zertifizierungsrichtlinien zu verbessern, hinterlege ich den Link zu dieser Seite direkt im Schlüssel als **Notation**. Dies ermöglicht es anderen Nutzern und automatisierten Tools, die Bedingungen meiner Signatur direkt aus dem Schlüssel heraus zu validieren.
+
+Umsetzung mit GnuPG:
+`gpg> notation`
+`Geben Sie die "Notation" ein: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+
+Dies entspricht meiner eigenen Konfiguration:
+`policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+
 ### Durchführung der Signierung
 Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpunkt) dauerhaft im Web of Trust zu dokumentieren, signiere ich Schlüssel ausschließlich mit dem folgenden Befehl:
 
@@ -68,9 +78,9 @@ Mein eigener Primärschlüssel basiert auf modernen Elliptischen Kurven (Ed448/E
 ### E-Mail-Verifizierung und Rückgabe der Signatur
 Die Prüfung eines amtlichen Ausweises bestätigt lediglich die Identität der physischen Person, jedoch nicht die Kontrolle über die im Schlüssel angegebene E-Mail-Adresse. 
 
-Daher lade ich von mir signierte Schlüssel niemals direkt auf einen öffentlichen Keyserver hoch. Stattdessen exportiere ich die erstellte Signatur, verschlüssele sie mit dem Public Key des Gegenübers und sende sie an die in der User-ID angegebene E-Mail-Adresse. 
+Daher lade ich von mir signierte Schlüssel niemals direkt hoch. Stattdessen exportiere ich die erstellte Signatur, verschlüssele sie mit dem Public Key des Gegenübers und sende sie an die in der User-ID angegebene E-Mail-Adresse. 
 
-Es liegt in der Verantwortung des Empfängers, die E-Mail zu entschlüsseln, die Signatur in den eigenen Schlüsselring zu importieren und das Update anschließend selbst auf den Keyservern zu veröffentlichen. So ist kryptografisch sichergestellt, dass die Person tatsächlichen Zugriff auf die E-Mail-Adresse besitzt.
+Es liegt in der Verantwortung des Empfängers, die E-Mail zu entschlüsseln, die Signatur in den eigenen Schlüsselring zu importieren und das Update anschließend selbst zu verteilen. So ist kryptografisch sichergestellt, dass die Person tatsächlichen Zugriff auf die E-Mail-Adresse besitzt.
 
 ### Haftungsausschluss und Vertraulichkeit (Rechtliches)
 *   **Keine Haftung für Dritte:** Mit der Signierung eines Schlüssels bestätige ich lediglich die Identität des Inhabers zum Zeitpunkt unseres Treffens. Ich übernehme ausdrücklich keine Verantwortung für das spätere Verhalten der Personen, deren Schlüssel ich signiert habe, oder für die Qualität und Vertrauenswürdigkeit von Signaturen, die diese Personen ihrerseits leisten.
