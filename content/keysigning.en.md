@@ -35,6 +35,16 @@ Example implementation with GnuPG (in `gpg --edit-key` mode):
 This adds a proof to the key that matches my own configuration:
 `callsign@do3eet.pages.dev=DO3EET`
 
+### Reference to the GPG Policy (Notation)
+To improve the discoverability of my certification guidelines, I include the link to this page directly in the key as a **notation**. This allows other users and automated tools to validate the conditions of my signature directly from the key.
+
+Implementation with GnuPG:
+`gpg> notation`
+`Enter the notation: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+
+This matches my own configuration:
+`policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+
 ### Signing Procedure
 To permanently document the context of our meeting (e.g., a specific event or meeting place) within the Web of Trust, I sign keys exclusively using the following command:
 
@@ -66,12 +76,11 @@ I will consistently **not** sign keys based on obsolete or mathematically weaken
 My own primary key is based on modern Elliptic Curves (Ed448/Ed25519) and reflects this high security standard. I recommend that every user uses ECC methods directly when creating new keys to achieve an optimal balance between security and performance.
 
 ### Email Verification and Return of the Signature
-The verification of an official ID only confirms the identity of the physical person, but not the control over the email address specified in the key.
+The verification of an official ID only confirms the identity of the physical person, but not the control over the email address specified in the key. 
 
-Therefore, I never upload keys signed by me directly to a public keyserver. Instead, I export the created signature, encrypt it with the recipient's public key, and send it to the email address specified in the User ID.
+Therefore, I never upload keys signed by me directly. Instead, I export the created signature, encrypt it with the recipient's public key, and send it to the email address specified in the User ID. 
 
-It is the recipient's responsibility to decrypt the email, import the signature into their own keyring, and then publish the update on the keyservers themselves. This cryptographically ensures that the person actually has access to the email address.
-
+It is the recipient's responsibility to decrypt the email, import the signature into their own keyring, and then publish the update themselves. This cryptographically ensures that the person actually has access to the email address.
 ### Disclaimer and Confidentiality (Legal)
 *   **No Liability for Third Parties:** By signing a key, I only confirm the identity of the owner at the time of our meeting. I explicitly assume no responsibility for the subsequent behavior of the persons whose keys I have signed, or for the quality and trustworthiness of signatures that these persons themselves may provide.
 *   **Secrecy of Correspondence:** I treat all encrypted messages addressed to me with the necessary care and discretion, analogous to the secrecy of correspondence. I will not grant third parties insight into the contents of this communication unless I am legally required to do so. To comply with such requests, the relevant laws from trustworthy sources must be presented to me.
