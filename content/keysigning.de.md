@@ -40,6 +40,13 @@ Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpun
 
 `gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>`
 
+### E-Mail-Verifizierung und Rückgabe der Signatur
+Die Prüfung eines amtlichen Ausweises bestätigt lediglich die Identität der physischen Person, jedoch nicht die Kontrolle über die im Schlüssel angegebene E-Mail-Adresse. 
+
+Daher lade ich von mir signierte Schlüssel niemals direkt auf einen öffentlichen Keyserver hoch. Stattdessen exportiere ich die erstellte Signatur, verschlüssele sie mit dem Public Key des Gegenübers und sende sie an die in der User-ID angegebene E-Mail-Adresse. 
+
+Es liegt in der Verantwortung des Empfängers, die E-Mail zu entschlüsseln, die Signatur in den eigenen Schlüsselring zu importieren und das Update anschließend selbst auf den Keyservern zu veröffentlichen. So ist kryptografisch sichergestellt, dass die Person tatsächlichen Zugriff auf die E-Mail-Adresse besitzt.
+
 ### Haftungsausschluss und Vertraulichkeit (Rechtliches)
 *   **Keine Haftung für Dritte:** Mit der Signierung eines Schlüssels bestätige ich lediglich die Identität des Inhabers zum Zeitpunkt unseres Treffens. Ich übernehme ausdrücklich keine Verantwortung für das spätere Verhalten der Personen, deren Schlüssel ich signiert habe, oder für die Qualität und Vertrauenswürdigkeit von Signaturen, die diese Personen ihrerseits leisten.
 *   **Brief- und Postgeheimnis:** Ich behandle alle an mich gerichteten verschlüsselten Nachrichten mit der gebotenen Sorgfalt und Diskretion, analog zum Brief- und Postgeheimnis. Ich werde Dritten keinen Einblick in die Inhalte dieser Kommunikation gewähren, es sei denn, ich bin gesetzlich dazu verpflichtet. Dafür müssen mir die entsprechenden Gesetze von vertrauenswürdigen Quellen vorgelegt werden, damit ich diesen nachkomme.
