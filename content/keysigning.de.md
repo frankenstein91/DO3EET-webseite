@@ -43,3 +43,8 @@ Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpun
 ### Haftungsausschluss und Vertraulichkeit (Rechtliches)
 *   **Keine Haftung für Dritte:** Mit der Signierung eines Schlüssels bestätige ich lediglich die Identität des Inhabers zum Zeitpunkt unseres Treffens. Ich übernehme ausdrücklich keine Verantwortung für das spätere Verhalten der Personen, deren Schlüssel ich signiert habe, oder für die Qualität und Vertrauenswürdigkeit von Signaturen, die diese Personen ihrerseits leisten.
 *   **Brief- und Postgeheimnis:** Ich behandle alle an mich gerichteten verschlüsselten Nachrichten mit der gebotenen Sorgfalt und Diskretion, analog zum Brief- und Postgeheimnis. Ich werde Dritten keinen Einblick in die Inhalte dieser Kommunikation gewähren, es sei denn, ich bin gesetzlich dazu verpflichtet. Dafür müssen mir die entsprechenden Gesetze von vertrauenswürdigen Quellen vorgelegt werden, damit ich diesen nachkomme.
+
+#### Hintergrund: Das Brief- und Postgeheimnis
+Das Brief- und Postgeheimnis schützt die Vertraulichkeit von Sendungen und Informationen vor unbefugter Kenntnisnahme. In meiner Policy übertrage ich diesen Grundsatz auf die digitale Kommunikation:
+*   **Verschlüsselung als digitaler Umschlag:** Eine verschlüsselte Nachricht ist für mich wie ein versiegelter Brief. Das unbefugte Mitlesen oder die Weitergabe des Inhalts ohne ausdrückliche Zustimmung ist ein Eingriff in die Privatsphäre, den ich strikt ablehne.
+*   **Recht auf vertrauliche Kommunikation:** Ich sehe die Verwendung von PGP nicht als Zeichen von Misstrauen, sondern als Wahrnehmung des Rechts auf eine geschützte Privatsphäre, die analog zur physischen Post auch digital unantastbar sein sollte.
