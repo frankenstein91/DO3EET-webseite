@@ -15,6 +15,10 @@ enableInlineShortcodes = true
   name = "tags"
   url = "/tags/"
   weight = 30
+[[menu.main]]
+  name = "GPG Policy"
+  url = "/keysigning/"
+  weight = 40
 
 [params]
 noindex = false
