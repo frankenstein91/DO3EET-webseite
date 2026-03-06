@@ -22,3 +22,15 @@ I reserve the right to refuse signing if there are any doubts regarding the iden
 
 ### Special Provisions for Radio Amateurs
 If the key to be signed shows a connection to amateur radio (for example, by including a callsign in the User ID or email address), I perform an additional validation step. In such cases, I either cross-reference the provided callsign with the official databases of the relevant national authority (in Germany, the Federal Network Agency/BNetzA) or, alternatively, accept the presentation of the physical license (Zuteilungsurkunde) in conjunction with an official photo ID. The key will only be signed if the name on the official photo ID matches the name of the callsign holder in the license database or on the physical license beyond any doubt. This process ensures that the radio identity claimed in the key can be reliably attributed to the physical person.
+
+### Recommended Identification for Radio Amateurs (Notations)
+Since the encryption of content is not permitted in the amateur radio service (according to international regulations and the German AfuV), I prefer a clear separation and identification of the radio identity within the PGP key.
+
+I therefore recommend not only optionally including the callsign in the name part of the User ID but also explicitly storing it as a **notation**. This allows for a structured and machine-readable assignment, focusing on digital signatures and authentication (as encryption over the air is prohibited).
+
+Example implementation with GnuPG (in `gpg --edit-key` mode):
+`gpg> notation`
+`Enter the notation: callsign@do3eet.pages.dev=YOUR_CALLSIGN`
+
+This adds a proof to the key that matches my own configuration:
+`callsign@do3eet.pages.dev=DO3EET`
