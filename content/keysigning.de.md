@@ -11,7 +11,6 @@ Um die Integrität des Web of Trust zu gewährleisten, signiere ich PGP-Schlüss
 Die Verifizierung erfolgt durch die Vorlage eines gültigen, amtlichen Lichtbildausweises im Original. Ich akzeptiere hierfür:
 *   Reisepass
 *   Personalausweis
-*   Amateurfunk-Zuteilungsurkunde (Zulassung zur Teilnahme am Amateurfunkdienst)
 
 Nicht-amtliche Dokumente oder Ausweise ohne ausreichende staatliche Sicherheitsmerkmale werden **nicht** akzeptiert. Dazu gehören unter anderem:
 *   Elektronische Gesundheitskarten (eGK)
@@ -22,4 +21,4 @@ Nicht-amtliche Dokumente oder Ausweise ohne ausreichende staatliche Sicherheitsm
 Ich behalte mir vor, die Signierung abzulehnen, wenn Zweifel an der Identität oder der Echtheit des Dokuments bestehen.
 
 ### Besonderheit bei Funkamateuren
-Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab. Die Vorlage der physischen Zuteilungsurkunde wird hierbei ebenfalls akzeptiert und zur Verifizierung herangezogen. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank übereinstimmt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.
+Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen entweder mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab oder akzeptiere alternativ die Vorlage der physischen Zuteilungsurkunde in Verbindung mit einem amtlichen Lichtbildausweis. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank bzw. der Urkunde übereinstimmt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.

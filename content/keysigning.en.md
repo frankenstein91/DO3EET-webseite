@@ -11,7 +11,6 @@ To ensure the integrity of the Web of Trust, I sign PGP keys exclusively after a
 Verification is performed by presenting a valid, original, government-issued photo ID. I accept the following:
 *   Passport
 *   National ID card
-*   Amateur Radio License (Zuteilungsurkunde / License to participate in the amateur radio service)
 
 Non-official documents or IDs without sufficient government security features will **not** be accepted. This includes, but is not limited to:
 *   Health insurance cards
@@ -22,4 +21,4 @@ Non-official documents or IDs without sufficient government security features wi
 I reserve the right to refuse signing if there are any doubts regarding the identity or the authenticity of the document presented.
 
 ### Special Provisions for Radio Amateurs
-If the key to be signed shows a connection to amateur radio (for example, by including a callsign in the User ID or email address), I perform an additional validation step. In such cases, I cross-reference the provided callsign with the official databases of the relevant national authority (in Germany, the Federal Network Agency/BNetzA). The presentation of the physical license (Zuteilungsurkunde) is also accepted and used for verification. The key will only be signed if the name on the official photo ID matches the name of the callsign holder in the license database beyond any doubt. This process ensures that the radio identity claimed in the key can be reliably attributed to the physical person.
+If the key to be signed shows a connection to amateur radio (for example, by including a callsign in the User ID or email address), I perform an additional validation step. In such cases, I either cross-reference the provided callsign with the official databases of the relevant national authority (in Germany, the Federal Network Agency/BNetzA) or, alternatively, accept the presentation of the physical license (Zuteilungsurkunde) in conjunction with an official photo ID. The key will only be signed if the name on the official photo ID matches the name of the callsign holder in the license database or on the physical license beyond any doubt. This process ensures that the radio identity claimed in the key can be reliably attributed to the physical person.
