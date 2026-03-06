@@ -22,3 +22,15 @@ Ich behalte mir vor, die Signierung abzulehnen, wenn Zweifel an der Identität o
 
 ### Besonderheit bei Funkamateuren
 Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen entweder mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab oder akzeptiere alternativ die Vorlage der physischen Zuteilungsurkunde in Verbindung mit einem amtlichen Lichtbildausweis. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank bzw. der Urkunde übereinstimmt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.
+
+### Empfohlene Kennzeichnung für Funkamateure (Notations)
+Da die Verschlüsselung von Inhalten im Amateurfunkdienst (gemäß AfuV) nicht gestattet ist, bevorzuge ich eine klare Trennung und Kennzeichnung der Funkidentität im PGP-Schlüssel. 
+
+Ich empfehle daher, das Rufzeichen nicht nur optional im Namensteil der User-ID zu führen, sondern es explizit als **Notation** zu hinterlegen. Dies ermöglicht eine strukturierte und maschinenlesbare Zuordnung, wobei der Fokus auf der Signatur und Authentifizierung liegt (da Verschlüsselung über Funk unzulässig ist).
+
+Ein Beispiel für die Umsetzung mit GnuPG (im `gpg --edit-key` Modus):
+`gpg> notation`
+`Geben Sie die "Notation" ein: callsign@do3eet.pages.dev=IHR_RUFZEICHEN`
+
+Dies ergänzt den Schlüssel um einen Nachweis, der meiner eigenen Konfiguration entspricht:
+`callsign@do3eet.pages.dev=DO3EET`
