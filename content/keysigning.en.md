@@ -43,3 +43,8 @@ To permanently document the context of our meeting (e.g., a specific event or me
 ### Disclaimer and Confidentiality (Legal)
 *   **No Liability for Third Parties:** By signing a key, I only confirm the identity of the owner at the time of our meeting. I explicitly assume no responsibility for the subsequent behavior of the persons whose keys I have signed, or for the quality and trustworthiness of signatures that these persons themselves may provide.
 *   **Secrecy of Correspondence:** I treat all encrypted messages addressed to me with the necessary care and discretion, analogous to the secrecy of correspondence. I will not grant third parties insight into the contents of this communication unless I am legally required to do so. To comply with such requests, the relevant laws from trustworthy sources must be presented to me.
+
+#### Background: Secrecy of Correspondence
+The secrecy of correspondence protects the confidentiality of mail and information from unauthorized access. In my policy, I apply this principle to digital communication:
+*   **Encryption as a Digital Envelope:** I treat an encrypted message like a sealed letter. Unauthorized reading or sharing the content without explicit consent is an intrusion into privacy that I strictly reject.
+*   **Right to Confidential Communication:** I do not see the use of PGP as a sign of distrust, but as the exercise of the right to a protected privacy, which should be inviolable digitally just as it is with physical mail.
