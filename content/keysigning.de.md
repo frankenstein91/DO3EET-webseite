@@ -21,7 +21,7 @@ Nicht-amtliche Dokumente oder Ausweise ohne ausreichende staatliche Sicherheitsm
 Ich behalte mir vor, die Signierung abzulehnen, wenn Zweifel an der Identität oder der Echtheit des Dokuments bestehen.
 
 ### Besonderheit bei Funkamateuren
-Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen entweder mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab oder akzeptiere alternativ die Vorlage der physischen Zuteilungsurkunde in Verbindung mit einem amtlichen Lichtbildausweis. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank bzw. der Urkunde übereinstimmt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.
+Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen entweder mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab oder akzeptiere alternativ die Vorlage der physischen Zuteilungsurkunde in Verbindung mit einem amtlichen Lichtbildausweis. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank bzw. der Urkunde umfällt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.
 
 ### Empfohlene Kennzeichnung für Funkamateure (Notations)
 Da die Verschlüsselung von Inhalten im Amateurfunkdienst (gemäß AfuV) nicht gestattet ist, bevorzuge ich eine klare Trennung und Kennzeichnung der Funkidentität im PGP-Schlüssel. 
@@ -39,3 +39,7 @@ Dies ergänzt den Schlüssel um einen Nachweis, der meiner eigenen Konfiguration
 Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpunkt) dauerhaft im Web of Trust zu dokumentieren, signiere ich Schlüssel ausschließlich mit dem folgenden Befehl:
 
 `gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>`
+
+### Haftungsausschluss und Vertraulichkeit (Rechtliches)
+*   **Keine Haftung für Dritte:** Mit der Signierung eines Schlüssels bestätige ich lediglich die Identität des Inhabers zum Zeitpunkt unseres Treffens. Ich übernehme ausdrücklich keine Verantwortung für das spätere Verhalten der Personen, deren Schlüssel ich signiert habe, oder für die Qualität und Vertrauenswürdigkeit von Signaturen, die diese Personen ihrerseits leisten.
+*   **Brief- und Postgeheimnis:** Ich behandle alle an mich gerichteten verschlüsselten Nachrichten mit der gebotenen Sorgfalt und Diskretion, analog zum Brief- und Postgeheimnis. Ich werde Dritten keinen Einblick in die Inhalte dieser Kommunikation gewähren, es sei denn, ich bin gesetzlich dazu verpflichtet.

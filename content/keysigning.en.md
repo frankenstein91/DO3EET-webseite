@@ -39,3 +39,7 @@ This adds a proof to the key that matches my own configuration:
 To permanently document the context of our meeting (e.g., a specific event or meeting place) within the Web of Trust, I sign keys exclusively using the following command:
 
 `gpg --cert-notation "event@do3eet.pages.dev=<Event name or Meeting Place>" --sign-key <FOREIGN_KEY_ID>`
+
+### Disclaimer and Confidentiality (Legal)
+*   **No Liability for Third Parties:** By signing a key, I only confirm the identity of the owner at the time of our meeting. I explicitly assume no responsibility for the subsequent behavior of the persons whose keys I have signed, or for the quality and trustworthiness of signatures that these persons themselves may provide.
+*   **Secrecy of Correspondence:** I treat all encrypted messages addressed to me with the necessary care and discretion, analogous to the secrecy of correspondence. I will not grant third parties insight into the contents of this communication unless I am legally required to do so.
