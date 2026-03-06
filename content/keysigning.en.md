@@ -40,6 +40,31 @@ To permanently document the context of our meeting (e.g., a specific event or me
 
 `gpg --cert-notation "event@do3eet.pages.dev=<Event name or Meeting Place>" --sign-key <FOREIGN_KEY_ID>`
 
+### Cryptographic Minimum Requirements (Based on BSI TR-02102)
+To ensure the long-term security and integrity of the Web of Trust (WoT), I exclusively sign keys that meet current cryptographic standards. Weak signatures within the web of trust do not only weaken the individual user but the entire ecosystem. Therefore, I strictly adhere to the recommendations of the Technical Guideline of the German Federal Office for Information Security (BSI TR-02102-1).
+
+#### Accepted Key Parameters and Algorithms
+I support the transition to modern, efficient, and secure methods. The following parameters are a prerequisite for signing:
+
+*   **Elliptic Curves (ECC):** This is my preferred method. I accept key lengths of at least 250 bits. This specifically includes:
+    *   **EdDSA:** Ed25519 and Ed448 (modern, performant, and resistant to many side-channel attacks).
+    *   **NIST Curves:** P-256, P-384, P-521.
+    *   **Brainpool Curves:** brainpoolP256r1, brainpoolP384r1, brainpoolP512r1.
+*   **RSA (Rivest-Shamir-Adleman):** Due to advancing computing power and new attack vectors, I only accept RSA keys with a length of **at least 3000 bits**. In practice, these are usually:
+    *   3072 bits or 4096 bits.
+*   **Hash Algorithms (for Certification Signatures):** The hash functions used for the signature must be collision-resistant according to the current state of the art. The following are accepted:
+    *   SHA-256, SHA-384, SHA-512 (SHA-2 family).
+    *   SHA3-256, SHA3-512 (SHA-3 family).
+
+#### Rejection of Obsolete and Insecure Standards
+I will consistently **not** sign keys based on obsolete or mathematically weakened methods. This specifically includes:
+
+*   **Legacy RSA:** RSA keys with lengths under 3000 bits (e.g., 1024 or 2048 bits) are no longer considered secure for long-term use.
+*   **DSA (Digital Signature Algorithm):** Since the classic DSA standard was often implemented with key lengths that are too small or with insecure parameters, I reject them.
+*   **Insecure Hash Functions:** Any certifications based on **SHA-1, RIPEMD-160, or MD5** will be rejected. SHA-1 has been considered broken for digital signatures since the "SHAttered" attacks at the latest.
+
+My own primary key is based on modern Elliptic Curves (Ed448/Ed25519) and reflects this high security standard. I recommend that every user uses ECC methods directly when creating new keys to achieve an optimal balance between security and performance.
+
 ### Email Verification and Return of the Signature
 The verification of an official ID only confirms the identity of the physical person, but not the control over the email address specified in the key.
 

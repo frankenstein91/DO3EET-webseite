@@ -40,6 +40,31 @@ Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpun
 
 `gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>`
 
+### Kryptografische Mindestanforderungen (in Anlehnung an BSI TR-02102)
+Um die langfristige Sicherheit und Integrität des Web of Trust (WoT) zu gewährleisten, signiere ich ausschließlich Schlüssel, die aktuellen kryptografischen Standards entsprechen. Schwache Signaturen innerhalb des Vertrauensnetzes schwächen nicht nur den einzelnen Nutzer, sondern das gesamte Ökosystem. Daher orientiere ich mich strikt an den Empfehlungen der Technischen Richtlinie des Bundesamtes für Sicherheit in der Informationstechnik (BSI TR-02102-1).
+
+#### Akzeptierte Schlüsselparameter und Algorithmen
+Ich unterstütze den Übergang zu modernen, effizienten und sicheren Verfahren. Folgende Parameter sind Voraussetzung für eine Signierung:
+
+*   **Elliptische Kurven (ECC):** Dies ist mein bevorzugtes Verfahren. Ich akzeptiere Schlüssellängen von mindestens 250 Bit. Dazu gehören insbesondere:
+    *   **EdDSA:** Ed25519 und Ed448 (modern, performant und sicher gegen viele Seitenkanalangriffe).
+    *   **NIST-Kurven:** P-256, P-384, P-521.
+    *   **Brainpool-Kurven:** brainpoolP256r1, brainpoolP384r1, brainpoolP512r1.
+*   **RSA (Rivest-Shamir-Adleman):** Aufgrund der fortschreitenden Rechenleistung und neuer Angriffsvektoren akzeptiere ich RSA-Schlüssel erst ab einer Länge von **mindestens 3000 Bit**. In der Praxis sind dies üblicherweise:
+    *   3072 Bit oder 4096 Bit.
+*   **Hash-Algorithmen (für Zertifizierungssignaturen):** Die für die Signatur verwendeten Hash-Funktionen müssen kollisionsresistent nach aktuellem Stand der Technik sein. Akzeptiert werden:
+    *   SHA-256, SHA-384, SHA-512 (SHA-2 Familie).
+    *   SHA3-256, SHA3-512 (SHA-3 Familie).
+
+#### Ablehnung veralteter und unsicherer Standards
+Schlüssel, die auf veralteten oder mathematisch geschwächten Verfahren basieren, werde ich konsequent **nicht** signieren. Dies umfasst insbesondere:
+
+*   **Veraltetes RSA:** RSA-Schlüssel mit Längen unter 3000 Bit (z. B. 1024 oder 2048 Bit) gelten heute als nicht mehr langfristig sicher.
+*   **DSA (Digital Signature Algorithm):** Da der klassische DSA-Standard häufig mit zu kleinen Schlüssellängen oder unsicheren Parametern implementiert wurde, lehne ich diese ab.
+*   **Unsichere Hash-Funktionen:** Jegliche Zertifizierungen, die auf **SHA-1, RIPEMD-160 oder MD5** basieren, werden abgelehnt. SHA-1 gilt spätestens seit den "SHAttered"-Angriffen als gebrochen für digitale Signaturen.
+
+Mein eigener Primärschlüssel basiert auf modernen Elliptischen Kurven (Ed448/Ed25519) und spiegelt diesen hohen Sicherheitsanspruch wider. Ich empfehle jedem Nutzer, beim Erstellen neuer Schlüssel direkt auf ECC-Verfahren zu setzen, um eine optimale Balance zwischen Sicherheit und Performance zu erreichen.
+
 ### E-Mail-Verifizierung und Rückgabe der Signatur
 Die Prüfung eines amtlichen Ausweises bestätigt lediglich die Identität der physischen Person, jedoch nicht die Kontrolle über die im Schlüssel angegebene E-Mail-Adresse. 
 
