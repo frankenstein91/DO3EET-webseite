@@ -34,3 +34,8 @@ Ein Beispiel für die Umsetzung mit GnuPG (im `gpg --edit-key` Modus):
 
 Dies ergänzt den Schlüssel um einen Nachweis, der meiner eigenen Konfiguration entspricht:
 `callsign@do3eet.pages.dev=DO3EET`
+
+### Durchführung der Signierung
+Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpunkt) dauerhaft im Web of Trust zu dokumentieren, signiere ich Schlüssel ausschließlich mit dem folgenden Befehl:
+
+`gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>`

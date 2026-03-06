@@ -34,3 +34,8 @@ Example implementation with GnuPG (in `gpg --edit-key` mode):
 
 This adds a proof to the key that matches my own configuration:
 `callsign@do3eet.pages.dev=DO3EET`
+
+### Signing Procedure
+To permanently document the context of our meeting (e.g., a specific event or meeting place) within the Web of Trust, I sign keys exclusively using the following command:
+
+`gpg --cert-notation "event@do3eet.pages.dev=<Event name or Meeting Place>" --sign-key <FOREIGN_KEY_ID>`
