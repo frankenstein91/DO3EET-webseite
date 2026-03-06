@@ -19,3 +19,6 @@ Nicht-amtliche Dokumente oder Ausweise ohne ausreichende staatliche Sicherheitsm
 *   Führerscheine (da diese in Deutschland nicht primär als Identitätsnachweis im Sinne des Personalausweisgesetzes dienen)
 
 Ich behalte mir vor, die Signierung abzulehnen, wenn Zweifel an der Identität oder der Echtheit des Dokuments bestehen.
+
+### Besonderheit bei Funkamateuren
+Sollte der zu signierende Schlüssel einen Bezug zum Amateurfunk aufweisen (beispielsweise durch die Angabe eines Rufzeichens in der User-ID oder der E-Mail-Adresse), führe ich eine zusätzliche Validierung durch. In diesem Fall gleiche ich das angegebene Rufzeichen mit den offiziellen Datenbanken der zuständigen nationalen Behörde (in Deutschland die Bundesnetzagentur) ab. Eine Signierung erfolgt nur, wenn der Name auf dem amtlichen Lichtbildausweis zweifelsfrei mit dem Inhaber des Rufzeichens in der Zuteilungsdatenbank übereinstimmt. Dies dient der Absicherung, dass die im Schlüssel behauptete Funkidentität tatsächlich der physischen Person zugeordnet werden kann.
