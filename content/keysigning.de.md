@@ -4,6 +4,10 @@ draft = false
 author = "Frank Tornack"
 +++
 
+## Mein öffentlicher GPG-Schlüssel
+
+{{< gpg_key src="keys/do3eet.asc" >}}
+
 ## Identitätsprüfung und physische Anwesenheit
 Um die Integrität des Web of Trust zu gewährleisten, signiere ich PGP-Schlüssel ausschließlich nach einer persönlichen Begegnung („Face-to-Face“). Eine Identitätsprüfung per Video-Ident, Telefon oder E-Mail findet nicht statt.
 

@@ -4,6 +4,10 @@ draft = false
 author = "Frank Tornack"
 +++
 
+## My public GPG key
+
+{{< gpg_key src="keys/do3eet.asc" >}}
+
 ## Identity Verification and Physical Presence
 To ensure the integrity of the Web of Trust, I sign PGP keys exclusively after a personal, face-to-face meeting. Identity verification via video call, telephone, or email is not conducted.
 
