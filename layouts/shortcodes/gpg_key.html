@@ -1,0 +1,6 @@
+{{ $file := .Get "src" }}
+{{ $content := readFile (printf "static/%s" $file) }}
+<div class="gpg-key-container">
+    <p><strong>Download:</strong> <a href="{{ $file | relURL }}" target="_blank">{{ path.Base $file }}</a></p>
+    <pre><code class="language-gpg">{{ $content | safeHTML }}</code></pre>
+</div>
