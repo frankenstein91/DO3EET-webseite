@@ -33,26 +33,36 @@ Since the encryption of content is not permitted in the amateur radio service (a
 I therefore recommend not only optionally including the callsign in the name part of the User ID but also explicitly storing it as a **notation**. This allows for a structured and machine-readable assignment, focusing on digital signatures and authentication (as encryption over the air is prohibited).
 
 Example implementation with GnuPG (in `gpg --edit-key` mode):
-`gpg> notation`
-`Enter the notation: callsign@do3eet.pages.dev=YOUR_CALLSIGN`
+```bash
+gpg> notation
+Enter the notation: callsign@do3eet.pages.dev=YOUR_CALLSIGN
+```
 
 This adds a proof to the key that matches my own configuration:
-`callsign@do3eet.pages.dev=DO3EET`
+```text
+callsign@do3eet.pages.dev=DO3EET
+```
 
 ### Reference to the GPG Policy (Notation)
 To improve the discoverability of my certification guidelines, I include the link to this page directly in the key as a **notation**. This allows other users and automated tools to validate the conditions of my signature directly from the key.
 
 Implementation with GnuPG:
-`gpg> notation`
-`Enter the notation: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+```bash
+gpg> notation
+Enter the notation: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/
+```
 
 This matches my own configuration:
-`policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+```text
+policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/
+```
 
 ### Signing Procedure
 To permanently document the context of our meeting (e.g., a specific event or meeting place) within the Web of Trust, I sign keys exclusively using the following command:
 
-`gpg --cert-notation "event@do3eet.pages.dev=<Event name or Meeting Place>" --sign-key <FOREIGN_KEY_ID>`
+```bash
+gpg --cert-notation "event@do3eet.pages.dev=<Event name or Meeting Place>" --sign-key <FOREIGN_KEY_ID>
+```
 
 ### Cryptographic Minimum Requirements (Based on BSI TR-02102)
 To ensure the long-term security and integrity of the Web of Trust (WoT), I exclusively sign keys that meet current cryptographic standards. Weak signatures within the web of trust do not only weaken the individual user but the entire ecosystem. Therefore, I strictly adhere to the recommendations of the Technical Guideline of the German Federal Office for Information Security (BSI TR-02102-1).
