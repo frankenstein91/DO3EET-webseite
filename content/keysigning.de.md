@@ -33,26 +33,36 @@ Da die Verschlüsselung von Inhalten im Amateurfunkdienst (gemäß AfuV) nicht g
 Ich empfehle daher, das Rufzeichen nicht nur optional im Namensteil der User-ID zu führen, sondern es explizit als **Notation** zu hinterlegen. Dies ermöglicht eine strukturierte und maschinenlesbare Zuordnung, wobei der Fokus auf der Signatur und Authentifizierung liegt (da Verschlüsselung über Funk unzulässig ist).
 
 Ein Beispiel für die Umsetzung mit GnuPG (im `gpg --edit-key` Modus):
-`gpg> notation`
-`Geben Sie die "Notation" ein: callsign@do3eet.pages.dev=IHR_RUFZEICHEN`
+```bash
+gpg> notation
+Geben Sie die "Notation" ein: callsign@do3eet.pages.dev=IHR_RUFZEICHEN
+```
 
 Dies ergänzt den Schlüssel um einen Nachweis, der meiner eigenen Konfiguration entspricht:
-`callsign@do3eet.pages.dev=DO3EET`
+```text
+callsign@do3eet.pages.dev=DO3EET
+```
 
 ### Verweis auf die GPG-Policy (Notation)
 Um die Auffindbarkeit meiner Zertifizierungsrichtlinien zu verbessern, hinterlege ich den Link zu dieser Seite direkt im Schlüssel als **Notation**. Dies ermöglicht es anderen Nutzern und automatisierten Tools, die Bedingungen meiner Signatur direkt aus dem Schlüssel heraus zu validieren.
 
 Umsetzung mit GnuPG:
-`gpg> notation`
-`Geben Sie die "Notation" ein: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+```bash
+gpg> notation
+Geben Sie die "Notation" ein: policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/
+```
 
 Dies entspricht meiner eigenen Konfiguration:
-`policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/`
+```text
+policy@do3eet.pages.dev=https://do3eet.pages.dev/keysigning/
+```
 
 ### Durchführung der Signierung
 Um den Kontext unserer Begegnung (z. B. ein spezifisches Event oder ein Treffpunkt) dauerhaft im Web of Trust zu dokumentieren, signiere ich Schlüssel ausschließlich mit dem folgenden Befehl:
 
-`gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>`
+```bash
+gpg --cert-notation "event@do3eet.pages.dev=<Eventname oder Treffpunkt>" --sign-key <FREMDE_KEY_ID>
+```
 
 ### Kryptografische Mindestanforderungen (in Anlehnung an BSI TR-02102)
 Um die langfristige Sicherheit und Integrität des Web of Trust (WoT) zu gewährleisten, signiere ich ausschließlich Schlüssel, die aktuellen kryptografischen Standards entsprechen. Schwache Signaturen innerhalb des Vertrauensnetzes schwächen nicht nur den einzelnen Nutzer, sondern das gesamte Ökosystem. Daher orientiere ich mich strikt an den Empfehlungen der Technischen Richtlinie des Bundesamtes für Sicherheit in der Informationstechnik (BSI TR-02102-1).
