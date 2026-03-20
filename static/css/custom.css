@@ -217,6 +217,12 @@ code {
     content: "📄 ";
 }
 
+.post-date {
+    color: #565f89;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
 /* Pagination Styling */
 .pagination-terminal {
     margin-top: 3rem;

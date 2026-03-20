@@ -1,0 +1,39 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">ls -F /{{ .Title | lower | urlize }}</h1>
+
+    {{ .Content }}
+
+    {{/* Paginator initialisieren */}}
+    {{ $paginator := .Paginator }}
+
+    <ul class="tree-list is-files">
+    {{ range $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+    </ul>
+
+    {{/* Terminal-Style Pagination */}}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination-terminal">
+        <span class="nav-prompt">page {{ $paginator.PageNumber }}/{{ $paginator.TotalPages }}</span>
+        <div class="pagination-links">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="nav-main-item">[ PREV ]</a>
+            {{ else }}
+            <span class="nav-dimmed">[ PREV ]</span>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="nav-main-item">[ NEXT ]</a>
+            {{ else }}
+            <span class="nav-dimmed">[ NEXT ]</span>
+            {{ end }}
+        </div>
+    </nav>
+    {{ end }}
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}
