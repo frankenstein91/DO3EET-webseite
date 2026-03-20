@@ -32,3 +32,29 @@
   {{ if .Param "math" }}
     {{ partialCached "math.html" . }}
   {{ end }}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const page = document.querySelector('.page');
+    if (page) {
+        const ua = navigator.userAgent;
+        let browser = "do3eet";
+        if (ua.indexOf("Firefox") > -1) {
+            browser = "Firefox";
+        } else if (ua.indexOf("Edg") > -1) {
+            browser = "Edge";
+        } else if (ua.indexOf("Chrome") > -1) {
+            browser = "Chrome";
+        } else if (ua.indexOf("Safari") > -1) {
+            browser = "Safari";
+        }
+        
+        let host = window.location.hostname;
+        if (!host || host === "localhost" || host === "127.0.0.1") {
+            host = "do3eet.pages.dev";
+        }
+        
+        page.setAttribute('data-prompt', "[" + browser + "@" + host + " /var/www]# ");
+    }
+});
+</script>
