@@ -216,3 +216,37 @@ code {
 .tree-list.is-files li a::before {
     content: "📄 ";
 }
+
+/* Pagination Styling */
+.pagination-terminal {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--terminal-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.pagination-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-dimmed {
+    color: #565f89;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--terminal-border);
+    border-radius: 4px;
+}
