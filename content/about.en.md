@@ -40,6 +40,9 @@ This header relates to Cross-Site Scripting (XSS) attacks, where malicious scrip
 ## Content-Security-Policy
 This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts (`unsafe-inline`) are explicitly allowed. In addition, external resources from trusted sources such as `cdnjs.cloudflare.com` (fonts/icons) and `cdn.jsdelivr.net` (for scripts and fonts from MathJax), as well as the use of web workers (`blob:`), are permitted. Inline styles are also enabled for the correct rendering of complex content like mathematical formulas. All design elements and Easter eggs have been optimized to function smoothly.
 
+### Note on IP Transmission
+When loading resources from these external CDNs, your IP address is transmitted to the respective providers. For users who wish to prevent this, I recommend browser extensions such as **Decentraleyes** or **LocalCDN**. These load common web libraries locally in the browser instead of requesting them from external servers.
+
 ## X-Content-Type-Options: nosniff
 The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.
 
@@ -79,11 +82,23 @@ Videos from the PeerTube platform are embedded on this website. PeerTube is a de
  - Date and time of video retrieval
  - The duration of video playback
  - Whether you watched the video in its entirety
+# Private Nature of the Website
+This website is a purely private, non-commercial project. It serves exclusively to present my personal hobbies (ham radio, Linux, technology, travel) and for informal exchange. No economic interests are pursued.
 
 # Hosting
 Cloudflare serves as a Content Delivery Network (CDN), hosting, and provides security and performance improvements for the delivery of this website. Note that Cloudflare's hosting infrastructure is used to optimize the availability and speed of the website. Cloudflare may collect anonymized statistical data about access to this website. For more information on Cloudflare's privacy practices, please refer to their privacy policy:
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 
+For specific questions regarding data processing by the Cloudflare infrastructure (e.g., global security logs), you can contact Cloudflare's Data Protection Officer directly: `privacy@cloudflare.com`. Cloudflare's EU representative is Cloudflare Germany GmbH, Rosental 7, 80331 Munich, Germany.
+
+# Data Protection Rights (GDPR)
+Even though this is a private website, I take the protection of your data seriously. Under the GDPR, you have the following rights regarding the (technically unavoidable) processing of your data (e.g., IP address when accessing the site):
+- **Access (Art. 15 GDPR):** You can find out what data is technically processed for a short time.
+- **Rectification, Erasure & Objection (Art. 16, 17, 21 GDPR):** You can request the correction or deletion of your data or object to its processing.
+
+Please direct such requests primarily to me (see contact above). Since I do not maintain a user database myself and IP logs are generally deleted or anonymized by the host within 7 days at the latest, the amount of data I possess is minimal.
+
+# Disclaimer
 # Data Protection in Connection with Cloudflare SSL Certificates
 The use of Cloudflare SSL certificates serves to protect the data transmitted between the user and this website. SSL (Secure Sockets Layer) ensures encrypted communication, which guarantees the confidentiality and integrity of the transmitted information. Cloudflare generally undertakes to respect the privacy of users and to comply with applicable data protection regulations. However, when using Cloudflare SSL certificates, certain anonymized information about data traffic may be collected in order to improve the performance, security, and analysis of the website. It is advisable to consult Cloudflare's privacy policy to obtain detailed information about what data is collected, how it is processed, and what protective measures are in place.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
