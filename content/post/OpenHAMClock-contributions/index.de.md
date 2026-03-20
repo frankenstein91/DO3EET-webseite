@@ -1,7 +1,7 @@
 +++
 title = '🧩 OpenHAMClock AddOns: Mehr als nur eine Uhr'
-date = 2026-03-20T21:00:00+01:00
-draft = true
+date = 2026-03-20T22:50:00+01:00
+draft = false
 author = "Frank Tornack"
 tags = [
     "Funk",
