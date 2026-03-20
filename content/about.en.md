@@ -41,7 +41,7 @@ This header relates to Cross-Site Scripting (XSS) attacks, where malicious scrip
 This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts (`unsafe-inline`) are explicitly allowed. In addition, external resources from trusted sources such as `cdnjs.cloudflare.com` (fonts/icons) and `cdn.jsdelivr.net` (for scripts and fonts from MathJax), as well as the use of web workers (`blob:`), are permitted. Inline styles are also enabled for the correct rendering of complex content like mathematical formulas. All design elements and Easter eggs have been optimized to function smoothly.
 
 ### Note on IP Transmission
-When loading resources from these external CDNs, your IP address is transmitted to the respective providers. For users who wish to prevent this, I recommend browser extensions such as **Decentraleyes** or **LocalCDN**. These load common web libraries locally in the browser instead of requesting them from external servers.
+When loading resources from external CDNs such as `cdnjs.cloudflare.com` (fonts/icons), `cdn.jsdelivr.net` (MathJax), `ipfs.io` (Cactus.Chat), or `giscus.app` (comments), your IP address is transmitted to the respective providers. For users who wish to prevent this, I recommend browser extensions such as **Decentraleyes** or **LocalCDN**. These load common web libraries locally in the browser instead of requesting them from external servers.
 
 ## X-Content-Type-Options: nosniff
 The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.
@@ -57,8 +57,11 @@ The comment function on this private website is provided via Github. The operato
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
 - [Data protection policy English](https://docs.github.com/en/site-policy/privacy-policies)
 
+# Mastodon Embeds
+This website occasionally embeds short messages ("Toots") from the decentralized Mastodon network. When viewing these posts, the text content is loaded on the server side, but the profile pictures (avatars) of the authors are loaded directly from the respective Mastodon instance (e.g., `mastodon.social`) into your browser. In this process, your IP address is transmitted to the server of the Mastodon instance.
+
 # Chat Function
-The chat function of this website is based on Matrix chat technology and is provided by the Cactus.Chat software. Matrix is an open standard for decentralized, secure, and interoperable real-time communication over the internet. Cactus.Chat uses this advanced Matrix infrastructure to create a secure and user-friendly chat environment. Matrix enables end-to-end encryption, which means that communication between users is confidential and protected. In addition, the Matrix platform offers the possibility to interact via various chat clients, which enables flexible and versatile use. We attach great importance to data protection and security and recommend that users familiarize themselves with the data protection guidelines of Matrix and Cactus.Chat in order to gain a comprehensive understanding of how their data is protected.
+The chat function of this website is based on Matrix chat technology and is provided by the Cactus.Chat software. The required JavaScript is loaded via a decentralized IPFS gateway (`ipfs.io`). Matrix is an open standard for decentralized, secure, and interoperable real-time communication over the internet. Cactus.Chat uses this advanced Matrix infrastructure to create a secure and user-friendly chat environment. Matrix enables end-to-end encryption, which means that communication between users is confidential and protected. In addition, the Matrix platform offers the possibility to interact via various chat clients, which enables flexible and versatile use. We attach great importance to data protection and security and recommend that users familiarize themselves with the data protection guidelines of Matrix and Cactus.Chat in order to gain a comprehensive understanding of how their data is protected.
 
 Matrix is a decentralized communication protocol in which users can choose their own servers (homeservers). Each homeserver operator can define their own privacy policies and security measures. Since there is no central authority that dictates the privacy policy for all homeservers, it is difficult to offer uniform privacy information. Every user who connects to your Matrix server is subject to the privacy policy of the specific homeserver they choose. It is recommended that users who wish to learn about the privacy policy of their Matrix homeserver contact the operator of the respective homeserver directly or search for the relevant information on the homeserver's website.
 
@@ -82,6 +85,7 @@ Videos from the PeerTube platform are embedded on this website. PeerTube is a de
  - Date and time of video retrieval
  - The duration of video playback
  - Whether you watched the video in its entirety
+
 # Private Nature of the Website
 This website is a purely private, non-commercial project. It serves exclusively to present my personal hobbies (ham radio, Linux, technology, travel) and for informal exchange. No economic interests are pursued.
 
