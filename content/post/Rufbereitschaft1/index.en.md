@@ -4,10 +4,7 @@ date = 2024-10-13T15:35:13+02:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Informatik",
     "IT",
-    "Personalplanung",
-    "Best Practices",
 ]
 +++
 

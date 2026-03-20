@@ -4,11 +4,10 @@ date = 2025-12-21T18:50:00+09:00
 draft = false
 author = "Frank Tornack"
 tags = [
-"Japan",
-"Hokkaido",
-"Reisen",
-"Winter",
-"Wandern",
+    "Japan",
+    "Hokkaido",
+    "Reisen",
+    "Winter",
 ]
 +++
 

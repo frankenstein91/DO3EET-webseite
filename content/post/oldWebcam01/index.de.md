@@ -5,9 +5,8 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Hardware",
-    "Firmware",
-    "WebCam",
     "alt",
+    "Hobby",
 ]
 +++
 

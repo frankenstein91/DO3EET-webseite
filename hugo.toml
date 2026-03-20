@@ -4,7 +4,7 @@ defaultContentLanguage = 'de'
 enableMissingTranslationPlaceholders = true
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
-pagination.pagerSize = 3
+pagination.pagerSize = 5
 enableInlineShortcodes = true
 [menu]
 [[menu.main]]
@@ -33,7 +33,7 @@ title = "DO3EET"
 description = "Ich bin Frank. Ein Informatiker und Funkamateur aus Deutschland. Außerdem reise ich gern nach Japan."
 
 [params.author]
-name = 'DO3EET'
+name = 'Frank Tornack'
 
 
 [markup.goldmark.renderer]
@@ -104,7 +104,7 @@ mapping = "pathname"
 reactionsEnabled = "1"
 emitMetadata = "1"
 inputPosition = "top"
-theme = "dark_protanopia"
+theme = "transparent_dark"
 lang = "de"
 loading = "lazy"
 

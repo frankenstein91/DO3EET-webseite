@@ -1,0 +1,56 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">ls -la /{{ .Title | lower | urlize }}</h1>
+
+    {{ .Content }}
+
+    {{/* Paginator initialisieren */}}
+    {{ $paginator := .Paginator }}
+
+    <div class="posts-expanded">
+    {{ range $index, $page := $paginator.Pages }}
+    {{ if $index }}<hr class="post-separator">{{ end }}
+    <article class="post-entry-terminal">
+        <header class="post-entry-header">
+            <span class="nav-prompt">cat</span>
+            {{ $author := .Params.author | default .Site.Params.author.name | default "do3eet" }}
+            {{ $author_slug := replace $author " " "_" }}
+            <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+            <div class="post-entry-meta">
+                <span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
+            </div>
+        </header>
+
+        <section class="post-entry-summary">
+            {{ .Summary }}
+            <div class="read-more">
+                <a href="{{ .Permalink }}">READ_MORE...</a>
+            </div>
+        </section>
+    </article>
+    {{ end }}    </div>
+
+    {{/* Terminal-Style Pagination */}}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination-terminal">
+        <span class="nav-prompt">page {{ $paginator.PageNumber }}/{{ $paginator.TotalPages }}</span>
+        <div class="pagination-links">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="nav-terminal-item">PREV</a>
+            {{ else }}
+            <span class="nav-dimmed">PREV</span>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="nav-terminal-item">NEXT</a>
+            {{ else }}
+            <span class="nav-dimmed">NEXT</span>
+            {{ end }}
+        </div>
+    </nav>
+    {{ end }}
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}

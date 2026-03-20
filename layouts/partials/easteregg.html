@@ -1,0 +1,111 @@
+<style>
+#easteregg-achievement {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: #1a1b26;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--fg-color);
+    font-family: var(--font-monospace);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    z-index: 9999;
+    
+    /* Animation-Setup */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#easteregg-achievement.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#easteregg-achievement .icon {
+    font-size: 2rem;
+    color: #e0af68; /* Gold/Orange */
+    text-shadow: 0 0 10px rgba(224, 175, 104, 0.5);
+}
+
+#easteregg-achievement .text-content {
+    flex: 1;
+}
+
+#easteregg-achievement .title {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--highlight-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#easteregg-achievement p {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.close-achievement {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    color: #566f56;
+}
+
+.close-achievement:hover {
+    color: var(--fg-color);
+}
+</style>
+
+<div id="easteregg-achievement">
+    <div class="close-achievement" onclick="this.parentElement.classList.remove('show')">×</div>
+    <div class="icon">🏆</div>
+    <div class="text-content">
+        <div class="title">Achievement Unlocked</div>
+        <p><strong>Screen Burn-In</strong><br>Glückwunsch! Deine Pixel sind jetzt offiziell eins mit meiner Website. 📺✨</p>
+    </div>
+</div>
+
+<script>
+(function() {
+    let idleTimer;
+    const idleTimeLimit = 5 * 60 * 1000; // 5 Minuten
+    const achievement = document.getElementById('easteregg-achievement');
+    let hasShown = false;
+
+    function showAchievement() {
+        if (!hasShown) {
+            achievement.classList.add('show');
+            hasShown = true;
+            console.log("Achievement: Screen Burn-In unlocked!");
+        }
+    }
+
+    function resetTimer() {
+        if (hasShown) return;
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(showAchievement, idleTimeLimit);
+    }
+
+    // Aktivitäten überwachen
+    const activityEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+    activityEvents.forEach(event => {
+        document.addEventListener(event, resetTimer, true);
+    });
+
+    // Initialer Start
+    resetTimer();
+})();
+</script>

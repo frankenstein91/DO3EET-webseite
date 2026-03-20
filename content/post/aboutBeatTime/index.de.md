@@ -5,8 +5,7 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Zeit",
-    "Uhr",
-    "Uhrzeit",
+    "Hobby",
 ]
 +++
 

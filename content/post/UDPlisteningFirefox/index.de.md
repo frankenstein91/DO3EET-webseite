@@ -5,12 +5,9 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Linux",
-    "Security",
-    "Firefox",
-    "Browser",
-    "Netzwerk",
+    "Sicherheit",
     "Internet",
-    "HTTP3",
+    "Netzwerk",
 ]
 +++
 

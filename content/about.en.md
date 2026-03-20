@@ -20,6 +20,8 @@ Hugo is a static website framework based on Golang. A static website is a websit
 # Source Code
 The source code of this private website is available on Github and can be viewed there. The website is implemented using Hugo, an open-source static site generator. Hugo converts the source code stored on Github into static HTML, CSS, and JavaScript files that are optimized for display in a web browser. This process enables efficient and fast delivery of content while ensuring a clear separation of content and presentation. With regard to the HTML source code, we would like to point out that the person responsible for the content has no direct influence on the generated HTML source code, as it is automatically created by the Hugo generator. The focus of the content manager is primarily on the creation and maintenance of the website's content components. If you have any questions or comments regarding the HTML source code, we recommend contacting the developer or maintainer of the Hugo theme directly.
 
+Additionally, I use a small client-side JavaScript to personalize the design of this website (terminal look). This script detects the browser you are using and the hostname to display the header in terminal style (e.g., `[Firefox@do3eet.pages.dev /var/www]#`). Another small Easter egg activates if the page remains open without interaction for a longer period (5 minutes) – as a small homage to old monitors, an "achievement" for a (simulated, of course) screen burn-in will then appear. Those who scroll all the way to the bottom will also find the "Ark of Truth". **No** data is stored, logged, or transmitted to me or third parties; the process takes place exclusively locally in your browser – at most, an "Ancient" might be looking over your shoulder.
+
 # HTTP headers
 In summary, these headers work together to create a more secure Browse experience by preventing clickjacking attacks, controlling device access rights, protecting against XSS attacks, and restricting where the website can load resources from.
 
@@ -36,7 +38,7 @@ This header controls how the website you visit can access the referrer informati
 This header relates to Cross-Site Scripting (XSS) attacks, where malicious scripts are injected into a website. This setting instructs the browser to enable XSS protection in "block" mode. This means that the browser will try to detect and block potential XSS attacks.
 
 ## Content-Security-Policy
-This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from.
+This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts are explicitly allowed (`unsafe-inline`), although these only run locally and do not load any external resources.
 
 ## X-Content-Type-Options: nosniff
 The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.

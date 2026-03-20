@@ -5,7 +5,6 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Linux",
-    "Wayland",
 ]
 +++
 
