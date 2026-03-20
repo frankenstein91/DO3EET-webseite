@@ -96,6 +96,12 @@ body {
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 0 5px var(--accent-color);
+    background: transparent !important; /* Grünen Hintergrund vom Theme entfernen */
+    padding: 0 !important;
+}
+
+.page__logo-inner::before {
+    content: "" !important; /* Eckige Klammern vom Theme entfernen */
 }
 
 .page__logo-inner::after {
@@ -103,6 +109,7 @@ body {
     animation: terminal-blink 1s step-end infinite !important;
     color: var(--accent-color) !important;
     display: inline-block !important;
+    margin-left: 0.5rem;
 }
 
 @keyframes terminal-blink {
