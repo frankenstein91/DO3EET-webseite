@@ -10,7 +10,7 @@ tags = [
     "GPS",
     "NTP",
     "Zeit",
-    ]
+]
 +++
 
 Ich glaube jeder Mensch beschäftigt sich mindestens einmal in seinem Leben mit der Zeit. Dabei geht die Faszination nicht nur von Chronométrophilia aus, sondern einfach auch vom normalen Zeit geprägtem Leben. Der eine wartet auf die Liebe seines Lebens am Bahnhof, der andere nur auf den Feierabend. Für beide tickt die Uhr.  

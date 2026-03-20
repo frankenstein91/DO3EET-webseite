@@ -9,8 +9,8 @@ tags = [
     "Hardware",
     "GPS",
     "NTP",
-    "Time",
-    ]
+    "Zeit",
+]
 +++
 
 I believe everyone contemplates time at least once in their life. This fascination doesn't just stem from Chronométrophilia, but also simply from a normal life shaped by time. One person might be waiting for the love of their life at the train station, another just for the workday to end. For both, the clock ticks on.  

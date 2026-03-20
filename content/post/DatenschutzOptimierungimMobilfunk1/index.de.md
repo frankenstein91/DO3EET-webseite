@@ -7,9 +7,6 @@ tags = [
     "Datenschutz",
     "Tracking",
     "Mobilfunk",
-    "Telekom",
-    "Vodafone",
-    "O2",
 ]
 +++
 

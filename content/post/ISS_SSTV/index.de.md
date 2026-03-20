@@ -8,6 +8,7 @@ tags = [
     "Space",
     "Funk",
     "SSTV",
+    "Hobby",
 ]
 +++
 

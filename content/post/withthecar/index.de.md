@@ -7,6 +7,7 @@ tags = [
     "Website",
     "Funk",
     "Auto",
+    "Hobby",
 ]
 +++
 

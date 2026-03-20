@@ -7,8 +7,7 @@ tags = [
     "Linux",
     "Open Source",
     "Hardware",
-    "RISC-V",
-    ]
+]
 +++
 
 Ich freue mich riesig, euch heute auf eine spannende Reise mitzunehmen. Vor kurzem habe ich mir das brandneue Milk-V Jupiter Board zugelegt, und ich kann es kaum erwarten, die ersten Schritte der Installation mit euch zu teilen. In diesem Blogbeitrag werde ich euch durch den gesamten Prozess führen, von der Vorbereitung der Hardware bis zur erfolgreichen Inbetriebnahme des Boards... so wie ich Ihn gerade erlebe. Ich hoffe, meine Erfahrungen werden euch hilfreich sein und mir eine gute Erinnerung, falls ich da nochmal durch muss.

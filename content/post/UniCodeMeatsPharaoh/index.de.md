@@ -5,8 +5,7 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Unicode",
-    "Ägypten",
-    "Zeichen",
+    "Hobby",
 ]
 +++
 

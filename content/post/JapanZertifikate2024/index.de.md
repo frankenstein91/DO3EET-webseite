@@ -7,7 +7,6 @@ tags = [
     "Japan",
     "Reisen",
     "Zertifikate",
-    "funny",
 ]
 +++
 
