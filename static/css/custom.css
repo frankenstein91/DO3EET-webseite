@@ -99,12 +99,13 @@ body {
 }
 
 .page__logo-inner::after {
-    content: "_";
-    animation: blink 1s step-end infinite;
-    color: var(--accent-color);
+    content: "_" !important;
+    animation: terminal-blink 1s step-end infinite !important;
+    color: var(--accent-color) !important;
+    display: inline-block !important;
 }
 
-@keyframes blink {
+@keyframes terminal-blink {
     from, to { opacity: 1; }
     50% { opacity: 0; }
 }
