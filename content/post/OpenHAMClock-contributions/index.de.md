@@ -32,11 +32,15 @@ Wer möchte nicht über neue APRS-Nachrichten informiert werden, ohne ständig a
 - Ein dezenter roter Badge signalisiert neue Eingänge.
 - Unterstützt Deutsch, Englisch und Japanisch.
 
-### 3. HFJ-350M Antennen-Rechner
-Die **Comet HFJ-350M** ist eine beliebte portable Mehrband-Antenne, aber das Abgleichen der Teleskop-Länge kann nervig sein. Mein Rechner nimmt die Arbeit ab:
-- Berechnet die exakte Länge in Millimetern für jede Frequenz von 160m bis 6m.
-- Zeigt die benötigten Spulen-Kombinationen grafisch an.
-- Inklusive Informationen zur Empfindlichkeit (kHz/cm), um das SWR perfekt zu treffen.
+### 3. HFJ-350M Antennen-Rechner: Von der Konsole ins Web
+Die **Comet HFJ-350M** ist eine fantastische portable Mehrband-Antenne, aber das manuelle Abgleichen der Teleskop-Länge anhand von Tabellen kann im Feld mühsam sein. 
+
+Die Idee für dieses AddOn kam mir durch mein eigenständiges Python-Tool [Comet-HFJ-350M-Toy-Box](https://github.com/frankenstein91/Comet-HFJ-350M-Toy-Box). Ursprünglich als CLI-Tool (Command Line Interface) konzipiert, ermöglichte es mir bereits am Terminal, blitzschnell die richtigen Einstellungen für jede Frequenz zu berechnen. Da ich die OpenHAMClock jedoch ständig als zentrales Display im Blick habe, war der nächste logische Schritt die Portierung dieser Logik in ein grafisches AddOn.
+
+Mein Web-Rechner übernimmt nun die ganze Arbeit:
+- **Präzision:** Berechnet die exakte Länge in Millimetern für jede Frequenz von 160m bis 6m.
+- **Visualisierung:** Zeigt die benötigten Spulen-Kombinationen und Jumper-Settings direkt im Dashboard an.
+- **Feintuning:** Inklusive Informationen zur Empfindlichkeit (kHz/cm), um das SWR mit minimalem Aufwand perfekt zu treffen.
 
 ## Die Infrastruktur für die Community
 Neben den funktionalen Tools war es mir wichtig, dass auch andere Entwickler leicht eigene Ideen umsetzen können. Daher habe ich zwei grundlegende Guides verfasst:
@@ -45,7 +49,7 @@ Neben den funktionalen Tools war es mir wichtig, dass auch andere Entwickler lei
 - **Self-Hosting Guide:** Eine Anleitung für alle, die ihre OpenHAMClock (und die AddOns) auf eigener Hardware wie einem Raspberry Pi oder in Docker betreiben wollen. Hier gehe ich besonders auf Sicherheitsaspekte bei API-Keys ein.
 
 ## Fazit
-Open Source lebt vom Mitmachen. Durch die AddOn-Schnittstelle ist die OpenHAMClock nun deutlich flexibler geworden. Ich bin gespannt, welche Ideen die Community als nächstes umsetzt!
+Open Source lebt vom Mitmachen. Was als kleines Python-Experiment für die Konsole begann, ist nun ein fester Bestandteil meines Shack-Dashboards geworden. Durch die AddOn-Schnittstelle ist die OpenHAMClock nun deutlich flexibler geworden. Ich bin gespannt, welche Ideen die Community als nächstes umsetzt!
 
 Schaut euch den Code gern auf GitHub an: [frankenstein91/openhamclock](https://github.com/frankenstein91/openhamclock/tree/main/AddOns)
 
