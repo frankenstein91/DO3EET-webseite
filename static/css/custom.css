@@ -6,17 +6,24 @@
 
 :root {
     --font-monospace: "OpenDyslexicMono", monospace;
-    --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau */
+    --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau (Beibehalten) */
     --fg-color: #c0caf5;        /* Helles Silbergrau für beste Lesbarkeit */
-    --accent-color: #7aa2f7;    /* Sanftes Blau für Prompts */
-    --highlight-color: #bb9af7; /* Violett für Aktives */
-    --terminal-border: #414868;
+    --accent-color: #00ff41;    /* Matrix Hellgrün für Prompts */
+    --highlight-color: #00cc33; /* Matrix Mittelgrün für Aktives */
+    --terminal-border: #003b00; /* Dunkelgrüner Rahmen */
+
+    /* Override Theme Variables */
+    --link: var(--accent-color);
+    --hover: var(--highlight-color);
+    --highlight: var(--highlight-color);
+    --logo: var(--accent-color);
+    --off-fg: #566f56; /* Greenish gray for dimmed text */
 }
 
 body {
     background-color: var(--bg-color);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%);
-    background-size: 100% 4px; /* Sehr subtile Scanlines */
+    background-image: linear-gradient(rgba(0, 255, 65, 0.05) 50%, transparent 50%);
+    background-size: 100% 4px; /* Sehr subtile Scanlines in Grün */
     color: var(--fg-color);
     font-family: var(--font-monospace);
     line-height: 1.6;
@@ -30,7 +37,7 @@ body {
     border: 1px solid var(--terminal-border);
     border-radius: 0 0 8px 8px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
 }
 
 /* Optional: Hauptinhalt im Grid noch etwas mehr Platz geben */
@@ -49,14 +56,14 @@ body {
     left: -1px;
     right: -1px;
     height: 2rem;
-    background: #24283b;
+    background: #001a00; /* Sehr dunkles Grün für die Kopfzeile */
     border: 1px solid var(--terminal-border);
     border-bottom: none;
     border-radius: 8px 8px 0 0;
     padding-left: 1rem;
     line-height: 2rem;
     font-size: 0.8rem;
-    color: #565f89;
+    color: var(--highlight-color);
     z-index: 1;
 }
 
@@ -68,7 +75,7 @@ body {
     height: 2rem;
     line-height: 2rem;
     font-size: 0.8rem;
-    color: #565f89;
+    color: var(--highlight-color);
     z-index: 2;
 }
 
@@ -88,12 +95,13 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: none;
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
 .page__logo-inner::after {
     content: "_";
     animation: blink 1s step-end infinite;
-    color: var(--highlight-color);
+    color: var(--accent-color);
 }
 
 @keyframes blink {
@@ -175,7 +183,7 @@ body {
 
 /* Code Blöcke */
 pre {
-    background: #16161e !important;
+    background: #000800 !important; /* Fast schwarzes Grün */
     border: 1px solid var(--terminal-border);
     border-radius: 4px;
     padding: 1rem !important;
@@ -183,6 +191,7 @@ pre {
 
 code {
     font-family: var(--font-monospace) !important;
+    color: #00ff41;
 }
 
 /* Folder Tree for Lists */
@@ -215,7 +224,7 @@ code {
 
 .tree-list li a:hover {
     background: var(--terminal-border);
-    color: var(--fg-color) !important;
+    color: var(--accent-color) !important;
 }
 
 /* Icons: Default is folder, override for posts */
@@ -231,7 +240,7 @@ code {
 }
 
 .post-date {
-    color: #565f89;
+    color: #008f11;
     margin-right: 0.5rem;
     font-size: 0.85rem;
 }
@@ -260,16 +269,16 @@ code {
     padding: 0.5rem 1rem;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
-    background: rgba(122, 162, 247, 0.05);
+    background: rgba(0, 255, 65, 0.05);
     transition: all 0.3s ease;
     
     /* CRT Glow-Effekt */
     text-shadow: 
-        0 0 5px rgba(122, 162, 247, 0.8),
-        0 0 10px rgba(122, 162, 247, 0.5);
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
     box-shadow: 
-        inset 0 0 10px rgba(122, 162, 247, 0.2),
-        0 0 10px rgba(122, 162, 247, 0.2);
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
     
     animation: crt-flicker 3s infinite;
 }
@@ -278,18 +287,18 @@ code {
     color: #fff;
     background: var(--accent-color);
     box-shadow: 
-        0 0 20px rgba(122, 162, 247, 0.8),
-        0 0 40px rgba(122, 162, 247, 0.4);
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .nav-dimmed {
-    color: #565f89;
+    color: #003b00;
     opacity: 0.5;
     cursor: not-allowed;
     letter-spacing: 2px;
     padding: 0.5rem 1rem;
-    border: 1px solid #565f89;
+    border: 1px solid #003b00;
     border-radius: 4px;
 }
 
@@ -313,7 +322,7 @@ code {
 .post-entry-meta {
     font-size: 0.8rem;
     margin-top: 0.5rem;
-    color: #565f89;
+    color: var(--highlight-color);
 }
 
 .post-entry-summary {
@@ -334,16 +343,16 @@ code {
     padding: 0.5rem 1rem;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
-    background: rgba(122, 162, 247, 0.05);
+    background: rgba(0, 255, 65, 0.05);
     transition: all 0.3s ease;
     
     /* CRT Glow-Effekt */
     text-shadow: 
-        0 0 5px rgba(122, 162, 247, 0.8),
-        0 0 10px rgba(122, 162, 247, 0.5);
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
     box-shadow: 
-        inset 0 0 10px rgba(122, 162, 247, 0.2),
-        0 0 10px rgba(122, 162, 247, 0.2);
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
     
     animation: crt-flicker 3s infinite;
 }
@@ -352,8 +361,8 @@ code {
     color: #fff;
     background: var(--accent-color);
     box-shadow: 
-        0 0 20px rgba(122, 162, 247, 0.8),
-        0 0 40px rgba(122, 162, 247, 0.4);
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 

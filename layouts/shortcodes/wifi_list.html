@@ -32,16 +32,16 @@
         background-color: #d36b1f;
     }
 
-    /* Arch Linux Box */
+    /* Matrix / Arch Box */
     .arch-install-box {
-        background: #333;
+        background: #000800;
         color: #eee;
         padding: 10px 15px;
         border-radius: 6px;
         font-family: monospace;
         font-size: 0.85em;
         margin-bottom: 20px;
-        border-left: 4px solid #1793d1; /* Arch Blue */
+        border-left: 4px solid #00ff41; /* Matrix Green */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -112,7 +112,7 @@
         white-space: nowrap;
     }
     .wifi-actions button {
-        background: #007bff;
+        background: #008f11;
         border: none;
         color: white;
         width: 32px;
@@ -180,7 +180,7 @@
                     <strong>{{ .description }}</strong><br>
                     {{ if and .latitude .longitude }}
                     <small>
-                        <a href="https://www.openstreetmap.org/?mlat={{.latitude}}&mlon={{.longitude}}#map=18/{{.latitude}}/{{.longitude}}" target="_blank" style="color:#88ccff">
+                        <a href="https://www.openstreetmap.org/?mlat={{.latitude}}&mlon={{.longitude}}#map=18/{{.latitude}}/{{.longitude}}" target="_blank" style="color:#00ff41">
                             <i class="fa-solid fa-map-location-dot"></i> Karte
                         </a>
                     </small>
