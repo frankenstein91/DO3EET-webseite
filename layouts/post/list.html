@@ -1,16 +1,32 @@
 {{ define "main" }}
-    <h1 id="{{ .Title | urlize }}">ls -F /{{ .Title | lower | urlize }}</h1>
+    <h1 id="{{ .Title | urlize }}">ls -la /{{ .Title | lower | urlize }}</h1>
 
     {{ .Content }}
 
     {{/* Paginator initialisieren */}}
     {{ $paginator := .Paginator }}
 
-    <ul class="tree-list is-files">
+    <div class="posts-expanded">
     {{ range $paginator.Pages }}
-        {{ .Render "li" }}
+    <article class="post-entry-terminal">
+        <header class="post-entry-header">
+            <span class="nav-prompt">cat</span> 
+            <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+            <div class="post-entry-meta">
+                <span class="prompt-user">frank@do3eet</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
+            </div>
+        </header>
+
+        <section class="post-entry-summary">
+            {{ .Summary }}
+            <div class="read-more">
+                <a href="{{ .Permalink }}">[ READ_MORE... ]</a>
+            </div>
+        </section>
+    </article>
+    <hr class="post-separator">
     {{ end }}
-    </ul>
+    </div>
 
     {{/* Terminal-Style Pagination */}}
     {{ if gt $paginator.TotalPages 1 }}

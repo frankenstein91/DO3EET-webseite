@@ -245,6 +245,45 @@ code {
     cursor: not-allowed;
 }
 
+/* Expanded Post Entries */
+.post-entry-terminal {
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+}
+
+.post-entry-header h2 {
+    display: inline;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    border-bottom: none;
+}
+
+.post-entry-meta {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #565f89;
+}
+
+.post-entry-summary {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.post-separator {
+    border: none;
+    border-top: 1px dashed var(--terminal-border);
+    margin: 3rem 0;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
