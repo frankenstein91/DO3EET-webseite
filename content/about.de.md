@@ -37,7 +37,7 @@ Diese Kopfzeile steuert, wie die von Ihnen besuchte Website auf die Referrer-Inf
 Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen bösartige Skripte in eine Website eingeschleust werden. Mit dieser Einstellung wird der Browser angewiesen, den XSS-Schutz im „Block“-Modus zu aktivieren. Das bedeutet, dass der Browser **versuchen wird**, potenzielle XSS-Angriffe zu erkennen und zu blockieren.
 
 ## Content-Security-Policy
-Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. Für das Terminal-Design dieser Seite werden Inline-Skripte explizit erlaubt (`unsafe-inline`), wobei diese jedoch nur lokal ausgeführt werden und keine externen Ressourcen nachladen.
+Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. Für das Terminal-Design dieser Seite werden Inline-Skripte explizit erlaubt (`unsafe-inline`), wobei diese jedoch nur lokal ausgeführt werden. Zudem sind externe Ressourcen von vertrauenswürdigen Quellen wie `cdnjs.cloudflare.com` (Schriftarten/Icons) und `cdn.jsdelivr.net` (für mathematische Formeln via MathJax) erlaubt. Sämtliche Design-Elemente und Easter-Eggs wurden so optimiert, dass sie ohne blockierte Inline-Styles funktionieren.
 
 ## X-Content-Type-Options: nosniff
 Der HTTP-Header `X-Content-Type-Options: nosniff` ist eine Sicherheitsmaßnahme, die Webserver einsetzen können, um Browser anzuweisen, den deklarierten Content-Type einer Ressource nicht zu "erraten" oder zu ändern.
