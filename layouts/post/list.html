@@ -12,9 +12,11 @@
     <article class="post-entry-terminal">
         <header class="post-entry-header">
             <span class="nav-prompt">cat</span>
+            {{ $author := .Params.author | default .Site.Params.author.name | default "do3eet" }}
+            {{ $author_slug := replace $author " " "_" }}
             <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
             <div class="post-entry-meta">
-                <span class="prompt-user">frank@do3eet</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
+                <span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
             </div>
         </header>
 

@@ -33,7 +33,7 @@ title = "DO3EET"
 description = "Ich bin Frank. Ein Informatiker und Funkamateur aus Deutschland. Außerdem reise ich gern nach Japan."
 
 [params.author]
-name = 'DO3EET'
+name = 'Frank Tornack'
 
 
 [markup.goldmark.renderer]
