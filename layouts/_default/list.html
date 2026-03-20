@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">ls -F /{{ .Title | lower | urlize }}</h1>
+
+    {{ .Content }}
+
+    {{/* 
+       Wir entscheiden hier, ob es Ordner (taxonomy list) 
+       oder Dateien (term/section list) sind.
+    */}}
+    {{ $isFiles := or (eq .Kind "section") (eq .Kind "term") }}
+
+    <ul class="tree-list{{ if $isFiles }} is-files{{ end }}">
+    {{ range .Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+    </ul>
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}

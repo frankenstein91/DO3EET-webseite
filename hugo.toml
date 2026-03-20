@@ -104,7 +104,7 @@ mapping = "pathname"
 reactionsEnabled = "1"
 emitMetadata = "1"
 inputPosition = "top"
-theme = "dark_protanopia"
+theme = "transparent_dark"
 lang = "de"
 loading = "lazy"
 
