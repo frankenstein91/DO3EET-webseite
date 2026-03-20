@@ -25,7 +25,7 @@ Zusätzlich verwende ich ein kleines clientseitiges JavaScript, um das Design di
 # HTTP Header
 Zusammenfassend lässt sich sagen, dass diese Header zusammenarbeiten, um ein sichereres Browsing-Erlebnis zu schaffen, indem sie Clickjacking-Angriffe verhindern, die Zugriffsrechte für Geräte kontrollieren, vor XSS-Angriffen schützen und einschränken, von wo die Website Ressourcen laden kann.
 ## X-Frame-Options: DENY
-Diese Kopfzeile teilt dem Browser mit, dass diese Website nicht innerhalb eines Frames auf einer anderen Website geladen werden soll. Dies hilft, Clickjacking-Angriffe zu verhindern, bei denen eine böswillige Website Sie dazu verleitet, auf etwas zu klicken, indem sie die legitime Website in ihren Frame einbettet. Sollten Sie meine Website trotzdem in einem Frame sehen, würde ich mich über eine Meldung freuen. Ausgenommen von dieser Meldebitte ist [Archive.org](https://web.archive.org/).
+Diese Kopfzeile teilt dem Browser mit, dass diese Website nicht innerhalb eines Frames auf einer anderen Website geladen werden soll. Dies hilft, Clickjacking-Angriffe zu verhindern, bei denen eine böswillige Website Sie dazu verleitet, auf etwas zu klicken, indem sie die legitime Website in ihren Frame einbietet. Sollten Sie meine Website trotzdem in einem Frame sehen, würde ich mich über eine Meldung freuen. Ausgenommen von dieser Meldebitte ist [Archive.org](https://web.archive.org/).
 
 ## Permissions-Policy: camera=(), microphone=(), geolocation=()
 Dieser Header gibt die Berechtigungsrichtlinie des Browsers für den Zugriff auf bestimmte Funktionen auf Ihrem Gerät an. In diesem Fall wird der Zugriff auf die Kamera, das Mikrofon und die Geolokalisierung für diese Website verweigert. Damit stelle ich sicher keinen Zugriff auf diese Informationen zu haben.
@@ -40,7 +40,7 @@ Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen 
 Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. Für das Terminal-Design dieser Seite werden Inline-Skripte (`unsafe-inline`) explizit erlaubt. Zudem sind externe Ressourcen von vertrauenswürdigen Quellen wie `cdnjs.cloudflare.com` (Schriftarten/Icons) und `cdn.jsdelivr.net` (für Skripte und Schriftarten von MathJax) sowie die Nutzung von Web-Workern (`blob:`) erlaubt. Auch Inline-Styles sind für die korrekte Darstellung komplexer Inhalte wie mathematischer Formeln freigegeben. Sämtliche Design-Elemente und Easter-Eggs wurden so optimiert, dass sie reibungslos funktionieren.
 
 ### Hinweis zur IP-Übertragung
-Beim Laden von Ressourcen von diesen externen CDNs wird Ihre IP-Adresse an die jeweiligen Anbieter übertragen. Für Nutzer, die dies unterbinden möchten, empfehle ich Browser-Erweiterungen wie **Decentraleyes** oder **LocalCDN**. Diese laden gängige Web-Bibliotheken lokal in den Browser, anstatt sie von externen Servern anzufragen.
+Beim Laden von Ressourcen von externen CDNs wie `cdnjs.cloudflare.com` (Fonts/Icons), `cdn.jsdelivr.net` (MathJax), `ipfs.io` (Cactus.Chat) oder `giscus.app` (Kommentare) wird Ihre IP-Adresse an die jeweiligen Anbieter übertragen. Für Nutzer, die dies unterbinden möchten, empfehle ich Browser-Erweiterungen wie **Decentraleyes** oder **LocalCDN**. Diese laden gängige Web-Bibliotheken lokal in den Browser, anstatt sie von externen Servern anzufragen.
 
 ## X-Content-Type-Options: nosniff
 Der HTTP-Header `X-Content-Type-Options: nosniff` ist eine Sicherheitsmaßnahme, die Webserver einsetzen können, um Browser anzuweisen, den deklarierten Content-Type einer Ressource nicht zu "erraten" oder zu ändern.
@@ -56,8 +56,11 @@ Die Kommentarfunktion auf dieser privaten Website wird über Github bereitgestel
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
 - [Data protection policy English](https://docs.github.com/en/site-policy/privacy-policies)
 
+# Mastodon-Einbettungen
+Auf dieser Website werden gelegentlich Kurznachrichten ("Toots") aus dem dezentralen Mastodon-Netzwerk eingebettet. Beim Anzeigen dieser Beiträge werden die Textinhalte serverseitig geladen, die Profilbilder (Avatare) der Autoren jedoch direkt von der jeweiligen Mastodon-Instanz (z. B. `mastodon.social`) in Ihren Browser geladen. Dabei wird Ihre IP-Adresse an den Server der Mastodon-Instanz übertragen.
+
 # Chatfunktion
-Die Chatfunktion dieser Website basiert auf der Matrix-Chat-Technologie und wird durch die Software Cactus.Chat bereitgestellt. Matrix ist ein offener Standard für dezentrale, sichere und interoperable Echtzeitkommunikation über das Internet. Cactus.Chat nutzt diese fortschrittliche Matrix-Infrastruktur, um eine sichere und benutzerfreundliche Chat-Umgebung zu schaffen. Matrix ermöglicht die Verschlüsselung von Ende zu Ende, was bedeutet, dass die Kommunikation zwischen den Nutzern vertraulich und geschützt ist. Darüber hinaus bietet die Matrix-Plattform die Möglichkeit, über verschiedene Chat-Clients zu interagieren, was eine flexible und vielseitige Nutzung ermöglicht. Wir legen großen Wert auf Datenschutz und Sicherheit und empfehlen den Nutzern, sich mit den Datenschutzrichtlinien von Matrix und Cactus.Chat vertraut zu machen, um ein umfassendes Verständnis darüber zu erhalten, wie ihre Daten geschützt werden.
+Die Chatfunktion dieser Website basiert auf der Matrix-Chat-Technologie und wird durch die Software Cactus.Chat bereitgestellt. Das benötigte JavaScript wird dabei über ein dezentrales IPFS-Gateway (`ipfs.io`) geladen. Matrix ist ein offener Standard für dezentrale, sichere und interoperable Echtzeitkommunikation über das Internet. Cactus.Chat nutzt diese fortschrittliche Matrix-Infrastruktur, um eine sichere und benutzerfreundliche Chat-Umgebung zu schaffen. Matrix ermöglicht die Verschlüsselung von Ende zu Ende, was bedeutet, dass die Kommunikation zwischen den Nutzern vertraulich und geschützt ist. Darüber hinaus bietet die Matrix-Plattform die Möglichkeit, über verschiedene Chat-Clients zu interagieren, was eine flexible und vielseitige Nutzung ermöglicht. Wir legen großen Wert auf Datenschutz und Sicherheit und empfehlen den Nutzern, sich mit den Datenschutzrichtlinien von Matrix und Cactus.Chat vertraut zu machen, um ein umfassendes Verständnis darüber zu erhalten, wie ihre Daten geschützt werden.
 
 Matrix ist ein dezentrales Kommunikationsprotokoll, bei dem die Nutzer ihre eigenen Server (Homeserver) wählen können. Jeder Homeserver-Betreiber kann seine eigenen Datenschutzrichtlinien und Sicherheitsmaßnahmen festlegen. Da es keine zentrale Instanz gibt, die die Datenschutzrichtlinien für alle Homeserver vorgibt, ist es schwierig, eine einheitliche Datenschutzinformation anzubieten. Jeder Nutzer, der sich mit deinem Matrix-Server verbindet, unterliegt den Datenschutzrichtlinien des spezifischen Homeservers, den er wählt. Es wird empfohlen, dass Nutzer, die die Datenschutzrichtlinien ihres Matrix-Heimservers kennenlernen möchten, sich direkt an den Betreiber des jeweiligen Homeservers wenden oder die entsprechenden Informationen auf der Website des Homeservers suchen.
 
@@ -80,6 +83,7 @@ Auf dieser Website werden Videos von der Plattform PeerTube eingebettet. PeerTub
 - Datum und Uhrzeit des Abrufs des Videos
 - Die Dauer der Wiedergabe des Videos
 - Ob Sie das Video vollständig angesehen haben
+
 # Privater Charakter der Website
 Diese Webseite ist ein rein privates, nicht-kommerzielles Projekt. Sie dient ausschließlich der Darstellung meiner persönlichen Hobbys (Amateurfunk, Linux, Technik, Reisen) und dem informellen Austausch. Es werden keinerlei wirtschaftliche Interessen verfolgt.
 
