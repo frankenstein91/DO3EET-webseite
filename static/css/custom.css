@@ -1,4 +1,4 @@
-/* Override this file to customise the theme's CSS for your site */
+/* Modern Dark Terminal Design */
 @font-face {
     font-family: 'OpenDyslexicMono';
     src: url('/fonts/OpenDyslexicMono-Regular.otf') format('opentype');
@@ -6,4 +6,172 @@
 
 :root {
     --font-monospace: "OpenDyslexicMono", monospace;
+    --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau */
+    --fg-color: #c0caf5;        /* Helles Silbergrau für beste Lesbarkeit */
+    --accent-color: #7aa2f7;    /* Sanftes Blau für Prompts */
+    --highlight-color: #bb9af7; /* Violett für Aktives */
+    --terminal-border: #414868;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    background-size: 100% 4px; /* Sehr subtile Scanlines */
+    color: var(--fg-color);
+    font-family: var(--font-monospace);
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 66rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid var(--terminal-border);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Dezentere Terminal-Kopfzeile */
+.page::before {
+    content: "● ● ●  do3eet@terminal:~";
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    background: #24283b;
+    border: 1px solid var(--terminal-border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding-left: 1rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #565f89;
+}
+
+/* Kompaktes Menü in einer Zeile */
+.terminal-header-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--terminal-border);
+    padding-bottom: 1rem;
+}
+
+.page__logo-inner {
+    color: #ffffff !important; /* Strahlendes Weiß für den Titel */
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page__logo-inner::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+    color: var(--highlight-color);
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.terminal-menu-inline {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1rem;
+}
+
+.nav-main-item {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-main-item:hover {
+    color: var(--highlight-color) !important;
+    text-decoration: underline;
+}
+
+.nav-main-item.active {
+    color: var(--highlight-color) !important;
+    font-weight: bold;
+}
+
+/* Sidebar / Aside */
+.page__aside {
+    border-left: 1px dashed var(--terminal-border);
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.aside__social {
+    margin-top: 1.5rem;
+}
+
+.aside__social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.aside__social-links li {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.aside__social-links li::before {
+    content: "├── ";
+    color: var(--terminal-border);
+}
+
+.aside__social-links li:last-child::before {
+    content: "└── ";
+}
+
+.link-label {
+    margin-left: 0.5rem;
+}
+
+.aside__social-links i {
+    width: 1rem;
+    text-align: center;
+}
+
+.aside__social-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.aside__social-links a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+/* Code Blöcke */
+pre {
+    background: #16161e !important;
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    padding: 1rem !important;
+}
+
+code {
+    font-family: var(--font-monospace) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--terminal-border);
+    border-radius: 4px;
 }
