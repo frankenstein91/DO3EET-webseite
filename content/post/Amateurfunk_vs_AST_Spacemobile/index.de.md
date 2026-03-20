@@ -6,12 +6,7 @@ author = "Frank Tornack"
 tags = [
     "Space",
     "Funk",
-    "Satelliten",
-    "5G",
-    "FCC",
-    "70cm-Band",
-    "Interferenz",
-    "Regulierung",
+    "Politik",
 ]
 +++
 

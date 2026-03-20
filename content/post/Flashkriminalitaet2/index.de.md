@@ -7,8 +7,6 @@ tags = [
     "Linux",
     "Sicherheit",
     "Betrug",
-    "Scam",
-    "Amazon",
     "Shopping",
 ]
 +++

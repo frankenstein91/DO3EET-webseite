@@ -6,7 +6,6 @@ author = "Frank Tornack"
 tags = [
     "Linux",
     "Dateisystem",
-    "BTRFS",
 ]
 +++
 

@@ -8,7 +8,8 @@ tags = [
     "Löten",
     "alt",
     "Weihnachten",
-    "Russland"
+    "Russland",
+    "Hobby",
 ]
 +++
 

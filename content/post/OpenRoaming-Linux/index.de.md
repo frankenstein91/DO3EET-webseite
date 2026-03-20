@@ -8,9 +8,9 @@ tags = [
     "Linux",
     "Reisen",
     "Hokkaido",
-    "Tech",
-    "OpenRoaming"
-    ]
+    "Technik",
+    "Netzwerk",
+]
 +++
 
 Grüße aus Hokkaido! Ich bin gerade mit meinem Framework Laptop in Japan unterwegs – genauer gesagt am Toya-See (Toyako). Japan ist ein tech-affines Land, aber als Linux-User (in meinem Fall Arch mit Cinnamon) stößt man oft auf Hürden, die Nutzer von iPhones oder Android-Geräten gar nicht kennen.

@@ -6,8 +6,7 @@ author = "Frank Tornack"
 tags = [
     "Japan",
     "Reisen",
-    "EXPO",
-    "Weltausstellung",
+    "Expo",
     "Osaka",
 ]
 +++

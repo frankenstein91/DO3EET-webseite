@@ -7,10 +7,7 @@ tags = [
     "Datenschutz",
     "Tracking",
     "Chat",
-    "WhatsApp",
-    "Telegram",
-    "Threema",
-    "Signal",
+    "Messenger",
     "Verschlüsselung",
 ]
 +++

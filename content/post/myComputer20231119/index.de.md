@@ -4,7 +4,7 @@ date = 2023-11-19T15:19:53+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Computer",
+    "Hardware",
 ]
 +++
 
