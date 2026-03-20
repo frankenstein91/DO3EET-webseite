@@ -382,14 +382,30 @@ code {
     content: none !important;
 }
 
-/* Scrollbar */
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
+    height: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-color);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: var(--terminal-border);
-    border-radius: 4px;
+    background: var(--accent-color);
+    border: 2px solid var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight-color);
+    box-shadow: 0 0 10px var(--highlight-color);
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
 }
