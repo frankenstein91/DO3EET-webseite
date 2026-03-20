@@ -6,6 +6,7 @@ author = "Frank Tornack"
 tags = [
     "Japan",
     "Reisen",
+    "Hobby",
 ]
 +++
 

@@ -8,8 +8,6 @@ tags = [
     "Politik",
     "Meinung",
     "Energie",
-    "Solar",
-    "Strom",
 ]
 +++
 

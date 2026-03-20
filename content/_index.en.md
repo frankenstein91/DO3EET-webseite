@@ -5,3 +5,4 @@ My name is Frank, and I'm excited to give you a little insight into my life as a
 ## About me
  - 🌍 World traveler and culture enthusiast
  - 👨🏻‍💻 Technology enthusiast
+ - 🚀 Big Star Trek and Stargate fan

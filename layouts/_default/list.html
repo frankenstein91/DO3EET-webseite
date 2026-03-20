@@ -1,0 +1,49 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">ls -F /{{ .Title | lower | urlize }}</h1>
+
+    {{ .Content }}
+
+    {{/* 
+       Wir entscheiden hier, ob es Ordner (taxonomy list) 
+       oder Dateien (term/section list) sind.
+    */}}
+    {{ $isFiles := or (eq .Kind "section") (eq .Kind "term") }}
+
+    {{/* Paginator nur für Sektionen und Terms verwenden, sonst alle Seiten anzeigen */}}
+    {{ $pages := .Pages }}
+    {{ $paginator := .Paginator }}
+    {{ if $isFiles }}
+        {{ $pages = $paginator.Pages }}
+    {{ end }}
+
+    <ul class="tree-list{{ if $isFiles }} is-files{{ end }}">
+    {{ range $pages }}
+        {{ .Render "li" }}
+    {{ end }}
+    </ul>
+
+    {{/* Terminal-Style Pagination nur wenn Paginator verwendet wird */}}
+    {{ if and $isFiles (gt $paginator.TotalPages 1) }}
+    <nav class="pagination-terminal">
+        <span class="nav-prompt">page {{ $paginator.PageNumber }}/{{ $paginator.TotalPages }}</span>
+        <div class="pagination-links">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="nav-main-item">[ PREV ]</a>
+            {{ else }}
+            <span class="nav-dimmed">[ PREV ]</span>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="nav-main-item">[ NEXT ]</a>
+            {{ else }}
+            <span class="nav-dimmed">[ NEXT ]</span>
+            {{ end }}
+        </div>
+    </nav>
+    {{ end }}
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}

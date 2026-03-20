@@ -20,6 +20,8 @@ Hugo ist ein statisches Webseiten-Framework, das auf Golang basiert. Eine statis
 # Quellcode
 Der Quellcode dieser privaten Website liegt auf Github und kann dort eingesehen werden. Die Umsetzung der Website erfolgt mithilfe von Hugo, einem Open-Source-Statiksite-Generator. Hugo wandelt den auf Github hinterlegten Quellcode in statische HTML-, CSS- und JavaScript-Dateien um, die für die Anzeige im Webbrowser optimiert sind. Dieser Prozess ermöglicht eine effiziente und schnelle Bereitstellung der Inhalte, während gleichzeitig eine klare Trennung von Inhalt und Darstellung gewährleistet wird. In Hinblick auf den HTML-Quellcode möchten wir darauf hinweisen, dass der Inhaltsverantwortliche keinen direkten Einfluss auf den generierten HTML-Quellcode hat, da dieser durch den Hugo-Generator automatisch erstellt wird. Der Fokus des Inhaltsverantwortlichen liegt vorrangig auf der Erstellung und Pflege der inhaltlichen Komponenten der Website. Bei Fragen oder Anmerkungen bezüglich des HTML-Quellcodes empfehlen wir, sich direkt an den Entwickler oder Maintainer des Hugo-Themas zu wenden.
 
+Zusätzlich verwende ich ein kleines clientseitiges JavaScript, um das Design dieser Website (Terminal-Optik) zu personalisieren. Dieses Skript erkennt den von Ihnen verwendeten Browser und den Hostnamen, um den Header im Terminal-Stil anzuzeigen (z.B. `[Firefox@do3eet.pages.dev /var/www]#`). Ein weiteres kleines Easter-Egg aktiviert sich, wenn die Seite längere Zeit (5 Minuten) ohne Interaktion geöffnet bleibt – als kleine Hommage an alte Monitore erscheint dann ein "Achievement" für einen (natürlich simulierten) Screen Burn-In. Wer ganz nach unten scrollt, findet zudem die "Quelle der Wahrheit". Dabei werden **keine** Daten gespeichert, protokolliert oder an mich oder Dritte übertragen; der Vorgang findet ausschließlich lokal in Ihrem Browser statt – maximal ein "Antiker" schaut Ihnen dabei vielleicht über die Schulter.
+
 # HTTP Header
 Zusammenfassend lässt sich sagen, dass diese Header zusammenarbeiten, um ein sichereres Browsing-Erlebnis zu schaffen, indem sie Clickjacking-Angriffe verhindern, die Zugriffsrechte für Geräte kontrollieren, vor XSS-Angriffen schützen und einschränken, von wo die Website Ressourcen laden kann.
 ## X-Frame-Options: DENY
@@ -35,7 +37,7 @@ Diese Kopfzeile steuert, wie die von Ihnen besuchte Website auf die Referrer-Inf
 Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen bösartige Skripte in eine Website eingeschleust werden. Mit dieser Einstellung wird der Browser angewiesen, den XSS-Schutz im „Block“-Modus zu aktivieren. Das bedeutet, dass der Browser **versuchen wird**, potenzielle XSS-Angriffe zu erkennen und zu blockieren.
 
 ## Content-Security-Policy
-Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann.
+Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. Für das Terminal-Design dieser Seite werden Inline-Skripte explizit erlaubt (`unsafe-inline`), wobei diese jedoch nur lokal ausgeführt werden und keine externen Ressourcen nachladen.
 
 ## X-Content-Type-Options: nosniff
 Der HTTP-Header `X-Content-Type-Options: nosniff` ist eine Sicherheitsmaßnahme, die Webserver einsetzen können, um Browser anzuweisen, den deklarierten Content-Type einer Ressource nicht zu "erraten" oder zu ändern.

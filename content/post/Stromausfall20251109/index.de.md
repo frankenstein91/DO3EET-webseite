@@ -3,11 +3,8 @@ title = 'Der 15-Minuten-Stromausfall in Kleinbothen (09.11.2025)'
 date = 2025-11-09T17:33:44+01:00
 author = "Frank Tornack"
 tags = [
-    "Grimma",
-    "Kleinbothen",
-    "Strom",
-    "Solar",
-    "Störung",
+    "Sachsen",
+    "Energie",
 ]
 +++
 

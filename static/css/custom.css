@@ -1,4 +1,4 @@
-/* Override this file to customise the theme's CSS for your site */
+/* Modern Dark Terminal Design */
 @font-face {
     font-family: 'OpenDyslexicMono';
     src: url('/fonts/OpenDyslexicMono-Regular.otf') format('opentype');
@@ -6,4 +6,415 @@
 
 :root {
     --font-monospace: "OpenDyslexicMono", monospace;
+    --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau (Beibehalten) */
+    --fg-color: #c0caf5;        /* Helles Silbergrau für beste Lesbarkeit */
+    --accent-color: #00ff41;    /* Matrix Hellgrün für Prompts */
+    --highlight-color: #00cc33; /* Matrix Mittelgrün für Aktives */
+    --terminal-border: #003b00; /* Dunkelgrüner Rahmen */
+
+    /* Override Theme Variables */
+    --link: var(--accent-color);
+    --hover: var(--highlight-color);
+    --highlight: var(--highlight-color);
+    --logo: var(--accent-color);
+    --off-fg: #566f56; /* Greenish gray for dimmed text */
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: linear-gradient(rgba(0, 255, 65, 0.05) 50%, transparent 50%);
+    background-size: 100% 4px; /* Sehr subtile Scanlines in Grün */
+    color: var(--fg-color);
+    font-family: var(--font-monospace);
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 80rem; /* Von 66rem auf 80rem erhöht */
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid var(--terminal-border);
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
+}
+
+/* Optional: Hauptinhalt im Grid noch etwas mehr Platz geben */
+@media (min-width: 45rem) {
+    .page {
+        grid-template-columns: minmax(0, 1fr) 18rem; /* Sidebar von 15rem auf 18rem leicht erhöht */
+        grid-column-gap: 3rem; /* Mehr Abstand zwischen Inhalt und Sidebar */
+    }
+}
+
+/* Dezentere Terminal-Kopfzeile */
+.page::before {
+    content: attr(data-prompt);
+    position: absolute;
+    top: -2rem;
+    left: -1px;
+    right: -1px;
+    height: 2rem;
+    background: #001a00; /* Sehr dunkles Grün für die Kopfzeile */
+    border: 1px solid var(--terminal-border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding-left: 1rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    z-index: 1;
+}
+
+.page::after {
+    content: "● ● ●";
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    z-index: 2;
+}
+
+/* Kompaktes Menü in einer Zeile */
+.terminal-header-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--terminal-border);
+    padding-bottom: 1rem;
+}
+
+.page__logo-inner {
+    color: #ffffff !important; /* Strahlendes Weiß für den Titel */
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
+.page__logo-inner::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.terminal-menu-inline {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1rem;
+}
+
+.nav-main-item {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-main-item:hover {
+    color: var(--highlight-color) !important;
+    text-decoration: underline;
+}
+
+.nav-main-item.active {
+    color: var(--highlight-color) !important;
+    font-weight: bold;
+}
+
+/* Sidebar / Aside */
+.page__aside {
+    border-left: 1px dashed var(--terminal-border);
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.aside__social {
+    margin-top: 1.5rem;
+}
+
+.aside__social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.aside__social-links li {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.aside__social-links li::before {
+    content: "├── ";
+    color: var(--terminal-border);
+}
+
+.aside__social-links li:last-child::before {
+    content: "└── ";
+}
+
+.link-label {
+    margin-left: 0.5rem;
+}
+
+.aside__social-links i {
+    width: 1rem;
+    text-align: center;
+}
+
+.aside__social-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.aside__social-links a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+/* Code Blöcke */
+pre {
+    background: #000800 !important; /* Fast schwarzes Grün */
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    padding: 1rem !important;
+}
+
+code {
+    font-family: var(--font-monospace) !important;
+    color: #00ff41;
+}
+
+/* Folder Tree for Lists */
+.tree-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.tree-list li {
+    display: block;
+    padding: 0.2rem 0;
+    position: relative;
+}
+
+.tree-list li::before {
+    content: "├── ";
+    color: var(--terminal-border);
+    font-family: monospace;
+}
+
+.tree-list li:last-child::before {
+    content: "└── ";
+}
+
+.tree-list li a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.tree-list li a:hover {
+    background: var(--terminal-border);
+    color: var(--accent-color) !important;
+}
+
+/* Icons: Default is folder, override for posts */
+.tree-list li a::before {
+    content: "📁 ";
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+    display: inline-block;
+}
+
+.tree-list.is-files li a::before {
+    content: "📄 ";
+}
+
+.post-date {
+    color: #008f11;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* Pagination Styling */
+.pagination-terminal {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--terminal-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.pagination-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-terminal-item {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background: rgba(0, 255, 65, 0.05);
+    transition: all 0.3s ease;
+    
+    /* CRT Glow-Effekt */
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
+    
+    animation: crt-flicker 3s infinite;
+}
+
+.nav-terminal-item:hover {
+    color: #fff;
+    background: var(--accent-color);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav-dimmed {
+    color: #003b00;
+    opacity: 0.5;
+    cursor: not-allowed;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #003b00;
+    border-radius: 4px;
+}
+
+/* Expanded Post Entries */
+.post-entry-terminal {
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+}
+
+.post-entry-header h2 {
+    display: inline;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    border-bottom: none;
+}
+
+.post-entry-meta {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: var(--highlight-color);
+}
+
+.post-entry-summary {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.read-more a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background: rgba(0, 255, 65, 0.05);
+    transition: all 0.3s ease;
+    
+    /* CRT Glow-Effekt */
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
+    
+    animation: crt-flicker 3s infinite;
+}
+
+.read-more a:hover {
+    color: #fff;
+    background: var(--accent-color);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 0.95; }
+    5% { opacity: 0.85; }
+    10% { opacity: 0.98; }
+    15% { opacity: 0.9; }
+    20% { opacity: 0.99; }
+    25% { opacity: 0.88; }
+    30% { opacity: 1; }
+    35% { opacity: 0.92; }
+    40% { opacity: 0.96; }
+    45% { opacity: 0.87; }
+    50% { opacity: 0.98; }
+    100% { opacity: 1; }
+}
+
+.post-separator {
+    border: none;
+    border-top: 1px dashed var(--terminal-border);
+    margin: 1rem 0;
+}
+
+.post-separator::after {
+    content: none !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border: 2px solid var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight-color);
+    box-shadow: 0 0 10px var(--highlight-color);
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
 }

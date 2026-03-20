@@ -4,9 +4,8 @@ date = 2025-12-26T21:55:04+09:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Krimi",
-    "Japan",
     "Fiktion",
+    "Japan",
 ]
 
 

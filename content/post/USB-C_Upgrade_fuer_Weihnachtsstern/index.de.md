@@ -5,11 +5,11 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Hardware",
-    "USB-C",
     "Löten",
     "alt",
     "Weihnachten",
-    "Russland"
+    "Russland",
+    "Hobby",
 ]
 +++
 

@@ -3,7 +3,7 @@ title = 'Apache NiFi hinter einem Reverse Proxy – Der „Unauthorized“-Fehle
 date = 2025-09-24T18:04:08+02:00
 author = "Frank Tornack"
 tags = [
-    "NiFi",
+    "Software",
     "Linux",
 ]
 +++

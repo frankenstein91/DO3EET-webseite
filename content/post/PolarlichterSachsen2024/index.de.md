@@ -9,6 +9,7 @@ tags = [
     "Polarlichter",
     "Deutschland",
     "Sachsen",
+    "Hobby",
 ]
 +++
 

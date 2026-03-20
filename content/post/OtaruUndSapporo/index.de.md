@@ -3,12 +3,12 @@ title = 'Weihnachten im hohen Norden: Otaru, Sapporo und der Blick in den Abgrun
 date = 2025-12-30T15:04:01+09:00
 draft = false
 tags = [
-"Japan",
-"Hokkaido",
-"Reisen",
-"Winter",
-"Otaru",
-"Sapporo"
+    "Japan",
+    "Hokkaido",
+    "Reisen",
+    "Winter",
+    "Otaru",
+    "Sapporo",
 ]
 +++
 

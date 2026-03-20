@@ -6,12 +6,11 @@ author = "Frank Tornack"
 tags = [
     "Japan",
     "Reisen",
-    "Food",
+    "Kulinarik",
     "Tempel",
-    "Park",
-    "Pokemon",
-    "Koriyama",
     "Natur",
+    "Hobby",
+    "Koriyama",
 ]
 +++
 

@@ -9,6 +9,7 @@ tags = [
     "Funk",
     "APRS",
     "QSL",
+    "Hobby",
 ]
 +++
 

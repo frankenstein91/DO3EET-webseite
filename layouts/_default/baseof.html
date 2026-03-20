@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+
+    <body>
+        <div class="page" data-prompt="[do3eet@terminal /var/www]# ">
+
+            <header class="page__header">
+                {{- partial "header.html" . -}}
+            </header>
+
+            <section class="page__body">
+                {{- block "main" . }}{{- end }}
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+                    {{- partial "about.html" . -}}
+                </div>
+                <hr>
+                <div class="aside__content">
+                    {{- block "aside" . }}{{- end }}
+                </div>
+            </section>
+
+            <footer class="page__footer">
+                {{- partial "footer.html" . -}}
+                {{- if .File -}}
+                    {{- if in .File.Path "about" -}}
+                        {{- partial "ark_of_truth.html" . -}}
+                    {{- end -}}
+                {{- end -}}
+            </footer>
+
+        </div>
+        {{- partial "easteregg.html" . -}}
+    </body>
+
+</html>
