@@ -28,8 +28,10 @@
 
             <footer class="page__footer">
                 {{- partial "footer.html" . -}}
-                {{- if in .File.Path "about" -}}
-                    {{- partial "ark_of_truth.html" . -}}
+                {{- if .File -}}
+                    {{- if in .File.Path "about" -}}
+                        {{- partial "ark_of_truth.html" . -}}
+                    {{- end -}}
                 {{- end -}}
             </footer>
 
