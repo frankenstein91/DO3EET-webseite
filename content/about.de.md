@@ -39,6 +39,9 @@ Diese Kopfzeile bezieht sich auf Cross-Site-Scripting (XSS)-Angriffe, bei denen 
 ## Content-Security-Policy
 Dies ist der komplexeste Header und definiert eine Content Security Policy (CSP). Eine CSP schränkt ein, woher der Browser Ressourcen (wie Schriftarten, Stylesheets, Skripte) laden kann. Für das Terminal-Design dieser Seite werden Inline-Skripte (`unsafe-inline`) explizit erlaubt. Zudem sind externe Ressourcen von vertrauenswürdigen Quellen wie `cdnjs.cloudflare.com` (Schriftarten/Icons) und `cdn.jsdelivr.net` (für Skripte und Schriftarten von MathJax) sowie die Nutzung von Web-Workern (`blob:`) erlaubt. Auch Inline-Styles sind für die korrekte Darstellung komplexer Inhalte wie mathematischer Formeln freigegeben. Sämtliche Design-Elemente und Easter-Eggs wurden so optimiert, dass sie reibungslos funktionieren.
 
+### Hinweis zur IP-Übertragung
+Beim Laden von Ressourcen von diesen externen CDNs wird Ihre IP-Adresse an die jeweiligen Anbieter übertragen. Für Nutzer, die dies unterbinden möchten, empfehle ich Browser-Erweiterungen wie **Decentraleyes** oder **LocalCDN**. Diese laden gängige Web-Bibliotheken lokal in den Browser, anstatt sie von externen Servern anzufragen.
+
 ## X-Content-Type-Options: nosniff
 Der HTTP-Header `X-Content-Type-Options: nosniff` ist eine Sicherheitsmaßnahme, die Webserver einsetzen können, um Browser anzuweisen, den deklarierten Content-Type einer Ressource nicht zu "erraten" oder zu ändern.
 
@@ -77,11 +80,23 @@ Auf dieser Website werden Videos von der Plattform PeerTube eingebettet. PeerTub
 - Datum und Uhrzeit des Abrufs des Videos
 - Die Dauer der Wiedergabe des Videos
 - Ob Sie das Video vollständig angesehen haben
+# Privater Charakter der Website
+Diese Webseite ist ein rein privates, nicht-kommerzielles Projekt. Sie dient ausschließlich der Darstellung meiner persönlichen Hobbys (Amateurfunk, Linux, Technik, Reisen) und dem informellen Austausch. Es werden keinerlei wirtschaftliche Interessen verfolgt.
 
 # Hosting
 Cloudflare dient als Content Delivery Network (CDN), Hosting und bietet Sicherheits- und Performance-Verbesserungen für die Bereitstellung dieser Website. Beachten Sie, dass die Hosting-Infrastruktur von Cloudflare genutzt wird, um die Verfügbarkeit und Geschwindigkeit der Website zu optimieren. Cloudflare erhebt dabei möglicherweise anonymisierte statistische Daten über den Zugriff auf diese Website. Für weitere Informationen zu den Datenschutzpraktiken von Cloudflare verweise ich auf deren Datenschutzrichtlinien: 
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 
+Bei spezifischen Fragen zur Datenverarbeitung durch die Cloudflare-Infrastruktur (z.B. globale Sicherheits-Logs) können Sie sich direkt an den Datenschutzbeauftragten von Cloudflare wenden: `privacy@cloudflare.com`. Die EU-Vertretung von Cloudflare ist die Cloudflare Germany GmbH, Rosental 7, 80331 München.
+
+# Datenschutzrechte (DSGVO)
+Auch wenn dies eine private Webseite ist, nehme ich den Schutz Ihrer Daten ernst. Nach der DSGVO haben Sie folgende Rechte bezüglich der (technisch unvermeidbaren) Verarbeitung Ihrer Daten (z.B. IP-Adresse beim Seitenaufruf):
+- **Auskunft (Art. 15 DSGVO):** Sie können erfahren, welche Daten technisch bedingt kurzzeitig verarbeitet werden.
+- **Berichtigung, Löschung & Widerspruch (Art. 16, 17, 21 DSGVO):** Sie können die Korrektur oder Löschung Ihrer Daten verlangen oder der Verarbeitung widersprechen.
+
+Bitte richten Sie entsprechende Anfragen primär an mich (siehe Kontakt oben). Da ich selbst keine Nutzerdatenbank führe und IP-Logs durch den Hoster in der Regel nach spätestens 7 Tagen gelöscht oder anonymisiert werden, ist der Umfang der bei mir vorhandenen Daten minimal.
+
+# Haftungsausschluss
 # Datenschutz im Zusammenhang mit Cloudflare SSL-Zertifikaten
 Die Verwendung von Cloudflare SSL-Zertifikaten dient dem Schutz der übermittelten Daten zwischen dem Nutzer und dieser Website. SSL (Secure Sockets Layer) gewährleistet eine verschlüsselte Kommunikation, die die Vertraulichkeit und Integrität der übertragenen Informationen sicherstellt. Cloudflare verpflichtet sich in der Regel dazu, die Privatsphäre der Nutzer zu respektieren und die geltenden Datenschutzbestimmungen einzuhalten. Bei der Nutzung von Cloudflare SSL-Zertifikaten können jedoch bestimmte anonymisierte Informationen über den Datenverkehr erfasst werden, um die Performance, Sicherheit und Analyse der Website zu verbessern. Es ist ratsam, die Datenschutzbestimmungen von Cloudflare zu konsultieren, um detaillierte Informationen darüber zu erhalten, welche Daten erfasst werden, wie sie verarbeitet werden und welche Schutzmaßnahmen getroffen sind.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
