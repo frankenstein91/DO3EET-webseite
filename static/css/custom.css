@@ -43,7 +43,7 @@ body {
 
 /* Dezentere Terminal-Kopfzeile */
 .page::before {
-    content: "do3eet@terminal:~";
+    content: attr(data-prompt);
     position: absolute;
     top: -2rem;
     left: -1px;
