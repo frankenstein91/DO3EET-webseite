@@ -7,10 +7,11 @@
     {{ $paginator := .Paginator }}
 
     <div class="posts-expanded">
-    {{ range $paginator.Pages }}
+    {{ range $index, $page := $paginator.Pages }}
+    {{ if $index }}<hr class="post-separator">{{ end }}
     <article class="post-entry-terminal">
         <header class="post-entry-header">
-            <span class="nav-prompt">cat</span> 
+            <span class="nav-prompt">cat</span>
             <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
             <div class="post-entry-meta">
                 <span class="prompt-user">frank@do3eet</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
@@ -20,13 +21,11 @@
         <section class="post-entry-summary">
             {{ .Summary }}
             <div class="read-more">
-                <a href="{{ .Permalink }}">[ READ_MORE... ]</a>
+                <a href="{{ .Permalink }}">READ_MORE...</a>
             </div>
         </section>
     </article>
-    <hr class="post-separator">
-    {{ end }}
-    </div>
+    {{ end }}    </div>
 
     {{/* Terminal-Style Pagination */}}
     {{ if gt $paginator.TotalPages 1 }}
@@ -34,15 +33,15 @@
         <span class="nav-prompt">page {{ $paginator.PageNumber }}/{{ $paginator.TotalPages }}</span>
         <div class="pagination-links">
             {{ if $paginator.HasPrev }}
-            <a href="{{ $paginator.Prev.URL }}" class="nav-main-item">[ PREV ]</a>
+            <a href="{{ $paginator.Prev.URL }}" class="nav-terminal-item">PREV</a>
             {{ else }}
-            <span class="nav-dimmed">[ PREV ]</span>
+            <span class="nav-dimmed">PREV</span>
             {{ end }}
 
             {{ if $paginator.HasNext }}
-            <a href="{{ $paginator.Next.URL }}" class="nav-main-item">[ NEXT ]</a>
+            <a href="{{ $paginator.Next.URL }}" class="nav-terminal-item">NEXT</a>
             {{ else }}
-            <span class="nav-dimmed">[ NEXT ]</span>
+            <span class="nav-dimmed">NEXT</span>
             {{ end }}
         </div>
     </nav>
