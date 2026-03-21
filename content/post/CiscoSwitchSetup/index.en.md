@@ -153,6 +153,42 @@ If SSH does not start directly for you, even though `transport input ssh` is set
 ```
 A key length of at least **2048 bits** is recommended here to satisfy modern SSH clients (like current OpenSSH versions).
 
+### 6. The "Antenna Analyzer" for Network Cables (TDR)
+
+As a ham radio operator (DO3EET), I love measurement tools. Did you know that the 3750G has a built-in TDR (Time Domain Reflectometry) meter? It can send electrical pulses through the cable to measure its length or find cable breaks with centimeter precision – even while the computer is still connected!
+
+Here are two examples from my test run:
+
+**Example 1: A working 1m patch cable (Port 1)**
+```bash
+3750g#show cable-diagnostics tdr interface gigabitEthernet 1/0/1
+Interface Speed Local pair Pair length        Remote pair Pair status
+--------- ----- ---------- ------------------ ----------- --------------------
+Gi1/0/1   1000M Pair A     0    +/- 4  meters Pair A      Normal              
+                Pair B     0    +/- 4  meters Pair B      Normal              
+                Pair C     0    +/- 4  meters Pair C      Normal              
+                Pair D     1    +/- 4  meters Pair D      Normal              
+```
+
+**Example 2: An open, approx. 24m long installation cable (Port 3)**
+```bash
+3750g#show cable-diagnostics tdr interface gigabitEthernet 1/0/3
+Interface Speed Local pair Pair length        Remote pair Pair status
+--------- ----- ---------- ------------------ ----------- --------------------
+Gi1/0/3   auto  Pair A     23   +/- 4  meters N/A         Open                
+                Pair B     24   +/- 4  meters N/A         Open                
+                Pair C     24   +/- 4  meters N/A         Open                
+                Pair D     24   +/- 4  meters N/A         Open                
+```
+
+**Interpreting the results:**
+*   **Pair status "Normal":** Everything is fine. The cable is connected to an active device.
+*   **Pair status "Open":** The cable has no termination at the end (unplugged).
+*   **Pair length:** The "1" in the first example indicates a very short cable (~1m). Since the hardware has a measurement tolerance of `+/- 4 meters`, values close to zero are often displayed as 0 or 1. In the second example, we see an approx. 24-meter cable that ends "open" somewhere in the house.
+*   **Remote pair:** In a working connection (Normal), the switch indicates whether the wire pairs arrive correctly on the opposite side. `Pair A -> Pair A` means: No twists in the cable!
+
+The result confirms: My clean-lab is fully under control measurement-wise!
+
 ## Hardware Check: Is the Device Healthy?
 
 After all the software work, I wanted to know about the physical health of the used switch. A look at `show tech-support` (or specific `show` commands) provided reassuring values:
