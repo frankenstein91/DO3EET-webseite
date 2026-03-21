@@ -153,6 +153,15 @@ Wenn SSH bei euch nicht direkt startet, obwohl `transport input ssh` gesetzt ist
 ```
 Empfehlenswert ist hier eine Schlüssellänge von mindestens **2048 Bit**, um moderne SSH-Clients (wie aktuelle OpenSSH-Versionen) glücklich zu machen.
 
+## Hardware-Check: Ist das Gerät fit?
+
+Nach der ganzen Software-Arbeit wollte ich wissen, wie es um die physische Gesundheit des gebrauchten Switches steht. Ein Blick in den `show tech-support` (oder gezielte `show`-Befehle) lieferte beruhigende Werte:
+
+*   **Temperatur:** Mit **34°C** (`System Temperature State: GREEN`) bleibt das Gerät im Leerlauf angenehm kühl.
+*   **Lüfter:** Ein kurzes `FAN is OK` im Log bestätigt, dass die Kühlung ordnungsgemäß funktioniert – bei gebrauchten Enterprise-Geräten oft ein kritischer Punkt (Stichwort: Lagerschaden).
+*   **Herzstück:** Im Inneren werkelt ein **PowerPC 405** Prozessor. Für heutige Verhältnisse fast schon antik, aber für Layer-3-Switching in Hardware immer noch absolut ausreichend.
+*   **Selbsttest:** Alle `POST` (Power-On Self-Test) Routinen, inklusive des PortASIC-Speichers, meldeten ein sauberes `Passed`.
+
 ## Die finale running-config
 
 Hier ist ein Auszug der aktuellen Konfiguration (Passwörter und Secrets wurden maskiert). Diese zeigt alle besprochenen Einstellungen im Zusammenspiel:

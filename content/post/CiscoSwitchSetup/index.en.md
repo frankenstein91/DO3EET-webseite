@@ -153,6 +153,15 @@ If SSH does not start directly for you, even though `transport input ssh` is set
 ```
 A key length of at least **2048 bits** is recommended here to satisfy modern SSH clients (like current OpenSSH versions).
 
+## Hardware Check: Is the Device Healthy?
+
+After all the software work, I wanted to know about the physical health of the used switch. A look at `show tech-support` (or specific `show` commands) provided reassuring values:
+
+*   **Temperature:** At **34°C** (`System Temperature State: GREEN`), the device stays pleasantly cool at idle.
+*   **Fans:** A brief `FAN is OK` in the log confirms that the cooling is working properly – often a critical point with used enterprise gear (think bearing damage).
+*   **The Heart:** Inside, a **PowerPC 405** processor is at work. Almost ancient by today's standards, but still perfectly adequate for Layer 3 switching in hardware.
+*   **Self-Test:** All `POST` (Power-On Self-Test) routines, including the PortASIC memory, reported a clean `Passed`.
+
 ## The Final running-config
 
 Here is an excerpt of the current configuration (passwords and secrets have been masked). It shows all the discussed settings working together:
