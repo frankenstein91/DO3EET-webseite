@@ -189,6 +189,22 @@ Gi1/0/3   auto  Pair A     23   +/- 4  meters N/A         Open
 
 Das Ergebnis bestätigt: Mein clean-lab ist messtechnisch voll unter Kontrolle!
 
+## Der finale Touch: Ein Login-Banner
+
+Um die Einrichtung abzurunden und dem Switch eine persönliche Note zu verleihen, habe ich noch einen Login-Banner (Message of the Day) konfiguriert. Das sieht nicht nur professionell aus, sondern ist in Firmenumgebungen oft auch rechtlich vorgeschrieben.
+
+```bash
+3750g(config)#banner motd #
+**************************************************************************
+*                                                                        *
+*   DO3EET Clean-Lab | Cisco 3750G                                       *
+*                                                                        *
+*   Authorized Access Only!                                              *
+*                                                                        *
+**************************************************************************
+#
+```
+
 ## Hardware-Check: Ist das Gerät fit?
 
 Nach der ganzen Software-Arbeit wollte ich wissen, wie es um die physische Gesundheit des gebrauchten Switches steht. Ein Blick in den `show tech-support` (oder gezielte `show`-Befehle) lieferte beruhigende Werte:
