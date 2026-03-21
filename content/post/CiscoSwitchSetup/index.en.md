@@ -1,6 +1,6 @@
 +++
 title = 'Cisco 3750G in the Homelab: A Rugged Path to IOS 15.0'
-date = 2026-03-21T14:00:00+01:00
+date = 2026-03-21T21:50:43+01:00
 draft = false
 tags = ["Cisco", "Switch", "Networking", "Homelab", "IOS"]
 categories = ["IT"]
