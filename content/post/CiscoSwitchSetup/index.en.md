@@ -189,6 +189,22 @@ Gi1/0/3   auto  Pair A     23   +/- 4  meters N/A         Open
 
 The result confirms: My clean-lab is fully under control measurement-wise!
 
+## The Final Touch: A Login Banner
+
+To round off the setup and give the switch a personal touch, I configured a login banner (Message of the Day). This not only looks professional but is often legally required in corporate environments.
+
+```bash
+3750g(config)#banner motd #
+**************************************************************************
+*                                                                        *
+*   DO3EET Clean-Lab | Cisco 3750G                                       *
+*                                                                        *
+*   Authorized Access Only!                                              *
+*                                                                        *
+**************************************************************************
+#
+```
+
 ## Hardware Check: Is the Device Healthy?
 
 After all the software work, I wanted to know about the physical health of the used switch. A look at `show tech-support` (or specific `show` commands) provided reassuring values:
