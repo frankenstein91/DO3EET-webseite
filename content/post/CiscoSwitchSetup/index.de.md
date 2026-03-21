@@ -153,6 +153,42 @@ Wenn SSH bei euch nicht direkt startet, obwohl `transport input ssh` gesetzt ist
 ```
 Empfehlenswert ist hier eine Schlüssellänge von mindestens **2048 Bit**, um moderne SSH-Clients (wie aktuelle OpenSSH-Versionen) glücklich zu machen.
 
+### 6. Der "Antennen-Analysator" für Netzwerkkabel (TDR)
+
+Als Funkamateur (DO3EET) liebe ich Messgeräte. Wusstet ihr, dass der 3750G ein eingebautes TDR (Time Domain Reflectometry) Messgerät hat? Er kann elektrische Impulse durch das Kabel schicken, um die Länge zu messen oder Kabelbrüche zentimetergenau zu finden – und das während der Rechner noch am Kabel hängt!
+
+Hier sind zwei Beispiele aus meinem Testlauf:
+
+**Beispiel 1: Ein funktionierendes 1m Patchkabel (Port 1)**
+```bash
+3750g#show cable-diagnostics tdr interface gigabitEthernet 1/0/1
+Interface Speed Local pair Pair length        Remote pair Pair status
+--------- ----- ---------- ------------------ ----------- --------------------
+Gi1/0/1   1000M Pair A     0    +/- 4  meters Pair A      Normal              
+                Pair B     0    +/- 4  meters Pair B      Normal              
+                Pair C     0    +/- 4  meters Pair C      Normal              
+                Pair D     1    +/- 4  meters Pair D      Normal              
+```
+
+**Beispiel 2: Ein offenes, ca. 24m langes Verlegekabel (Port 3)**
+```bash
+3750g#show cable-diagnostics tdr interface gigabitEthernet 1/0/3
+Interface Speed Local pair Pair length        Remote pair Pair status
+--------- ----- ---------- ------------------ ----------- --------------------
+Gi1/0/3   auto  Pair A     23   +/- 4  meters N/A         Open                
+                Pair B     24   +/- 4  meters N/A         Open                
+                Pair C     24   +/- 4  meters N/A         Open                
+                Pair D     24   +/- 4  meters N/A         Open                
+```
+
+**Die Ergebnisse interpretieren:**
+*   **Pair status "Normal":** Alles bestens. Das Kabel ist an ein aktives Gerät angeschlossen.
+*   **Pair status "Open":** Das Kabel hat am Ende keinen Abschluss (nicht eingesteckt).
+*   **Pair length:** Die "1" im ersten Beispiel zeigt ein sehr kurzes Kabel (~1m) an. Da die Hardware eine Messtoleranz von `+/- 4 meters` hat, werden Werte nahe Null oft als 0 oder 1 angezeigt. Im zweiten Beispiel sehen wir ein ca. 24 Meter langes Kabel, das irgendwo im Haus "offen" endet.
+*   **Remote pair:** Bei einer funktionierenden Verbindung (Normal) zeigt der Switch an, ob die Adernpaare auf der Gegenseite korrekt ankommen. `Pair A -> Pair A` bedeutet: Kein Dreher im Kabel!
+
+Das Ergebnis bestätigt: Mein clean-lab ist messtechnisch voll unter Kontrolle!
+
 ## Hardware-Check: Ist das Gerät fit?
 
 Nach der ganzen Software-Arbeit wollte ich wissen, wie es um die physische Gesundheit des gebrauchten Switches steht. Ein Blick in den `show tech-support` (oder gezielte `show`-Befehle) lieferte beruhigende Werte:
