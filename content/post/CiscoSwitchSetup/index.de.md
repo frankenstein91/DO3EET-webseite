@@ -153,7 +153,29 @@ Wenn SSH bei euch nicht direkt startet, obwohl `transport input ssh` gesetzt ist
 ```
 Empfehlenswert ist hier eine Schlüssellänge von mindestens **2048 Bit**, um moderne SSH-Clients (wie aktuelle OpenSSH-Versionen) glücklich zu machen.
 
-### 6. Der "Antennen-Analysator" für Netzwerkkabel (TDR)
+### 6. SSH-Verbindungsprobleme lösen (Legacy-Kryptografie)
+
+Wer versucht, sich von einem modernen Linux- oder macOS-System per SSH auf den Switch zu verbinden, wird oft mit Fehlermeldungen wie `no matching key exchange method found` oder `no matching host key type found` begrüßt. Das liegt daran, dass der SSH-Stack von IOS 15.0 aus heutiger Sicht veraltete (unsichere) Verfahren nutzt, die moderne Clients standardmäßig deaktiviert haben.
+
+Um trotzdem reinzukommen, muss man dem SSH-Client explizit erlauben, diese alten Methoden zu nutzen:
+
+```bash
+ssh -oKexAlgorithms=+diffie-hellman-group14-sha1 \
+    -oHostKeyAlgorithms=+ssh-rsa \
+    -oCiphers=+aes256-cbc \
+    root@192.168.254.1
+```
+
+Alternativ kann man für den Switch einen Eintrag in der lokalen `~/.ssh/config` anlegen, um nicht jedes Mal diese Parameter tippen zu müssen:
+
+```text
+Host 192.168.254.1
+    KexAlgorithms +diffie-hellman-group14-sha1
+    HostkeyAlgorithms +ssh-rsa
+    Ciphers +aes256-cbc
+```
+
+### 7. Der "Antennen-Analysator" für Netzwerkkabel (TDR)
 
 Als Funkamateur (DO3EET) liebe ich Messgeräte. Wusstet ihr, dass der 3750G ein eingebautes TDR (Time Domain Reflectometry) Messgerät hat? Er kann elektrische Impulse durch das Kabel schicken, um die Länge zu messen oder Kabelbrüche zentimetergenau zu finden – und das während der Rechner noch am Kabel hängt!
 
@@ -219,9 +241,10 @@ Nach der ganzen Software-Arbeit wollte ich wissen, wie es um die physische Gesun
 Hier ist ein Auszug der aktuellen Konfiguration (Passwörter und Secrets wurden maskiert). Diese zeigt alle besprochenen Einstellungen im Zusammenspiel:
 
 ```text
-Current configuration : 5956 bytes
+Current configuration : 6798 bytes
 !
 version 15.0
+no service pad
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
@@ -244,19 +267,22 @@ ip dhcp pool MGMT_POOL
  network 192.168.254.0 255.255.255.0
  default-router 192.168.254.1 
  dns-server 8.8.8.8 1.1.1.1 
+!
 energywise domain MyLab security shared-secret 0 <PASSWORD>
 !
 crypto pki trustpoint TP-self-signed-<ID>
  enrollment selfsigned
  subject-name cn=IOS-Self-Signed-Certificate-<ID>
- revocation-check none
  rsakeypair TP-self-signed-<ID>
-!
 !
 crypto pki certificate chain TP-self-signed-<ID>
  certificate self-signed 01
   <CERTIFICATE_DATA_MASKED>
 quit
+!
+no errdisable detect cause gbic-invalid
+spanning-tree mode pvst
+spanning-tree extend system-id
 !
 interface GigabitEthernet1/0/1
  description MANAGEMENT_PORT
@@ -278,6 +304,7 @@ interface GigabitEthernet1/0/28
 interface Vlan1
  ip address 192.168.254.1 255.255.255.0
  no ip route-cache
+ ipv6 enable
 !
 ip http server
 ip http authentication local
@@ -288,6 +315,17 @@ access-list 10 permit 192.168.254.0 0.0.0.255
 snmp-server community <SECRET>
 snmp-server location 3750g
 snmp-server contact DO3EET
+!
+no vstack
+banner motd ^C
+**************************************************************************
+*                                                                        *
+*   DO3EET Clean-Lab | Cisco 3750G                                       *
+*                                                                        *
+*   Authorized Access Only!                                              *
+*                                                                        *
+**************************************************************************
+^C
 !
 line con 0
 line vty 0 15

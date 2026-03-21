@@ -153,7 +153,29 @@ If SSH does not start directly for you, even though `transport input ssh` is set
 ```
 A key length of at least **2048 bits** is recommended here to satisfy modern SSH clients (like current OpenSSH versions).
 
-### 6. The "Antenna Analyzer" for Network Cables (TDR)
+### 6. Solving SSH Connection Issues (Legacy Cryptography)
+
+Anyone trying to connect to the switch via SSH from a modern Linux or macOS system will often be greeted with error messages like `no matching key exchange method found` or `no matching host key type found`. This is because the IOS 15.0 SSH stack uses methods that are considered outdated (insecure) today and are disabled by default by modern clients.
+
+To get in anyway, you must explicitly allow the SSH client to use these old methods:
+
+```bash
+ssh -oKexAlgorithms=+diffie-hellman-group14-sha1 \
+    -oHostKeyAlgorithms=+ssh-rsa \
+    -oCiphers=+aes256-cbc \
+    root@192.168.254.1
+```
+
+Alternatively, you can create an entry in your local `~/.ssh/config` for the switch so you don't have to type these parameters every time:
+
+```text
+Host 192.168.254.1
+    KexAlgorithms +diffie-hellman-group14-sha1
+    HostkeyAlgorithms +ssh-rsa
+    Ciphers +aes256-cbc
+```
+
+### 7. The "Antenna Analyzer" for Network Cables (TDR)
 
 As a ham radio operator (DO3EET), I love measurement tools. Did you know that the 3750G has a built-in TDR (Time Domain Reflectometry) meter? It can send electrical pulses through the cable to measure its length or find cable breaks with centimeter precision – even while the computer is still connected!
 
@@ -214,14 +236,15 @@ After all the software work, I wanted to know about the physical health of the u
 *   **The Heart:** Inside, a **PowerPC 405** processor is at work. Almost ancient by today's standards, but still perfectly adequate for Layer 3 switching in hardware.
 *   **Self-Test:** All `POST` (Power-On Self-Test) routines, including the PortASIC memory, reported a clean `Passed`.
 
-## The Final running-config
+The Final running-config
 
 Here is an excerpt of the current configuration (passwords and secrets have been masked). It shows all the discussed settings working together:
 
 ```text
-Current configuration : 5956 bytes
+Current configuration : 6798 bytes
 !
 version 15.0
+no service pad
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
@@ -244,19 +267,22 @@ ip dhcp pool MGMT_POOL
  network 192.168.254.0 255.255.255.0
  default-router 192.168.254.1 
  dns-server 8.8.8.8 1.1.1.1 
+!
 energywise domain MyLab security shared-secret 0 <PASSWORD>
 !
 crypto pki trustpoint TP-self-signed-<ID>
  enrollment selfsigned
  subject-name cn=IOS-Self-Signed-Certificate-<ID>
- revocation-check none
  rsakeypair TP-self-signed-<ID>
-!
 !
 crypto pki certificate chain TP-self-signed-<ID>
  certificate self-signed 01
   <CERTIFICATE_DATA_MASKED>
 quit
+!
+no errdisable detect cause gbic-invalid
+spanning-tree mode pvst
+spanning-tree extend system-id
 !
 interface GigabitEthernet1/0/1
  description MANAGEMENT_PORT
@@ -278,6 +304,7 @@ interface GigabitEthernet1/0/28
 interface Vlan1
  ip address 192.168.254.1 255.255.255.0
  no ip route-cache
+ ipv6 enable
 !
 ip http server
 ip http authentication local
@@ -288,6 +315,17 @@ access-list 10 permit 192.168.254.0 0.0.0.255
 snmp-server community <SECRET>
 snmp-server location 3750g
 snmp-server contact DO3EET
+!
+no vstack
+banner motd ^C
+**************************************************************************
+*                                                                        *
+*   DO3EET Clean-Lab | Cisco 3750G                                       *
+*                                                                        *
+*   Authorized Access Only!                                              *
+*                                                                        *
+**************************************************************************
+^C
 !
 line con 0
 line vty 0 15
