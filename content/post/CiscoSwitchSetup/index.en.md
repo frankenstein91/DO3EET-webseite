@@ -211,6 +211,80 @@ Gi1/0/3   auto  Pair A     23   +/- 4  meters N/A         Open
 
 The result confirms: My clean-lab is fully under control measurement-wise!
 
+## Nerd Overkill: The Antenna Calculator on the Switch (TCL)
+
+As a ham radio operator, I’m always looking for ways to combine my hobbies. Since modern Go binaries don't run on classic IOS, I used an old "backdoor": **TCL (Tool Command Language)**.
+
+I ported my Python calculator for the **Comet HFJ-350M antenna** to TCL and uploaded it to the switch's flash. Now I can calculate my antenna settings directly on the switch console – perfect when I'm working on the rack!
+
+```bash
+3750g#tclsh flash:hfj350.tcl
+=== Comet HFJ-350M Calculator (Cisco Edition) ===
+Band (e.g. 40m) or Freq (MHz): 7.1
+
+--- Configuration for 40m ---
+Coil:   Base (No additional coil)
+Jumper: None
+Std Len (7.0 MHz): 960 mm
+Calc Len (7.1 MHz): 920 mm
+```
+IT infrastructure meets ham radio – it doesn't get more "homelab" than this! Maybe this is even the foundation for a HAM-Net on the 10m band? 📡🌐🛰️
+
+For those who want to rebuild it, here is the full TCL code:
+
+```tcl
+# Comet HFJ-350M Antenna Calculator for Cisco IOS
+# Author: DO3EET
+
+set antenna_data {
+    {band "160m" low 1.8 high 2.0 std 1.8 coil "Base + 3.5 coil + 1.8 coil" jumper "None" len 1170 change 7}
+    {band "80m"  low 3.5 high 3.8 std 3.5 coil "Base + 3.5 coil" jumper "None" len 910 change 20}
+    {band "40m"  low 7.0 high 7.2 std 7.0 coil "Base (No additional coil)" jumper "None" len 960 change 25}
+    {band "30m"  low 10.1 high 10.15 std 10.1 coil "Base" jumper "Terminal 1" len 990 change 40}
+    {band "20m"  low 14.0 high 14.35 std 14.0 coil "Base" jumper "Terminal 2" len 800 change 60}
+    {band "17m"  low 18.068 high 18.168 std 18.0 coil "Base" jumper "Terminal 3 (or 2)" len 1070 change 50}
+    {band "15m"  low 21.0 high 21.45 std 21.0 coil "Base" jumper "Terminal 3" len 750 change 80}
+    {band "12m"  low 24.89 high 24.99 std 24.9 coil "Base" jumper "Terminal 3" len 530 change 100}
+    {band "10m"  low 28.0 high 29.7 std 28.5 coil "Base" jumper "Terminal 4" len 1000 change 120}
+    {band "6m"   low 50.0 high 52.0 std 51.0 coil "Base" jumper "Terminal 5" len 950 change 100}
+}
+
+puts "=== Comet HFJ-350M Calculator (Cisco Edition) ==="
+puts "Type 'exit' to quit."
+
+while {1} {
+    puts -nonewline "Band (e.g. 40m) or Freq (MHz): "
+    flush stdout
+    set input [string trim [gets stdin]]
+    if {$input == "exit" || $input == "q"} break
+    if {$input == ""} continue
+    
+    set found 0
+    foreach item $antenna_data {
+        array set d $item
+        set clean_band [string map {m ""} $d(band)]
+        set is_freq [string is double -strict $input]
+        
+        if {$input == $d(band) || $input == $clean_band || ($is_freq && $input >= $d(low) && $input <= $d(high))} {
+            puts "\n--- Configuration for $d(band) ---"
+            puts "Coil:   $d(coil)"
+            puts "Jumper: $d(jumper)"
+            puts "Std Len ($d(std) MHz): $d(len) mm"
+            
+            if {$is_freq && $input != $d(std)} {
+                set diff_khz [expr {($input - $d(std)) * 1000.0}]
+                set calc_len [expr {round($d(len) - (($diff_khz / $d(change)) * 10.0))}]
+                puts "Calc Len ($input MHz): $calc_len mm"
+            }
+            puts ""
+            set found 1
+            break
+        }
+    }
+    if {!$found} { puts "No data found for '$input'\n" }
+}
+```
+
 ## The Final Touch: A Login Banner
 
 To round off the setup and give the switch a personal touch, I configured a login banner (Message of the Day). This not only looks professional but is often legally required in corporate environments.
