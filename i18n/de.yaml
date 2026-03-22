@@ -1,0 +1,14 @@
+- id: menu_start
+  translation: "Hauptmenü der Website start:"
+- id: menu_end
+  translation: "Hauptmenü der Website Ende."
+- id: lang_active
+  translation: "Die aktuell ausgewählte Sprache der Website ist"
+- id: lang_switch
+  translation: "Die Website auf Englisch anzeigen"
+- id: skip_link
+  translation: "Zum Hauptinhalt springen"
+- id: heading_start
+  translation: "Überschrift Grad {{ .Level }} Anfang:"
+- id: heading_end
+  translation: "Ende der Überschrift."

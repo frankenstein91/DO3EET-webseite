@@ -1,5 +1,10 @@
 {{ define "main" }}
-    <h1 id="{{ .Title | urlize }}">ls -la /{{ .Title | lower | urlize }}</h1>
+    <h1 id="{{ .Title | urlize }}">
+        <span class="sr-only">{{ T "heading_start" (dict "Level" 1) }}</span>
+        <span class="heading-hashtag" aria-hidden="true">#</span>
+        ls -la /{{ .Title | lower | urlize }}
+        <span class="sr-only">{{ T "heading_end" }}</span>
+    </h1>
 
     {{ .Content }}
 
@@ -14,10 +19,16 @@
             <span class="nav-prompt">cat</span>
             {{ $author := .Params.author | default .Site.Params.author.name | default "do3eet" }}
             {{ $author_slug := replace $author " " "_" }}
-            <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+            <h2>
+                <span class="sr-only">{{ T "heading_start" (dict "Level" 2) }}</span>
+                <span class="heading-hashtag" aria-hidden="true">##</span>
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                <span class="sr-only">{{ T "heading_end" }}</span>
+            </h2>
             <div class="post-entry-meta">
-                <span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
+               <span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$</span> stat {{ .Date.Format "2006-01-02" }}
             </div>
+
         </header>
 
         <section class="post-entry-summary">

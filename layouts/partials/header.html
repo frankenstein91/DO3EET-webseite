@@ -1,13 +1,18 @@
 <nav class="page__nav main-nav">
     <div class="terminal-header-line">
-      <span class="prompt-user">frank@do3eet</span>:<span class="prompt-dir">~</span>$ 
+      <span aria-hidden="true" class="terminal-prompt"><span class="prompt-user">frank@do3eet</span>:<span class="prompt-dir">~</span>$</span>
       <a href="{{ .Site.BaseURL }}" class="page__logo-inner">{{ .Site.Title }}</a>
       
-      <div class="terminal-menu-inline">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-          <a class="nav-main-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq ($currentPage.Permalink) (.URL | absLangURL)) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">./{{ .Name }}</a>
-        {{ end }}
-      </div>
+      <nav class="terminal-menu-inline" aria-label="{{ T "menu_start" }}">
+        <ul class="menu-list">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li class="menu-item">
+              <a class="nav-main-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq ($currentPage.Permalink) (.URL | absLangURL)) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}"><span aria-hidden="true" class="nav-prefix">./</span>{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+        <span class="sr-only">{{ T "menu_end" }}</span>
+      </nav>
     </div>
 </nav>
