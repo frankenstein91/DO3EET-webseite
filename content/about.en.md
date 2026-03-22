@@ -38,7 +38,10 @@ This header controls how the website you visit can access the referrer informati
 This header relates to Cross-Site Scripting (XSS) attacks, where malicious scripts are injected into a website. This setting instructs the browser to enable XSS protection in "block" mode. This means that the browser will try to detect and block potential XSS attacks.
 
 ## Content-Security-Policy
-This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts are explicitly allowed (`unsafe-inline`), although these only run locally and do not load any external resources.
+This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts (`unsafe-inline`) are explicitly allowed. In addition, external resources from trusted sources such as `cdnjs.cloudflare.com` (fonts/icons) and `cdn.jsdelivr.net` (for scripts and fonts from MathJax), as well as the use of web workers (`blob:`), are permitted. Inline styles are also enabled for the correct rendering of complex content like mathematical formulas. All design elements and Easter eggs have been optimized to function smoothly.
+
+### Note on IP Transmission
+When loading resources from external CDNs such as `cdnjs.cloudflare.com` (fonts/icons), `cdn.jsdelivr.net` (MathJax), `ipfs.io` (Cactus.Chat), or `giscus.app` (comments), your IP address is transmitted to the respective providers. For users who wish to prevent this, I recommend browser extensions such as **Decentraleyes** or **LocalCDN**. These load common web libraries locally in the browser instead of requesting them from external servers.
 
 ## X-Content-Type-Options: nosniff
 The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.
@@ -54,8 +57,11 @@ The comment function on this private website is provided via Github. The operato
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
 - [Data protection policy English](https://docs.github.com/en/site-policy/privacy-policies)
 
+# Mastodon Embeds
+This website occasionally embeds short messages ("Toots") from the decentralized Mastodon network. When viewing these posts, the text content is loaded on the server side, but the profile pictures (avatars) of the authors are loaded directly from the respective Mastodon instance (e.g., `mastodon.social`) into your browser. In this process, your IP address is transmitted to the server of the Mastodon instance.
+
 # Chat Function
-The chat function of this website is based on Matrix chat technology and is provided by the Cactus.Chat software. Matrix is an open standard for decentralized, secure, and interoperable real-time communication over the internet. Cactus.Chat uses this advanced Matrix infrastructure to create a secure and user-friendly chat environment. Matrix enables end-to-end encryption, which means that communication between users is confidential and protected. In addition, the Matrix platform offers the possibility to interact via various chat clients, which enables flexible and versatile use. We attach great importance to data protection and security and recommend that users familiarize themselves with the data protection guidelines of Matrix and Cactus.Chat in order to gain a comprehensive understanding of how their data is protected.
+The chat function of this website is based on Matrix chat technology and is provided by the Cactus.Chat software. The required JavaScript is loaded via a decentralized IPFS gateway (`ipfs.io`). Matrix is an open standard for decentralized, secure, and interoperable real-time communication over the internet. Cactus.Chat uses this advanced Matrix infrastructure to create a secure and user-friendly chat environment. Matrix enables end-to-end encryption, which means that communication between users is confidential and protected. In addition, the Matrix platform offers the possibility to interact via various chat clients, which enables flexible and versatile use. We attach great importance to data protection and security and recommend that users familiarize themselves with the data protection guidelines of Matrix and Cactus.Chat in order to gain a comprehensive understanding of how their data is protected.
 
 Matrix is a decentralized communication protocol in which users can choose their own servers (homeservers). Each homeserver operator can define their own privacy policies and security measures. Since there is no central authority that dictates the privacy policy for all homeservers, it is difficult to offer uniform privacy information. Every user who connects to your Matrix server is subject to the privacy policy of the specific homeserver they choose. It is recommended that users who wish to learn about the privacy policy of their Matrix homeserver contact the operator of the respective homeserver directly or search for the relevant information on the homeserver's website.
 
@@ -80,10 +86,23 @@ Videos from the PeerTube platform are embedded on this website. PeerTube is a de
  - The duration of video playback
  - Whether you watched the video in its entirety
 
+# Private Nature of the Website
+This website is a purely private, non-commercial project. It serves exclusively to present my personal hobbies (ham radio, Linux, technology, travel) and for informal exchange. No economic interests are pursued.
+
 # Hosting
 Cloudflare serves as a Content Delivery Network (CDN), hosting, and provides security and performance improvements for the delivery of this website. Note that Cloudflare's hosting infrastructure is used to optimize the availability and speed of the website. Cloudflare may collect anonymized statistical data about access to this website. For more information on Cloudflare's privacy practices, please refer to their privacy policy:
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 
+For specific questions regarding data processing by the Cloudflare infrastructure (e.g., global security logs), you can contact Cloudflare's Data Protection Officer directly: `privacy@cloudflare.com`. Cloudflare's EU representative is Cloudflare Germany GmbH, Rosental 7, 80331 Munich, Germany.
+
+# Data Protection Rights (GDPR)
+Even though this is a private website, I take the protection of your data seriously. Under the GDPR, you have the following rights regarding the (technically unavoidable) processing of your data (e.g., IP address when accessing the site):
+- **Access (Art. 15 GDPR):** You can find out what data is technically processed for a short time.
+- **Rectification, Erasure & Objection (Art. 16, 17, 21 GDPR):** You can request the correction or deletion of your data or object to its processing.
+
+Please direct such requests primarily to me (see contact above). Since I do not maintain a user database myself and IP logs are generally deleted or anonymized by the host within 7 days at the latest, the amount of data I possess is minimal.
+
+# Disclaimer
 # Data Protection in Connection with Cloudflare SSL Certificates
 The use of Cloudflare SSL certificates serves to protect the data transmitted between the user and this website. SSL (Secure Sockets Layer) ensures encrypted communication, which guarantees the confidentiality and integrity of the transmitted information. Cloudflare generally undertakes to respect the privacy of users and to comply with applicable data protection regulations. However, when using Cloudflare SSL certificates, certain anonymized information about data traffic may be collected in order to improve the performance, security, and analysis of the website. It is advisable to consult Cloudflare's privacy policy to obtain detailed information about what data is collected, how it is processed, and what protective measures are in place.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
