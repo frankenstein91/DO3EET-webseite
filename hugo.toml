@@ -1,6 +1,7 @@
 baseURL = 'https://do3eet.pages.dev'
 languageCode = 'de-DE'
 defaultContentLanguage = 'de'
+i18nDir = 'i18n'
 enableMissingTranslationPlaceholders = true
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]

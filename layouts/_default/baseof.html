@@ -7,6 +7,7 @@
 
     <body>
         <div class="page">
+            <a href="#main-content" class="skip-link">{{ T "skip_link" | default "Zum Hauptinhalt springen" }}</a>
             <div class="terminal-header-top" aria-hidden="true">
                 <span class="terminal-prompt-dyn"></span>
                 <span class="terminal-dots">● ● ●</span>
@@ -41,10 +42,6 @@
 
         </div>
         {{- partial "easteregg.html" . -}}
-    </body>
-
-</html>
-{{- partial "easteregg.html" . -}}
     </body>
 
 </html>
