@@ -35,8 +35,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const page = document.querySelector('.page');
-    if (page) {
+    const promptSpan = document.querySelector('.terminal-prompt-dyn');
+    if (promptSpan) {
         const ua = navigator.userAgent;
         let browser = "do3eet";
         if (ua.indexOf("Firefox") > -1) {
@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (ua.indexOf("Safari") > -1) {
             browser = "Safari";
         }
-        
+
         let host = window.location.hostname;
         if (!host || host === "localhost" || host === "127.0.0.1") {
             host = "do3eet.pages.dev";
         }
-        
-        page.setAttribute('data-prompt', "[" + browser + "@" + host + " /var/www]# ");
+
+        promptSpan.textContent = "[" + browser + "@" + host + " /var/www]# ";
     }
 });
 </script>
