@@ -49,8 +49,7 @@ body {
 }
 
 /* Dezentere Terminal-Kopfzeile */
-.page::before {
-    content: attr(data-prompt);
+.terminal-header-top {
     position: absolute;
     top: -2rem;
     left: -1px;
@@ -60,23 +59,21 @@ body {
     border: 1px solid var(--terminal-border);
     border-bottom: none;
     border-radius: 8px 8px 0 0;
-    padding-left: 1rem;
+    padding: 0 1rem;
     line-height: 2rem;
     font-size: 0.8rem;
     color: var(--highlight-color);
     z-index: 1;
-}
-
-.page::after {
-    content: "● ● ●";
-    position: absolute;
-    top: -2rem;
-    right: 1rem;
-    height: 2rem;
-    line-height: 2rem;
-    font-size: 0.8rem;
-    color: var(--highlight-color);
-    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Nicht markierbar machen */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none; /* Verhindert auch Interaktionen, falls gewünscht */
 }
 
 /* Kompaktes Menü in einer Zeile */
@@ -119,8 +116,25 @@ body {
 
 .terminal-menu-inline {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-left: 1rem;
+}
+
+@media (max-width: 48rem) {
+    .terminal-header-line {
+        gap: 0.5rem;
+    }
+    
+    .terminal-menu-inline {
+        margin-left: 0;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .page__logo-inner {
+        font-size: 1.1rem;
+    }
 }
 
 .nav-main-item {
@@ -144,6 +158,39 @@ body {
     border-left: 1px dashed var(--terminal-border);
     padding-left: 1.5rem;
     font-size: 0.9rem;
+}
+
+@media (max-width: 45rem) {
+    .page__aside {
+        position: static !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+        border-left: none;
+        border-top: 1px dashed var(--terminal-border);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+.page__footer {
+    clear: both;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 8rem; /* Extra Platz für Achievements/Eastereggs am Seitenende */
+    border-top: 1px solid var(--terminal-border);
+    position: relative;
+    z-index: 5;
+    background: var(--bg-color); /* Überdeckt eventuell nachrutschende Inhalte beim Scrollen */
+}
+
+@media (max-width: 48rem) {
+    #ark-of-truth, #easteregg-achievement {
+        width: calc(100% - 40px) !important;
+        left: 20px !important;
+        right: 20px !important;
+        bottom: 10px !important;
+    }
 }
 
 .aside__social {
@@ -195,6 +242,19 @@ pre {
     border: 1px solid var(--terminal-border);
     border-radius: 4px;
     padding: 1rem !important;
+    overflow-x: auto;
+}
+
+@media (max-width: 48rem) {
+    .page {
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .terminal-header-top {
+        display: none; /* Hide decorative terminal top on very small screens to save space */
+    }
 }
 
 code {
