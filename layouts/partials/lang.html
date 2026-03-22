@@ -1,0 +1,32 @@
+<p>
+    {{ $siteLanguages := .Site.Languages }}
+    {{ $pageLang := .Page.Lang }}
+    
+    {{ $currentPage := . }}
+    {{ $pageName := "" }}
+    {{ range .Site.Menus.main }}
+      {{ if eq ($currentPage.Permalink) (.URL | absLangURL) }}
+        {{ $pageName = .Name }}
+      {{ end }}
+    {{ end }}
+    
+    {{ range .Page.AllTranslations }}
+      {{ $translation := .}}
+      {{ range $siteLanguages }}
+          {{ if eq $translation.Lang .Lang }}
+            {{ if eq $pageLang .Lang }}
+                <br/><span class="active">
+                    <span class="sr-only">{{ T "lang_active" }} {{ .LanguageName }}.</span>
+                    <span aria-hidden="true">$ echo $LANG<br/><b>{{ .LanguageName }}</b></span>
+                </span><br/>
+
+            {{ else }}
+                <br/><a href="{{ $translation.Permalink }}" aria-label="{{ T "lang_switch" }}">
+                    <span aria-hidden="true">export LANG={{ .LanguageName }}; ./{{ $pageName }}</span>
+                </a><br/>
+            {{ end }}
+          {{ end }}
+      {{ end }}
+    {{ end }}
+</p>
+<br /><br />

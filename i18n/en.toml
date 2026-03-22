@@ -3,3 +3,9 @@ other = "Start of main menu:"
 
 [menu_end]
 other = "End of main menu."
+
+[lang_active]
+other = "The currently selected language of the website is"
+
+[lang_switch]
+other = "View the website in German"

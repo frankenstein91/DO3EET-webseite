@@ -3,3 +3,9 @@ other = "Hauptmenü der Website start:"
 
 [menu_end]
 other = "Hauptmenü der Website Ende."
+
+[lang_active]
+other = "Die aktuell ausgewählte Sprache der Website ist"
+
+[lang_switch]
+other = "Die Website auf Englisch anzeigen"
