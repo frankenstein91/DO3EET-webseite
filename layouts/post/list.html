@@ -16,8 +16,9 @@
             {{ $author_slug := replace $author " " "_" }}
             <h2><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
             <div class="post-entry-meta">
-                <span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$ stat {{ .Date.Format "2006-01-02" }}
+               <span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$</span> stat {{ .Date.Format "2006-01-02" }}
             </div>
+
         </header>
 
         <section class="post-entry-summary">

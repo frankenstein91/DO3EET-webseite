@@ -159,18 +159,19 @@ body {
     text-decoration: underline;
 }
 
-.prompt-user {
+.terminal-prompt {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
 
+.prompt-user {
+    color: var(--accent-color);
+}
+
 .prompt-dir {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    color: var(--fg-color);
 }
 
 /* Sidebar / Aside */
