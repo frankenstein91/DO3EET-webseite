@@ -179,6 +179,18 @@ body {
     border-left: 1px dashed var(--terminal-border);
     padding-left: 1.5rem;
     font-size: 0.9rem;
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+    z-index: 100;
+    background-color: var(--bg-color);
+    padding-bottom: 2rem;
+    max-height: calc(100vh - 4rem) !important;
+    overflow-y: auto !important;
+}
+
+.page__body {
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 45rem) {
@@ -194,15 +206,22 @@ body {
     }
 }
 
+.nav-prompt {
+    display: block;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 .page__footer {
     clear: both;
     margin-top: 2rem;
     padding-top: 1rem;
-    padding-bottom: 8rem; /* Extra Platz für Achievements/Eastereggs am Seitenende */
+    padding-bottom: 1.5rem; /* Weiter reduziert auf 1.5rem */
     border-top: 1px solid var(--terminal-border);
-    position: relative;
-    z-index: 5;
-    background: var(--bg-color); /* Überdeckt eventuell nachrutschende Inhalte beim Scrollen */
 }
 
 @media (max-width: 48rem) {
@@ -567,6 +586,17 @@ code {
 
 .close-achievement {
     position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    color: #566f56;
+}
+
+.close-achievement:hover {
+    color: var(--fg-color);
+}
+e;
     top: 5px;
     right: 5px;
     cursor: pointer;
