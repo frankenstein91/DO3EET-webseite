@@ -203,6 +203,11 @@ body {
     font-weight: 500;
 }
 
+.nav-prefix {
+    color: var(--muted) !important;
+    margin-right: 0.1rem;
+}
+
 .nav-main-item:hover {
     color: var(--highlight-color) !important;
     text-decoration: underline;
