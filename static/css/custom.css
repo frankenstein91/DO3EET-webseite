@@ -162,10 +162,20 @@ body {
 }
 
 .terminal-menu-inline {
+    margin-left: 1rem;
+}
+
+.menu-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-left: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
 }
 
 @media (max-width: 48rem) {
@@ -175,8 +185,11 @@ body {
     
     .terminal-menu-inline {
         margin-left: 0;
-        gap: 1rem;
         width: 100%;
+    }
+
+    .menu-list {
+        gap: 1rem;
     }
 
     .page__logo-inner {
