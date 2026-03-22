@@ -6,13 +6,18 @@
     </head>
 
     <body>
-        <div class="page" data-prompt="[do3eet@terminal /var/www]# ">
+        <div class="page">
+            <a href="#main-content" class="skip-link">{{ T "skip_link" | default "Zum Hauptinhalt springen" }}</a>
+            <div class="terminal-header-top" aria-hidden="true">
+                <span class="terminal-prompt-dyn"></span>
+                <span class="terminal-dots">● ● ●</span>
+            </div>
 
             <header class="page__header">
                 {{- partial "header.html" . -}}
             </header>
 
-            <section class="page__body">
+            <section class="page__body" id="main-content">
                 {{- block "main" . }}{{- end }}
             </section>
 

@@ -1,6 +1,11 @@
 {{ define "main" }}
     <header class="content__header">
-        <h1>{{ .Title | markdownify }}</h1>
+        <h1>
+            <span class="sr-only">{{ T "heading_start" (dict "Level" 1) }}</span>
+            <span class="heading-hashtag" aria-hidden="true">#</span>
+            {{ .Title | markdownify }}
+            <span class="sr-only">{{ T "heading_end" }}</span>
+        </h1>
     </header>
     {{ if .Params.toc }}
     <aside>
