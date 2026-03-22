@@ -297,9 +297,25 @@ pre {
     }
 }
 
-code {
-    font-family: var(--font-monospace) !important;
-    color: #00ff41;
+/* Headings - Disable default hashtags from theme */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: none !important;
+}
+
+/* Accessible Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.heading-hashtag {
+    color: var(--off-fg);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-right: 0.5rem;
 }
 
 /* Folder Tree for Lists */

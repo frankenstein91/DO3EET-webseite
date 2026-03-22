@@ -9,3 +9,9 @@ other = "Die aktuell ausgewählte Sprache der Website ist"
 
 [lang_switch]
 other = "Die Website auf Englisch anzeigen"
+
+[heading_start]
+other = "Überschrift Grad {{ .Level }} Anfang:"
+
+[heading_end]
+other = "Ende der Überschrift."
