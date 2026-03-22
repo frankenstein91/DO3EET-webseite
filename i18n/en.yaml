@@ -1,0 +1,14 @@
+- id: menu_start
+  translation: "Start of main menu:"
+- id: menu_end
+  translation: "End of main menu."
+- id: lang_active
+  translation: "The currently selected language of the website is"
+- id: lang_switch
+  translation: "View the website in German"
+- id: skip_link
+  translation: "Skip to main content"
+- id: heading_start
+  translation: "Start of heading level {{ .Level }}:"
+- id: heading_end
+  translation: "End of heading."

@@ -12,20 +12,39 @@
 }
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
+    position: fixed;
+    top: 10px;
+    left: 10px;
     background: var(--accent-color);
     color: var(--bg-color);
-    padding: 8px;
-    z-index: 10000;
-    transition: top 0.3s;
-    text-decoration: none;
+    padding: 1rem;
+    z-index: 999999;
     font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+
+    /* Visuell verstecken, aber für Fokus behalten */
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
 .skip-link:focus {
-    top: 0;
+    /* Wieder einblenden bei Fokus */
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    overflow: visible;
+    outline: 3px solid #ffffff;
+    color: #000000 !important; /* Explizit Schwarz für maximalen Kontrast */
+    font-size: 1rem !important;
+    display: block !important;
+    text-align: center;
 }
 @font-face {
     font-family: 'OpenDyslexicMono';
