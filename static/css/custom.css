@@ -159,9 +159,18 @@ body {
     text-decoration: underline;
 }
 
-.nav-main-item.active {
-    color: var(--highlight-color) !important;
-    font-weight: bold;
+.prompt-user {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.prompt-dir {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Sidebar / Aside */
