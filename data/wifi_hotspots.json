@@ -1,5 +1,16 @@
 [
   {
+    "id": 2,
+    "ssid": "clt-legacy",
+    "description": "Chemnitzer Linux-Tage (CLT) - Legacy Network",
+    "latitude": "50.8131",
+    "longitude": "12.9292",
+    "created_at": "2026-03-22T14:00:00.000000",
+    "password": "Chemnitz",
+    "encryption": "WPA2",
+    "roaming": []
+  },
+  {
     "id": 1,
     "ssid": "clt",
     "description": "Chemnitzer Linux-Tage (CLT) [Permission: https://mastodon.hams.social/@clt_news@mastodon.social/116269325819243876]",
