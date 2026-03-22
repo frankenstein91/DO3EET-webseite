@@ -4,10 +4,12 @@
       <a href="{{ .Site.BaseURL }}" class="page__logo-inner">{{ .Site.Title }}</a>
       
       <div class="terminal-menu-inline">
+        <span class="sr-only">Hauptmenü der Website start:</span>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
           <a class="nav-main-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq ($currentPage.Permalink) (.URL | absLangURL)) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}"><span aria-hidden="true">./</span>{{ .Name }}</a>
         {{ end }}
+        <span class="sr-only">Hauptmenü der Website Ende.</span>
       </div>
     </div>
 </nav>
