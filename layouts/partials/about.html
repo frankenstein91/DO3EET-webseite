@@ -2,13 +2,13 @@
 <div class="aside__about">
     {{ with .logo }}<span class="about__logo" role="img">{{ . }}</span>&nbsp;{{ end }}
     {{ with .logo_image }}<img class="about__logo" src="{{ . | absURL }}" alt="Logo">{{ end }}
-    <h1 class="about__title"><span class="prompt-user">whoami</span></h1>
+    <h1 class="about__title"><span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">whoami</span></span></h1>
     {{ with .description }}<p class="about__description">{{ . | markdownify }}</p>{{ end }}
 </div>
 {{ end }}
 
 <div class="aside__social">
-    <span class="nav-prompt">ls -l ~/links</span>
+    <span class="nav-prompt" aria-hidden="true">ls -l ~/links</span>
     <ul class="aside__social-links">
         {{ range $item := .Site.Params.socialLinks }}
         <li>
