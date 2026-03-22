@@ -16,7 +16,7 @@
                 {{- partial "header.html" . -}}
             </header>
 
-            <section class="page__body">
+            <section class="page__body" id="main-content">
                 {{- block "main" . }}{{- end }}
             </section>
 
@@ -41,6 +41,10 @@
 
         </div>
         {{- partial "easteregg.html" . -}}
+    </body>
+
+</html>
+{{- partial "easteregg.html" . -}}
     </body>
 
 </html>
