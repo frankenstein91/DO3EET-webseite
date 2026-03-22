@@ -1,0 +1,6 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+  <span class="sr-only">{{ T "heading_start" (dict "Level" .Level) }}</span>
+  <span class="heading-hashtag" aria-hidden="true">{{ range seq .Level }}#{{ end }}</span>
+  {{ .Text | safeHTML }}
+  <span class="sr-only">{{ T "heading_end" }}</span>
+</h{{ .Level }}>

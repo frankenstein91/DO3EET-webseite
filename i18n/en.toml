@@ -9,3 +9,9 @@ other = "The currently selected language of the website is"
 
 [lang_switch]
 other = "View the website in German"
+
+[heading_start]
+other = "Start of heading level {{ .Level }}:"
+
+[heading_end]
+other = "End of heading."
