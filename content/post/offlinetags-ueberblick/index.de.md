@@ -169,6 +169,8 @@ Haut in die Tasten (oder funkt mich an)!
 
 Ich selbst werde die Tags **Name Me** und **Blur Screen** übrigens definitiv tragen, sobald ich eine gute Möglichkeit gefunden habe, diese als hochwertige Anstecker/Buttons herstellen zu lassen.
 
+Und ganz ehrlich: Eigentlich bräuchte ich noch einen siebten Tag: **„Kann mit Lob nicht umgehen“**... ;)
+
 ---
 
 ### 📝 Aufruf: Teilnahme an wissenschaftlicher Umfrage

@@ -169,6 +169,8 @@ Get typing (or radio me)!
 
 By the way, I will definitely be wearing the **Name Me** and **Blur Screen** tags myself as soon as I find a good way to produce them as high-quality pins or buttons.
 
+And honestly: I actually need a seventh tag: **"Can't handle praise"**... ;)
+
 ---
 
 ### 📝 Call for Participation: Scientific Survey
