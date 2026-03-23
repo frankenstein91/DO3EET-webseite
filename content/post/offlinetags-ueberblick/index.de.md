@@ -1,6 +1,6 @@
 +++
 title = 'Offlinetags: Die 6 Privacy-Signale im Überblick'
-date = 2026-03-23T15:30:00+01:00
+date = 2026-03-23T20:27:00+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -168,6 +168,22 @@ Die Offlinetags sind ein mächtiges Werkzeug, um die Diskussion über digitale P
 Haut in die Tasten (oder funkt mich an)!
 
 Ich selbst werde die Tags **Name Me** und **Blur Screen** übrigens definitiv tragen, sobald ich eine gute Möglichkeit gefunden habe, diese als hochwertige Anstecker/Buttons herstellen zu lassen.
+
+---
+
+### 📝 Aufruf: Teilnahme an wissenschaftlicher Umfrage
+
+Passend zum Thema gibt es aktuell eine spannende Online-Umfrage im Rahmen einer Zusammenarbeit der **Universität Salzburg** und der **TU Chemnitz**. Es geht dabei um die Kommunikation von Fotopräferenzen auf öffentlichen Veranstaltungen.
+
+*   **Ziel:** Einstellungen zum Fotografieren/Fotografiert-werden und zur Kommunikation persönlicher Präferenzen verstehen.
+*   **Zeitaufwand:** ca. 5 Minuten.
+*   **Anonymität:** Die Umfrage ist komplett anonym.
+*   **Frist:** Teilnahmen sind bis zum **28.03.2026** möglich.
+
+Wenn ihr das Forschungsprojekt unterstützen wollt, findet ihr hier den Link:
+👉 **[Zur Umfrage (Limesurvey)](https://bildungsportal.sachsen.de/umfragen/limesurvey/index.php/232125?lang=de)**
+
+Vielen Dank für eure Unterstützung!
 
 ```bash
 [frank@do3eet-terminal ~]$ logout

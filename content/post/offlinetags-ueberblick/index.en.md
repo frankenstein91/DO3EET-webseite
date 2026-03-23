@@ -1,6 +1,6 @@
 +++
 title = 'Offlinetags: An Overview of All 6 Privacy Signals'
-date = 2026-03-23T15:30:00+01:00
+date = 2026-03-23T20:27:00+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -168,6 +168,22 @@ Offlinetags are a powerful tool to bring the discussion about digital privacy fr
 Get typing (or radio me)!
 
 By the way, I will definitely be wearing the **Name Me** and **Blur Screen** tags myself as soon as I find a good way to produce them as high-quality pins or buttons.
+
+---
+
+### 📝 Call for Participation: Scientific Survey
+
+Fittingly, there is currently an exciting online survey as part of a collaboration between the **University of Salzburg** and **TU Chemnitz**. It deals with the communication of photo preferences at public events.
+
+*   **Goal:** Understanding attitudes towards taking photos/being photographed and the communication of personal preferences.
+*   **Time required:** approx. 5 minutes.
+*   **Anonymity:** The survey is completely anonymous.
+*   **Deadline:** Participation is possible until **March 28, 2026**.
+
+If you would like to support the research project, you can find the link here:
+👉 **[To the Survey (Limesurvey)](https://bildungsportal.sachsen.de/umfragen/limesurvey/index.php/232125?lang=de)**
+
+Thank you for your support!
 
 ```bash
 [frank@do3eet-terminal ~]$ logout
