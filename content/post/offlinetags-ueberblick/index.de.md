@@ -182,7 +182,7 @@ Passend zum Thema gibt es aktuell eine spannende Online-Umfrage im Rahmen einer 
 *   **Anonymität:** Die Umfrage ist komplett anonym.
 *   **Frist:** Teilnahmen sind bis zum **28.03.2026** möglich.
 
-Wenn ihr das Forschungsprojekt unterstützen wollt, findet ihr hier den Link:
+Wenn ihr das Forschungsprojekt unterstützen wollt, findet ihr hier den Link:  
 👉 **[Zur Umfrage (Limesurvey)](https://bildungsportal.sachsen.de/umfragen/limesurvey/index.php/232125?lang=de)**
 
 Vielen Dank für eure Unterstützung!

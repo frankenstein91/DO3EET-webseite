@@ -182,7 +182,7 @@ Fittingly, there is currently an exciting online survey as part of a collaborati
 *   **Anonymity:** The survey is completely anonymous.
 *   **Deadline:** Participation is possible until **March 28, 2026**.
 
-If you would like to support the research project, you can find the link here:
+If you would like to support the research project, you can find the link here:  
 👉 **[To the Survey (Limesurvey)](https://bildungsportal.sachsen.de/umfragen/limesurvey/index.php/232125?lang=de)**
 
 Thank you for your support!
