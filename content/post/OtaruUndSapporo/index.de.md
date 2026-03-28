@@ -22,18 +22,18 @@ Vom 24. bis zum 26. Dezember 2025 verbrachte ich meine Feiertage in der nostalgi
 
 Meine Ankunft in Otaru am Heiligabend wurde von der erwarteten Kälte und der rauen, ungeschminkten Schönheit des Hafens begleitet. Der Otaru-Kanal und der Hafenbereich, einst das geschäftige Herz des Heringshandels, haben im Winter eine ganz eigene Atmosphäre. Die alten Lagerhäuser aus Stein, die sich im dunklen Wasser spiegeln, erzählen von einer Zeit, als hier das Geld so locker saß wie der Schnee auf den Dächern. Spaziert man hier abseits der Hauptrouten entlang, wenn der Wind vom Meer herüberweht und einem Eiskristalle ins Gesicht treibt, spürt man die Geschichte der Stadt viel deutlicher und ehrlicher als in den polierten, warm beleuchteten Souvenirshops der Sakaimachi-Straße, wo sich alles nur um Käsekuchen und Glaswaren dreht.
 
-{{< imgwebp src="PXL_20251225_082209678.jpg" alt="nostalgische Hafenstadt Otaru" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/PXL_20251225_082209678.jpg" alt="nostalgische Hafenstadt Otaru" width="1000" height="1000" >}}
 
 Natürlich gehört der Besuch der berühmten Otaru Steam Clock zum absoluten Pflichtprogramm eines jeden Besuchers. Doch genau hier zeigte sich die hässliche Fratze des globalen Übertourismus, der auch vor der abgelegenen Insel Hokkaido nicht Halt macht. Die Uhr selbst, ein Geschenk der kanadischen Partnerstadt Vancouver, ist ein faszinierendes Stück Technik, das alle xx Minuten pfeifend Dampf ablässt und eine Melodie spielt. Doch die Magie dieses viktorianischen Charmes ging leider im rücksichtslosen Gedränge unter.
 
 Horden asiatischer Touristen, denen das Konzept von Höflichkeit, Warteschlangen oder persönlichem Freiraum völlig fremd zu sein schien, machten das Bestaunen der Dampfpfeifen eher zu einer Geduldsprobe als zu einem Genuss. Man wurde geschubst, Selfiesticks bohrten sich fast in die Nase, und der Moment, in dem die Uhr ihre Melodie spielte, wurde von lautem Geschnatter und Rufen übertönt. Es war der Moment, in dem man sich fragt, ob man Teil des Problems ist oder nur ein unschuldiger Zuschauer in einem absurden Theaterstück.
 
-{{< imgwebp src="PXL_20251225_025904160_exported_37800.jpg" alt="Die Dampfuhr von Otaru im Belagerungszustand" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/PXL_20251225_025904160_exported_37800.jpg" alt="Die Dampfuhr von Otaru im Belagerungszustand" width="1000" height="1000" >}}
 
 Einen heilsamen, fast schon therapeutischen Kontrast dazu boten meine Besuche der Schreine. Der Suitengu Shrine, majestätisch auf einer steilen Anhöhe gelegen, bot nicht nur spirituelle Einkehr, sondern auch einen wunderbaren, unverstellten Blick über den Hafen – und das weitab vom Lärm und den süßen Düften der Einkaufsstraße. Hier oben war der Schnee unberührt, die Luft klar, und das einzige Geräusch war das Knirschen unter meinen eigenen Stiefeln.
 Bevor ich am 26. Dezember endgültig in den Zug nach Sapporo stieg, stattete ich noch dem Sumiyoshijinja einen Besuch ab. Es war der perfekte Abschied von Otaru: Die Stille des Schreins, dessen rote Torii im tiefen Weiß des Schnees fast unwirklich leuchteten, ließ den Stress der Menschenmassen vergessen. Es war ein Moment des "Reset", der mich mental reinigte und auf die Hektik der Großstadt vorbereitete.
 
-{{< imgwebp src="PXL_20251225_021911373.jpg" alt="Stille im Sumiyoshijinja im Schnee" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/PXL_20251225_021911373.jpg" alt="Stille im Sumiyoshijinja im Schnee" width="1000" height="1000" >}}
 
 # Sapporo: Hoch hinaus (und tief blicken)
 
@@ -43,11 +43,11 @@ Der Sapporo TV Tower am Ende des Odori Parks bietet den klassischen Blick auf di
 
 Die Aussicht vom 38. Stockwerk ("T38") ist spektakulär, keine Frage – man sieht bis zu den Bergen und über die unendliche Weite der urbanen Landschaft. Aber sein wir ehrlich: Das eigentliche Highlight, über das in gedämpftem Ton gesprochen wird, ist für die männlichen Besucher das wohl berühmteste Pissoir Japans. Es wurde von den Architekten bewusst an der Glasfront platziert. Es gibt etwas surreal Befreiendes, fast schon Machtvolles daran, seine Notdurft zu verrichten, während man aus bodentiefen Fenstern direkt auf die Millionenstadt hinabblickt, die wie ein Ameisenhaufen unter einem liegt. Design trifft hier auf... nun ja, Erleichterung. Es ist ein stiller Dialog zwischen Mensch und Metropole, intim und öffentlich zugleich.
 
-{{< imgwebp src="PXL_20251227_091816309.jpg" alt="Das berühmte Panorama-Pissoir im JR Tower" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/PXL_20251227_091816309.jpg" alt="Das berühmte Panorama-Pissoir im JR Tower" width="1000" height="1000" >}}
 
 Weniger Glück hatte ich zunächst mit meinem Ausflug zur Mount Moiwa Ropeway. Mein Plan war klassisch romantisch: Hinauffahren, dann genießen. Die Realität war jedoch eine graue, undurchdringliche Wand aus Nebel und Schneetreiben. Weder Sonne noch Sterne, nur eine schlechte Aussicht und ein wolkenverhangener Himmel, der die Stadt verschluckte. Ich stand in der Kälte und fragte mich, warum ich dafür bezahlt hatte. Doch Geduld zahlt sich aus – später klarte es etwas auf, der Wind riss Löcher in die Wolkendecke und der Berg gab zumindest einen atmosphärischen, teilweisen Überblick über das weiße Sapporo frei. Es war nicht das perfekte Postkartenmotiv, das man sich erhofft, aber vielleicht gerade deswegen eine ehrlichere Erinnerung an die Unberechenbarkeit des nordischen Winters.
 
-{{< imgwebp src="PXL_20251227_053618752.jpg" alt="Wolkenverhangener Blick vom Mount Moiwa" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/PXL_20251227_053618752.jpg" alt="Wolkenverhangener Blick vom Mount Moiwa" width="1000" height="1000" >}}
 
 # Eintauchen in die Geschichte Hokkaidos
 
