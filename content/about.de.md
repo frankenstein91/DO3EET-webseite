@@ -12,6 +12,8 @@ Verantwortlich für den Inhalt dieser privaten Website mit Ausnahme der Kommenta
     Badstraße 7
     04668 Grimma
 
+Dies gilt ebenfalls für die ergänzende Domain `do3eet-media.dreamofjapan.de`, welche zur Bereitstellung von Medieninhalten (Bilder) dieser Webseite verwendet wird.
+
 Sie erreichen mich am besten über meine E-Mail am rechten Seitenrand.
 
 # Framework

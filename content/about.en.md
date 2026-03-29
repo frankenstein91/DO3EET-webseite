@@ -12,6 +12,8 @@ Responsible for the content of this private website, with the exception of comme
     Badstraße 7
     04668 Grimma
 
+This also applies to the complementary domain `do3eet-media.dreamofjapan.de`, which is used to provide media content (images) for this website.
+
 You can best reach me via my email address on the right sidebar.
 
 # Framework
