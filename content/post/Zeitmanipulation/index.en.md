@@ -48,7 +48,7 @@ But just as with GPS, there are also attackers who intercept NTP packets and alt
 My idea is to detect a potential attack on one of these signals by monitoring its drift relative to the other signal. Of course, this requires a lot of data to differentiate the normal drift fluctuations for a specific location and internet connection from an actual attack. But I've already made a start, and I don't want to hide it.
 
 ## GUI
-{{< imgwebp src="1.jpg" alt="Die GUI" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Zeitmanipulation/1.jpg" alt="Die GUI" width="1024" height="1024" >}}
 At the very top, the current time is displayed, sourced directly from a GPS receiver. Below that, the tool lists the times it has received from various NTP (Network Time Protocol) servers. Further down, the difference between the GPS time and the time from each individual NTP server is calculated and displayed in milliseconds (ms). A small amount of drift is normal and is caused by network latency and system processing speeds.
 ```html
 <!DOCTYPE html>

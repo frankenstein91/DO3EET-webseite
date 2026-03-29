@@ -13,9 +13,9 @@ tags = [
 # Zugriff auf die Kamera
 In meiner ersten Ausbildung habe ich mir eine Hootoo HT-IP206 gekauft, um etwas mit Live-Streaming zu experimentieren. Diese habe ich nun staubig auf dem Dachboden wieder gefunden. Auch wenn die Kamera eigentlich steinalt ist, habe ich mich dran gemacht um sie wieder in Betrieb zu nehmen.
 
-{{< imgwebp src="PXL_20240615_173019869.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/PXL_20240615_173019869.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
 
-{{< imgwebp src="PXL_20240615_173051193~2.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/PXL_20240615_173051193~2.jpg" alt="Hootoo HT-IP206" width="1024" height="1024" >}}
 
 
 Der erste Schritt war es die Kamera an das Netzwerk anzubinden, dafür habe ich erst einen Hardwarereset mit Büroklammer durchgeführt. Im Anschluss wurde die Webcam mit einem Labor-VLAN ohne Internet verbunden. Im Netzwerk meldete sich die Kamera gleich als `ipcam_E8ABFA190420`.
@@ -35,9 +35,9 @@ So ganz bin ich mit dem bin-File nicht klar gekommen, doch ich habe gesehen es i
 # Update 17. Juni 2024
 Ich habe noch ein paar Bilder aus dem inneren der Kamera gemacht.
 
-{{< imgwebp src="IMG_9901.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
-{{< imgwebp src="IMG_9902.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
-{{< imgwebp src="IMG_9903.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
-{{< imgwebp src="IMG_9904.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
-{{< imgwebp src="IMG_9905.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
-{{< imgwebp src="IMG_9907.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9901.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9902.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9903.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9904.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9905.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/oldWebcam01/IMG_9907.png" alt="Hootoo HT-IP206 geöffnet" width="1024" height="1024" >}}

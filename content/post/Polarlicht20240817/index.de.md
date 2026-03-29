@@ -17,7 +17,7 @@ Es gab wieder schwache Polarlichter über meiner Heimat.
 Hier das beste Bild, was mir kurz vor dem Ende gelungen ist.
 <!--more-->
 
-{{< imgwebp src="PXL_20240817_210643723.NIGHT.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Polarlicht20240817/PXL_20240817_210643723.NIGHT.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
 und ein kleines Video
 

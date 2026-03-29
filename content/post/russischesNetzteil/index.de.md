@@ -42,9 +42,9 @@ Im inneren des typischen schwarzen Block, der in der Steckdose steckt und die Ko
 
 ```
 
-{{< imgwebp src="PXL_20250105_103624439.jpg" alt="geöffnetes Kondensatornetzteil" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/russischesNetzteil/PXL_20250105_103624439.jpg" alt="geöffnetes Kondensatornetzteil" width="1024" height="1024" >}}
 
-{{< imgwebp src="PXL_20250105_103708319.jpg" alt="geöffnetes Kondensatornetzteil" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/russischesNetzteil/PXL_20250105_103708319.jpg" alt="geöffnetes Kondensatornetzteil" width="1024" height="1024" >}}
 
 Einer der Kondensatoren im Netzteil wirkt als kapazitiver Widerstand. Dieser Widerstand begrenzt den Stromfluss von der 230V Netzspannung. Die Größe des Kondensators bestimmt, wie stark der Strom begrenzt wird. Ich denke ein weiterer er Kondensatoren verschiebt die Phase des Stroms gegenüber der Spannung. Dadurch wird der Stromfluss zur Glühbirne begrenzt und die Helligkeit reduziert. Der Widerstand dient zum Schutz. Er begrenzt den Einschaltstromstoß und schützt die Leuchtmittel vor Überspannungen.
 

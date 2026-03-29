@@ -53,7 +53,7 @@ Früher wurde der Weihnachtsstern mit einem Spannungswandler betrieben. Dieser s
 # Upgrade
 Über die Daten des alten Netzteil kann ich nur spekulieren, besonders da es nur mit dem Preis in Rubel, der Spannung (input) und der Frequenz beschriftet war und keine weiteren Angaben. Aber ich bin mir sehr sicher, moderne USB-C-Netzteile sind viel effizenter... die Technik steht nie still. Also habe ich entschlossen das Kabel am Trafo geschnitten und die Isolierung über wenige Millimeter enterfernt. Außerdem habe ich mir ein kleines Board organesiert, welches Power Delivery steuern kann. Dieses PCB habe ich im Lötverfahren an den Kabeln angebracht. Da der Stern keine LEDs nutzt, kann ich die Polarität ignoerien. Da die Adern im Kabel sehr dünn waren, habe ich mir einen Trick bei den chineischen Herstellern ausgeliehen... ganz viel Heißkleber auf die Kontakte.
 
-{{< imgwebp src="original_b542fc55-0d5c-4229-9888-c1a8ad6a12aa_PXL_20241224_091728455.jpg" alt="USB-C PD Board" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/USB-C_Upgrade_fuer_Weihnachtsstern/original_b542fc55-0d5c-4229-9888-c1a8ad6a12aa_PXL_20241224_091728455.jpg" alt="USB-C PD Board" width="1024" height="1024" >}}
 
 ```goat
                                      ┌───────────┐
@@ -90,8 +90,8 @@ Früher wurde der Weihnachtsstern mit einem Spannungswandler betrieben. Dieser s
 Eingestellt habe ich den Adapter auf maximal 20 Volt. Damit lässt sich der Weihnachtsstern nun mit fast jedem Handy-Ladegerät bzw. Powerbank betreiben. Außerdem hält sich nun der Weihnachtsschmuck aus Russland an die [EU Richtlinie 2022/2380](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2380).
 
 # weitere Bilder
-{{< imgwebp src="PXL_20241221_125119190.jpg" alt="Im Stern" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/USB-C_Upgrade_fuer_Weihnachtsstern/PXL_20241221_125119190.jpg" alt="Im Stern" width="1024" height="1024" >}}
 
-{{< imgwebp src="PXL_20241221_131644252.jpg" alt="der Stern" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/USB-C_Upgrade_fuer_Weihnachtsstern/PXL_20241221_131644252.jpg" alt="der Stern" width="1024" height="1024" >}}
 
-{{< imgwebp src="PXL_20241223_212551198~4.jpg" alt="auf dem Baum" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/USB-C_Upgrade_fuer_Weihnachtsstern/PXL_20241223_212551198~4.jpg" alt="auf dem Baum" width="1024" height="1024" >}}

@@ -12,7 +12,7 @@ Am Sonntagmorgen, dem 9. November 2025, erlebten wir hier in Kleinbothen (Grimma
 
 Während ein so kurzer Ausfall oft unbemerkt bleibt oder als einfaches "Flackern" abgetan wird, liefern moderne Haus-Energiemanagementsysteme unbestechliche Daten. Ein Blick in das Dashboard meiner Sonnenbatterie (siehe Bild) bestätigt den Vorfall auf die Sekunde genau.
 <!-- more -->
-{{< imgwebp src="Screenshot_20251109-172057.png" alt="Screenshot der Sonnen App" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Stromausfall20251109/Screenshot_20251109-172057.png" alt="Screenshot der Sonnen App" width="1000" height="1000" >}}
 
 In der Tagesanalyse des Energieflusses ist eine klare Lücke zu sehen: Der gesamte Netzbezug und Verbrauch (dargestellt durch die farbigen Linien und die graue Grundlastfläche) fällt um 07:45 Uhr abrupt auf die Nulllinie. Exakt 15 Minuten lang herrscht "digitale Stille", bevor das System um 08:00 Uhr die Wiederkehr der Spannung registriert und der normale Betrieb weitergeht.
 

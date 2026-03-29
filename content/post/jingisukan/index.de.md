@@ -13,7 +13,7 @@ tags = [
 
 Jingisukan (ジンギスカン), benannt nach dem mongolischen Eroberer Dschingis Khan, ist ein japanisches Lamm- und Hammelfleischgericht, das auf einem speziellen, gewölbten Metallgrill zubereitet wird. Es ist eine Spezialität von Hokkaido.
 
-{{< imgwebp src="PXL_20251221_104225778.jpg" alt="Jingisukan in Toyako" width="1400" height="1400" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/jingisukan/PXL_20251221_104225778.jpg" alt="Jingisukan in Toyako" width="1400" height="1400" >}}
 
 # Das Erlebnis am Tisch
 Wie du auf dem Foto oben sehen kannst, ist das Ganze ein sehr interaktives Erlebnis:

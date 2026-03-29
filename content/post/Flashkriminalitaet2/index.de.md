@@ -19,11 +19,11 @@ Da ich selbst nicht auf [Mastodon](https://joinmastodon.org/) aktiv bin, aber vo
 ## USB3-Pins
 Wir erinnern uns an das Bild des blauen USB2-Anschluss? Nein, okay dann hier nochmal:
 
-{{< imgwebp src="PXL_20240411_055122297~3.jpg" alt="USB-Anschluss blau" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Flashkriminalitaet2/PXL_20240411_055122297~3.jpg" alt="USB-Anschluss blau" width="800" height="600" >}}
 
 Und hier nun von einem guten USB-3 auf USB-C Kabel aus meiner Sammlung ein Bild wie es aussehen müsste:
 
-{{< imgwebp src="USB3.jpg" alt="USB3-Anschluss" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Flashkriminalitaet2/USB3.jpg" alt="USB3-Anschluss" width="800" height="600" >}}
 
 Sehr deutlich sieht man in der Tiefe (?) des Anschlusses die 5 weiteren Kontakte. Die USB 3.0-Spezifikation fügt zusätzliche Kontakte im Vergleich zu USB 2.0 hinzu, um die Leistung zu verbessern und neue Funktionen zu ermöglichen. Das sind ein zusätzlicher Erdungskontakt, ein paar für die Stromversorgung und ein paar für die SuperSpeed-Datenleitung. Die alten Kontakte bleiben in der Spezifikation für USB3 aber bestehen, daher zusätzliche Pins/Kontakte.
 
@@ -35,7 +35,7 @@ Malware ist ein Oberbegriff für Schadprogramme, die Computer oder andere Gerät
 ## war ich trotzdem leichtsinnig?
 Ja, war ich. Ich habe den USB-Stick nicht über Wegwerfhardware formatiert. Mich hätte man mit einem schnellen BadUSB-Skript angreifen können oder mit einem USB Killer.
 ### Was ist BadUSB?
-{{< imgwebp src="BadUSB-Stick.jpg" alt="BadUSB-Stick" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Flashkriminalitaet2/BadUSB-Stick.jpg" alt="BadUSB-Stick" width="800" height="600" >}}
 Bei einem Angriff mit BadUSB-Hardware wird die Firmware eines USB-Sticks, einer externen Festplatte oder eines anderen USB-Geräts umprogrammiert. Diese Geräte geben sich dann meist als HID-Gerät aus, zum Beispiel einer Tastatur. Diese "Tastatur" öffnet dann ganz schnell eine PowerSell und öffnet für die Angreifer die Türen.
 ### Was ist ein USB Killer?
 Wenn ich auch einen BadUSB-Stick besitze, Hardware wie USB Killer habe ich nicht. Bei diesen Geräten handelt es sich um Hardware die den USB-Anschluss oder gar das ganze System dauerhaft beschädigen oder zerstören. Die meisten Geräte arbeiten nach einem einfachen Prinzip:

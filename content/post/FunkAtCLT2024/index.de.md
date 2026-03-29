@@ -7,7 +7,7 @@ author = "Frank Tornack"
 
 Nach einem schönen Wochenende auf dem Event [Chemnitzer Linux-Tage](https://chemnitzer.linux-tage.de/2024/de), startet nun wieder das "normale" Leben. Doch ich möchte noch kurz von dem Event berichten.
 
-{{< imgwebp src="PXL_20240319_051906998.jpg" alt="Vögel auf der Antenne" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/FunkAtCLT2024/PXL_20240319_051906998.jpg" alt="Vögel auf der Antenne" width="800" height="600" >}}
 
 Viele hatten sich schon am Vortag zum Eventaufbau und zum Austausch getroffen. Für mich gab es zum dienstlichen Feierabend nur wenige Aufbauaufgaben und ich habe mir meine Helferposten schon angeschaut. Da es für mich dieses Jahr keinen Stand für [Yacy](https://github.com/yacy) gab, hatte ich mich als Helfer für das Streaming-Team und die Praxis Dr. Tux[^1] gemeldet.
 

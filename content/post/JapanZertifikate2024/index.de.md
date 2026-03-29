@@ -15,12 +15,12 @@ Auf einer Japanreise gibt es viel zu sammeln. Dabei geht es nicht nur um die nor
 # Charming Visitor Certificate (Fuji)
 Das Charming Visitor Certificate ist im Grunde ein Souvenir-Zertifikat, das du erhältst, wenn du bestimmte Orte am Fuji besuchst und dieser sich durch deine "Schönheit" hinter den Wolken "schüchtern" versteckt. Es hat die Größe einer Postkarte und ist in Japanisch und Englisch formuliert. Der Text wird mit dem aktuellen Datum gestempelt und ist vom Bürgermeister unterzeichnet.
 
-{{< imgwebp src="Fuji-Cert.png" alt="Charming Visitor Certificate" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanZertifikate2024/Fuji-Cert.png" alt="Charming Visitor Certificate" width="1000" height="1000" >}}
 
 # Kanmon TOPPA! Gedenkurkunde
 Eine weitere Leistung ist das Durchqueren des Kanmon-Fußgängertunnel. Dieser Tunnel führt unter dem Ozean von einer Insel zur Nächsten. Auf beiden Seiten gibt es einen halben Stempel. Wer mit dem kmpletten Stempel auf Papier in einer der Touristeninformationen nach dem Zertifikat fragt, kommt dieses für seine Leistung in Postkartengröße ausgestellt.
 
-{{< imgwebp src="Kanmon-Cert.png" alt="Kanmon TOPPA! Gedenkurkunde" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanZertifikate2024/Kanmon-Cert.png" alt="Kanmon TOPPA! Gedenkurkunde" width="1000" height="1000" >}}
 
 Eine Leistung besonders für Menschen, die unter Platzangst leiden.
 
@@ -29,6 +29,6 @@ Auch in Osaka gibt es die Möglichkeit seine Leistung zertifizieren zu lassen. D
 
 Dieses Papier hat die Größe von zwei Postkarten und lässt sich in der Mitte mit einer Schere trennen. Die eine Seite ist eine Postkarte und die andere Seite ist das beidseitige Zertifikat. Formuliert ist dieses auch in Englisch und Japanisch.
 
-{{< imgwebp src="Osaka-Cert.png" alt="Tempozan Bergsteigerzertifikat" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanZertifikate2024/Osaka-Cert.png" alt="Tempozan Bergsteigerzertifikat" width="1000" height="1000" >}}
 
 Nun stellt sich die abschließende Frage, sind diese Zertifkate für die Personalakte oder eine Bewerbung geeignet?

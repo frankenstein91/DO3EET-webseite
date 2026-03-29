@@ -20,7 +20,7 @@ Ich habe vor einigen Tagen einen USB3-Stick mit 512GB auf Amazon gekauft. Mir sa
 ## USB-Version
 ich hätte mir eigentlich den blauen USB-Anschluss nur genauer anschauen müssen, um zu sehen das es sich hier nur um einen blaugefärbten USB2-Anschluss handelt. Es fehlten nämlich die entsprechenden Kontakte im Anschluss. Aber als Linux-User habe ich erst die Möglichkeiten über die Software genutzt. In der Ausgabe von `sudo lsusb -v -d 048d:1234` fiel mir schnell die Zeile `bcdUSB               2.00` auf. Mit einem unguten Gefühl ließ ich mir von einer Yacy-Suche bestätigen, es handelt sich bei `bcdUSB` um die USB-Version. Da mein Framework Notebook garantiert USB3-fähig ist, ist es also der Stick. Also habe ich mir den Stick genauer angeschaut und habe im Anschluss nur vier Kontakte gefunden, was eher untypisch ist für USB3. Da ich nun den ersten Betrug gefunden hatte, war die Neugier geweckt. 
 
-{{< imgwebp src="PXL_20240411_055122297~3.jpg" alt="USB-Anschluss blau" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Flashkriminalitaet1/PXL_20240411_055122297~3.jpg" alt="USB-Anschluss blau" width="800" height="600" >}}
 
 ## Speicherbereich
 Bis hier hätte ich auf Amazon nur eine schlechte Bewertung als Warnung hinterlassen. Sowohl für den Usecase meines Bekannten, als auch für meine Anwendung, waren die Geschwindigkeiten von USB3 nicht notwendig. Aber mit dem Misstrauen packte ich nun andere Testtools aus. Mit f3[^1] steht eine gute Suite zum Kampf gegen Flash-Betrug zur Verfügung. Das Paket kann man unter Arch leicht über das AUR beziehen. Die Installation läuft schnell über `pikaur -S f3`.

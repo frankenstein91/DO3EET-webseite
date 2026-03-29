@@ -17,15 +17,15 @@ Durch die aktuellen Sonnenstürme in unserem Sonnensystem, hat man die Chance au
 
 Die ersten Fotos habe ich schon fertig und schreibe nun einen kurzen Beitrag. 
 
-{{< imgwebp src="FRA_3000.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/PolarlichterSachsen2024/FRA_3000.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
-{{< imgwebp src="FRA_3037.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/PolarlichterSachsen2024/FRA_3037.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
-{{< imgwebp src="FRA_3039.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/PolarlichterSachsen2024/FRA_3039.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
-{{< imgwebp src="FRA_3048.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/PolarlichterSachsen2024/FRA_3048.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
-{{< imgwebp src="FRA_3056.jpg" alt="Polarlichter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/PolarlichterSachsen2024/FRA_3056.jpg" alt="Polarlichter" width="1024" height="1024" >}}
 
 {{< rawhtml >}}
 <iframe title="Polarlichter über Sachsen" width="560" height="315" src="https://tube.tchncs.de/videos/embed/5100a398-587c-4da3-9474-48aa16062d2c?warningTitle=0&amp;p2p=0" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
