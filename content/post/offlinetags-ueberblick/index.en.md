@@ -61,7 +61,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="TagMe.svg" alt="Tag Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/TagMe.svg" alt="Tag Me">
   </div>
   <div class="ot-content">
     <h3>1. Tag Me (Green)</h3>
@@ -76,7 +76,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="UploadMe.svg" alt="Upload Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/UploadMe.svg" alt="Upload Me">
   </div>
   <div class="ot-content">
     <h3>2. Upload Me (Yellow)</h3>
@@ -91,7 +91,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="BlurMe.svg" alt="Blur Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/BlurMe.svg" alt="Blur Me">
   </div>
   <div class="ot-content">
     <h3>3. Blur Me (Blue)</h3>
@@ -106,7 +106,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="NoPhotos.svg" alt="No Photos">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/NoPhotos.svg" alt="No Photos">
   </div>
   <div class="ot-content">
     <h3>4. No Photos (Red)</h3>
@@ -125,7 +125,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="NameMe.svg" alt="Name Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/NameMe.svg" alt="Name Me">
   </div>
   <div class="ot-content">
     <h3>5. Name Me (Purple)</h3>
@@ -140,7 +140,7 @@ This is exactly where **Offlinetags** come in. They are a social signal for huma
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="BlurScreen.svg" alt="Blur Screen">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/BlurScreen.svg" alt="Blur Screen">
   </div>
   <div class="ot-content">
     <h3>6. Blur Screen (Teal)</h3>

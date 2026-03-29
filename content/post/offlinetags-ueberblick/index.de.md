@@ -61,7 +61,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="TagMe.svg" alt="Tag Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/TagMe.svg" alt="Tag Me">
   </div>
   <div class="ot-content">
     <h3>1. Tag Me (Grün)</h3>
@@ -76,7 +76,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="UploadMe.svg" alt="Upload Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/UploadMe.svg" alt="Upload Me">
   </div>
   <div class="ot-content">
     <h3>2. Upload Me (Gelb)</h3>
@@ -91,7 +91,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="BlurMe.svg" alt="Blur Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/BlurMe.svg" alt="Blur Me">
   </div>
   <div class="ot-content">
     <h3>3. Blur Me (Blau)</h3>
@@ -106,7 +106,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="NoPhotos.svg" alt="No Photos">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/NoPhotos.svg" alt="No Photos">
   </div>
   <div class="ot-content">
     <h3>4. No Photos (Rot)</h3>
@@ -125,7 +125,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="NameMe.svg" alt="Name Me">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/NameMe.svg" alt="Name Me">
   </div>
   <div class="ot-content">
     <h3>5. Name Me (Violett)</h3>
@@ -140,7 +140,7 @@ Genau hier setzen die **Offlinetags** an. Sie sind ein soziales Signal an Mensch
 
 <div class="ot-row">
   <div class="ot-tag">
-    <img src="BlurScreen.svg" alt="Blur Screen">
+    <img src="https://do3eet-media.dreamofjapan.de/posts/offlinetags-ueberblick/BlurScreen.svg" alt="Blur Screen">
   </div>
   <div class="ot-content">
     <h3>6. Blur Screen (Türkis)</h3>
