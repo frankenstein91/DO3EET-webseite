@@ -15,8 +15,8 @@ heute ist ein besonderer Tag für mich, denn ich starte ein neues Projekt, das m
 
 Der erste Schritt besteht darin, Hugo auf meinem Rechner zu installieren und die Grundstruktur meiner Webseite festzulegen. Dabei werde ich mich auch für ein passendes Theme entscheiden, das meinen Vorstellungen entspricht. *Wir sind nerdig im Terminal unterwegs.*
 
-Einen schönen "Chat" habe ich auch. Ist zwar nicht live für die Website, aber ihr landet schnell bei mir.
-{{< chat firstChat >}}
+Einen schönen "Chat" hatte ich auch. Ist zwar nicht live für die Website, aber ihr landet schnell bei mir.
+{{/* cactus.chat wurde leider abgeschaltet */}}
 
 Wie immer sind die ersten Beträge eher für das Testing. Ich hoffe es wird hier aber auch bald guten Inhalt geben.
 
