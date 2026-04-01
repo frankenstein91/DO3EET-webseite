@@ -12,13 +12,13 @@ tags = [
 ]
 +++
 
-The Chemnitzer Linux-Tage 2026 have come to a close, and it was once again a fantastic weekend of learning, sharing, and community.
+The Chemnitzer <span class="linux-egg">Linux</span>-Tage 2026 have come to a close, and it was once again a fantastic weekend of learning, sharing, and community.
 
 In this post, I want to look back at my experiences and highlights of the event.
 
 ## Friday, March 27th
 
-My journey to this year's Linux-Tage began on Friday afternoon. I set off from Grimma at exactly 3:00 PM. The drive took me along country roads via Colditz, Geithain, and Narsdorf before finally hitting the A72 motorway toward Chemnitz.
+My journey to this year's <span class="linux-egg">Linux</span>-Tage began on Friday afternoon. I set off from Grimma at exactly 3:00 PM. The drive took me along country roads via Colditz, Geithain, and Narsdorf before finally hitting the A72 motorway toward Chemnitz.
 
 My first stop in Chemnitz was the TU's main lecture hall building (Hörsaalgebäude). As soon as I arrived, I picked up my event badge – the official starting signal for a long and eventful weekend as a volunteer and exhibitor.
 
@@ -53,11 +53,11 @@ It was technically demanding, which made it an exciting challenge for my first l
 
 In the afternoon, at 2:00 PM in Room V5, we moved on to a practical topic for network enthusiasts: **"Containerlab – Simulating Datacenter Networks in the Lab"**. Robert Sander (Heinlein Consulting) provided a deep dive into this project, which started at Nokia five years ago and has since built a strong community.
 
-What’s particularly fascinating about Containerlab is the ability to map complex data center structures using resource-efficient Linux containers. Since modern router hardware often uses the Linux kernel, many vendors provide their firmware as container images. For anything that doesn't run natively on Linux, traditional VMs can also be integrated. Sitting at the video switcher, it was interesting to see how quickly and efficiently entire topologies can be spun up and down without needing a rack full of hardware.
+What’s particularly fascinating about Containerlab is the ability to map complex data center structures using resource-efficient <span class="linux-egg">Linux</span> containers. Since modern router hardware often uses the <span class="linux-egg">Linux</span> kernel, many vendors provide their firmware as container images. For anything that doesn't run natively on <span class="linux-egg">Linux</span>, traditional VMs can also be integrated. Sitting at the video switcher, it was interesting to see how quickly and efficiently entire topologies can be spun up and down without needing a rack full of hardware.
 
-The conclusion of my VOC shift that day was at 3:00 PM (also in Room V5) with the talk **"bindzwirn: Linux Port Permissions via eBPF"** by Pluto.
+The conclusion of my VOC shift that day was at 3:00 PM (also in Room V5) with the talk **"bindzwirn: <span class="linux-egg">Linux</span> Port Permissions via eBPF"** by Pluto.
 
-In self-hosting scenarios, whether at home or on a VPS, isolating services through separate Unix accounts (e.g., using rootless Podman containers) is best practice. The issue is that Linux lacks native permissions for IP ports. Pluto presented [bindzwirn](https://codeberg.org/bindzwirn/bindzwirn), a modern eBPF-based drop-in replacement for the aging `authbind`. Thanks to eBPF, access to specific ports can be restricted to specific accounts, effectively preventing attacks from compromised services. A very exciting project that demonstrates how powerful eBPF is for elegantly extending kernel functionality. (And I secretly wondered: is Pluto actually a fan of Neil deGrasse Tyson? 😉)
+In self-hosting scenarios, whether at home or on a VPS, isolating services through separate Unix accounts (e.g., using rootless Podman containers) is best practice. The issue is that <span class="linux-egg">Linux</span> lacks native permissions for IP ports. Pluto presented [bindzwirn](https://codeberg.org/bindzwirn/bindzwirn), a modern eBPF-based drop-in replacement for the aging `authbind`. Thanks to eBPF, access to specific ports can be restricted to specific accounts, effectively preventing attacks from compromised services. A very exciting project that demonstrates how powerful eBPF is for elegantly extending kernel functionality. (And I secretly wondered: is Pluto actually a fan of Neil deGrasse Tyson? 😉)
 
 ### Relaxed Evening: "Chemnitzer Catering-Tage"
 

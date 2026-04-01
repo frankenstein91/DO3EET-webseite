@@ -15,6 +15,7 @@
         {{ .Content }}
     </div>
     <footer class="content__footer">{{ partial "post/giscus.html" . }}</footer>
+    {{ partial "clt_egg.html" . }}
 {{ end }}
 
 {{define "aside" }}

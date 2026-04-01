@@ -12,13 +12,13 @@ tags = [
 ]
 +++
 
-Die Chemnitzer Linux-Tage 2026 sind nun vorbei und es war wieder einmal ein fantastisches Wochenende voller Wissen, Austausch und Gemeinschaft.
+Die Chemnitzer <span class="linux-egg">Linux</span>-Tage 2026 sind nun vorbei und es war wieder einmal ein fantastisches Wochenende voller Wissen, Austausch und Gemeinschaft.
 
 In diesem Beitrag möchte ich meine Erlebnisse und Eindrücke Revue passieren lassen.
 
 ## Freitag, 27. März
 
-Meine Reise zu den diesjährigen Linux-Tagen begann am Freitagnachmittag. Pünktlich um 15:00 Uhr ging es in Grimma los. Die Fahrt führte mich über die Landstraßen via Colditz, Geithain und Narsdorf, bevor ich schließlich auf die A72 Richtung Chemnitz auffuhr.
+Meine Reise zu den diesjährigen <span class="linux-egg">Linux</span>-Tagen begann am Freitagnachmittag. Pünktlich um 15:00 Uhr ging es in Grimma los. Die Fahrt führte mich über die Landstraßen via Colditz, Geithain und Narsdorf, bevor ich schließlich auf die A72 Richtung Chemnitz auffuhr.
 
 Mein erster Weg in Chemnitz führte mich direkt zum Hörsaalgebäude der TU. Dort angekommen, holte ich mir als erstes meinen Event-Ausweis ab – das offizielle Startsignal für ein langes und ereignisreiches Wochenende als Helfer und Aussteller.
 
@@ -53,11 +53,11 @@ Es war technisch anspruchsvoll, aber gerade deshalb eine spannende Herausforderu
 
 Am Nachmittag, um 14:00 Uhr, ging es im Raum V5 weiter mit einem praktischen Thema für Netzwerk-Enthusiasten: **"Containerlab – RZ-Netzwerke im Lab simulieren"**. Robert Sander (Heinlein Consulting) gab einen tiefen Einblick in das mittlerweile fünf Jahre alte Projekt, das ursprünglich von Nokia gestartet wurde.
 
-Besonders faszinierend an Containerlab ist die Möglichkeit, selbst komplexe Rechenzentrums-Strukturen ressourcensparend in Linux-Containern abzubilden. Da moderne Router-Hardware oft auf dem Linux-Kernel basiert, stellen viele Hersteller ihre Firmware direkt als Container-Images bereit. Für alles, was nicht nativ auf Linux läuft, können auch klassische VMs eingebunden werden. Für mich am Mischpult war es interessant zu sehen, wie schnell und effizient man heute ganze Topologien hoch- und herunterfahren kann, ohne einen Schrank voller Hardware zu benötigen.
+Besonders faszinierend an Containerlab ist die Möglichkeit, selbst komplexe Rechenzentrums-Strukturen ressourcensparend in <span class="linux-egg">Linux</span>-Containern abzubilden. Da moderne Router-Hardware oft auf dem <span class="linux-egg">Linux</span>-Kernel basiert, stellen viele Hersteller ihre Firmware direkt als Container-Images bereit. Für alles, was nicht nativ auf <span class="linux-egg">Linux</span> läuft, können auch klassische VMs eingebunden werden. Für mich am Mischpult war es interessant zu sehen, wie schnell und effizient man heute ganze Topologien hoch- und herunterfahren kann, ohne einen Schrank voller Hardware zu benötigen.
 
-Den Abschluss meines VOC-Dienstes an diesem Tag bildete um 15:00 Uhr (ebenfalls in Raum V5) der Vortrag **"bindzwirn: Linux Port-Berechtigungen per eBPF"** von Pluto. 
+Den Abschluss meines VOC-Dienstes an diesem Tag bildete um 15:00 Uhr (ebenfalls in Raum V5) der Vortrag **"bindzwirn: <span class="linux-egg">Linux</span> Port-Berechtigungen per eBPF"** von Pluto. 
 
-Beim Self-Hosting, egal ob zuhause oder auf einem VPS, ist die Isolation von Diensten durch separate Unix-Accounts (z. B. in rootless Podman-Containern) Best Practice. Das Problem: Linux kennt nativ keine Berechtigungen für IP-Ports. Pluto präsentierte mit [bindzwirn](https://codeberg.org/bindzwirn/bindzwirn) ein modernes Drop-in-Replacement für das in die Jahre gekommene `authbind`. Dank eBPF lässt sich der Zugriff auf bestimmte Ports gezielt auf bestimmte Accounts begrenzen, was Angriffe durch gekaperte Accounts effektiv unterbindet. Ein sehr spannendes Projekt, das zeigt, wie mächtig eBPF ist, um fehlende Kernel-Funktionalitäten elegant nachzurüsten. (Und ich habe mich währenddessen heimlich gefragt, ob Pluto eigentlich ein Fan von Neil deGrasse Tyson ist? 😉)
+Beim Self-Hosting, egal ob zuhause oder auf einem VPS, ist die Isolation von Diensten durch separate Unix-Accounts (z. B. in rootless Podman-Containern) Best Practice. Das Problem: <span class="linux-egg">Linux</span> kennt nativ keine Berechtigungen für IP-Ports. Pluto präsentierte mit [bindzwirn](https://codeberg.org/bindzwirn/bindzwirn) ein modernes Drop-in-Replacement für das in die Jahre gekommene `authbind`. Dank eBPF lässt sich der Zugriff auf bestimmte Ports gezielt auf bestimmte Accounts begrenzen, was Angriffe durch gekaperte Accounts effektiv unterbindet. Ein sehr spannendes Projekt, das zeigt, wie mächtig eBPF ist, um fehlende Kernel-Funktionalitäten elegant nachzurüsten. (Und ich habe mich währenddessen heimlich gefragt, ob Pluto eigentlich ein Fan von Neil deGrasse Tyson ist? 😉)
 
 ### Der gemütliche Ausklang: "Chemnitzer Catering-Tage"
 

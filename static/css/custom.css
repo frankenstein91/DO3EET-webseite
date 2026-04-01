@@ -809,3 +809,9 @@ code {
     color: var(--off-fg);
     font-style: italic;
 }
+
+/* Linux Easter Egg */
+.linux-egg {
+    color: inherit;
+    text-decoration: none;
+}
