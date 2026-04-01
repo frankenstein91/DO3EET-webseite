@@ -32,7 +32,7 @@ Ein herzliches Dankeschön geht an dieser Stelle an Silke für den tollen Post z
 
 Ein weiteres interessantes Fundstück des Abends war ein Flyer für die **3. Open Source Hardware Konferenz (OSHap)**, die vom 23. bis 24. September 2026 in Halle (Saale) stattfinden wird. Unter dem Motto „Think open. Build open.“ wird dort aktuell zur Teilnahme aufgerufen (Call for Participation). Da das Thema Open Source Hardware perfekt zu meinen Interessen passt (man denke an den Sharp PC-E500S oder RISC-V), überlege ich ernsthaft, im September auch in Halle dabei zu sein. Weitere Infos dazu gibt es unter [www.oshop-network.de](https://www.oshop-network.de).
 
-{{< imgwebp src="https://do3eet-assets.dreamofjapan.de/posts/CLT2026/EinladungHalle.jpg" alt="Flyer der OSHap 2026 in Halle" width="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/CLT2026/EinladungHalle.jpg/EinladungHalle.jpg" alt="Flyer der OSHap 2026 in Halle" width="600" >}}
 
 ## Samstag, 28. März
 
@@ -63,7 +63,7 @@ Beim Self-Hosting, egal ob zuhause oder auf einem VPS, ist die Isolation von Die
 
 Nach dem offiziellen Programm am Samstag gab es für alle Helfer, Vortragenden, Aussteller und Sponsoren noch eine leckere Abendveranstaltung. Wie jedes Jahr wurde hier gescherzt, dass die Veranstaltung eigentlich in "Chemnitzer Catering-Tage" umbenannt werden müsste – das Essen war einfach wieder hervorragend und bot den perfekten Rahmen für entspanntes Networking abseits des Messetrubels.
 
-{{< imgwebp src="https://do3eet-assets.dreamofjapan.de/posts/CLT2026/CCT.jpg" alt="Plakat der Chemnitzer Catering-Tage" width="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/CLT2026/CCT.jpg/CCT.jpg" alt="Plakat der Chemnitzer Catering-Tage" width="600" >}}
 
 ## Ein besonderes Highlight: Hardware-Rettung über Nacht
 
