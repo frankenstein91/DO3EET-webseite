@@ -71,7 +71,7 @@ Bitte beachten Sie, dass YouTube eigene Datenschutzrichtlinien hat, auf die ich 
 Um Ihre Privatsphäre zu schützen, habe ich die Einbettung von YouTube-Videos so konfiguriert, dass sie den erweiterten Datenschutzmodus von YouTube verwenden. Bitte beachten Sie, dass der erweiterte Datenschutzmodus von YouTube möglicherweise erst dann aktiviert wird, wenn Sie das Video abspielen. Die Datenübertragung an YouTube kann jedoch auch ohne aktive Video-Wiedergabe stattfinden.
 
 # PeerTube-Einbettung
-Auf dieser Website werden Videos von der Plattform PeerTube eingebettet. PeerTube ist eine dezentrale Videoplattform, die auf dem Peer-to-Peer-Prinzip basiert. Das bedeutet, dass die Videos nicht auf einem zentralen Server gespeichert werden, sondern auf einem Netzwerk von Computern, die von den Nutzern der Plattform betrieben werden. Diese Funktion ist nach besten Wissen und Gewissen abgeschaltet. Der PeerTube-Server-Betreiber sieht aber trotzdem Ihre IP und Browserdaten.
+Auf dieser Website werden Videos von der Plattform PeerTube eingebettet. PeerTube ist eine dezentrale Videoplattform, die auf dem Peer-to-Peer-Prinzip basiert. Das bedeutet, dass die Videos normalerweise nicht nur von einem Server, sondern auch von anderen Zuschauern geladen werden können. Der P2P-Teil (das Teilen des Videos durch Ihren Browser) ist für diese Einbettungen nach bestem Wissen und Gewissen abgeschaltet. Der PeerTube-Server-Betreiber sieht aber trotzdem Ihre IP und Browserdaten.
 ## Datenverarbeitung durch PeerTube
 - Ihre IP-Adresse
 - Ihr Browsertyp und Ihre Browsereinstellungen
