@@ -671,14 +671,141 @@ code {
 .close-achievement:hover {
     color: var(--fg-color);
 }
-e;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    font-size: 0.7rem;
-    color: #566f56;
+
+/* Mastodon Toot Styles */
+.toot-blockquote {
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 2rem 0;
+    font-family: var(--font-monospace);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.05);
+    color: var(--fg-color);
+    animation: toot-pulse 4s infinite ease-in-out;
 }
 
-.close-achievement:hover {
+@keyframes toot-pulse {
+    0% {
+        border-color: var(--terminal-border);
+        box-shadow: 0 0 5px rgba(0, 255, 65, 0.1);
+    }
+    50% {
+        border-color: var(--highlight-color);
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+    }
+    100% {
+        border-color: var(--terminal-border);
+        box-shadow: 0 0 5px rgba(0, 255, 65, 0.1);
+    }
+}
+
+.toot-blockquote::before {
+    content: none !important;
+}
+
+.toot-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed var(--terminal-border);
+    padding-bottom: 0.8rem;
+}
+
+.toot-profile img {
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    background: var(--bg-color);
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.toot-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.toot-author-name {
+    font-weight: bold;
+    color: #ffffff !important;
+    text-shadow: 0 0 5px var(--accent-color);
+    text-decoration: none !important;
+}
+
+.toot-author-handle {
+    font-size: 0.8rem;
+    color: var(--highlight-color) !important;
+    text-decoration: none !important;
+}
+
+.toot-prompt {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.toot-prompt .prompt-user {
+    color: var(--accent-color);
+}
+
+.toot-prompt .prompt-host {
     color: var(--fg-color);
+}
+
+.toot-prompt .prompt-separator {
+    color: var(--fg-color);
+}
+
+.toot-prompt .prompt-dir {
+    color: var(--fg-color);
+}
+
+.toot-prompt .prompt-char {
+    color: var(--highlight-color);
+}
+
+.toot-blockquote p {
+    margin: 0.8rem 0;
+}
+
+.toot-blockquote a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.toot-blockquote a:hover {
+    text-decoration: underline;
+}
+
+.toot-footer {
+    margin-top: 1.2rem;
+    border-top: 1px dashed var(--terminal-border);
+    padding-top: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--off-fg);
+}
+
+.toot-date {
+    color: var(--accent-color) !important;
+    text-decoration: none !important;
+}
+
+.toot-date:hover {
+    text-decoration: underline !important;
+}
+
+.pokey {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.ctr.legal {
+    text-align: center;
+    color: var(--off-fg);
+    font-style: italic;
 }
