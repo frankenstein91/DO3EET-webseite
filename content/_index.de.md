@@ -6,3 +6,4 @@ Mein Name ist Frank, und ich bin begeistert, euch einen kleinen Einblick in mein
 - 🌍 Weltreisender und Kulturbegeisterter
 - 👨🏻‍💻 Enthusiast für Technologie
 - 🚀 Großer Star Trek und Stargate Fan
+- 🐚 Stolzer ZSH-Nutzer
