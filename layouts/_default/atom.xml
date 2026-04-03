@@ -5,7 +5,7 @@
   <updated>{{ now.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</updated>
   <id>{{ .Permalink }}</id>
   <author>
-    <name>{{ .Site.Author.name }}</name>
+    <name>{{ .Site.Params.author.name | default "Frank Tornack" }}</name>
   </author>
   <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
   {{ range .RegularPages }}

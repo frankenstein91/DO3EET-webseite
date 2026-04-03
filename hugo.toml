@@ -139,8 +139,8 @@ loading = "lazy"
 
 [outputs]
 home = ['html', 'rss', 'atom']
-section = ['html', 'rss', 'amp', 'atom']
-page = ['html', 'rss', 'amp', 'WIFI_RSS']
+section = ['html', 'rss', 'atom']
+page = ['html', 'WIFI_RSS']
 
 [Author]
 name = "Frank Tornack"
