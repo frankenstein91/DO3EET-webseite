@@ -815,3 +815,58 @@ code {
     color: inherit;
     text-decoration: none;
 }
+
+/* --- Media & Image Optimization (Anti-Glare / CRT Style) --- */
+img {
+    /* Verhindert das weiße Aufblitzen durch Nutzung der Theme-Hintergrundfarbe */
+    background-color: var(--bg-color); 
+    
+    /* Integration in das Terminal-Design */
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    
+    /* Sanftes "Aufwärmen" beim Erscheinen (wie ein CRT-Monitor) */
+    animation: imgWarmup 1.2s ease-out forwards;
+    
+    /* Falls das Bild nicht lädt: Alt-Text in Matrix-Grün */
+    color: var(--highlight-color);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@keyframes imgWarmup {
+    0% { 
+        opacity: 0; 
+        filter: brightness(1.5) blur(10px);
+    }
+    10% {
+        opacity: 0.1;
+        filter: brightness(2) blur(8px);
+    }
+    100% { 
+        opacity: 1; 
+        filter: brightness(1) blur(0);
+    }
+}
+
+/* Hover-Effekt passend zum Rest des Designs */
+img:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Zentrierung für Bilder im Hauptinhalt */
+.page__body img {
+    margin: 2rem auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Spezialfall: Keine Animation für kleine Icons in Listen oder Social Links */
+.menu-item img, .aside__social-links img, .toot-profile img {
+    animation: none;
+    margin: 0;
+    display: inline-block;
+}
