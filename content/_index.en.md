@@ -5,7 +5,9 @@ My name is Frank, and I'm excited to give you a little insight into my life as a
 ## About me
  - 🌍 World traveler and culture enthusiast
  - 👨🏻‍💻 Technology enthusiast
- - 📷 Enthusiastic Nikon photographer
+ - 📷 Passion for photography
+   - classic with Nikon
+   - modern with the **Google Pixel 9 Pro XL** (impressive *software defined camera*)
  - 🚀 Big Star Trek and Stargate fan
  - 🐚 Proud ZSH user
  - 🔍 Supporter of the decentralized search engine **YaCy**
