@@ -850,13 +850,6 @@ img {
     }
 }
 
-/* Hover-Effekt passend zum Rest des Designs */
-img:hover {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
-    transition: all 0.3s ease;
-}
-
 /* Zentrierung für Bilder im Hauptinhalt */
 .page__body img {
     margin: 2rem auto;
