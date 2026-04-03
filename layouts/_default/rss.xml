@@ -23,10 +23,9 @@
         {{- $content = $content | replaceRE "<span class=\"sr-only\">.*?</span>" "" -}}
         {{- /* 2. Heading Hashtags (##) entfernen */ -}}
         {{- $content = $content | replaceRE "<span class=\"heading-hashtag\" aria-hidden=\"true\">.*?</span>" "" -}}
-        {{- /* 3. Design-Klassen (linux-egg) entfernen, Text behalten */ -}}
-        {{- $content = $content | replaceRE "<span class=\"linux-egg\">" "" -}}
-        {{- $content = $content | replaceRE "</span>" "" -}}
-        {{- /* 4. Whitespace aufräumen (reduziert unnötige Leerzeilen) */ -}}
+        {{- /* 3. Design-Klassen (linux-egg) säubern, ohne andere Spans zu beschädigen */ -}}
+        {{- $content = $content | replaceRE "<span class=\"linux-egg\">(.*?)</span>" "$1" -}}
+        {{- /* 4. Whitespace aufräumen */ -}}
         {{- $content = $content | replaceRE "[\n\r]+" "\n" -}}
         {{- $content | safeHTML -}}
       </description>
