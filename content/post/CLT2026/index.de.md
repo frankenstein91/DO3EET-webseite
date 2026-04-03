@@ -20,6 +20,10 @@ In diesem Beitrag möchte ich meine Erlebnisse und Eindrücke Revue passieren la
 
 Meine Reise zu den diesjährigen <span class="linux-egg">Linux</span>-Tagen begann am Freitagnachmittag. Pünktlich um 15:00 Uhr ging es in Grimma los. Die Fahrt führte mich über die Landstraßen via Colditz, Geithain und Narsdorf, bevor ich schließlich auf die A72 Richtung Chemnitz auffuhr.
 
+{{< rawhtml >}}
+<iframe title="Road to CLT2026" width="560" height="315" src="https://tube.tchncs.de/videos/embed/beCGFiCtbdQ9xU5v8zqWjE?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+{{< /rawhtml >}}
+
 Mein erster Weg in Chemnitz führte mich direkt zum Hörsaalgebäude der TU. Dort angekommen, holte ich mir als erstes meinen Event-Ausweis ab – das offizielle Startsignal für ein langes und ereignisreiches Wochenende als Helfer und Aussteller.
 
 Anschließend ging es zum Check-in ins Hotel. Kaum auf dem Zimmer angekommen, wurde natürlich erst einmal das wichtigste Equipment aufgebaut: Mein D-Star Hotspot und mein Funkgerät. Damit war ich auch in Chemnitz sofort wieder "QRV" und bereit für den Austausch auf den Bändern.

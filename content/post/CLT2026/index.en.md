@@ -20,6 +20,10 @@ In this post, I want to look back at my experiences and highlights of the event.
 
 My journey to this year's <span class="linux-egg">Linux</span>-Tage began on Friday afternoon. I set off from Grimma at exactly 3:00 PM. The drive took me along country roads via Colditz, Geithain, and Narsdorf before finally hitting the A72 motorway toward Chemnitz.
 
+{{< rawhtml >}}
+<iframe title="Road to CLT2026" width="560" height="315" src="https://tube.tchncs.de/videos/embed/beCGFiCtbdQ9xU5v8zqWjE?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&peertubeLink=0&p2p=0" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+{{< /rawhtml >}}
+
 My first stop in Chemnitz was the TU's main lecture hall building (Hörsaalgebäude). As soon as I arrived, I picked up my event badge – the official starting signal for a long and eventful weekend as a volunteer and exhibitor.
 
 After that, I checked into my hotel. As soon as I got to my room, I set up the most essential equipment first: my D-Star hotspot and my radio. This meant I was immediately back "QRV" in Chemnitz and ready for some exchanges over the air.
