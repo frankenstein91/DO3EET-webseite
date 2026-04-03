@@ -8,7 +8,7 @@
     <name>{{ .Site.Params.author.name | default "Frank Tornack" }}</name>
   </author>
   <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
-  {{ range .RegularPages }}
+  {{ range where .Site.RegularPages "Section" "post" }}
   <entry>
     <title>{{ .Title }}</title>
     <link href="{{ .Permalink }}"/>
