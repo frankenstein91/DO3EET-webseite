@@ -275,7 +275,7 @@ body {
     clear: both;
     margin-top: 2rem;
     padding-top: 1rem;
-    padding-bottom: 1.5rem; /* Weiter reduziert auf 1.5rem */
+    padding-bottom: 0.5rem;
     border-top: 1px solid var(--terminal-border);
 }
 
