@@ -98,7 +98,7 @@ title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
 
 [[params.socialLinks]]
-icon = "fa-regular fa-square-rss"
+icon = "fa-solid fa-square-rss"
 title = "Atom"
 url = "https://do3eet.pages.dev/atom.xml"
 
