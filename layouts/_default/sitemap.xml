@@ -1,0 +1,37 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{ range (where .Data.Pages "Kind" "not in" (slice "taxonomy" "term")) }}
+    {{- if .Permalink -}}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{ if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+    {{ end }}
+    {{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{ else }}
+    <changefreq>{{ if .IsPage }}monthly{{ else }}weekly{{ end }}</changefreq>
+    {{ end }}
+    {{ with .Sitemap.Priority }}
+    <priority>{{ . }}</priority>
+    {{ else }}
+    <priority>{{ if .IsHome }}1.0{{ else if .IsPage }}0.8{{ else }}0.5{{ end }}</priority>
+    {{ end }}
+    {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.Lang }}"
+                href="{{ .Permalink }}"
+                />
+    {{ end }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.Lang }}"
+                href="{{ .Permalink }}"
+                />
+    {{ end }}
+  </url>
+    {{- end -}}
+  {{ end }}
+</urlset>
