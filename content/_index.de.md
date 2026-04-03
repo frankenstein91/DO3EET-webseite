@@ -9,3 +9,4 @@ Mein Name ist Frank, und ich bin begeistert, euch einen kleinen Einblick in mein
 - 🐚 Stolzer ZSH-Nutzer
 - 🔍 Unterstützer der dezentralen Suchmaschine **YaCy**
   - auf den Chemnitzer Linux-Tagen
+  - YaCy-Vortrag bei LEX (Learning from Experts)
