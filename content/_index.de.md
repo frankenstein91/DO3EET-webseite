@@ -7,4 +7,5 @@ Mein Name ist Frank, und ich bin begeistert, euch einen kleinen Einblick in mein
 - 👨🏻‍💻 Enthusiast für Technologie
 - 🚀 Großer Star Trek und Stargate Fan
 - 🐚 Stolzer ZSH-Nutzer
-- 🔍 Unterstützer der dezentralen Suchmaschine **YaCy** (u.a. auf den Chemnitzer Linux-Tagen)
+- 🔍 Unterstützer der dezentralen Suchmaschine **YaCy**
+  - auf den Chemnitzer Linux-Tagen
