@@ -52,6 +52,7 @@
   }
 
 :root {
+    color-scheme: dark;
     --font-monospace: "OpenDyslexicMono", monospace;
     --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau (Beibehalten) */
     --fg-color: #c0caf5;        /* Helles Silbergrau für beste Lesbarkeit */
