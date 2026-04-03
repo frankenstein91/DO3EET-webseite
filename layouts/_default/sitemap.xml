@@ -7,16 +7,19 @@
     {{ if not .Lastmod.IsZero }}
     <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
     {{ end }}
-    {{ with .Sitemap.ChangeFreq }}
-    <changefreq>{{ . }}</changefreq>
-    {{ else }}
-    <changefreq>{{ if .IsPage }}monthly{{ else }}weekly{{ end }}</changefreq>
-    {{ end }}
-    {{ with .Sitemap.Priority }}
-    <priority>{{ . }}</priority>
-    {{ else }}
-    <priority>{{ if .IsHome }}1.0{{ else if .IsPage }}0.8{{ else }}0.5{{ end }}</priority>
-    {{ end }}
+    
+    {{- /* Logic for ChangeFreq */ -}}
+    {{- $changefreq := "weekly" -}}
+    {{- if .IsPage }}{{ $changefreq = "monthly" }}{{ end -}}
+    {{- with .Sitemap.ChangeFreq }}{{ if ne . -1 }}{{ $changefreq = . }}{{ end }}{{ end -}}
+    <changefreq>{{ $changefreq }}</changefreq>
+
+    {{- /* Logic for Priority */ -}}
+    {{- $priority := 0.5 -}}
+    {{- if .IsHome }}{{ $priority = 1.0 }}{{ else if .IsPage }}{{ $priority = 0.8 }}{{ end -}}
+    {{- with .Sitemap.Priority }}{{ if ne . -1.0 }}{{ $priority = . }}{{ end }}{{ end -}}
+    <priority>{{ $priority }}</priority>
+
     {{ if .IsTranslated }}
     {{ range .AllTranslations }}
     <xhtml:link
@@ -25,11 +28,6 @@
                 href="{{ .Permalink }}"
                 />
     {{ end }}
-    <xhtml:link
-                rel="alternate"
-                hreflang="{{ .Language.Lang }}"
-                href="{{ .Permalink }}"
-                />
     {{ end }}
   </url>
     {{- end -}}
