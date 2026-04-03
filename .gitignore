@@ -9,3 +9,15 @@ hugo_stats.json
 .DS_Store
 Thumbs.db
 DO3EET_keyslips.html
+
+# Bilder (sollen auf R2 ausgelagert werden)
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.bmp
+*.tiff
+# Aber Favicons und SVGs erlauben wir weiterhin, falls nötig
+!favicon.ico
+!*.svg
