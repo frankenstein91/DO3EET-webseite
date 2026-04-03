@@ -1,0 +1,36 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne .Title .Site.Title }}{{ with .Title }}on {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ .Site.LanguageCode }}</language>
+    {{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    {{ end }}
+    {{ range .RegularPages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>
+        {{- $content := .Content -}}
+        {{- /* 1. Barrierefreiheits-Texte (sr-only) entfernen */ -}}
+        {{- $content = $content | replaceRE "<span class=\"sr-only\">.*?</span>" "" -}}
+        {{- /* 2. Heading Hashtags (##) entfernen */ -}}
+        {{- $content = $content | replaceRE "<span class=\"heading-hashtag\" aria-hidden=\"true\">.*?</span>" "" -}}
+        {{- /* 3. Design-Klassen (linux-egg) entfernen, Text behalten */ -}}
+        {{- $content = $content | replaceRE "<span class=\"linux-egg\">" "" -}}
+        {{- $content = $content | replaceRE "</span>" "" -}}
+        {{- /* 4. Whitespace aufräumen (reduziert unnötige Leerzeilen) */ -}}
+        {{- $content = $content | replaceRE "[\n\r]+" "\n" -}}
+        {{- $content | safeHTML -}}
+      </description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
