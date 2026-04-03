@@ -25,6 +25,14 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
+<!-- RSS & Atom Feed Discoverability -->
+{{ with .OutputFormats.Get "rss" -}}
+  <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }} RSS Feed">
+{{ end }}
+{{ with .OutputFormats.Get "atom" -}}
+  <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }} Atom Feed">
+{{ end }}
+
 <!-- Ariadne/Keyoxide Identity Proof -->
 <meta name="openpgp4fpr" content="83C577D642DFD5422B142EB253481A1D51D844C2FBC24D06760B69BA8CFA577C">
 <link rel="me" href="https://mastodon.hams.social/@DO3EET">

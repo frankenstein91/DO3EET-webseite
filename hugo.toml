@@ -96,6 +96,11 @@ icon = "fa-solid fa-rss"
 title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
 
+[[params.socialLinks]]
+icon = "fa-solid fa-rss"
+title = "Atom"
+url = "https://do3eet.pages.dev/atom.xml"
+
 [params.giscus]
 repo = "frankenstein91/DO3EET-webseite"
 repoID = "R_kgDOKsmxqw"
@@ -118,6 +123,8 @@ loading = "lazy"
 [mediaTypes]
   [mediaTypes."application/rss+xml"]
     suffixes = ["xml"]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
 
 [outputFormats]
   [outputFormats.WIFI_RSS]
@@ -125,9 +132,14 @@ loading = "lazy"
     baseName = "index"
     isPlainText = true
     notAlternative = true
+  [outputFormats.atom]
+    mediaType = "application/atom+xml"
+    baseName = "atom"
+    isPlainText = false
 
 [outputs]
-section = ['html', 'rss', 'amp']
+home = ['html', 'rss', 'atom']
+section = ['html', 'rss', 'amp', 'atom']
 page = ['html', 'rss', 'amp', 'WIFI_RSS']
 
 [Author]
