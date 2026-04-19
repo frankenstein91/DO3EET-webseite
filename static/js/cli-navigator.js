@@ -239,6 +239,33 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'help':
                 response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping';
                 break;
+            case 'date':
+                const options = { 
+                    weekday: 'short', 
+                    day: '2-digit', 
+                    month: 'short', 
+                    year: 'numeric', 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit', 
+                    timeZoneName: 'short' 
+                };
+                // "So 19. Apr 2026, 17:34:56 CEST" (ungefährer Linux-Stil)
+                let dateFormatted = now.toLocaleString('de-DE', options).replace(/,/g, '');
+                response.textContent = dateFormatted;
+                break;
+            case 'passwd':
+                response.textContent = 'Changing password for Guest.';
+                cliOutput.appendChild(response);
+                scrollToBottom();
+                
+                await new Promise(r => setTimeout(r, 800));
+                const pError = document.createElement('div');
+                pError.className = 'cli-line';
+                pError.textContent = 'passwd: You do not have sufficient privileges to change the password.';
+                cliOutput.appendChild(pError);
+                scrollToBottom();
+                return;
             case 'ping':
                 const host = args[1];
                 if (!host) {
