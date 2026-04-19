@@ -72,8 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!vfs['/'].children['tags'].children[tagSlug]) {
                         vfs['/'].children['tags'].children[tagSlug] = { type: 'dir', children: {} };
                     }
-                    const fileName = (page.path || "").split('/').pop() || page.title;
-                    vfs['/'].children['tags'].children[tagSlug].children[fileName] = { type: 'file', data: page };
+                    
+                    const pathParts = (page.path || "").split('/').filter(p => p);
+                    const fileName = pathParts.pop() || page.title;
+                    
+                    // Artikel-Ordnername bestimmen (entweder Parent-Ordner bei index.md oder Dateiname ohne Endung)
+                    let articleDirName = fileName.replace(/\.(de|en)\.md$/, '');
+                    if (fileName.startsWith('index.') && pathParts.length > 0) {
+                        articleDirName = pathParts[pathParts.length - 1];
+                    }
+
+                    // Unterordner für den Artikel im Tag-Verzeichnis erstellen
+                    if (!vfs['/'].children['tags'].children[tagSlug].children[articleDirName]) {
+                        vfs['/'].children['tags'].children[tagSlug].children[articleDirName] = { type: 'dir', children: {} };
+                    }
+                    
+                    // Die Datei (Sprachversion) in den Artikel-Ordner legen
+                    vfs['/'].children['tags'].children[tagSlug].children[articleDirName].children[fileName] = { type: 'file', data: page };
                 });
             }
         });
