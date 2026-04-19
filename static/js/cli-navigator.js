@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (cmd) {
             case 'help':
-                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping';
+                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping, date, passwd';
                 break;
             case 'date':
                 const options = { 
