@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (cmd) {
             case 'help':
-                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping, date, passwd';
+                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping, date, passwd, fortune';
                 break;
             case 'date':
                 const options = { 
@@ -266,6 +266,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 cliOutput.appendChild(pError);
                 scrollToBottom();
                 return;
+            case 'fortune':
+                if (pagesData.length > 0) {
+                    const randomPages = [];
+                    for(let i=0; i<2; i++) {
+                        const randomIdx = Math.floor(Math.random() * pagesData.length);
+                        randomPages.push(pagesData[randomIdx]);
+                    }
+                    response.style.whiteSpace = 'pre-wrap';
+                    response.innerHTML = `🔮 Your fortune today is inspired by DO3EET's blog:\n\n` +
+                                         `> ${randomPages[0].title}: "${randomPages[0].summary.substring(0, 100)}..."\n\n` +
+                                         `> ${randomPages[1].title}: "${randomPages[1].summary.substring(0, 100)}..."`;
+                } else {
+                    response.textContent = "No fortunes found in the data.";
+                }
+                break;
             case 'ping':
                 const host = args[1];
                 if (!host) {
