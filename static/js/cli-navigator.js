@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cliOutput = document.getElementById('cli-output');
     const cliScrollArea = document.getElementById('cli-scroll-area');
     const prompts = document.querySelectorAll('.cli-input-wrapper .prompt-dir');
+    const inputWrapper = document.querySelector('.cli-input-wrapper');
 
     if (!cliNavigator || !cliInput || !cliOutput || !cliScrollArea) return;
 
     let vfs = { '/': { type: 'dir', children: {} } };
     let currentPath = '/';
     let pagesData = [];
+    let currentProcess = null;
 
     // History Logic
     let history = JSON.parse(sessionStorage.getItem('cli_history') || '[]');
@@ -102,6 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     cliNavigator.addEventListener('click', () => cliInput.focus());
 
     window.addEventListener('keydown', (e) => {
+        // Ctrl+C handling
+        if (e.ctrlKey && e.key === 'c' && cliNavigator.classList.contains('is-visible')) {
+            if (currentProcess) {
+                currentProcess.stop();
+                return;
+            }
+        }
+
         if (e.key === '^' || e.key === 'Circumflex' || e.code === 'Backquote') {
             const activeElement = document.activeElement;
             const isInput = activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA' || activeElement.isContentEditable;
@@ -116,6 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cliInput.addEventListener('keydown', (e) => {
+        if (currentProcess) {
+            e.preventDefault();
+            return;
+        }
+
         if (e.key === 'Enter') {
             const command = cliInput.value.trim();
             if (command) {
@@ -157,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentWord = args[args.length - 1];
         const isCommand = args.length === 1;
 
-        const commands = ['help', 'clear', 'exit', 'w', 'who', 'ls', 'cd', 'cat', 'open', 'history'];
+        const commands = ['help', 'clear', 'exit', 'w', 'who', 'ls', 'cd', 'cat', 'open', 'history', 'ping'];
 
         if (isCommand) {
             const matches = commands.filter(c => c.startsWith(currentWord.toLowerCase()));
@@ -204,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return current;
     }
 
-    function processCommand(input) {
+    async function processCommand(input) {
         const line = document.createElement('div');
         line.className = 'cli-line';
         const displayPath = currentPath === '/' ? '~' : currentPath.replace(/^\//, '~/');
@@ -221,7 +236,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (cmd) {
             case 'help':
-                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history';
+                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history, ping';
+                break;
+            case 'ping':
+                const host = args[1];
+                if (!host) {
+                    response.textContent = 'ping: usage: ping host';
+                } else {
+                    inputWrapper.style.display = 'none'; // Verstecke Eingabe während Ping
+                    
+                    let stopped = false;
+                    currentProcess = {
+                        stop: () => {
+                            stopped = true;
+                            currentProcess = null;
+                            inputWrapper.style.display = 'flex';
+                            cliInput.focus();
+                        }
+                    };
+
+                    const isLocal = host.includes('do3eet') || host.includes('localhost') || host.includes('127.0.0.1');
+                    const gateway = "62.155.247.176";
+                    const ip = isLocal ? "2a06:98c1:3120::3" : `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`;
+
+                    const startLine = document.createElement('div');
+                    startLine.className = 'cli-line';
+                    startLine.textContent = `PING ${host} (${ip}) 56(84) bytes of data.`;
+                    cliOutput.appendChild(startLine);
+                    scrollToBottom();
+
+                    const rtts = [];
+                    let seq = 1;
+                    const startTime = performance.now();
+
+                    while (!stopped) {
+                        if (!isLocal) {
+                            await new Promise(r => setTimeout(r, 1000));
+                            if (stopped) break;
+                            const pLine = document.createElement('div');
+                            pLine.className = 'cli-line';
+                            pLine.textContent = `From ${gateway} icmp_seq=${seq} Destination Net Unreachable`;
+                            cliOutput.appendChild(pLine);
+                            scrollToBottom();
+                        } else {
+                            const pStart = performance.now();
+                            try {
+                                await fetch('/', { method: 'HEAD', cache: 'no-cache' });
+                                const pEnd = performance.now();
+                                const rtt = (pEnd - pStart).toFixed(1);
+                                rtts.push(parseFloat(rtt));
+                                const pLine = document.createElement('div');
+                                pLine.className = 'cli-line';
+                                pLine.textContent = `64 bytes from ${host} (${ip}): icmp_seq=${seq} ttl=55 time=${rtt} ms`;
+                                cliOutput.appendChild(pLine);
+                                scrollToBottom();
+                            } catch (e) {
+                                const pLine = document.createElement('div');
+                                pLine.className = 'cli-line';
+                                pLine.textContent = `Request timeout for icmp_seq ${seq}`;
+                                cliOutput.appendChild(pLine);
+                                scrollToBottom();
+                            }
+                            await new Promise(r => setTimeout(r, 1000));
+                        }
+                        seq++;
+                        if (stopped) break;
+                    }
+
+                    const totalTime = (performance.now() - startTime).toFixed(0);
+                    const statsLine = document.createElement('div');
+                    statsLine.className = 'cli-line';
+                    statsLine.style.whiteSpace = 'pre';
+                    statsLine.textContent = `\n^C\n--- ${host} ping statistics ---\n`;
+                    const received = rtts.length;
+                    const loss = isLocal ? (100 - (received / (seq - 1) * 100)).toFixed(0) : 100;
+                    statsLine.textContent += `${seq - 1} packets transmitted, ${received} received, ${loss}% packet loss, time ${totalTime}ms\n`;
+                    if (received > 0) {
+                        const avg = (rtts.reduce((a, b) => a + b, 0) / received).toFixed(3);
+                        const min = Math.min(...rtts).toFixed(3);
+                        const max = Math.max(...rtts).toFixed(3);
+                        statsLine.textContent += `rtt min/avg/max/mdev = ${min}/${avg}/${max}/1.018 ms`;
+                    }
+                    cliOutput.appendChild(statsLine);
+                    scrollToBottom();
+                    return;
+                }
                 break;
             case 'w':
                 response.style.whiteSpace = 'pre';
