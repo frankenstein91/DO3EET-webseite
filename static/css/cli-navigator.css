@@ -1,0 +1,95 @@
+.cli-navigator {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33vh; /* Unteres Drittel */
+    background: rgba(26, 27, 38, 0.98);
+    border-top: 2px solid var(--terminal-border);
+    box-shadow: 0 -10px 30px rgba(0, 255, 65, 0.2);
+    z-index: 999999;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--font-monospace);
+    color: var(--fg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.cli-navigator.is-visible {
+    transform: translateY(0);
+}
+
+.cli-navigator-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 255, 65, 0.05) 50%, transparent 50%);
+    background-size: 100% 4px; /* Scanlines passend zum Rest */
+}
+
+.cli-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5rem;
+    background: #001a00;
+    border-bottom: 1px solid var(--terminal-border);
+    border-top: none;
+    border-radius: 0;
+    padding: 0 1rem;
+    font-size: 0.7rem;
+    pointer-events: none;
+}
+
+.cli-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 1.5rem; /* Platz für den Header */
+    padding-bottom: 1rem;
+}
+
+.cli-output-lines {
+    display: flex;
+    flex-direction: column;
+}
+
+.cli-line {
+    margin-bottom: 0.3rem;
+    word-break: break-all;
+}
+
+.cli-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.cli-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--accent-color);
+    font-family: var(--font-monospace);
+    font-size: 1rem;
+}
+
+/* Scrollbar für die Konsole */
+.cli-output::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cli-output::-webkit-scrollbar-thumb {
+    background: var(--terminal-border);
+    border-radius: 3px;
+}
+
+.cli-output::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}

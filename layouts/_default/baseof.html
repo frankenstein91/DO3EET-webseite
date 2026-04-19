@@ -3,6 +3,8 @@
 
     <head>
         {{- partial "head.html" . -}}
+        <link rel="stylesheet" href="{{ "css/cli-navigator.css" | absURL }}">
+        <script src="{{ "js/cli-navigator.js" | absURL }}" defer></script>
     </head>
 
     <body>
@@ -41,6 +43,7 @@
             </footer>
 
         </div>
+        {{- partial "cli-navigator.html" . -}}
         {{- partial "easteregg.html" . -}}
     </body>
 
