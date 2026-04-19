@@ -1,0 +1,14 @@
+[
+  {{- range $index, $page := .Site.AllPages }}
+  {{- if $index }},{{ end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "url": {{ $page.RelPermalink | jsonify }},
+    "path": {{ with $page.File }}{{ .Path | jsonify }}{{ else }}{{ $page.Path | jsonify }}{{ end }},
+    "summary": {{ $page.Summary | plainify | jsonify }},
+    "kind": {{ $page.Kind | jsonify }},
+    "section": {{ $page.Section | jsonify }},
+    "tags": {{ $page.Params.tags | jsonify }}
+  }
+  {{- end }}
+]

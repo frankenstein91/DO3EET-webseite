@@ -126,6 +126,8 @@ loading = "lazy"
     suffixes = ["xml"]
   [mediaTypes."application/atom+xml"]
     suffixes = ["xml"]
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
 
 [outputFormats]
   [outputFormats.WIFI_RSS]
@@ -137,9 +139,14 @@ loading = "lazy"
     mediaType = "application/atom+xml"
     baseName = "atom"
     isPlainText = false
+  [outputFormats.CLI_INDEX]
+    mediaType = "application/json"
+    baseName = "cli-index"
+    isPlainText = true
+    notAlternative = true
 
 [outputs]
-home = ['html', 'rss', 'atom']
+home = ['html', 'rss', 'atom', 'CLI_INDEX']
 section = ['html', 'rss', 'atom']
 page = ['html', 'WIFI_RSS']
 
