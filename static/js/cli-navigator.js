@@ -11,6 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPath = '/';
     let pagesData = [];
 
+    // History Logic
+    let history = JSON.parse(sessionStorage.getItem('cli_history') || '[]');
+    let historyIndex = -1;
+    let tempInput = '';
+
+    const saveHistory = (cmd) => {
+        if (cmd && history[history.length - 1] !== cmd) {
+            history.push(cmd);
+            if (history.length > 50) history.shift();
+            sessionStorage.setItem('cli_history', JSON.stringify(history));
+        }
+        historyIndex = -1;
+    };
+
+    const clearHistory = () => {
+        history = [];
+        sessionStorage.removeItem('cli_history');
+        historyIndex = -1;
+    };
+
+    // JSON laden und VFS aufbauen
     fetch('/cli-index.json')
         .then(response => response.json())
         .then(data => {
@@ -20,15 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(err => console.error('Failed to load CLI index:', err));
 
     function buildVFS(data) {
-        // Zuerst die tatsächlichen Dateipfade anlegen
         data.forEach(page => {
             const parts = (page.path || "").split('/').filter(p => p);
             let current = vfs['/'];
             
             parts.forEach((part, index) => {
                 const isLast = index === parts.length - 1;
-                // Wenn es eine Datei (kind='page') ist, wird sie als Datei angelegt
-                // Alles andere (sections, taxonomies, terms) wird als Ordner behandelt
                 if (isLast && page.kind === 'page') {
                     current.children[part] = { type: 'file', data: page };
                 } else {
@@ -36,13 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         current.children[part] = { type: 'dir', children: {} };
                     }
                     current = current.children[part];
-                    // Wenn dieser Ordner Metadaten hat (z.B. _index.md), speichern wir sie
                     if (isLast) current.data = page;
                 }
             });
         });
 
-        // Dann virtuelle Tags-Ordner bevölkern
         if (!vfs['/'].children['tags']) {
             vfs['/'].children['tags'] = { type: 'dir', children: {} };
         }
@@ -54,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!vfs['/'].children['tags'].children[tagSlug]) {
                         vfs['/'].children['tags'].children[tagSlug] = { type: 'dir', children: {} };
                     }
-                    // Den Post im Tag-Ordner verlinken
                     const fileName = (page.path || "").split('/').pop() || page.title;
                     vfs['/'].children['tags'].children[tagSlug].children[fileName] = { type: 'file', data: page };
                 });
@@ -103,10 +118,77 @@ document.addEventListener('DOMContentLoaded', () => {
     cliInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             const command = cliInput.value.trim();
-            if (command) processCommand(command);
+            if (command) {
+                saveHistory(command);
+                processCommand(command);
+            }
             cliInput.value = '';
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (history.length > 0) {
+                if (historyIndex === -1) {
+                    tempInput = cliInput.value;
+                    historyIndex = history.length - 1;
+                } else if (historyIndex > 0) {
+                    historyIndex--;
+                }
+                cliInput.value = history[historyIndex];
+            }
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (historyIndex !== -1) {
+                if (historyIndex < history.length - 1) {
+                    historyIndex++;
+                    cliInput.value = history[historyIndex];
+                } else {
+                    historyIndex = -1;
+                    cliInput.value = tempInput;
+                }
+            }
+        } else if (e.key === 'Tab') {
+            e.preventDefault();
+            handleTabCompletion();
         }
     });
+
+    function handleTabCompletion() {
+        const input = cliInput.value;
+        const args = input.split(/\s+/);
+        const currentWord = args[args.length - 1];
+        const isCommand = args.length === 1;
+
+        const commands = ['help', 'clear', 'exit', 'w', 'who', 'ls', 'cd', 'cat', 'open', 'history'];
+
+        if (isCommand) {
+            const matches = commands.filter(c => c.startsWith(currentWord.toLowerCase()));
+            if (matches.length === 1) {
+                cliInput.value = matches[0] + ' ';
+            } else if (matches.length > 1) {
+                showCompletions(matches);
+            }
+        } else {
+            const dir = getDir(currentPath);
+            if (!dir) return;
+            const items = Object.keys(dir.children);
+            const matches = items.filter(item => item.startsWith(currentWord));
+            
+            if (matches.length === 1) {
+                const item = dir.children[matches[0]];
+                cliInput.value = input.substring(0, input.lastIndexOf(currentWord)) + matches[0] + (item.type === 'dir' ? '/' : ' ');
+            } else if (matches.length > 1) {
+                showCompletions(matches);
+            }
+        }
+    }
+
+    function showCompletions(matches) {
+        const line = document.createElement('div');
+        line.className = 'cli-line';
+        line.style.color = 'var(--off-fg)';
+        line.textContent = matches.join('  ');
+        cliOutput.appendChild(line);
+        scrollToBottom();
+    }
 
     function getDir(path) {
         if (path === '/') return vfs['/'];
@@ -129,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         line.innerHTML = `<span class="terminal-prompt"><span class="prompt-user">Guest@do3eet.pages.dev</span>:<span class="prompt-dir">${displayPath}</span>$</span> ${input}`;
         cliOutput.appendChild(line);
 
-        const args = input.split(/\s+/);
+        const args = input.trim().split(/\s+/);
         const cmd = args[0].toLowerCase();
         const response = document.createElement('div');
         response.className = 'cli-line';
@@ -139,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (cmd) {
             case 'help':
-                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open';
+                response.textContent = 'Available commands: help, clear, exit, w, who, ls, cd, cat, open, history';
                 break;
             case 'w':
                 response.style.whiteSpace = 'pre';
@@ -223,6 +305,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 } else {
                     response.textContent = `open: ${fileToOpen}: No such file or data`;
+                }
+                break;
+            case 'history':
+                if (args[1] === '-c') {
+                    clearHistory();
+                    response.textContent = 'History cleared.';
+                } else {
+                    response.style.whiteSpace = 'pre';
+                    response.textContent = history.map((c, i) => `${i + 1}  ${c}`).join('\n');
                 }
                 break;
             case 'clear':
