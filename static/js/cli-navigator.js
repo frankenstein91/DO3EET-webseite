@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleCLI = () => {
         const isVisible = cliNavigator.classList.toggle('is-visible');
         cliNavigator.setAttribute('aria-hidden', !isVisible);
+        cliInput.setAttribute('tabindex', isVisible ? '0' : '-1');
         if (isVisible) {
             setTimeout(() => {
                 cliInput.focus();
