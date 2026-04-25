@@ -40,6 +40,11 @@ In meinen Apps wähle ich jetzt einfach den Eingang **"ME6S Noise Canceling Micr
 ### 3. Die Hardware-Falle
 Ein klassischer Anfängerfehler bei Kondensatormikros: Das ME6S ist ein **Side-Address**-Mikrofon. Man darf nicht von oben hineinsprechen, sondern muss das Logo direkt anschauen. Klingt logisch, macht aber den Unterschied zwischen "Ich hör dich kaum" und "Studio-Qualität".
 
+### Update: WirePlumber 0.5 und dynamische Filter
+Ich hatte anfangs versucht, die Rauschunterdrückung über ein Lua-Skript in WirePlumber dynamisch laden zu lassen, sodass das virtuelle Mikrofon nur existiert, wenn das ME6S angesteckt ist. **Achtung:** WirePlumber 0.5 unterstützt diese alten Lua-Skripte nicht mehr!
+
+Die robusteste Lösung ist es, die Filter-Chain als statische PipeWire-Konfiguration (in `~/.config/pipewire/pipewire.conf.d/`) anzulegen. Durch Hinzufügen des Flags `nofail` bleibt die Konfiguration fehlerfrei, auch wenn das Mikrofon abgezogen ist. Moderne Desktop-Umgebungen verstecken "tote" Audio-Quellen ohnehin automatisch.
+
 ## Fazit
 Mit ein wenig PipeWire-Magie und der richtigen Filter-Konfiguration klingt das 30€-Mikrofon jetzt wie ein deutlich teureres Setup. Linux-Audio ist im Jahr 2026 dank PipeWire wirklich ein Traum geworden – wenn man weiß, an welchen Schrauben man drehen muss.
 
