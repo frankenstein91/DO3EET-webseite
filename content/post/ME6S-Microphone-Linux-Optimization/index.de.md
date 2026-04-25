@@ -20,7 +20,7 @@ tags = [
 
 Wer kennt es nicht? Neue Hardware kommt an, man schließt sie an und unter Linux ist erst einmal alles... naja, "suboptimal". So ging es mir heute mit meinem neuen **ME6S USB-Kondensatormikrofon**. 
 
-Das Gerät sieht super aus, aber out-of-the-box war es viel zu leise und hat ordentlich gerauscht. Hier ist der Log, wie ich das Problem (mit Hilfe meines digitalen Assistenten) gelöst habe.
+Das Gerät sieht super aus, aber out-of-the-box war es viel zu leise und hat ordentlich gerauscht. Hier ist der Log, wie ich das Problem gelöst habe.
 
 ## Das Problem: Zu leise, zu viel Rauschen
 USB-Mikrofone wie das ME6S neigen dazu, unter Linux mit 100% Pegel immer noch sehr dünn zu klingen. Erhöht man den Pegel digital, steigt sofort das Grundrauschen.
@@ -32,8 +32,8 @@ Nach einigen Testaufnahmen (`sox stats` ist hier ein Lebensretter!) haben wir fe
 
 Damit ich das nicht nach jedem Neustart manuell machen muss, sorgt **WirePlumber** jetzt dafür, dass dieser Wert dauerhaft gespeichert bleibt.
 
-### 2. KI gegen das Rauschen (RNNoise)
-Da ein 160% Boost auch das Rauschen verstärkt, habe ich das Plugin `noise-suppression-for-voice` installiert. Über eine PipeWire **Filter-Chain** wird nun ein virtuelles Mikrofon erzeugt, das alle Hintergrundgeräusche per KI wegfiltert.
+### 2. Rauschunterdrückung (RNNoise)
+Da ein 160% Boost auch das Rauschen verstärkt, habe ich das Plugin `noise-suppression-for-voice` installiert. Über eine PipeWire **Filter-Chain** wird nun ein virtuelles Mikrofon erzeugt, das alle Hintergrundgeräusche automatisch wegfiltert.
 
 In meinen Apps wähle ich jetzt einfach den Eingang **"ME6S Noise Canceling Microphone"** aus. In den Sprechpausen herrscht nun absolute Stille (-244 dB laut Statistik!).
 
@@ -41,7 +41,7 @@ In meinen Apps wähle ich jetzt einfach den Eingang **"ME6S Noise Canceling Micr
 Ein klassischer Anfängerfehler bei Kondensatormikros: Das ME6S ist ein **Side-Address**-Mikrofon. Man darf nicht von oben hineinsprechen, sondern muss das Logo direkt anschauen. Klingt logisch, macht aber den Unterschied zwischen "Ich hör dich kaum" und "Studio-Qualität".
 
 ## Fazit
-Mit ein wenig PipeWire-Magie und KI-Unterstützung klingt das 30€-Mikrofon jetzt wie ein deutlich teureres Setup. Linux-Audio ist im Jahr 2026 dank PipeWire wirklich ein Traum geworden – wenn man weiß, an welchen Schrauben man drehen muss.
+Mit ein wenig PipeWire-Magie und der richtigen Filter-Konfiguration klingt das 30€-Mikrofon jetzt wie ein deutlich teureres Setup. Linux-Audio ist im Jahr 2026 dank PipeWire wirklich ein Traum geworden – wenn man weiß, an welchen Schrauben man drehen muss.
 
 ```bash
 [frank@do3eet-terminal ~]$ arecord -vv /dev/null
