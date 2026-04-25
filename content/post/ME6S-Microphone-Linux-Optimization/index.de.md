@@ -37,6 +37,15 @@ Da ein 160% Boost auch das Rauschen verstärkt, habe ich das Plugin `noise-suppr
 
 In meinen Apps wähle ich jetzt einfach den Eingang **"ME6S Noise Canceling Microphone"** aus. In den Sprechpausen herrscht nun absolute Stille (-244 dB laut Statistik!).
 
+### 2.1 Der "Studio-Schliff" (Equalizer)
+Um die Stimme noch professioneller klingen zu lassen, habe ich die Filter-Chain um einen Equalizer erweitert. Ein einfacher 4-Band-EQ bewirkt Wunder:
+- **Low Cut (80 Hz):** Entfernt tieffrequentes Rumpeln.
+- **Bass Boost (150 Hz):** Gibt der Stimme mehr "Körper" (Radio-Effekt).
+- **Presence Boost (3 kHz):** Verbessert die Sprachverständlichkeit deutlich.
+- **Air Shelf (10 kHz):** Sorgt für ein seidiges Finish in den Höhen.
+
+Das Ergebnis ist ein präsentes, warmes Signal, das sich deutlich von Standard-Headsets abhebt.
+
 ### 3. Die Hardware-Falle
 Ein klassischer Anfängerfehler bei Kondensatormikros: Das ME6S ist ein **Side-Address**-Mikrofon. Man darf nicht von oben hineinsprechen, sondern muss das Logo direkt anschauen. Klingt logisch, macht aber den Unterschied zwischen "Ich hör dich kaum" und "Studio-Qualität".
 
