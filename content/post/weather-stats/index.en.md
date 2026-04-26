@@ -13,6 +13,8 @@ tags = [
 
 In this post, I take a look at the collected data from my weather station. I have cleaned the CSV exports and transferred them into a SQLite database to create comparative statistics and charts.
 
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/PXL_20220915_154306128.jpg" alt="The town hall in Grimma with light cloud cover" width="1000" height="1778" >}}
+
 It is amazing what you can see when you look at the data over several years (2022 to present). *We are again a bit nerdy on the terminal, using Python and Matplotlib for the visualization.*
 
 <!--more-->
