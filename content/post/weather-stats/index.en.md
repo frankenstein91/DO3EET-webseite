@@ -31,7 +31,14 @@ To provide a better overview of the trends, this summary shows the progression o
 ![Yearly Overview Avg](year_overview_avg.svg)
 ![Yearly Overview Min](year_overview_min.svg)
 
-## Monthly Detailed Views
+## Rainfall Comparison
+
+Besides temperature, rainfall is one of the most important parameters. The following diagrams show the total monthly amount and the number of days it rained (at least 0.1 mm).
+
+![Monthly Rainfall](year_overview_rain_total.svg)
+![Number of Rainy Days](year_overview_rainy_days.svg)
+
+## Monthly Detailed Views (Temperature)
 
 ### January
 ![January Max](temp_max_01_januar.svg)

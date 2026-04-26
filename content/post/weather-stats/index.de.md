@@ -31,7 +31,14 @@ Um einen besseren Überblick über die Trends zu bekommen, zeigt diese Übersich
 ![Jahresübersicht Durchschnitt](year_overview_avg.svg)
 ![Jahresübersicht Tiefstwerte](year_overview_min.svg)
 
-## Monatliche Detailansichten
+## Niederschlag im Vergleich
+
+Neben der Temperatur ist der Regen eine der wichtigsten Kenngrößen. Die folgenden Diagramme zeigen die monatliche Gesamtmenge sowie die Anzahl der Tage, an denen es geregnet hat (mindestens 0,1 mm).
+
+![Monatliche Regenmenge](year_overview_rain_total.svg)
+![Anzahl der Regentage](year_overview_rainy_days.svg)
+
+## Monatliche Detailansichten (Temperatur)
 
 ### Januar
 ![Januar Höchstwerte](temp_max_01_januar.svg)
