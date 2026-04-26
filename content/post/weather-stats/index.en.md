@@ -1,6 +1,6 @@
 +++
 title = 'Weather Statistics of my Station'
-date = "2026-04-26T14:29:54+02:00"
+date = "2026-04-26T15:16:51+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
