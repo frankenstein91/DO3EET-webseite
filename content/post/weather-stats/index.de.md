@@ -33,7 +33,7 @@ Um einen besseren Überblick über die Trends zu bekommen, zeigt diese Übersich
 
 In meiner Datenbank finden sich interessante Extremwerte: Der bisher **heißeste Tag** war der **02.07.2025 mit stolzen 36,2 °C**. Auf der anderen Seite steht der **11.01.2026** als kältester Rekordhalter mit frostigen **-17,7 °C**.
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/panoramio-47372951.jpg" alt="Der Lutherweg im Winter – passend zu den frostigen Rekordtemperaturen" width="1000" height="1494" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/panoramio-47372951.jpg" alt="Der Lutherweg im Winter – passend zu den frostigen Rekordtemperaturen" width="250" height="374" >}}
 
 ![Jahresübersicht Höchstwerte](year_overview_max.svg)
 
