@@ -13,7 +13,7 @@ tags = [
 
 In diesem Beitrag werfe ich einen Blick auf die gesammelten Daten meiner Wetterstation. Ich habe die CSV-Exporte bereinigt und in eine SQLite-Datenbank überführt, um vergleichende Statistiken und Diagramme zu erstellen.
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/PXL_20220915_154306128.jpg" alt="Das Rathaus in Grimma mit leichter Bewölkung" width="1000" height="1778" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/PXL_20220915_154306128.jpg" alt="Das Rathaus in Grimma mit leichter Bewölkung" width="250" height="445" >}}
 
 Es ist schon erstaunlich, was man so alles sieht, wenn man die Daten über mehrere Jahre (2022 bis heute) hinweg betrachtet. *Wir sind wieder etwas nerdig unterwegs und nutzen Python/Matplotlib für die Visualisierung.*
 

@@ -33,7 +33,7 @@ To provide a better overview of the trends, this summary shows the progression o
 
 My database contains some interesting extremes: The **hottest day** so far was **July 2nd, 2025, with a solid 36.2 °C**. On the other hand, **January 11th, 2026**, holds the cold record with a frosty **-17.7 °C**.
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/panoramio-47372951.jpg" alt="The Lutherweg in winter – matching the frosty record temperatures" width="1000" height="1494" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/weather-stats/panoramio-47372951.jpg" alt="The Lutherweg in winter – matching the frosty record temperatures" width="250" height="374" >}}
 
 ![Yearly Overview Max](year_overview_max.svg)
 
