@@ -12,7 +12,7 @@ tags = [
 +++
 Okay Leute, grabt euch nen Tee oder Kakao, denn ich muss euch was erzählen. Der Winter in Otaru ist straight up kein Joke. Das Wetter da flexed richtig hart. Alles ist weiß, Schnee ohne Ende, total die Aesthetic für Instagram, aber halt auch saukalt. So kalt, dass dir die Nase abfriert, wenn du nur kurz rausguckst. Normalerweise ist der Tempel da oben am Hang der chilligste Ort ever. Totale Stille, nur ab und zu läutet ne Glocke und der Wind pfeift durch die alten Balken. Richtig zen, fast schon spirituell. Aber heute? Vergiss es. Kompletter Chaos-Modus. Da war nix mit innerer Mitte finden.
 <!--more-->
-![Otaru Winter](fokus_stack_optimal.webp)
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Detektiv1/fokus_stack_optimal.webp" alt="Otaru Winter" width="1000" height="1000" >}}
 
 # Der Tatort: Komplett sus und absolut impossible
 

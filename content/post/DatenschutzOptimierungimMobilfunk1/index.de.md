@@ -24,7 +24,7 @@ Der Anbieter stellt mit seiner Platform [consenthub](https://consenthub.utiq.com
 
 Für Leser die gerade nicht das Smartphone zum lesen nutzen... hier nochmal der Link:
 
-![QR Code for https://consenthub.utiq.com/](qrcode.png)
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/DatenschutzOptimierungimMobilfunk1/qrcode.png" alt="QR Code for https://consenthub.utiq.com/" width="300" height="300" >}}
 
 Und am Besten gleich für nächstes Jahr einen Termin in den Kalender schreiben... [Kalenderdatei](UtiqSperreErneuern.ics)
 
