@@ -47,8 +47,6 @@ Obwohl das Teleskop noch auf dem Weg ist, habe ich heute schon die ersten Softwa
 pikaur -S starnet2-bin graxpert-bin siril
 ```
 
-In diesem Beitrag werde ich meine weiteren Gedanken, den Lieferprozess und später natürlich auch die ersten Astrofotografie-Ergebnisse mit diesem kompakten Gerät dokumentieren.
-
 ## Abschied von alten Wegbegleitern
 
 Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaffen. Ich plane, meine zwei alten Teleskope aus Kindertagen an die Kinder meiner Cousine abzugeben. So verstauben sie nicht länger ungenutzt im Schrank und können hoffentlich eine neue Generation für die Astronomie und den Blick in die Sterne begeistern.

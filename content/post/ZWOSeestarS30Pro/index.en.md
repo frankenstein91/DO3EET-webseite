@@ -47,8 +47,6 @@ Although the telescope is still on its way, today I already installed the first 
 pikaur -S starnet2-bin graxpert-bin siril
 ```
 
-In this post, I will document my initial thoughts, the delivery process, and later, of course, the first astrophotography results with this compact device.
-
 ## Saying Goodbye to Old Companions
 
 With the arrival of the new smart telescope, it is also time to clear some space. I plan to pass down my two old telescopes from my childhood days to my cousin's children. This way, they won't gather dust in the closet anymore and will hopefully inspire a new generation to look up at the stars and explore astronomy.
