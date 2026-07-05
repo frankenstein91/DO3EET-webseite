@@ -24,7 +24,7 @@ Ich schreibe diesen Beitrag über mehrere Tage hinweg tagebuchartig mit und werd
 Der Impuls für den Kauf entstand auf der diesjährigen [HAM Radio Friedrichshafen](https://www.hamradio-friedrichshafen.de/). Neben der klassischen Amateurfunk-Messe gab es dort auch eine parallel stattfindende Astromesse, auf der ich das Smart-Teleskop zum ersten Mal live sehen und bewundern konnte.
 
 ### 4. Juli 2026: Die Bestellung
-Das Smart-Teleskop wurde über Bresser bestellt. Um ehrlich zu sein, hat auch der Preis eine Rolle gespielt: Ich konnte einen 15 % Messe-Gutschein nutzen, was die Entscheidung deutlich erleichtert hat. Eigentlich wollte ich den Kauf über meine Crypto.com Kreditkarte abwickeln, um zusätzlich noch die 2 % Cashback mitzunehmen. Da jedoch Wochenende war, war eine rechtzeitige Überweisung zur Aufladung der Karte nicht möglich. Weil ich dort nicht genug flüssiges Guthaben hatte, musste ich letztendlich auf eine ganz normale Kreditkarte zurückgreifen.
+Das Smart-Teleskop wurde über Bresser bestellt – der Endpreis lag dank eines 15 % Messe-Gutscheins bei 643,55 € inklusive DHL-Versand. Eigentlich wollte ich den Kauf über meine Crypto.com Kreditkarte abwickeln, um zusätzlich noch die 2 % Cashback mitzunehmen. Da jedoch Wochenende war, war eine rechtzeitige Überweisung zur Aufladung der Karte nicht möglich. Weil ich dort nicht genug flüssiges Guthaben hatte, musste ich letztendlich auf eine ganz normale Kreditkarte zurückgreifen.
 
 #### Warum das Seestar S30 Pro?
 Der erste und für mich entscheidende Punkt war, dass das Seestar S30 Pro nativ mit **FITS-Dateien** arbeitet – im Gegensatz zu den proprietären **NEF-Dateien** (Nikon Electronic Format) meiner Nikon D5660. 

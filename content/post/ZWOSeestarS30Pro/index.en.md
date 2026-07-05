@@ -24,7 +24,7 @@ I am writing this post diary-style over several days and will only publish it on
 The inspiration for this purchase came during my visit to the [HAM Radio Friedrichshafen](https://www.hamradio-friedrichshafen.de/) exhibition. Alongside the traditional amateur radio event, there was a parallel astronomy exhibition where I saw the smart telescope in person for the first time.
 
 ### July 4, 2026: The Order
-The smart telescope was ordered via Bresser. To be honest, the price also played a role: I was able to use a 15% exhibition discount coupon, which made the decision much easier. I actually wanted to pay using my Crypto.com credit card to benefit from the 2% cashback. However, since it was the weekend, a bank transfer to top up the card wasn't possible in time. Because I didn't have enough liquid funds on it, I had to resort to a standard credit card in the end.
+The smart telescope was ordered via Bresser – thanks to a 15% exhibition discount coupon, the final price was €643.55 including DHL shipping. I actually wanted to pay using my Crypto.com credit card to benefit from the 2% cashback. However, since it was the weekend, a bank transfer to top up the card wasn't possible in time. Because I didn't have enough liquid funds on it, I had to resort to a standard credit card in the end.
 
 #### Why the Seestar S30 Pro?
 The first and most crucial point for me was that the Seestar S30 Pro works natively with **FITS files** – unlike the proprietary **NEF files** (Nikon Electronic Format) of my Nikon D5660.
