@@ -41,7 +41,7 @@ Hier sind die wichtigsten Unterschiede und Vorteile von FITS im astrofotografisc
 *   **Mosaik-Modus (Milchstraßen-Stitching)**: Ein cooles Software-Feature ist der Mosaik-Modus, mit dem sich größere Himmelsareale automatisch abrasten und als Mosaik zusammenfügen (stichen) lassen. Das ist besonders für große Nebelkomplexe oder Milchstraßen-Panoramen extrem praktisch, da der Sensor ansonsten ein relativ begrenztes Sichtfeld (FOV) hat.
 
 ### 5. Juli 2026: Software-Vorbereitungen
-Obwohl das Teleskop noch auf dem Weg ist, habe ich heute schon die ersten Softwarepakete für die spätere Astrofotografie-Bildbearbeitung installiert. Über den AUR-Helper `pikaur`[^2] wurden `siril` (für Stacking und Bearbeitung), `graxpert-bin` (für die Gradientenentfernung) und `starnet2-bin` (für die Sternenentfernung) auf meinem System eingerichtet:
+Obwohl das Teleskop noch auf dem Weg ist, habe ich heute schon die ersten Softwarepakete für die spätere Astrofotografie-Bildbearbeitung installiert. Über den AUR-Helper `pikaur`[^2] wurden `siril`[^3] (für Stacking und Bearbeitung), `graxpert-bin`[^4] (für die Gradientenentfernung) und `starnet2-bin`[^5] (für die Sternenentfernung - mittlerweile leider closed source) auf meinem System eingerichtet:
 
 ```bash
 pikaur -S starnet2-bin graxpert-bin siril
@@ -57,3 +57,6 @@ Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaf
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)
 [^2]: [GitHub: actionless/pikaur](https://github.com/actionless/pikaur)
+[^3]: [Siril](https://siril.org/)
+[^4]: [GraXpert](https://graxpert.com/)
+[^5]: [StarNet](https://starnetastro.com/cli-tools/starnet/) (nicht mehr Open Source)

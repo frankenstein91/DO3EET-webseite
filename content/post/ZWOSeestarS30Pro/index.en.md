@@ -41,7 +41,7 @@ Here are the key differences and benefits of FITS in daily astrophotography:
 *   **Mosaic Mode (Milky Way Stitching)**: A great software feature is the mosaic mode, which automatically sweeps larger areas of the sky and stitches them together as a mosaic. This is extremely useful for large nebula complexes or Milky Way panoramas, since the sensor otherwise has a relatively narrow field of view (FOV).
 
 ### July 5, 2026: Software Preparations
-Although the telescope is still on its way, today I already installed the first software packages required for future astrophotography image processing on my Linux system. Using the AUR helper `pikaur`[^2], I set up `siril` (for stacking and basic processing), `graxpert-bin` (for gradient removal), and `starnet2-bin` (for star removal):
+Although the telescope is still on its way, today I already installed the first software packages required for future astrophotography image processing on my Linux system. Using the AUR helper `pikaur`[^2], I set up `siril`[^3] (for stacking and basic processing), `graxpert-bin`[^4] (for gradient removal), and `starnet2-bin`[^5] (for star removal - which is unfortunately closed source now):
 
 ```bash
 pikaur -S starnet2-bin graxpert-bin siril
@@ -57,3 +57,6 @@ With the arrival of the new smart telescope, it is also time to clear some space
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)
 [^2]: [GitHub: actionless/pikaur](https://github.com/actionless/pikaur)
+[^3]: [Siril](https://siril.org/)
+[^4]: [GraXpert](https://graxpert.com/)
+[^5]: [StarNet](https://starnetastro.com/cli-tools/starnet/) (no longer open source)
