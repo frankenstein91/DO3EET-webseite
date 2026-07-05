@@ -47,6 +47,10 @@ Obwohl das Teleskop noch auf dem Weg ist, habe ich heute schon die ersten Softwa
 pikaur -S starnet2-bin graxpert-bin siril
 ```
 
+Anschließend habe ich in den Einstellungen von Siril direkt die Pfade zu den beiden externen Programmen hinterlegt, damit Siril diese für die automatische Bearbeitung aufrufen kann:
+*   StarNet2: `/usr/bin/starnet2`
+*   GraXpert: `/usr/bin/graxpert-bin`
+
 ## Abschied von alten Wegbegleitern
 
 Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaffen. Ich plane, meine zwei alten Teleskope aus Kindertagen an die Kinder meiner Cousine abzugeben. So verstauben sie nicht länger ungenutzt im Schrank und können hoffentlich eine neue Generation für die Astronomie und den Blick in die Sterne begeistern.
