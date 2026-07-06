@@ -19,3 +19,8 @@ DO3EET_keyslips.html
 # Aber Favicons und SVGs erlauben wir weiterhin, falls nötig
 !favicon.ico
 !*.svg
+
+# Astro-Dateien (FITS)
+*.fits
+*.fit
+*.fts

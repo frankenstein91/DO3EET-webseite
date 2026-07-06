@@ -50,4 +50,18 @@ if [ -n "$NEW_POSTS" ]; then
     done
 fi
 
+# 3. VERHINDERE FITS-DATEIEN (Astro-Rohdaten)
+FITS_EXTENSIONS="fits|fit|fts"
+STAGED_FITS=$(git diff --cached --name-only --diff-filter=A | grep -Ei "\.($FITS_EXTENSIONS)$")
+
+if [ -n "$STAGED_FITS" ]; then
+    echo -e "\033[0;31m[ERROR]\033[0m Du versuchst, FITS-Dateien zu committen:"
+    echo "$STAGED_FITS" | sed 's/^/  - /'
+    echo ""
+    echo "FITS-Dateien (Astro-Rohdaten) sind zu groß für GitHub und dürfen nicht committet werden!"
+    echo "Bitte entferne sie aus dem Staging (git reset <datei>)."
+    echo ""
+    exit 1
+fi
+
 exit 0
