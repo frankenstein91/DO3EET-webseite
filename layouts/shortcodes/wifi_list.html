@@ -143,7 +143,7 @@
 </style>
 
 <div class="wifi-header">
-    <span><strong>{{ len $.Site.Data.wifi_hotspots }}</strong> Netzwerke in der Datenbank</span>
+    <span><strong>{{ len hugo.Data.wifi_hotspots.hotspots }}</strong> Netzwerke in der Datenbank</span>
     {{ with .Page.OutputFormats.Get "WIFI_RSS" }}
     <a href="{{ .Permalink }}" class="rss-btn" target="_blank">
         <i class="fa-solid fa-rss"></i> Feed abonnieren
@@ -174,7 +174,7 @@
         </thead>
         <tbody>
             {{/* Wir sortieren nach ID absteigend, damit neue Einträge oben stehen */}}
-            {{ range sort $.Site.Data.wifi_hotspots "id" "desc" }}
+            {{ range sort hugo.Data.wifi_hotspots.hotspots "id" "desc" }}
             <tr id="wifi-{{ .id }}">
                 <td>
                     <strong>{{ .description }}</strong><br>

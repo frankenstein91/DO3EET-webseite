@@ -1,5 +1,4 @@
 <p>
-    {{ $siteLanguages := .Site.Languages }}
     {{ $pageLang := .Page.Lang }}
     
     {{ $currentPage := . }}
@@ -11,21 +10,16 @@
     {{ end }}
     
     {{ range .Page.AllTranslations }}
-      {{ $translation := .}}
-      {{ range $siteLanguages }}
-          {{ if eq $translation.Lang .Lang }}
-            {{ if eq $pageLang .Lang }}
-                <br/><span class="active">
-                    <span class="sr-only">{{ T "lang_active" }} {{ .LanguageName }}.</span>
-                    <span aria-hidden="true">$ echo $LANG<br/><b>{{ .LanguageName }}</b></span>
-                </span><br/>
+      {{ if eq $pageLang .Lang }}
+          <br/><span class="active">
+              <span class="sr-only">{{ T "lang_active" }} {{ .Language.Label }}.</span>
+              <span aria-hidden="true">$ echo $LANG<br/><b>{{ .Language.Label }}</b></span>
+          </span><br/>
 
-            {{ else }}
-                <br/><a href="{{ $translation.Permalink }}" aria-label="{{ T "lang_switch" }}">
-                    <span aria-hidden="true">export LANG={{ .LanguageName }}; ./{{ $pageName }}</span>
-                </a><br/>
-            {{ end }}
-          {{ end }}
+      {{ else }}
+          <br/><a href="{{ .Permalink }}" aria-label="{{ T "lang_switch" }}">
+              <span aria-hidden="true">export LANG={{ .Language.Label }}; ./{{ $pageName }}</span>
+          </a><br/>
       {{ end }}
     {{ end }}
 </p>

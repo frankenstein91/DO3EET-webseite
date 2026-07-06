@@ -134,7 +134,7 @@ def export_for_hugo(data):
     os.makedirs(os.path.dirname(EXPORT_FILE), exist_ok=True)
     
     with open(EXPORT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(export_list, f, indent=2, ensure_ascii=False)
+        json.dump({"hotspots": export_list}, f, indent=2, ensure_ascii=False)
         
     print(f"🚀 Exportiert für Hugo: {EXPORT_FILE} ({len(export_list)} Einträge)")
 
