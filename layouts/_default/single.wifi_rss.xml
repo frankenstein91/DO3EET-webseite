@@ -5,14 +5,14 @@
     <link>{{ .Permalink }}</link>
     <description>Neue Hotspots und OpenRoaming Standorte von DO3EET</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>{{ site.Language.LanguageCode }}</language>
+    <language>{{ site.Language.Locale }}</language>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
     {{- with .OutputFormats.Get "WIFI_RSS" }}
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
     {{- end }}
     
     {{/* Iteriere über die JSON Daten, sortiert nach ID absteigend (neueste zuerst) */}}
-    {{ range sort $.Site.Data.wifi_hotspots "id" "desc" }}
+    {{ range sort hugo.Data.wifi_hotspots.hotspots "id" "desc" }}
     <item>
       <title>WLAN: {{ .ssid }} ({{ .description }})</title>
       <link>{{ $.Permalink }}#wifi-{{ .id }}</link>

@@ -1,5 +1,5 @@
 baseURL = 'https://do3eet.pages.dev'
-languageCode = 'de-DE'
+locale = 'de-DE'
 defaultContentLanguage = 'de'
 i18nDir = 'i18n'
 enableMissingTranslationPlaceholders = true
@@ -148,11 +148,11 @@ name = "Frank Tornack"
 
 [languages]
   [languages.de]
-    languageName = "Deutsch"
+    label = "Deutsch"
     weight = 10
 
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 20
 
 
