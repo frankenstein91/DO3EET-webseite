@@ -51,8 +51,10 @@ Anschließend habe ich in den Einstellungen von Siril direkt die Pfade zu den be
 *   StarNet2: `/usr/bin/starnet2`
 *   GraXpert: `/usr/bin/graxpert-bin`
 
-### 7. Juli 2026: Versand erfolgt
-Um 10:10 Uhr kam die Nachricht, dass das Paket in den Versand gegangen ist. Eine DHL-Sendungsnummer liegt zwar schon vor, das DHL-Tracking zeigt unter dieser Nummer allerdings derzeit noch keinerlei Informationen an.
+### 7. Juli 2026: Versand und FITS-Viewer-Integration
+*   **Versand erfolgt**: Um 10:10 Uhr kam die Nachricht, dass das Paket in den Versand gegangen ist. Eine DHL-Sendungsnummer liegt zwar schon vor, das DHL-Tracking zeigt unter dieser Nummer allerdings derzeit noch keinerlei Informationen an.
+*   **FITS-Viewer integriert**: Um nach der Lieferung des Teleskops direkt richtig loslegen zu können, habe ich bereits einen FITS-Viewer in meine Website eingebaut. Ein großes Dankeschön geht an Reddit-User `u/sjmoodyiii` ([Link zum Beitrag](https://www.reddit.com/r/seestar/comments/1cg0vbe/comment/l1sof20/)), der freundlicherweise Beispieldateien im Internet hostet und mir so das Testen ermöglicht hat.
+
 
 ## Abschied von alten Wegbegleitern
 

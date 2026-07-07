@@ -51,8 +51,10 @@ Afterward, I configured the paths to both external programs directly in Siril's 
 *   StarNet2: `/usr/bin/starnet2`
 *   GraXpert: `/usr/bin/graxpert-bin`
 
-### July 7, 2026: Shipped
-At 10:10 AM, notification was received that the package has shipped. Although a DHL tracking number is already available, the tracking page does not show any information yet.
+### July 7, 2026: Shipped & FITS Viewer Integration
+*   **Package Shipped**: At 10:10 AM, notification was received that the package has shipped. Although a DHL tracking number is already available, the tracking page does not show any information yet.
+*   **FITS Viewer Integrated**: To hit the ground running as soon as the telescope is delivered, I integrated a FITS viewer into my website. A big thank you to Reddit user `u/sjmoodyiii` ([link to comment](https://www.reddit.com/r/seestar/comments/1cg0vbe/comment/l1sof20/)) for kindly hosting sample files on the internet, which made testing possible.
+
 
 ## Saying Goodbye to Old Companions
 
