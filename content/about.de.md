@@ -24,6 +24,12 @@ Der Quellcode dieser privaten Website liegt auf Github und kann dort eingesehen 
 
 Zusätzlich verwende ich ein kleines clientseitiges JavaScript, um das Design dieser Website (Terminal-Optik) zu personalisieren. Dieses Skript erkennt den von Ihnen verwendeten Browser und den Hostnamen, um den Header im Terminal-Stil anzuzeigen (z.B. `[Firefox@do3eet.pages.dev /var/www]#`). Ein weiteres kleines Easter-Egg aktiviert sich, wenn die Seite längere Zeit (5 Minuten) ohne Interaktion geöffnet bleibt – als kleine Hommage an alte Monitore erscheint dann ein "Achievement" für einen (natürlich simulierten) Screen Burn-In. Wer ganz nach unten scrollt, findet zudem die "Quelle der Wahrheit". Dabei werden **keine** Daten gespeichert, protokolliert oder an mich oder Dritte übertragen; der Vorgang findet ausschließlich lokal in Ihrem Browser statt – maximal ein "Antiker" schaut Ihnen dabei vielleicht über die Schulter.
 
+# FITS-Viewer (Astronomische Bilddaten)
+Auf manchen Seiten (z. B. Beiträgen über mein ZWO Seestar Smart-Teleskop) kommt ein interaktiver FITS-Viewer zum Einsatz. Dieser Viewer wurde speziell für diese Website entwickelt und läuft **vollständig clientseitig** in Ihrem Webbrowser:
+- Die astronomischen Bilddateien (`.fit`/`.fits`) werden vom Webserver geladen und direkt in Ihrem Browser per JavaScript entpackt, gestreckt (MTF) und auf einem Canvas-Element gerendert.
+- Es findet **keinerlei Datenübertragung** von Bildinhalten, Metadaten oder persönlichen Einstellungen an mich oder Dritte statt. Sämtliche Anpassungen (Helligkeit, Kontrast, Farbkanäle) geschehen lokal.
+- Der Button zur Weiterleitung an **Stellarium Web** ist ein normaler ausgehender Link. Dem Link werden lediglich die im FITS-Header enthaltenen Metadaten (Objektname, Aufnahmezeitpunkt sowie die GPS-Koordinaten des Aufnahmeorts) als URL-Parameter übergeben, damit Stellarium die korrekte Sternenkonstellation für diesen Moment und Ort simulieren kann.
+
 # HTTP Header
 Zusammenfassend lässt sich sagen, dass diese Header zusammenarbeiten, um ein sichereres Browsing-Erlebnis zu schaffen, indem sie Clickjacking-Angriffe verhindern, die Zugriffsrechte für Geräte kontrollieren, vor XSS-Angriffen schützen und einschränken, von wo die Website Ressourcen laden kann.
 ## X-Frame-Options: DENY

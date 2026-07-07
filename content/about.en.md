@@ -24,6 +24,12 @@ The source code of this private website is available on Github and can be viewed
 
 Additionally, I use a small client-side JavaScript to personalize the design of this website (terminal look). This script detects the browser you are using and the hostname to display the header in terminal style (e.g., `[Firefox@do3eet.pages.dev /var/www]#`). Another small Easter egg activates if the page remains open without interaction for a longer period (5 minutes) – as a small homage to old monitors, an "achievement" for a (simulated, of course) screen burn-in will then appear. Those who scroll all the way to the bottom will also find the "Ark of Truth". **No** data is stored, logged, or transmitted to me or third parties; the process takes place exclusively locally in your browser – at most, an "Ancient" might be looking over your shoulder.
 
+# FITS Viewer (Astronomical Image Data)
+On some pages (e.g., posts about my ZWO Seestar smart telescope), an interactive FITS viewer is used. This viewer was specially developed for this website and runs **entirely client-side** in your web browser:
+- The astronomical image files (`.fit`/`.fits`) are loaded from the webserver and unpacked, stretched (MTF), and rendered on a canvas element directly in your browser using JavaScript.
+- There is **no data transmission** of image contents, metadata, or personal settings to me or third parties. All adjustments (brightness, contrast, color channels) take place locally.
+- The button to redirect to **Stellarium Web** is a standard outgoing link. The metadata contained in the FITS header (object name, time of observation, and the GPS coordinates of the observing site) are simply passed as URL parameters to the link, so that Stellarium can simulate the correct star constellation for that moment and location.
+
 # HTTP headers
 In summary, these headers work together to create a more secure Browse experience by preventing clickjacking attacks, controlling device access rights, protecting against XSS attacks, and restricting where the website can load resources from.
 

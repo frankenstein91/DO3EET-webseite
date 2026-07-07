@@ -1,0 +1,191 @@
+{{ $src := .Get "src" }}
+{{ $watermark := .Get "watermark" | default "" }}
+
+{{ $url := "" }}
+{{ $filename := "" }}
+{{ $isValid := false }}
+
+{{ if $src }}
+  {{ $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "/") }}
+  {{ if $isRemote }}
+    {{ $url = $src }}
+    {{ $filename = path.Base $src }}
+    {{ $isValid = true }}
+  {{ else }}
+    {{ $file := .Page.Resources.Get $src }}
+    {{ if $file }}
+      {{ $url = $file.RelPermalink }}
+      {{ $filename = $file.Name }}
+      {{ $isValid = true }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $isValid }}
+  <!-- Load FITS Viewer styling and script -->
+  <link rel="stylesheet" href="{{ "css/fitsviewer.css" | absURL }}">
+  <script src="{{ "js/fitsviewer.js" | absURL }}" defer></script>
+
+  <div class="fits-viewer-wrapper" data-fits-url="{{ $url }}" data-watermark="{{ $watermark }}">
+      <!-- Retro-Terminal Header -->
+      <div class="fits-viewer-header">
+          <div class="title">
+              <span style="color: var(--muted); margin-right: 0.2rem;">[guest@do3eet /var/www]#</span>
+              <span>fitsview {{ $filename }}</span>
+              <span class="terminal-prompt-dyn" style="display: none;"></span>
+          </div>
+          <div class="window-buttons">
+              <div class="win-btn minimize"></div>
+              <div class="win-btn maximize"></div>
+              <div class="win-btn close"></div>
+          </div>
+      </div>
+
+      <!-- Main Viewer Content -->
+      <div class="fits-viewer-content">
+          <!-- Column 1: Image Canvas & Controls -->
+          <div class="fits-viewer-image-col">
+              <div class="fits-canvas-container">
+                  <!-- Loading overlay -->
+                  <div class="fits-loading-overlay">
+                      <div class="fits-spinner"></div>
+                      <div class="fits-loading-text">Loading FITS file...</div>
+                  </div>
+                  
+                  <!-- Visible Canvas -->
+                  <canvas id="fits-canvas"></canvas>
+                  
+                  <!-- Canvas controls overlay (Zoom and Fullscreen) -->
+                  <div class="fits-canvas-controls">
+                      <button id="btn-zoom-in" class="fits-canvas-btn" title="Zoom In"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                      <button id="btn-zoom-out" class="fits-canvas-btn" title="Zoom Out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                      <button id="btn-zoom-reset" class="fits-canvas-btn" title="Reset View"><i class="fa-solid fa-arrows-to-eye"></i></button>
+                      <button id="btn-fullscreen" class="fits-canvas-btn" title="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button>
+                  </div>
+              </div>
+              
+              <!-- Channel Selector (RGB / Mono channels) -->
+              <div class="fits-channel-selector" style="width: 100%; max-width: 400px;">
+                  <div class="fits-channel-pill active" data-channel="rgb">--rgb</div>
+                  <div class="fits-channel-pill" data-channel="r">--red</div>
+                  <div class="fits-channel-pill" data-channel="g">--green</div>
+                  <div class="fits-channel-pill" data-channel="b">--blue</div>
+              </div>
+          </div>
+
+          <!-- Column 2: Meta Info and Stretch controls -->
+          <div class="fits-viewer-meta-col">
+              <!-- Target Astro Card -->
+              <div class="fits-astro-card">
+                  <h3 class="fits-astro-title">
+                      <span><i class="fa-solid fa-circle-info" style="color: var(--accent-color); margin-right: 0.5rem;"></i>ASTRONOMISCHES OBJEKT</span>
+                      <span id="astro-object" style="color: var(--accent-color); font-weight: bold;">Loading...</span>
+                  </h3>
+                  <div class="fits-astro-grid">
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Teleskop</span>
+                          <span id="astro-telescope" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Filter</span>
+                          <span id="astro-filter" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Belichtungszeit</span>
+                          <span id="astro-exposure" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Gestackte Bilder</span>
+                          <span id="astro-stack" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Gain</span>
+                          <span id="astro-gain" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item">
+                          <span class="fits-astro-label">Kameratemp.</span>
+                          <span id="astro-temp" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item" style="grid-column: span 2;">
+                          <span class="fits-astro-label">Aufnahmezeit (UTC)</span>
+                          <span id="astro-date" class="fits-astro-value">-</span>
+                      </div>
+                      <div class="fits-astro-item" style="grid-column: span 2;">
+                          <span class="fits-astro-label">Rektaszension / Deklination (WCS)</span>
+                          <span id="astro-coords" class="fits-astro-value" style="color: #e0af68;">-</span>
+                      </div>
+                  </div>
+                  
+                  <!-- External databases lookup -->
+                  <div class="fits-astro-actions">
+                      <!-- Populated dynamically via JS -->
+                  </div>
+              </div>
+
+              <!-- Rendering & Stretching controls -->
+              <div class="fits-controls-group">
+                  <div class="fits-btn-row">
+                      <button id="btn-stretch-auto" class="fits-btn active">Auto-Stretch</button>
+                      <button id="btn-stretch-linear" class="fits-btn">Linear</button>
+                      <button id="btn-stretch-log" class="fits-btn">Logarithmisch</button>
+                  </div>
+                  
+                  <!-- Sliders -->
+                  <div class="fits-control-item">
+                      <div class="fits-control-label-row">
+                          <span>Brightness (Helligkeit)</span>
+                          <span id="val-brightness" class="fits-control-value">1.0</span>
+                      </div>
+                      <input type="range" id="slider-brightness" class="fits-slider" min="0.1" max="3.0" step="0.1" value="1.0">
+                  </div>
+                  
+                  <div class="fits-control-item">
+                      <div class="fits-control-label-row">
+                          <span>Contrast (Schwarzpunkt)</span>
+                          <span id="val-contrast" class="fits-control-value">0.0</span>
+                      </div>
+                      <input type="range" id="slider-contrast" class="fits-slider" min="-0.9" max="0.9" step="0.05" value="0.0">
+                  </div>
+                  
+                  <div class="fits-control-item">
+                      <div class="fits-control-label-row">
+                          <span>Gamma / Midtones</span>
+                          <span id="val-gamma" class="fits-control-value">1.00</span>
+                      </div>
+                      <input type="range" id="slider-gamma" class="fits-slider" min="0.1" max="3.0" step="0.05" value="1.0">
+                  </div>
+              </div>
+
+              <!-- Metadata Table -->
+              <div class="fits-metadata-panel">
+                  <div class="fits-metadata-search-row">
+                      <div class="fits-metadata-search-prompt">grep -i</div>
+                      <input type="text" id="fits-search" class="fits-metadata-input" placeholder="Header durchsuchen (z.B. date, site, pixel)..." autocomplete="off">
+                  </div>
+                  <div class="fits-metadata-table-container">
+                      <table class="fits-metadata-table">
+                          <thead>
+                              <tr style="display: none;">
+                                  <th>Key</th>
+                                  <th>Value</th>
+                                  <th>Comment</th>
+                              </tr>
+                          </thead>
+                          <tbody id="fits-metadata-rows">
+                              <tr>
+                                  <td colspan="3" style="text-align: center; color: var(--off-fg); padding: 1.5rem;">
+                                      Parsing FITS header blocks...
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+{{ else }}
+  <div style="border: 2px dashed #ff5555; padding: 1.5rem; border-radius: 4px; background: rgba(255, 85, 85, 0.05); font-family: monospace; color: #ff5555; margin: 2rem 0;">
+      <strong>FITS-VIEWER FEHLER:</strong> Die Datei <code>{{ $src }}</code> konnte weder als lokale Page Resource noch als externer Link geladen werden.
+  </div>
+{{ end }}
