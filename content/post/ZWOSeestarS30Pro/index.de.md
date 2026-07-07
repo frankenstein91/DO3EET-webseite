@@ -51,6 +51,9 @@ Anschließend habe ich in den Einstellungen von Siril direkt die Pfade zu den be
 *   StarNet2: `/usr/bin/starnet2`
 *   GraXpert: `/usr/bin/graxpert-bin`
 
+### 7. Juli 2026: Versand erfolgt
+Um 10:10 Uhr kam die Nachricht, dass das Paket in den Versand gegangen ist. Eine DHL-Sendungsnummer liegt zwar schon vor, das DHL-Tracking zeigt unter dieser Nummer allerdings derzeit noch keinerlei Informationen an.
+
 ## Abschied von alten Wegbegleitern
 
 Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaffen. Ich plane, meine zwei alten Teleskope aus Kindertagen an die Kinder meiner Cousine abzugeben. So verstauben sie nicht länger ungenutzt im Schrank und können hoffentlich eine neue Generation für die Astronomie und den Blick in die Sterne begeistern.

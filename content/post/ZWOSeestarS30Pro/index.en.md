@@ -51,6 +51,9 @@ Afterward, I configured the paths to both external programs directly in Siril's 
 *   StarNet2: `/usr/bin/starnet2`
 *   GraXpert: `/usr/bin/graxpert-bin`
 
+### July 7, 2026: Shipped
+At 10:10 AM, notification was received that the package has shipped. Although a DHL tracking number is already available, the tracking page does not show any information yet.
+
 ## Saying Goodbye to Old Companions
 
 With the arrival of the new smart telescope, it is also time to clear some space. I plan to pass down my two old telescopes from my childhood days to my cousin's children. This way, they won't gather dust in the closet anymore and will hopefully inspire a new generation to look up at the stars and explore astronomy.
