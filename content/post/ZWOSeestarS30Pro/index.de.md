@@ -55,6 +55,11 @@ Anschließend habe ich in den Einstellungen von Siril direkt die Pfade zu den be
 *   **Versand erfolgt**: Um 10:10 Uhr kam die Nachricht, dass das Paket in den Versand gegangen ist. Eine DHL-Sendungsnummer liegt zwar schon vor, das DHL-Tracking zeigt unter dieser Nummer allerdings derzeit noch keinerlei Informationen an.
 *   **FITS-Viewer integriert**: Um nach der Lieferung des Teleskops direkt richtig loslegen zu können, habe ich bereits einen FITS-Viewer in meine Website eingebaut. Ein großes Dankeschön geht an Reddit-User `u/sjmoodyiii` ([Link zum Beitrag](https://www.reddit.com/r/seestar/comments/1cg0vbe/comment/l1sof20/)), der freundlicherweise Beispieldateien im Internet hostet und mir so das Testen ermöglicht hat.
 
+### 9. Juli 2026: Lieferung & First Light
+*   **Paket angekommen**: Das Paket von DHL kam heute an.
+*   **Auspacken & Laden**: Ich habe das Teleskop direkt ausgepackt und – wie man es bei jedem elektronischen Gerät tun sollte – erst einmal zum Laden angeschlossen.
+*   **App-Download**: Parallel dazu habe ich den Download der Seestar-App gestartet. Mit einer Größe von rund 1,3 GiB ist das kein Leichtgewicht – an einem DSL-7000-Anschluss dauert das eine Weile und ist insbesondere für zukünftige Reisen im Ausland eine wichtige Information, die man vorab einplanen sollte.
+*   **First Light**: Glücklicherweise klärte sich der Himmel am späten Abend auf, sodass ich ab 23:10 Uhr direkt für die erste Beobachtungssession (NGC 7000) nach draußen gehen konnte.
 
 ## Abschied von alten Wegbegleitern
 
@@ -62,7 +67,71 @@ Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaf
 
 ## Erste Eindrücke nach der Lieferung
 
-*Hier kommt später der Bericht rein, wenn das Paket ankommt und ausgepackt wird.*
+Nachdem der DHL-Bote das Paket heute übergeben hatte, ging es sofort ans Auspacken. Zwar liegt dem Seestar S30 Pro im Gegensatz zu manch anderen Modellen kein klassischer Hartschaum-Koffer (Hardcase) bei, aber die stattdessen mitgelieferte Tragetasche macht einen äußerst hochwertigen Eindruck. Besonders praktisch: Das gesamte Zubehör – darunter ein Sonnenfilter und ein kompaktes Stativ – war bereits ordentlich in der Tasche verstaut und einsatzbereit einsortiert.
+
+Als erster Schritt wurde das Teleskop erst einmal zum Laden angeschlossen. Parallel dazu läuft bereits der Download der zugehörigen Seestar-App. Mit stattlichen 1,3 GiB ist die App ein echtes Schwergewicht. An meinem DSL-7000-Anschluss erfordert das etwas Geduld und ist auch ein wichtiger Aspekt, den man im Hinterkopf behalten sollte, wenn man das Teleskop im Ausland oder unterwegs über mobile Daten einrichten möchte.
+
+Der nächste Schritt nach dem Laden ist das Verbinden des Teleskops mit dem Smartphone. Hierfür ist es notwendig, in der App einen entsprechenden Account anzulegen. Sobald die Verbindung steht, kann man das WLAN-Passwort des Seestar ändern (eine sehr empfehlenswerte Sicherheitsmaßnahme) und direkt die Firmware auf den aktuellen Stand bringen. Sobald das erledigt ist und das Wetter mitspielt, folgt das „First Light“.
+
+## First Light: Die erste Nacht im Einsatz
+
+Ich hatte unglaubliches Glück: Direkt am Abend nach der Lieferung zeigte sich der Himmel wolkenfrei und bot perfekte Bedingungen für das „First Light“. Um 23:10 Uhr ging es also mit dem frisch geladenen Seestar nach draußen.
+
+### Stativ und Befestigung
+
+Da ich noch keinen Stativkopf mit einem passenden 3/8-Zoll-Gewinde besitze, habe ich mein vorhandenes Rollei-Stativ direkt ohne Kopf genutzt und das Teleskop direkt auf die Stativschraube gedreht. Im Vergleich zu meiner Nikon D5660 ist das Seestar S30 Pro doch ein relativ großes und massives Gerät. Das Aufschrauben direkt auf das nackte Stativgewinde fühlte sich anfangs etwas ungewohnt und unsicher an – man hat das Gefühl, die Balance nicht optimal halten zu können, während man das schwere Teleskop dreht. Sobald das Gewinde jedoch vollständig eingedreht ist, sitzt das Teleskop absolut fest und sicher.
+
+### App-Einstellungen und das erste Ziel: NGC 7000
+
+Vor dem Start habe ich die Seestar-App auf Englisch umgestellt. Die deutsche Übersetzung der App wirkt an vielen Stellen etwas holprig und ungenau. Da mein Englisch gut genug ist, liest sich die englische Benutzeroberfläche für mich deutlich flüssiger und verständlicher.
+
+Als erstes Beobachtungsziel des Abends habe ich mir **NGC 7000** ausgesucht, den bekannten Nordamerikanebel im Sternbild Schwan. Während das Teleskop das Ziel ansteuerte und im Hintergrund die Aufnahme vorbereitete, spielte die App ihre Stärken aus: Die integrierte KI-Funktion begann direkt damit, mir interessante Fakten und Hintergrundinformationen über den Nebel zu erzählen. Diese akustische/textuelle Begleitung verkürzt die Wartezeit beim Alignment und der Kalibrierung ungemein und macht das Beobachtungserlebnis noch interaktiver.
+
+Hier ist das fertige Summenbild (Rohstack) als FITS-Datei direkt aus dem Teleskop, das sich über den interaktiven FITS-Viewer betrachten und anpassen lässt:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
+
+### Zweites Ziel: Sadr und die Suchtgefahr
+
+Eigentlich hatte ich mir vorgenommen, in dieser ersten Nacht nur ein einziges Testbild aufzunehmen, um das Zusammenspiel von Stativ, Teleskop und App zu erproben. Doch das Beobachten und die Einfachheit des Systems haben so viel Spaß gemacht, dass ich einfach nicht aufhören konnte. Spontan entschied ich mich daher, noch eine weitere Aufnahme zu starten.
+
+Mein zweites Ziel war **Sadr** (Gamma Cygni), der helle Stern im Zentrum des Sternbilds Schwan, welcher von weitläufigen Emissionsnebeln (IC 1318) umgeben ist. Auch dieses Mal klappte das Anfahren und Zentrieren absolut problemlos.
+
+Hier ist das zweite Summenbild (Rohstack) der Sadr-Region als FITS-Datei:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
+
+### Zum Abschluss: Ein Weitwinkel-Mosaik von Vega
+
+Ganz am Ende der Nacht, als ich schon fast am Abbauen war, packte mich noch einmal die Neugier: Ich wollte unbedingt den neuen Mosaik-Modus des Seestar S30 Pro ausprobieren. 
+
+Dafür wählte ich einen der hellsten Sterne am Sommerhimmel als Ziel: **Vega** (Wega) im Sternbild Leier. Das Besondere an diesem Bild ist, dass es nicht mit der Hauptkamera, sondern mit der integrierten **Weitwinkelkamera** (Sony IMX586 mit einer Brennweite von 5,96 mm) aufgenommen wurde. 
+
+Das Teleskop belichtete insgesamt 54 Frames zu je 10 Sekunden (insgesamt 9 Minuten Belichtungszeit). Die resultierende FITS-Datei hat eine Auflösung von **4175 x 3777 Pixeln**. Da der Sensor der Weitwinkelkamera nativ ein anderes Seitenverhältnis besitzt, zeigt dieses fast quadratische Format deutlich, dass die Software hier erfolgreich mehrere Einzelbilder zu einem Mosaik zusammengesetzt (gestitcht) hat, während das Teleskop den Bereich um Vega abrasterte.
+
+Hier ist die zusammengesetzte FITS-Aufnahme von Vega und ihrer Umgebung:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
+
+### Wissenschaftlicher Exkurs: Warum leuchten diese Nebel rot?
+
+Sowohl der Nordamerikanebel (NGC 7000) als auch die Region um Sadr (IC 1318) gehören zur Klasse der **Emissionsnebel**. Das charakteristische rote Leuchten dieser Regionen hat einen faszinierenden physikalischen Grund:
+
+* **Wasserstoff (H-alpha)**: Diese Nebel bestehen zu einem Großteil aus interstellarem Gas, hauptsächlich atomarem Wasserstoff. Nahegelegene, extrem heiße Sterne strahlen große Mengen an energiereichem ultraviolettem (UV) Licht aus.
+* **Ionisation & Rekombination**: Diese UV-Strahlung ionisiert die Wasserstoffatome, indem sie die Elektronen von den Protonen trennt. Wenn sich die Elektronen wieder mit den Protonen verbinden (Rekombination) und auf niedrigere Energieniveaus zurückfallen, senden sie Licht aus.
+* **Die 656,28-nm-Linie**: Der Übergang des Elektrons vom dritten auf das zweite Energieniveau (die sogenannte **H-alpha-Linie**) strahlt Licht mit einer Wellenlänge von exakt 656,28 Nanometern aus. Dies liegt im tiefroten Bereich des für uns sichtbaren Spektrums.
+
+Weil Wasserstoff das mit Abstand häufigste Element im Universum ist, leuchten fast alle klassischen Sternentstehungsgebiete und Emissionsnebel auf Astrofotografien in diesem wunderschönen Rot.
+
+### Rohdaten vs. JPEG: Warum sind die Farben im FITS-Viewer blasser?
+
+Wer das fertige JPEG auf dem Smartphone mit der FITS-Datei im interaktiven FITS-Viewer vergleicht, wird feststellen, dass das Rot im Viewer deutlich schwächer und blasser wirkt. Das ist kein Fehler, sondern hat technische Gründe:
+
+* **Kein Farbsättigungs-Boost**: Die Seestar-App wendet auf die JPEGs eine aggressive Bildverarbeitung an. Dazu gehört ein starker Sättigungs-Boost, um die schwachen Farben der Nebel für das menschliche Auge auf dem Display "knallig" zu machen. Der FITS-Viewer streckt zwar die Helligkeitswerte, verändert aber nicht die Farbsättigung.
+* **Wissenschaftlicher Weißabgleich**: Der FITS-Viewer (implementiert in `fitsviewer.js`) gleicht die Kanäle (RGB) automatisch an, um den Himmelshintergrund zu neutralisieren. Die Handy-App nutzt hingegen sensor-spezifische Farbmatrizen, um das H-alpha-Rot gezielt hervorzuheben.
+* **FITS als Ausgangsmaterial**: FITS-Dateien sind rohe Messdaten für die Weiterverarbeitung in Programmen wie Siril oder PixInsight. Erst durch die manuelle Bildbearbeitung (Strecken, Hintergrund-Abzug und Sättigung) holt man das volle, leuchtende Rot kontrolliert aus den Daten heraus.
+
+
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)
 [^2]: [GitHub: actionless/pikaur](https://github.com/actionless/pikaur)

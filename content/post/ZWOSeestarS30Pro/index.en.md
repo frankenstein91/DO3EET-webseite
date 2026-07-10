@@ -55,6 +55,11 @@ Afterward, I configured the paths to both external programs directly in Siril's 
 *   **Package Shipped**: At 10:10 AM, notification was received that the package has shipped. Although a DHL tracking number is already available, the tracking page does not show any information yet.
 *   **FITS Viewer Integrated**: To hit the ground running as soon as the telescope is delivered, I integrated a FITS viewer into my website. A big thank you to Reddit user `u/sjmoodyiii` ([link to comment](https://www.reddit.com/r/seestar/comments/1cg0vbe/comment/l1sof20/)) for kindly hosting sample files on the internet, which made testing possible.
 
+### July 9, 2026: Delivery & First Light
+*   **Telescope Arrived**: The package was delivered by DHL today.
+*   **Unboxing & Charging**: I unpacked the telescope right away. As with any new electronic device, the very first step is to plug it in and let it charge fully before taking it out for its first test run.
+*   **App Download**: At the same time, I started downloading the Seestar app. With a size of about 1.3 GiB, it is quite a large download—on a DSL 7000 connection, this takes some time, which is crucial to plan for, especially when traveling abroad.
+*   **First Light**: Luckily, the sky cleared up late in the evening, allowing me to head outside for the first observation session (NGC 7000) starting at 11:10 PM.
 
 ## Saying Goodbye to Old Companions
 
@@ -62,7 +67,71 @@ With the arrival of the new smart telescope, it is also time to clear some space
 
 ## First Impressions After Delivery
 
-*This section will contain the unpacking and first impressions once the package arrives.*
+After the DHL delivery agent handed over the package today, I immediately went to unbox it. Unlike some other models, the Seestar S30 Pro does not come with a classic hard shell case (hardcase). Instead, it includes a carrying bag that feels very premium. A very practical detail: all the accessories—including a solar filter and a small tripod—were already neatly packed and organized inside the bag.
+
+As the first step, the telescope was plugged in to charge the battery. Meanwhile, the download of the accompanying Seestar app is already underway. Weighing in at a substantial 1.3 GiB, the app is a real heavyweight. On my DSL 7000 connection, this requires some patience and is also a critical detail to keep in mind if you plan to set up the telescope abroad or on the go using mobile data.
+
+The next step after charging is connecting the telescope to the smartphone. To do this, it is necessary to create an account in the app. Once connected, you can change the default Wi-Fi password of the Seestar (a highly recommended security measure) and directly update the firmware to the latest version. As soon as that is done and the weather plays along, it will be time for the "first light."
+
+## First Light: The First Night in Action
+
+I was incredibly lucky: on the very evening after delivery, the sky cleared up completely, offering perfect conditions for the "first light." At 11:10 PM, I headed outside with the fully charged Seestar.
+
+### Tripod and Mounting
+
+Since I don't own a tripod head with a 3/8-inch thread yet, I used my existing Rollei tripod directly without a head, mounting the telescope straight onto the tripod's base screw. Compared to my Nikon D5660, the Seestar S30 Pro is a relatively large and bulky device. Screwing it onto the bare tripod thread felt a bit awkward and unsafe at first—it was tricky to keep it balanced while turning the telescope body. However, once the thread was fully tightened, it sat extremely stable and secure.
+
+### App Settings and the First Target: NGC 7000
+
+Before starting, I switched the Seestar app's language to English. The German localization feels a bit clunky and inaccurate in several places. Since my English is strong, the English user interface is much cleaner and easier for me to use.
+
+My first target of the night was **NGC 7000**, the famous North America Nebula in the constellation Cygnus. While the telescope was slewing to the target and preparing the capture sequence in the background, the app showcased one of its coolest features: the built-in AI started sharing interesting facts and background details about the nebula. Having this audio/text companion completely transforms the waiting time during alignment and calibration, making the stargazing experience feel highly interactive.
+
+Here is the finished stacked raw image as a FITS file directly from the telescope, which can be viewed and adjusted using the interactive FITS viewer:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
+
+### Second Target: Sadr and the Addictive Fun
+
+Originally, I had only planned to capture a single test image during this first night to check how the tripod, telescope, and app worked together. However, the observation process and the simplicity of the system were so much fun that I just couldn't stop. On a whim, I decided to start a second capture.
+
+My second target of the night was **Sadr** (Gamma Cygni), the bright star at the center of the constellation Cygnus, which is surrounded by the vast emission nebulae of the Sadr region (IC 1318). Once again, slewing and centering went flawlessly.
+
+Here is the second stacked raw FITS image of the Sadr region:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
+
+### In Conclusion: A Wide-Angle Mosaic of Vega
+
+At the very end of the night, just as I was about to pack up, curiosity got the better of me: I really wanted to try out the new mosaic mode of the Seestar S30 Pro.
+
+For this test, I chose one of the brightest stars in the summer sky: **Vega** in the constellation Lyra. What makes this image special is that it was not captured with the main telephoto lens, but with the integrated **wide-angle camera** (Sony IMX586 with a focal length of 5.96 mm).
+
+The telescope captured a total of 54 frames at 10 seconds each (amounting to 9 minutes of total exposure time). The resulting FITS file has a resolution of **4175 x 3777 pixels**. Since the wide-angle camera's sensor natively has a different aspect ratio, this almost square format clearly demonstrates that the software successfully stitched multiple individual frames into a mosaic while the telescope swept the area around Vega.
+
+Here is the stitched FITS image of Vega and its surroundings:
+
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
+
+### Scientific Excursion: Why Do These Nebulae Glow Red?
+
+Both the North America Nebula (NGC 7000) and the region around Sadr (IC 1318) belong to the class of **emission nebulae**. The characteristic red glow of these regions has a fascinating physical reason:
+
+* **Hydrogen (H-alpha)**: These nebulae consist largely of interstellar gas, primarily atomic hydrogen. Nearby, extremely hot stars emit vast amounts of energetic ultraviolet (UV) light.
+* **Ionization & Recombination**: This UV radiation ionizes the hydrogen atoms by stripping the electrons away from the protons. When the electrons recombine with the protons and cascade down to lower energy levels, they emit light.
+* **The 656.28 nm Line**: The electron transition from the third to the second energy level (the so-called **H-alpha line**) emits light at a wavelength of exactly 656.28 nanometers. This lies in the deep red portion of the visible spectrum.
+
+Since hydrogen is by far the most abundant element in the universe, almost all classic star-forming regions and emission nebulae glow in this beautiful red hue in astrophotography.
+
+### Raw Data vs. JPEG: Why Are the Colors in the FITS Viewer Fainter?
+
+Anyone comparing the finished JPEG on their smartphone with the FITS file in the interactive FITS viewer will notice that the red color in the viewer appears significantly weaker and fainter. This is not a bug, but is due to technical reasons:
+
+* **No Saturation Boost**: The Seestar app applies aggressive image processing to the JPEGs. This includes a heavy saturation boost to make the faint colors of the nebulae "pop" on mobile displays. The FITS viewer stretches the brightness values but does not modify color saturation.
+* **Scientific White Balance**: The FITS viewer (implemented in `fitsviewer.js`) automatically balances the RGB channels to neutralize the sky background. In contrast, the mobile app uses sensor-specific color matrices to selectively boost H-alpha red.
+* **FITS as Raw Material**: FITS files are raw measurement data intended for post-processing in software like Siril or PixInsight. It is only during manual processing (stretching, background extraction, and color saturation) that you pull the full, vibrant red out of the data in a controlled way.
+
+
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)
 [^2]: [GitHub: actionless/pikaur](https://github.com/actionless/pikaur)
