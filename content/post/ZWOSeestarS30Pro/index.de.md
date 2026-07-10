@@ -131,6 +131,15 @@ Gegen 01:30 Uhr war es dann Zeit für den Abbau. Ähnlich wie beim Aufbau war da
 
 Zudem fiel mir beim Einpacken auf, dass das Material der mitgelieferten Tragetasche die abendliche Luftfeuchtigkeit sehr stark anzieht. Die Tasche war außen spürbar nass. Man sollte also darauf achten, das Teleskop und Zubehör zu Hause noch einmal kurz lüften zu lassen, damit keine Feuchtigkeit in der Tasche eingeschlossen wird.
 
+### Akkulaufzeit, Reichweite und Komfort
+
+Im praktischen Betrieb haben mich zwei Punkte besonders positiv überrascht: die Akkulaufzeit und die Reichweite des direkten WLAN-Hotspots:
+
+* **Akkukapazität**: Nach der rund 2 Stunden und 20 Minuten dauernden Session (von 23:10 bis ca. 01:30 Uhr), bei der das Teleskop fast durchgehend kalibriert, angefahren und gestackt hat, sank der Akkustand von 100 % auf lediglich 77 %. Das deutet darauf hin, dass die Akkulaufzeit im realen Betrieb unter diesen Bedingungen sogar noch über den im Vorfeld recherchierten YouTube-Werten liegen könnte.
+* **WLAN-Reichweite**: Die Steuerung lief komplett über das vom Seestar selbst aufgebaute direkte WLAN-Netz (ohne Einbindung ins Heimnetzwerk). Dabei konnte ich das Teleskop bequem direkt aus dem Bett heraus steuern – das Signal reichte stabil durch eine Hauswand über eine Distanz von rund 50 Metern bis in die dunkle, ländliche Ecke des Grundstücks, auf dem ich das Gerät positioniert hatte.
+
+Auf eventuellen Taubeschlag an der Frontlinse habe ich in dieser ersten Nacht noch nicht explizit geachtet – bei der hohen Luftfeuchtigkeit und Nässe der Tragetasche wird dies in Zukunft aber sicher ein wichtiger Punkt sein, den ich im Auge behalten muss.
+
 ### Wissenschaftlicher Exkurs: Warum leuchten diese Nebel rot?
 
 Sowohl der Nordamerikanebel (NGC 7000) als auch die Region um Sadr (IC 1318) gehören zur Klasse der **Emissionsnebel**. Das charakteristische rote Leuchten dieser Regionen hat einen faszinierenden physikalischen Grund:
@@ -147,7 +156,7 @@ Wer das fertige JPEG auf dem Smartphone mit der FITS-Datei im interaktiven FITS-
 
 * **Kein Farbsättigungs-Boost**: Die Seestar-App wendet auf die JPEGs eine aggressive Bildverarbeitung an. Dazu gehört ein starker Sättigungs-Boost, um die schwachen Farben der Nebel für das menschliche Auge auf dem Display "knallig" zu machen. Der FITS-Viewer streckt zwar die Helligkeitswerte, verändert aber nicht die Farbsättigung.
 * **Wissenschaftlicher Weißabgleich**: Der FITS-Viewer (implementiert in `fitsviewer.js`) gleicht die Kanäle (RGB) automatisch an, um den Himmelshintergrund zu neutralisieren. Die Handy-App nutzt hingegen sensor-spezifische Farbmatrizen, um das H-alpha-Rot gezielt hervorzuheben.
-* **FITS als Ausgangsmaterial**: FITS-Dateien sind rohe Messdaten für die Weiterverarbeitung in Programmen wie Siril oder PixInsight. Erst durch die manuelle Bildbearbeitung (Strecken, Hintergrund-Abzug und Sättigung) holt man das volle, leuchtende Rot kontrolliert aus den Daten heraus.
+* **FITS als Ausgangsmaterial**: FITS-Dateien sind rohe Messdaten für die Weiterverarbeitung in Programmen wie Siril oder PixInsight. Da mein Rechner nach dem letzten Arch-Update gerade Probleme mit Siril hat, konnte ich den manuellen Stacking- und Bearbeitungsprozess auf dem Notebook noch nicht durchführen – die FITS-Aufnahmen hier basieren daher auf den vom Teleskop automatisch erstellten Summenbildern. Erst durch die manuelle Bildbearbeitung (Strecken, Hintergrund-Abzug und Sättigung) holt man das volle, leuchtende Rot kontrolliert aus den Daten heraus.
 
 ## Diskutiert mit!
 
