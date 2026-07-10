@@ -87,7 +87,11 @@ Vor dem Start habe ich die Seestar-App auf Englisch umgestellt. Die deutsche Üb
 
 Als erstes Beobachtungsziel des Abends habe ich mir **NGC 7000** ausgesucht, den bekannten Nordamerikanebel im Sternbild Schwan. Während das Teleskop das Ziel ansteuerte und im Hintergrund die Aufnahme vorbereitete, spielte die App ihre Stärken aus: Die integrierte KI-Funktion begann direkt damit, mir interessante Fakten und Hintergrundinformationen über den Nebel zu erzählen. Diese akustische/textuelle Begleitung verkürzt die Wartezeit beim Alignment und der Kalibrierung ungemein und macht das Beobachtungserlebnis noch interaktiver.
 
-Hier ist das fertige Summenbild (Rohstack) als FITS-Datei direkt aus dem Teleskop, das sich über den interaktiven FITS-Viewer betrachten und anpassen lässt:
+Hier ist zum Vergleich das von der Seestar-App automatisch bearbeitete und gestreckte JPEG-Bild, wie es direkt auf dem Smartphone gespeichert wird:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/NGC7000.jpg" alt="NGC 7000 (Seestar JPEG)" width="360" height="640" >}}
+
+Und hier ist das fertige Summenbild (Rohstack) als FITS-Datei direkt aus dem Teleskop, das sich über den interaktiven FITS-Viewer betrachten und anpassen lässt:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
 
@@ -97,7 +101,11 @@ Eigentlich hatte ich mir vorgenommen, in dieser ersten Nacht nur ein einziges Te
 
 Mein zweites Ziel war **Sadr** (Gamma Cygni), der helle Stern im Zentrum des Sternbilds Schwan, welcher von weitläufigen Emissionsnebeln (IC 1318) umgeben ist. Auch dieses Mal klappte das Anfahren und Zentrieren absolut problemlos.
 
-Hier ist das zweite Summenbild (Rohstack) der Sadr-Region als FITS-Datei:
+Hier ist das verarbeitete JPEG-Bild der Sadr-Region aus der App:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Sadr.jpg" alt="Sadr Region (Seestar JPEG)" width="360" height="640" >}}
+
+Und hier ist das Summenbild (Rohstack) als FITS-Datei zum Vergleich:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
 
@@ -109,7 +117,11 @@ Dafür wählte ich einen der hellsten Sterne am Sommerhimmel als Ziel: **Vega** 
 
 Das Teleskop belichtete insgesamt 54 Frames zu je 10 Sekunden (insgesamt 9 Minuten Belichtungszeit). Die resultierende FITS-Datei hat eine Auflösung von **4175 x 3777 Pixeln**. Da der Sensor der Weitwinkelkamera nativ ein anderes Seitenverhältnis besitzt, zeigt dieses fast quadratische Format deutlich, dass die Software hier erfolgreich mehrere Einzelbilder zu einem Mosaik zusammengesetzt (gestitcht) hat, während das Teleskop den Bereich um Vega abrasterte.
 
-Hier ist die zusammengesetzte FITS-Aufnahme von Vega und ihrer Umgebung:
+Hier ist das gestitchte Weitwinkel-JPEG-Bild von Vega aus der App:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Vega.jpg" alt="Vega Mosaik (Seestar JPEG)" width="500" height="452" >}}
+
+Und hier ist die zusammengesetzte FITS-Aufnahme zum interaktiven Vergleich:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
 

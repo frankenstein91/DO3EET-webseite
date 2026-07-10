@@ -87,7 +87,11 @@ Before starting, I switched the Seestar app's language to English. The German lo
 
 My first target of the night was **NGC 7000**, the famous North America Nebula in the constellation Cygnus. While the telescope was slewing to the target and preparing the capture sequence in the background, the app showcased one of its coolest features: the built-in AI started sharing interesting facts and background details about the nebula. Having this audio/text companion completely transforms the waiting time during alignment and calibration, making the stargazing experience feel highly interactive.
 
-Here is the finished stacked raw image as a FITS file directly from the telescope, which can be viewed and adjusted using the interactive FITS viewer:
+For comparison, here is the JPEG image automatically processed and stretched by the Seestar app, exactly as saved on the smartphone:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/NGC7000.jpg" alt="NGC 7000 (Seestar JPEG)" width="360" height="640" >}}
+
+And here is the finished stacked raw image as a FITS file directly from the telescope, which can be viewed and adjusted using the interactive FITS viewer:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
 
@@ -97,7 +101,11 @@ Originally, I had only planned to capture a single test image during this first 
 
 My second target of the night was **Sadr** (Gamma Cygni), the bright star at the center of the constellation Cygnus, which is surrounded by the vast emission nebulae of the Sadr region (IC 1318). Once again, slewing and centering went flawlessly.
 
-Here is the second stacked raw FITS image of the Sadr region:
+Here is the processed JPEG image of the Sadr region from the app:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Sadr.jpg" alt="Sadr Region (Seestar JPEG)" width="360" height="640" >}}
+
+And here is the raw stacked FITS image for comparison:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
 
@@ -109,7 +117,11 @@ For this test, I chose one of the brightest stars in the summer sky: **Vega** in
 
 The telescope captured a total of 54 frames at 10 seconds each (amounting to 9 minutes of total exposure time). The resulting FITS file has a resolution of **4175 x 3777 pixels**. Since the wide-angle camera's sensor natively has a different aspect ratio, this almost square format clearly demonstrates that the software successfully stitched multiple individual frames into a mosaic while the telescope swept the area around Vega.
 
-Here is the stitched FITS image of Vega and its surroundings:
+Here is the stitched wide-angle JPEG image of Vega from the app:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Vega.jpg" alt="Vega Mosaic (Seestar JPEG)" width="500" height="452" >}}
+
+And here is the stitched FITS image for interactive comparison:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
 
