@@ -513,3 +513,19 @@
     height: 100%;
     padding-right: 10px;
 }
+
+/* Layout bottom (stacked) styling overrides */
+.fits-viewer-wrapper.layout-bottom .fits-viewer-content {
+    grid-template-columns: 1fr !important;
+}
+
+.fits-viewer-wrapper.layout-bottom .fits-canvas-container {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4/3;
+    margin: 0 auto;
+}
+
+.fits-viewer-wrapper.layout-bottom .fits-channel-selector {
+    margin: 0 auto;
+}
