@@ -1,6 +1,6 @@
 +++
 title = 'New Addition: Ordering the ZWO Seestar S30 Pro'
-date = "2026-07-05T20:42:27+02:00"
+date = "2026-07-10T12:10:00+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -93,7 +93,7 @@ For comparison, here is the JPEG image automatically processed and stretched by 
 
 And here is the finished stacked raw image as a FITS file directly from the telescope, which can be viewed and adjusted using the interactive FITS viewer:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" watermark="DO3EET - NGC 7000" >}}
 
 ### Second Target: Sadr and the Addictive Fun
 
@@ -107,7 +107,7 @@ Here is the processed JPEG image of the Sadr region from the app:
 
 And here is the raw stacked FITS image for comparison:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" watermark="DO3EET - Sadr" >}}
 
 ### In Conclusion: A Wide-Angle Mosaic of Vega
 
@@ -123,7 +123,7 @@ Here is the stitched wide-angle JPEG image of Vega from the app:
 
 And here is the stitched FITS image for interactive comparison:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" watermark="DO3EET - Vega" >}}
 
 ### Packing Up and Night Moisture
 

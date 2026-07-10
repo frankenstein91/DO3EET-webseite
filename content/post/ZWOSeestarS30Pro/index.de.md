@@ -1,6 +1,6 @@
 +++
 title = 'Neuer Zuwachs: ZWO Seestar S30 Pro bestellt'
-date = "2026-07-05T20:42:27+02:00"
+date = "2026-07-10T12:10:00+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
@@ -93,7 +93,7 @@ Hier ist zum Vergleich das von der Seestar-App automatisch bearbeitete und gestr
 
 Und hier ist das fertige Summenbild (Rohstack) als FITS-Datei direkt aus dem Teleskop, das sich über den interaktiven FITS-Viewer betrachten und anpassen lässt:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_227_NGC%207000_10.0s_LP_20260710-001530_2.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_227_NGC 7000_10.0s_LP_20260710-001530_2.fit" watermark="DO3EET - NGC 7000" >}}
 
 ### Zweites Ziel: Sadr und die Suchtgefahr
 
@@ -107,7 +107,7 @@ Hier ist das verarbeitete JPEG-Bild der Sadr-Region aus der App:
 
 Und hier ist das Summenbild (Rohstack) als FITS-Datei zum Vergleich:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" localsrc="Seestar_Fit_20260710_013425/Stacked_181_Sadr_10.0s_LP_20260710-010138_6.fit" watermark="DO3EET - Sadr" >}}
 
 ### Zum Abschluss: Ein Weitwinkel-Mosaik von Vega
 
@@ -123,7 +123,7 @@ Hier ist das gestitchte Weitwinkel-JPEG-Bild von Vega aus der App:
 
 Und hier ist die zusammengesetzte FITS-Aufnahme zum interaktiven Vergleich:
 
-{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
+{{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" watermark="DO3EET - Vega" >}}
 
 ### Abbau und nächtliche Feuchtigkeit
 
