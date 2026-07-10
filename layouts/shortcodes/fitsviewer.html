@@ -1,22 +1,35 @@
 {{ $src := .Get "src" }}
+{{ $localsrc := .Get "localsrc" | default "" }}
 {{ $watermark := .Get "watermark" | default "" }}
+{{ $layout := .Get "layout" | default "side" }}
 
 {{ $url := "" }}
 {{ $filename := "" }}
 {{ $isValid := false }}
 
-{{ if $src }}
-  {{ $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "/") }}
-  {{ if $isRemote }}
-    {{ $url = $src }}
-    {{ $filename = path.Base $src }}
+{{ if and hugo.IsServer $localsrc }}
+  {{ $file := .Page.Resources.Get $localsrc }}
+  {{ if $file }}
+    {{ $url = $file.RelPermalink }}
+    {{ $filename = $file.Name }}
     {{ $isValid = true }}
-  {{ else }}
-    {{ $file := .Page.Resources.Get $src }}
-    {{ if $file }}
-      {{ $url = $file.RelPermalink }}
-      {{ $filename = $file.Name }}
+  {{ end }}
+{{ end }}
+
+{{ if not $isValid }}
+  {{ if $src }}
+    {{ $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "/") }}
+    {{ if $isRemote }}
+      {{ $url = $src }}
+      {{ $filename = path.Base $src }}
       {{ $isValid = true }}
+    {{ else }}
+      {{ $file := .Page.Resources.Get $src }}
+      {{ if $file }}
+        {{ $url = $file.RelPermalink }}
+        {{ $filename = $file.Name }}
+        {{ $isValid = true }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -26,7 +39,7 @@
   <link rel="stylesheet" href="{{ "css/fitsviewer.css" | absURL }}">
   <script src="{{ "js/fitsviewer.js" | absURL }}" defer></script>
 
-  <div class="fits-viewer-wrapper" data-fits-url="{{ $url }}" data-watermark="{{ $watermark }}">
+  <div class="fits-viewer-wrapper{{ if eq $layout "bottom" }} layout-bottom{{ end }}" data-fits-url="{{ $url }}" data-watermark="{{ $watermark }}">
       <!-- Retro-Terminal Header -->
       <div class="fits-viewer-header">
           <div class="title">
