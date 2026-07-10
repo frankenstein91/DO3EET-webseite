@@ -67,7 +67,7 @@ Mit dem Einzug des neuen Smart-Teleskops ist es auch an der Zeit, Platz zu schaf
 
 ## Erste Eindrücke nach der Lieferung
 
-Nachdem der DHL-Bote das Paket heute übergeben hatte, ging es sofort ans Auspacken. Zwar liegt dem Seestar S30 Pro im Gegensatz zu manch anderen Modellen kein klassischer Hartschaum-Koffer (Hardcase) bei, aber die stattdessen mitgelieferte Tragetasche macht einen äußerst hochwertigen Eindruck. Besonders praktisch: Das gesamte Zubehör – darunter ein Sonnenfilter und ein kompaktes Stativ – war bereits ordentlich in der Tasche verstaut und einsatzbereit einsortiert.
+Nachdem der DHL-Bote das Paket heute übergeben hatte, ging es sofort ans Auspacken. Zwar liegt dem Seestar S30 Pro im Gegensatz zu manch anderen Modellen kein klassischer Hartschaum-Koffer (Hardcase) bei, aber die stattdessen mitgelieferte Tragetasche macht einen äußerst hochwertigen Eindruck. Besonders praktisch: Das gesamte Zubehör – darunter ein kompakter Sonnenfilter mit magnetischer Halterung (den ich allerdings noch nicht testen konnte) und ein kompaktes Stativ – war bereits ordentlich in der Tasche verstaut und einsatzbereit einsortiert.
 
 Als erster Schritt wurde das Teleskop erst einmal zum Laden angeschlossen. Parallel dazu läuft bereits der Download der zugehörigen Seestar-App. Mit stattlichen 1,3 GiB ist die App ein echtes Schwergewicht. An meinem DSL-7000-Anschluss erfordert das etwas Geduld und ist auch ein wichtiger Aspekt, den man im Hinterkopf behalten sollte, wenn man das Teleskop im Ausland oder unterwegs über mobile Daten einrichten möchte.
 

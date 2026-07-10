@@ -67,7 +67,7 @@ With the arrival of the new smart telescope, it is also time to clear some space
 
 ## First Impressions After Delivery
 
-After the DHL delivery agent handed over the package today, I immediately went to unbox it. Unlike some other models, the Seestar S30 Pro does not come with a classic hard shell case (hardcase). Instead, it includes a carrying bag that feels very premium. A very practical detail: all the accessories—including a solar filter and a small tripod—were already neatly packed and organized inside the bag.
+After the DHL delivery agent handed over the package today, I immediately went to unbox it. Unlike some other models, the Seestar S30 Pro does not come with a classic hard shell case (hardcase). Instead, it includes a carrying bag that feels very premium. A very practical detail: all the accessories—including a compact solar filter with a magnetic mount (which I haven't tested yet) and a small tripod—were already neatly packed and organized inside the bag.
 
 As the first step, the telescope was plugged in to charge the battery. Meanwhile, the download of the accompanying Seestar app is already underway. Weighing in at a substantial 1.3 GiB, the app is a real heavyweight. On my DSL 7000 connection, this requires some patience and is also a critical detail to keep in mind if you plan to set up the telescope abroad or on the go using mobile data.
 
