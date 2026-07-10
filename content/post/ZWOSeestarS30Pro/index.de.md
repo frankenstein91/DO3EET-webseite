@@ -125,6 +125,12 @@ Und hier ist die zusammengesetzte FITS-Aufnahme zum interaktiven Vergleich:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
 
+### Abbau und nächtliche Feuchtigkeit
+
+Gegen 01:30 Uhr war es dann Zeit für den Abbau. Ähnlich wie beim Aufbau war das Abschrauben des Teleskops direkt vom Stativgewinde wieder eine etwas nervenaufreibende Angelegenheit. Durch die Größe des Seestar S30 Pro hat man auch hier großen Respekt davor, das Gerät versehentlich fallen zu lassen, während man es vom nackten 3/8-Zoll-Gewinde dreht. Ein passender Stativkopf wird definitiv meine nächste Anschaffung sein, um diesen Prozess sicherer zu machen.
+
+Zudem fiel mir beim Einpacken auf, dass das Material der mitgelieferten Tragetasche die abendliche Luftfeuchtigkeit sehr stark anzieht. Die Tasche war außen spürbar nass. Man sollte also darauf achten, das Teleskop und Zubehör zu Hause noch einmal kurz lüften zu lassen, damit keine Feuchtigkeit in der Tasche eingeschlossen wird.
+
 ### Wissenschaftlicher Exkurs: Warum leuchten diese Nebel rot?
 
 Sowohl der Nordamerikanebel (NGC 7000) als auch die Region um Sadr (IC 1318) gehören zur Klasse der **Emissionsnebel**. Das charakteristische rote Leuchten dieser Regionen hat einen faszinierenden physikalischen Grund:

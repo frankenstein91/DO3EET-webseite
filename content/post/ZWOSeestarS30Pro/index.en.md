@@ -125,6 +125,12 @@ And here is the stitched FITS image for interactive comparison:
 
 {{< fitsviewer src="https://do3eet-media.dreamofjapan.de/posts/ZWOSeestarS30Pro/20260710-012011_4.fit" localsrc="Seestar_Fit_20260710_013425/20260710-012011_4.fit" layout="bottom" >}}
 
+### Packing Up and Night Moisture
+
+Around 1:30 AM, it was time to pack up. Similar to the setup, unscrewing the telescope directly from the tripod thread was a slightly nerve-wracking process. Due to the bulkiness of the Seestar S30 Pro, there is a constant fear of dropping the device while turning it off the bare 3/8-inch base screw. A proper tripod head will definitely be my next purchase to make this process much safer.
+
+Additionally, while packing up, I noticed that the material of the included carrying bag strongly attracts the evening humidity. The bag was noticeably wet on the outside. It is definitely a good idea to let the telescope and accessories air out briefly at home so that no moisture gets trapped inside the bag.
+
 ### Scientific Excursion: Why Do These Nebulae Glow Red?
 
 Both the North America Nebula (NGC 7000) and the region around Sadr (IC 1318) belong to the class of **emission nebulae**. The characteristic red glow of these regions has a fascinating physical reason:
