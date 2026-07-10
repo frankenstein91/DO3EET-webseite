@@ -149,6 +149,12 @@ Anyone comparing the finished JPEG on their smartphone with the FITS file in the
 * **Scientific White Balance**: The FITS viewer (implemented in `fitsviewer.js`) automatically balances the RGB channels to neutralize the sky background. In contrast, the mobile app uses sensor-specific color matrices to selectively boost H-alpha red.
 * **FITS as Raw Material**: FITS files are raw measurement data intended for post-processing in software like Siril or PixInsight. It is only during manual processing (stretching, background extraction, and color saturation) that you pull the full, vibrant red out of the data in a controlled way.
 
+## Join the Discussion!
+
+Now it's your turn: Which celestial bodies should I target next with the Seestar S30 Pro? And what do you prefer when viewing – the interactive, scientific raw FITS data directly in the browser, or the pre-processed, vibrant JPEGs? Let me know in the comments below!
+
+
+
 
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)

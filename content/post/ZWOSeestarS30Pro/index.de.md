@@ -149,6 +149,12 @@ Wer das fertige JPEG auf dem Smartphone mit der FITS-Datei im interaktiven FITS-
 * **Wissenschaftlicher Weißabgleich**: Der FITS-Viewer (implementiert in `fitsviewer.js`) gleicht die Kanäle (RGB) automatisch an, um den Himmelshintergrund zu neutralisieren. Die Handy-App nutzt hingegen sensor-spezifische Farbmatrizen, um das H-alpha-Rot gezielt hervorzuheben.
 * **FITS als Ausgangsmaterial**: FITS-Dateien sind rohe Messdaten für die Weiterverarbeitung in Programmen wie Siril oder PixInsight. Erst durch die manuelle Bildbearbeitung (Strecken, Hintergrund-Abzug und Sättigung) holt man das volle, leuchtende Rot kontrolliert aus den Daten heraus.
 
+## Diskutiert mit!
+
+Jetzt seid ihr gefragt: Welche Himmelskörper soll ich als Nächstes mit dem Seestar S30 Pro ins Visier nehmen? Und was bevorzugt ihr beim Betrachten – die interaktiven, wissenschaftlichen FITS-Rohdaten direkt im Browser oder die fertig aufbereiteten, farbintensiven JPEGs? Schreibt es mir gerne unten in die Kommentare!
+
+
+
 
 
 [^1]: [YouTube: ZWO Seestar S30 Pro Review / Test in Tokyo](https://youtu.be/WHwij7kp5Ao?si=akDDS5MTtnikQk3b)
