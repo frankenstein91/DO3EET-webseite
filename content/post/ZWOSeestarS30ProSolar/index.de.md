@@ -66,4 +66,6 @@ Die dunklen Flecken auf der Sonne sind keine Löcher, sondern ein faszinierendes
 ## Fazit
 Der Test des Sonnenfilters hat mich begeistert. Die Kombination aus der sicheren und unkomplizierten magnetischen Halterung des Filters und der intelligenten Sonnen-Suche in der App macht die Sonnenbeobachtung mit dem ZWO Seestar S30 Pro zu einem kinderleichten und absolut sicheren Erlebnis. Egal ob für die schnelle Beobachtung zwischendurch oder zur Vorbereitung auf astronomische Highlights wie Finsternisse – das System funktioniert hervorragend.
 
+*Hinweis:* Am **12. August 2026** steht uns übrigens eine partielle Sonnenfinsternis bevor, die auch in Deutschland mit hoher Abdeckung sichtbar sein wird. Mit dem Seestar S30 Pro und dem Sonnenfilter ist man dafür bestens vorbereitet!
+
 Habt ihr auch schon Erfahrungen mit der Sonnenbeobachtung gemacht oder konntet ihr die Sonnenflecken der letzten Wochen mit eurem Setup einfangen? Schreibt es mir gerne in die Kommentare!

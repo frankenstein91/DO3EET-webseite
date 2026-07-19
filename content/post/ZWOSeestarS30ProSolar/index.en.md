@@ -66,4 +66,6 @@ The dark spots on the sun are not holes; they are a fascinating result of magnet
 ## Conclusion
 Testing the solar filter was a fantastic experience. The combination of the safe, simple magnetic mount and the app's intelligent solar search makes observing the sun with the ZWO Seestar S30 Pro incredibly easy and completely safe. Whether for a quick look during the day or preparing for astronomical highlights like eclipses, the system works flawlessly.
 
+*Note:* On **August 12, 2026**, a partial solar eclipse will occur, which will be visible with high coverage in Germany. With the Seestar S30 Pro and the solar filter, you are perfectly prepared for this event!
+
 Have you had any experience with solar observation, or have you managed to capture the sunspots of the past few weeks with your setup? Let me know in the comments below!
