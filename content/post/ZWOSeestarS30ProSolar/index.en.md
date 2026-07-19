@@ -63,6 +63,12 @@ The dark spots on the sun are not holes; they are a fascinating result of magnet
 * **Brightness Contrast**: Since cooler gases emit less light, these regions look black in direct contrast to the extremely bright surroundings. If you were to place a single sunspot by itself in the night sky, it would still shine brighter than the full moon!
 * **Activity Cycle**: The number of sunspots fluctuates on an 11-year cycle. Since we are in the middle of the maximum of **Solar Cycle 25** in 2026, the sun is currently highly active, presenting spectacular spot groups for observation almost daily.
 
+### Impact on Amateur Radio
+As a licensed radio amateur (callsign DO3EET), I track solar activity for more than just visual appeal. Sunspots have a direct and major impact on our hobby:
+* **Improved Propagation**: The intense ultraviolet radiation associated with sunspots ionizes the F-layer of Earth's atmosphere (ionosphere). A more densely ionized ionosphere acts as a better mirror, reflecting high-frequency (HF) signals back to Earth.
+* **DX on Higher Bands**: During the current solar maximum, the higher bands (such as 10m, 12m, and 15m) regularly open up for worldwide contacts (DX) even with low transmit power.
+* **The Downside – Radio Blackouts**: Highly active sunspot groups can produce solar flares. When these hit Earth, they can cause Sudden Ionospheric Disturbances (SID) and complete radio blackouts on the sunlit side of the planet.
+
 ## Conclusion
 Testing the solar filter was a fantastic experience. The combination of the safe, simple magnetic mount and the app's intelligent solar search makes observing the sun with the ZWO Seestar S30 Pro incredibly easy and completely safe. Whether for a quick look during the day or preparing for astronomical highlights like eclipses, the system works flawlessly.
 

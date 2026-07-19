@@ -63,6 +63,12 @@ Die dunklen Flecken auf der Sonne sind keine Löcher, sondern ein faszinierendes
 * **Der Helligkeitskontrast**: Da kühlere Gase weniger Licht aussenden, wirken diese Regionen im direkten Kontrast zur extrem hellen Umgebung schwarz. Würde man einen einzelnen Sonnenfleck isoliert an den Nachthimmel setzen, würde er dennoch heller leuchten als der Vollmond!
 * **Aktivitätszyklus**: Die Anzahl der Sonnenflecken schwankt in einem ca. 11-jährigen Rhythmus. Da wir uns im Jahr 2026 mitten im Maximum des aktuellen **Sonnenfleckenzyklus 25** befinden, ist die Sonne derzeit besonders aktiv und bietet fast täglich spektakuläre Fleckengruppen zur Beobachtung an.
 
+### Auswirkung auf den Amateurfunk
+Als Amateurfunker (Rufzeichen DO3EET) verfolge ich die Sonnenaktivität natürlich nicht nur aus optischem Interesse. Sonnenflecken haben einen direkten und spürbaren Einfluss auf unser Hobby:
+* **Bessere Ausbreitungsbedingungen**: Die starke ultraviolette Strahlung, die mit Sonnenflecken einhergeht, ionisiert die F-Schicht der Erdatmosphäre (Ionosphäre). Eine dichter ionisierte Ionosphäre reflektiert Kurzwellensignale viel besser zurück zur Erde.
+* **DX auf den oberen Bändern**: Während des aktuellen solaren Maximums öffnen sich die höheren Bänder (wie 10m, 12m und 15m) regelmäßig für weltweite Verbindungen (DX) mit geringer Sendeleistung.
+* **Kehrseite – Radio Blackouts**: Sehr aktive Sonnenfleckengruppen können solare Flares (Strahlungsausbrüche) erzeugen. Treffen diese auf die Erde, kann dies zu plötzlichen Ionosphärenstörungen (SID) und kompletten Funkstille-Phasen (Radio Blackouts) auf der Tagseite führen.
+
 ## Fazit
 Der Test des Sonnenfilters hat mich begeistert. Die Kombination aus der sicheren und unkomplizierten magnetischen Halterung des Filters und der intelligenten Sonnen-Suche in der App macht die Sonnenbeobachtung mit dem ZWO Seestar S30 Pro zu einem kinderleichten und absolut sicheren Erlebnis. Egal ob für die schnelle Beobachtung zwischendurch oder zur Vorbereitung auf astronomische Highlights wie Finsternisse – das System funktioniert hervorragend.
 
