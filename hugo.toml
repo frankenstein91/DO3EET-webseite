@@ -93,6 +93,11 @@ title = "Mastodon"
 url = "https://mastodon.hams.social/@DO3EET"
 
 [[params.socialLinks]]
+icon = "fa-solid fa-camera"
+title = "AstroImg"
+url = "https://www.astroimg.com/user/627588482457407491"
+
+[[params.socialLinks]]
 icon = "fa-solid fa-rss"
 title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
