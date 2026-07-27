@@ -24,3 +24,5 @@ DO3EET_keyslips.html
 *.fits
 *.fit
 *.fts
+
+.wrangler/
