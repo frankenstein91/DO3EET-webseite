@@ -53,16 +53,16 @@
                 <span class="stat-val" id="sofi-stat-time">20:10 MESZ</span>
               </div>
               <div class="stat-row">
-                <span class="stat-lbl">OCCULTATION:</span>
+                <span class="stat-lbl">COVER:</span>
                 <span class="stat-val highlight" id="sofi-stat-cov">86.8 %</span>
               </div>
               <div class="stat-row">
-                <span class="stat-lbl">ALTITUDE:</span>
+                <span class="stat-lbl">ALT:</span>
                 <span class="stat-val" id="sofi-stat-alt">6.2° WNW</span>
               </div>
               <div class="stat-row">
                 <span class="stat-lbl">STATUS:</span>
-                <span class="stat-val status-text" id="sofi-stat-phase">Maximum der Finsternis</span>
+                <span class="stat-val status-text" id="sofi-stat-phase">⭐ Maximum (86.8%)</span>
               </div>
             </div>
           </div>
@@ -259,28 +259,51 @@
   bottom: 8px;
   left: 8px;
   right: 8px;
-  background: rgba(0, 18, 0, 0.88);
+  background: rgba(0, 18, 0, 0.92);
   backdrop-filter: blur(6px);
   border: 1px solid var(--terminal-border, #003b00);
   border-radius: 4px;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.72rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.25rem 0.75rem;
+  grid-template-columns: 1fr 1.15fr;
+  column-gap: 0.75rem;
+  row-gap: 0.25rem;
+  box-sizing: border-box;
+  min-height: 48px;
 }
 .stat-row {
   display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.stat-lbl { color: #566f56; font-weight: bold; }
-.stat-val { color: var(--fg-color, #c0caf5); font-weight: 600; }
+.stat-lbl {
+  color: #566f56;
+  font-weight: bold;
+  min-width: 50px;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+.stat-val {
+  color: var(--fg-color, #c0caf5);
+  font-weight: 600;
+  font-family: var(--font-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .stat-val.highlight {
   color: var(--accent-color, #00ff41);
   text-shadow: 0 0 5px rgba(0, 255, 65, 0.6);
 }
-.stat-val.status-text { color: #ffaa00; }
+.stat-val.status-text {
+  color: #ffaa00;
+  font-size: 0.68rem;
+}
 
 .sofi-controls {
   background: rgba(0, 20, 0, 0.35);
