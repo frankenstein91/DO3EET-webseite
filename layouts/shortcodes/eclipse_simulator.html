@@ -1,0 +1,761 @@
+<div class="sofi-sim-wrapper" id="sofi-sim-app">
+  <div class="sofi-terminal-window">
+    <!-- Matrix Terminal Header -->
+    <div class="sofi-term-header">
+      <div class="sofi-term-buttons">
+        <span class="win-btn close"></span>
+        <span class="win-btn minimize"></span>
+        <span class="win-btn maximize"></span>
+      </div>
+      <div class="sofi-term-title">
+        <span class="term-prompt">frank@do3eet:~/astro/sofi2026$</span> ./run_simulation.sh
+      </div>
+      <div class="sofi-term-badge">LIVE HIMMELSMECHANIK</div>
+    </div>
+
+    <div class="sofi-sim-body">
+      <div class="sofi-sim-heading">
+        <h3 class="sofi-title">☀️ Sonnenfinsternis-Simulator 2026 (Sachsen)</h3>
+        <p class="sofi-subtitle">
+          Beobachtungsstandort: <span class="coord-val">51.1749° N, 12.7595° E</span> (Nahe Colditz) • <span class="date-val">12. August 2026</span>
+        </p>
+      </div>
+
+      <!-- Dual Viewport -->
+      <div class="sofi-grid">
+        <!-- 1. Space Orbit Perspective -->
+        <div class="sofi-panel">
+          <div class="sofi-panel-header">
+            <span class="panel-icon">🛰️</span>
+            <span>[ORBIT-GEO] Geometrie im Weltraum (Umbra & Penumbra)</span>
+          </div>
+          <div class="sofi-canvas-box">
+            <canvas id="sofiOrbitCanvas" width="560" height="320"></canvas>
+            <div class="sofi-legend">
+              <span class="legend-item"><span class="dot umbra-dot"></span> Kernschatten (Umbra)</span>
+              <span class="legend-item"><span class="dot penumbra-dot"></span> Halbschatten (Penumbra)</span>
+              <span class="legend-item"><span class="dot obs-dot"></span> Standort Sachsen (~87%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Local Sky / Telescope View -->
+        <div class="sofi-panel">
+          <div class="sofi-panel-header">
+            <span class="panel-icon">🔭</span>
+            <span>[OPTIC-FEED] Teleskop-Anblick (Seestar S30 Pro)</span>
+          </div>
+          <div class="sofi-canvas-box">
+            <canvas id="sofiSkyCanvas" width="320" height="320"></canvas>
+            <div class="sofi-overlay-stats">
+              <div class="stat-row">
+                <span class="stat-lbl">TIME:</span>
+                <span class="stat-val" id="sofi-stat-time">20:10 MESZ</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">OCCULTATION:</span>
+                <span class="stat-val highlight" id="sofi-stat-cov">86.8 %</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">ALTITUDE:</span>
+                <span class="stat-val" id="sofi-stat-alt">6.2° WNW</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">STATUS:</span>
+                <span class="stat-val status-text" id="sofi-stat-phase">Maximum der Finsternis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="sofi-controls">
+        <div class="sofi-slider-row">
+          <button id="sofiPlayBtn" class="sofi-btn play-btn" title="Simulation starten / pausieren">
+            <span id="sofiPlayIcon">▶</span> PLAY
+          </button>
+          <input type="range" id="sofiTimeSlider" min="0" max="1000" value="625" class="sofi-slider" aria-label="Zeitregler Sonnenfinsternis">
+          <span class="sofi-time-badge" id="sofiSliderTime">20:10 MESZ</span>
+        </div>
+
+        <div class="sofi-presets">
+          <button class="sofi-preset-btn" data-progress="0">
+            <span class="preset-time">19:14</span>
+            <span class="preset-name">1. Kontakt (Ingress)</span>
+          </button>
+          <button class="sofi-preset-btn" data-progress="330">
+            <span class="preset-time">19:45</span>
+            <span class="preset-name">Halbzeit (~45%)</span>
+          </button>
+          <button class="sofi-preset-btn active" data-progress="625">
+            <span class="preset-time">20:10</span>
+            <span class="preset-name">⭐ Maximum (86.8%)</span>
+          </button>
+          <button class="sofi-preset-btn" data-progress="1000">
+            <span class="preset-time">20:46</span>
+            <span class="preset-name">Sonnenuntergang</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.sofi-sim-wrapper {
+  margin: 2.5rem 0;
+  font-family: var(--font-monospace, "OpenDyslexicMono", monospace);
+  color: var(--fg-color, #c0caf5);
+}
+.sofi-terminal-window {
+  background: #0b0c12;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 255, 65, 0.12);
+  overflow: hidden;
+  position: relative;
+}
+.sofi-term-header {
+  background: #001500;
+  border-bottom: 1px solid var(--terminal-border, #003b00);
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  user-select: none;
+}
+.sofi-term-buttons {
+  display: flex;
+  gap: 6px;
+}
+.sofi-term-buttons .win-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+.win-btn.close { background: #ff5555; }
+.win-btn.minimize { background: #ffaa00; }
+.win-btn.maximize { background: #00ff41; }
+
+.sofi-term-title {
+  color: var(--accent-color, #00ff41);
+  font-size: 0.85rem;
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.6);
+  font-family: var(--font-monospace, monospace);
+}
+.term-prompt {
+  color: #566f56;
+}
+.sofi-term-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: rgba(0, 255, 65, 0.12);
+  color: var(--accent-color, #00ff41);
+  border: 1px solid var(--accent-color, #00ff41);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.sofi-sim-body {
+  padding: 1.25rem;
+}
+.sofi-sim-heading {
+  margin-bottom: 1.25rem;
+}
+.sofi-title {
+  margin: 0 0 0.25rem 0;
+  color: var(--accent-color, #00ff41);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+.sofi-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--off-fg, #566f56);
+}
+.coord-val, .date-val {
+  color: var(--fg-color, #c0caf5);
+  font-weight: bold;
+}
+
+.sofi-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 820px) {
+  .sofi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.sofi-panel {
+  background: rgba(0, 20, 0, 0.35);
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+}
+.sofi-panel-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color, #00ff41);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+.sofi-canvas-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #050608;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--terminal-border, #003b00);
+}
+.sofi-canvas-box canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sofi-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #001200;
+  width: 100%;
+  border-top: 1px solid var(--terminal-border, #003b00);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #a9b1d6;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.umbra-dot { background: #ff5555; box-shadow: 0 0 4px #ff5555; }
+.penumbra-dot { background: #00ff41; box-shadow: 0 0 4px #00ff41; }
+.obs-dot { background: #ffaa00; box-shadow: 0 0 4px #ffaa00; }
+
+.sofi-overlay-stats {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(0, 18, 0, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 0.75rem;
+}
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.stat-lbl { color: #566f56; font-weight: bold; }
+.stat-val { color: var(--fg-color, #c0caf5); font-weight: 600; }
+.stat-val.highlight {
+  color: var(--accent-color, #00ff41);
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.6);
+}
+.stat-val.status-text { color: #ffaa00; }
+
+.sofi-controls {
+  background: rgba(0, 20, 0, 0.35);
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 1rem;
+}
+.sofi-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+.sofi-btn {
+  background: #002b00;
+  color: var(--accent-color, #00ff41);
+  border: 1px solid var(--accent-color, #00ff41);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-monospace, monospace);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.2);
+}
+.sofi-btn:hover {
+  background: var(--accent-color, #00ff41);
+  color: #000000;
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.8);
+  transform: translateY(-1px);
+}
+.sofi-slider {
+  flex: 1;
+  accent-color: var(--accent-color, #00ff41);
+  height: 6px;
+  cursor: pointer;
+}
+.sofi-time-badge {
+  background: #001800;
+  color: var(--accent-color, #00ff41);
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  min-width: 95px;
+  text-align: center;
+  border: 1px solid var(--accent-color, #00ff41);
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.7);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.15);
+}
+.sofi-presets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+}
+@media (max-width: 600px) {
+  .sofi-presets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.sofi-preset-btn {
+  background: #041004;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: #779977;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--font-monospace, monospace);
+  transition: all 0.2s ease;
+}
+.sofi-preset-btn:hover {
+  background: #002200;
+  border-color: var(--accent-color, #00ff41);
+  color: var(--accent-color, #00ff41);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}
+.sofi-preset-btn.active {
+  background: rgba(0, 255, 65, 0.15);
+  border-color: var(--accent-color, #00ff41);
+  color: var(--accent-color, #00ff41);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.35);
+}
+.preset-time {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.preset-name {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+</style>
+
+<script>
+(function() {
+  const orbitCanvas = document.getElementById("sofiOrbitCanvas");
+  const skyCanvas = document.getElementById("sofiSkyCanvas");
+  if (!orbitCanvas || !skyCanvas) return;
+
+  const orbitCtx = orbitCanvas.getContext("2d");
+  const skyCtx = skyCanvas.getContext("2d");
+
+  const slider = document.getElementById("sofiTimeSlider");
+  const sliderTime = document.getElementById("sofiSliderTime");
+  const playBtn = document.getElementById("sofiPlayBtn");
+  const playIcon = document.getElementById("sofiPlayIcon");
+  const presetBtns = document.querySelectorAll(".sofi-preset-btn");
+
+  const statTime = document.getElementById("sofi-stat-time");
+  const statCov = document.getElementById("sofi-stat-cov");
+  const statAlt = document.getElementById("sofi-stat-alt");
+  const statPhase = document.getElementById("sofi-stat-phase");
+
+  let isPlaying = false;
+  let animId = null;
+  let progress = 625; // default: maximum at 20:10 (scale: 0 to 1000)
+
+  function getTimelineData(tNorm) {
+    const totalMinutes = 92;
+    const elapsedMinutes = tNorm * totalMinutes;
+    const startHour = 19;
+    const startMin = 14;
+    
+    let curMinTotal = startHour * 60 + startMin + elapsedMinutes;
+    let h = Math.floor(curMinTotal / 60);
+    let m = Math.floor(curMinTotal % 60);
+    let s = Math.floor((curMinTotal % 1) * 60);
+    
+    let timeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')} MESZ`;
+    let shortTimeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')} MESZ`;
+
+    const maxT = 56.0 / 92.0; // 20:10 MESZ
+    let cov = 0;
+    if (tNorm < maxT) {
+      cov = Math.sin((tNorm / maxT) * (Math.PI / 2)) * 86.8;
+    } else {
+      cov = Math.cos(((tNorm - maxT) / (1 - maxT)) * (Math.PI / 4)) * 86.8;
+    }
+    cov = Math.max(0, Math.min(86.8, cov));
+
+    let alt = Math.max(0, 15.2 - (elapsedMinutes / totalMinutes) * 15.2);
+
+    let phaseName = "Partielle Phase";
+    if (tNorm < 0.03) phaseName = "1. Kontakt (Ingress)";
+    else if (Math.abs(tNorm - maxT) < 0.04) phaseName = "⭐ Finsternis-Maximum";
+    else if (tNorm > 0.96) phaseName = "🌅 Sonnenuntergang";
+
+    return {
+      timeStr,
+      shortTimeStr,
+      cov: cov.toFixed(1),
+      alt: alt.toFixed(1),
+      phaseName,
+      tNorm
+    };
+  }
+
+  function drawOrbit(tNorm) {
+    const w = orbitCanvas.width;
+    const h = orbitCanvas.height;
+    orbitCtx.clearRect(0, 0, w, h);
+
+    // Deep space background
+    orbitCtx.fillStyle = "#05070a";
+    orbitCtx.fillRect(0, 0, w, h);
+
+    // Background Stars with subtle Matrix Green tint
+    const starCoords = [
+      [30, 40], [80, 260], [140, 50], [210, 290], [320, 30], [450, 45], [520, 280],
+      [490, 70], [380, 295], [260, 40], [170, 260], [90, 120]
+    ];
+    orbitCtx.fillStyle = "rgba(0, 255, 65, 0.4)";
+    starCoords.forEach(([sx, sy]) => {
+      orbitCtx.beginPath();
+      orbitCtx.arc(sx, sy, 1, 0, Math.PI * 2);
+      orbitCtx.fill();
+    });
+
+    // 1. Sun (Left)
+    const sunX = 70;
+    const sunY = h / 2;
+    const sunR = 48;
+
+    // Corona glow
+    const glowGrad = orbitCtx.createRadialGradient(sunX, sunY, sunR * 0.8, sunX, sunY, sunR * 2.2);
+    glowGrad.addColorStop(0, "rgba(255, 200, 80, 0.8)");
+    glowGrad.addColorStop(0.5, "rgba(255, 140, 0, 0.25)");
+    glowGrad.addColorStop(1, "rgba(255, 100, 0, 0)");
+    orbitCtx.fillStyle = glowGrad;
+    orbitCtx.beginPath();
+    orbitCtx.arc(sunX, sunY, sunR * 2.2, 0, Math.PI * 2);
+    orbitCtx.fill();
+
+    // Sun Disk
+    const sunGrad = orbitCtx.createRadialGradient(sunX - 10, sunY - 10, 5, sunX, sunY, sunR);
+    sunGrad.addColorStop(0, "#fff5cc");
+    sunGrad.addColorStop(0.7, "#ffaa00");
+    sunGrad.addColorStop(1, "#e65c00");
+    orbitCtx.fillStyle = sunGrad;
+    orbitCtx.beginPath();
+    orbitCtx.arc(sunX, sunY, sunR, 0, Math.PI * 2);
+    orbitCtx.fill();
+
+    // Label Sonne
+    orbitCtx.fillStyle = "#00ff41";
+    orbitCtx.font = "bold 11px monospace";
+    orbitCtx.textAlign = "center";
+    orbitCtx.fillText("SONNE", sunX, sunY + sunR + 18);
+
+    // 2. Earth (Right)
+    const earthX = w - 90;
+    const earthY = h / 2;
+    const earthR = 32;
+
+    // 3. Moon along orbit
+    const moonDist = 135;
+    const moonAngle = Math.PI - 0.38 + tNorm * 0.76;
+    const moonX = earthX + Math.cos(moonAngle) * moonDist;
+    const moonY = earthY + Math.sin(moonAngle) * moonDist * 0.7;
+    const moonR = 10;
+
+    // Draw Orbit Line
+    orbitCtx.strokeStyle = "rgba(0, 255, 65, 0.25)";
+    orbitCtx.setLineDash([4, 4]);
+    orbitCtx.beginPath();
+    orbitCtx.arc(earthX, earthY, moonDist, Math.PI - 0.5, Math.PI + 0.5);
+    orbitCtx.stroke();
+    orbitCtx.setLineDash([]);
+
+    // 4. Shadow Cones (Umbra & Penumbra)
+    // Penumbra Cone (Matrix Green glow)
+    orbitCtx.fillStyle = "rgba(0, 255, 65, 0.12)";
+    orbitCtx.beginPath();
+    orbitCtx.moveTo(sunX, sunY - sunR);
+    orbitCtx.lineTo(moonX, moonY + moonR);
+    orbitCtx.lineTo(earthX + earthR + 50, moonY + (moonY - (sunY - sunR)) * 1.8 + 40);
+    orbitCtx.lineTo(earthX + earthR + 50, moonY + (moonY - (sunY + sunR)) * 1.8 - 40);
+    orbitCtx.lineTo(moonX, moonY - moonR);
+    orbitCtx.lineTo(sunX, sunY + sunR);
+    orbitCtx.closePath();
+    orbitCtx.fill();
+
+    // Umbra Cone (Points towards Earth)
+    const umbraTipX = moonX + (moonX - sunX) * 0.9;
+    const umbraTipY = moonY + (moonY - sunY) * 0.9;
+
+    orbitCtx.fillStyle = "rgba(255, 85, 85, 0.4)";
+    orbitCtx.beginPath();
+    orbitCtx.moveTo(moonX, moonY - moonR);
+    orbitCtx.lineTo(umbraTipX, umbraTipY);
+    orbitCtx.lineTo(moonX, moonY + moonR);
+    orbitCtx.closePath();
+    orbitCtx.fill();
+
+    // 5. Draw Earth
+    const earthGrad = orbitCtx.createRadialGradient(earthX - 10, earthY - 10, 5, earthX, earthY, earthR);
+    earthGrad.addColorStop(0, "#3b82f6");
+    earthGrad.addColorStop(0.5, "#1d4ed8");
+    earthGrad.addColorStop(1, "#0a192f");
+    orbitCtx.fillStyle = earthGrad;
+    orbitCtx.beginPath();
+    orbitCtx.arc(earthX, earthY, earthR, 0, Math.PI * 2);
+    orbitCtx.fill();
+
+    orbitCtx.strokeStyle = "#00ff41";
+    orbitCtx.lineWidth = 1.5;
+    orbitCtx.beginPath();
+    orbitCtx.arc(earthX, earthY, earthR, 0, Math.PI * 2);
+    orbitCtx.stroke();
+
+    // Observer Location Dot (Sachsen: 51.17° N)
+    const obsX = earthX - earthR * 0.72;
+    const obsY = earthY - earthR * 0.45;
+    
+    orbitCtx.fillStyle = "#ffaa00";
+    orbitCtx.beginPath();
+    orbitCtx.arc(obsX, obsY, 4, 0, Math.PI * 2);
+    orbitCtx.fill();
+    orbitCtx.strokeStyle = "#00ff41";
+    orbitCtx.lineWidth = 1;
+    orbitCtx.stroke();
+
+    orbitCtx.fillStyle = "#00ff41";
+    orbitCtx.font = "10px monospace";
+    orbitCtx.textAlign = "left";
+    orbitCtx.fillText("📍 Sachsen (51.17°N)", obsX + 8, obsY - 4);
+
+    orbitCtx.fillStyle = "#00ff41";
+    orbitCtx.font = "bold 11px monospace";
+    orbitCtx.textAlign = "center";
+    orbitCtx.fillText("ERDE", earthX, earthY + earthR + 18);
+
+    // 6. Draw Moon
+    const moonGrad = orbitCtx.createRadialGradient(moonX - 2, moonY - 2, 1, moonX, moonY, moonR);
+    moonGrad.addColorStop(0, "#a0aec0");
+    moonGrad.addColorStop(0.7, "#4a5568");
+    moonGrad.addColorStop(1, "#1a202c");
+    orbitCtx.fillStyle = moonGrad;
+    orbitCtx.beginPath();
+    orbitCtx.arc(moonX, moonY, moonR, 0, Math.PI * 2);
+    orbitCtx.fill();
+    orbitCtx.strokeStyle = "rgba(0, 255, 65, 0.5)";
+    orbitCtx.lineWidth = 1;
+    orbitCtx.stroke();
+
+    orbitCtx.fillStyle = "#c0caf5";
+    orbitCtx.font = "10px monospace";
+    orbitCtx.fillText("Mond", moonX, moonY - moonR - 6);
+  }
+
+  function drawSky(tNorm) {
+    const w = skyCanvas.width;
+    const h = skyCanvas.height;
+    skyCtx.clearRect(0, 0, w, h);
+
+    // Filter view: Black cosmic background
+    skyCtx.fillStyle = "#050608";
+    skyCtx.fillRect(0, 0, w, h);
+
+    const cx = w / 2;
+    const cy = h / 2 - 15;
+    const r = 90;
+
+    // 1. Sun Photosphere (through ND5 solar filter)
+    const sunFilterGrad = skyCtx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
+    sunFilterGrad.addColorStop(0, "#fff2b2");
+    sunFilterGrad.addColorStop(0.65, "#f5a31a");
+    sunFilterGrad.addColorStop(0.92, "#d66a00");
+    sunFilterGrad.addColorStop(1, "#7a2b00");
+
+    skyCtx.fillStyle = sunFilterGrad;
+    skyCtx.beginPath();
+    skyCtx.arc(cx, cy, r, 0, Math.PI * 2);
+    skyCtx.fill();
+
+    // 2. Real Sunspots as seen through Seestar S30 Pro
+    // AR4485 (in upper-left / west quadrant)
+    skyCtx.fillStyle = "#2c1200";
+    skyCtx.beginPath();
+    skyCtx.ellipse(cx - r * 0.55, cy - r * 0.18, 3.8, 2.6, -0.3, 0, Math.PI * 2);
+    skyCtx.fill();
+    skyCtx.fillStyle = "#0d0400";
+    skyCtx.beginPath();
+    skyCtx.arc(cx - r * 0.55, cy - r * 0.18, 1.8, 0, Math.PI * 2);
+    skyCtx.fill();
+
+    // AR4482 (in lower-right quadrant)
+    skyCtx.fillStyle = "#2c1200";
+    skyCtx.beginPath();
+    skyCtx.ellipse(cx + r * 0.45, cy + r * 0.60, 3.2, 2.2, 0.4, 0, Math.PI * 2);
+    skyCtx.fill();
+    skyCtx.fillStyle = "#0d0400";
+    skyCtx.beginPath();
+    skyCtx.arc(cx + r * 0.45, cy + r * 0.60, 1.5, 0, Math.PI * 2);
+    skyCtx.fill();
+
+    // 3. Precise Moon Motion matching Seestar Sensor (Unmirrored Real Camera Feed)
+    const maxT = 56.0 / 92.0; // 20:10 MESZ
+    
+    let mx, my;
+    if (tNorm <= maxT) {
+      let f = tNorm / maxT;
+      // Ingress at (cx + 1.45*r, cy + 1.60*r) -> Maximum at (cx - 0.04*r, cy + 0.23*r)
+      mx = (1 - f) * (cx + 1.45 * r) + f * (cx - 0.04 * r);
+      my = (1 - f) * (cy + 1.60 * r) + f * (cy + 0.23 * r);
+    } else {
+      let f = (tNorm - maxT) / (1 - maxT);
+      // Maximum -> Sunset at (cx - 0.65*r, cy + 0.40*r)
+      mx = (1 - f) * (cx - 0.04 * r) + f * (cx - 0.65 * r);
+      my = (1 - f) * (cy + 0.23 * r) + f * (cy + 0.40 * r);
+    }
+
+    const moonR = r * 1.018; // Moon angular size slightly larger than Sun
+
+    // Draw Moon Silhouette (True black obstruction)
+    skyCtx.fillStyle = "#050608";
+    skyCtx.beginPath();
+    skyCtx.arc(mx, my, moonR, 0, Math.PI * 2);
+    skyCtx.fill();
+    skyCtx.strokeStyle = "rgba(0, 0, 0, 0.95)";
+    skyCtx.lineWidth = 1;
+    skyCtx.stroke();
+
+    // 4. Horizon Bar at Sunset (horizon rises from bottom upwards)
+    if (tNorm > 0.80) {
+      let fSunset = (tNorm - 0.80) / 0.20;
+      let startY = h + 10;
+      let endY = cy + r * 0.15;
+      let horizY = (1 - fSunset) * startY + fSunset * endY;
+
+      skyCtx.fillStyle = "rgba(0, 25, 0, 0.95)";
+      skyCtx.fillRect(0, horizY, w, h - horizY);
+      skyCtx.strokeStyle = "#00ff41";
+      skyCtx.lineWidth = 1.5;
+      skyCtx.beginPath();
+      skyCtx.moveTo(0, horizY);
+      skyCtx.lineTo(w, horizY);
+      skyCtx.stroke();
+      skyCtx.fillStyle = "#00ff41";
+      skyCtx.font = "bold 9px monospace";
+      skyCtx.fillText("🌅 Westhorizont", 10, horizY - 4);
+    }
+
+    // Reticle & Scale Guide with Matrix Green styling
+    skyCtx.strokeStyle = "rgba(0, 255, 65, 0.25)";
+    skyCtx.lineWidth = 1;
+    skyCtx.setLineDash([2, 4]);
+    skyCtx.beginPath();
+    skyCtx.moveTo(cx, 10);
+    skyCtx.lineTo(cx, h - 70);
+    skyCtx.moveTo(15, cy);
+    skyCtx.lineTo(w - 15, cy);
+    skyCtx.stroke();
+    skyCtx.setLineDash([]);
+  }
+
+  function update() {
+    const tNorm = progress / 1000.0;
+    const data = getTimelineData(tNorm);
+
+    slider.value = progress;
+    sliderTime.textContent = data.shortTimeStr;
+    statTime.textContent = data.shortTimeStr;
+    statCov.textContent = `${data.cov} %`;
+    statAlt.textContent = `${data.alt}° WNW`;
+    statPhase.textContent = data.phaseName;
+
+    drawOrbit(tNorm);
+    drawSky(tNorm);
+  }
+
+  slider.addEventListener("input", function(e) {
+    progress = parseInt(e.target.value, 10);
+    presetBtns.forEach(b => b.classList.remove("active"));
+    update();
+  });
+
+  presetBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      presetBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      progress = parseInt(btn.getAttribute("data-progress"), 10);
+      update();
+    });
+  });
+
+  playBtn.addEventListener("click", function() {
+    isPlaying = !isPlaying;
+    if (isPlaying) {
+      playBtn.classList.add("playing");
+      playIcon.textContent = "⏸";
+      playBtn.innerHTML = `<span>⏸</span> PAUSE`;
+      function step() {
+        if (!isPlaying) return;
+        progress += 3;
+        if (progress > 1000) progress = 0;
+        update();
+        animId = requestAnimationFrame(step);
+      }
+      animId = requestAnimationFrame(step);
+    } else {
+      playBtn.classList.remove("playing");
+      playBtn.innerHTML = `<span>▶</span> PLAY`;
+      if (animId) cancelAnimationFrame(animId);
+    }
+  });
+
+  update();
+})();
+</script>
