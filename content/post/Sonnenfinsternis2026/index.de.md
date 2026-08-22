@@ -155,6 +155,36 @@ Es braucht dringend verbindliche, internationale Regelungen für Satellitenbetre
 
 ---
 
+## Exkurs: Location-Scouting & Sonnenbahn-Projektion mit Python
+
+Ein erfolgreiches astronomisches Event – insbesondere bei einem tiefstehenden Himmelsereignis wie dieser Sonnenfinsternis kurz vor Sonnenuntergang – steht und fällt mit der Wahl des richtigen Beobachtungsortes. Wenn die Sonne nur wenige Grad über dem Horizont steht, können bereits eine ferne Baumgruppe, Strommasten oder eine leichte Geländeerhebung die entscheidenden Minuten des Finsternis-Maximums verdecken.
+
+Um beim Scouting potenzieller Standorte im Vorfeld nichts dem Zufall zu überlassen, habe ich am **5. August 2026** mit dem Smartphone Panoramabilder möglicher Beobachtungsorte aufgenommen und diese anschließend mit einem eigenen Python-Workflow ausgewertet.
+
+### Wie die Sonnenbahn-Projektion funktioniert:
+
+1. **GPS-Koordinaten & Ephemeriden-Berechnung**: Aus den EXIF-Metadaten der Smartphone-Fotos werden der exakte Aufnahmeort (Breiten- und Längengrad, Höhe) sowie der GPS-Zeitstempel der Referenzaufnahme extrahiert. Anhand hochpräziser astronomischer Ephemeriden berechnet Python die Sonnenposition (Azimut und Elevation) für jeden Zeitpunkt des Finsternistages (12. August 2026).
+2. **Optische Sonnen-Erkennung & Horizont-Kalibrierung**: Das Skript lokalisiert die Sonne im Referenzbild über Computer-Vision-Algorithmen (Helligkeits- und Farbsegmentierung). Durch den Abgleich der tatsächlichen Pixelposition der Sonne mit ihrer theoretischen Sonnenposition zum Aufnahmezeitpunkt werden das Sichtfeld (*Field of View*), der Bildwinkel und die Ausrichtung des Fotos präzise kalibriert.
+3. **Projektion der Finsternis-Trajektorie**: Auf Basis dieser geometrischen Transformation projiziert das Skript die zukünftige Sonnenbahn für den 12. August direkt als farbige Verlaufslinie samt Zeitmarken in das reale Landschaftsfoto hinein.
+
+### Der praktische Nutzen im Gelände
+
+Anhand der eingezeichneten Trajektorie ließ sich auf einen Blick ablesen, zu welchem Zeitpunkt die Sonne hinter welcher Baumkrone oder Geländekante verschwinden würde und ab wann freie Sicht auf das Finsternis-Maximum gewährleistet war:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Sonnenfinsternis2026/PXL_20260805_171642355_trajectory_20260812.jpg" alt="Location Scouting Standort 1: Sonnenbahn-Projektion für den 12. August 2026" width="1200" >}}
+<p style="font-size: 0.85rem; color: #a9b1d6; margin-top: -0.5rem; margin-bottom: 1.5rem; text-align: center;">
+  <strong>Scouting-Standort 1</strong>: Simulation der Sonnenbahn für den Finsternistag über dem Landschaftshorizont.
+</p>
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Sonnenfinsternis2026/PXL_20260805_172054182_trajectory_20260812.jpg" alt="Location Scouting Standort 2: Weitwinkel-Panoramaprojektion der Sonnenbahn" width="1200" >}}
+<p style="font-size: 0.85rem; color: #a9b1d6; margin-top: -0.5rem; margin-bottom: 1.5rem; text-align: center;">
+  <strong>Scouting-Standort 2</strong>: Weitwinkel-Analyse der Sichtachsen zur Absicherung gegen lokale Horizont-Hindernisse.
+</p>
+
+Dieser datengestützte Scouting-Prozess gab uns letztlich die Sicherheit, am 12. August zielsicher genau die Feldrand-Location bei Colditz anzusteuern, an der wir bis zum Sonnenuntergang freie Bahn hatten.
+
+---
+
 ## Fazit eines unvergesslichen Tages
 
 Der 12. August 2026 wird mir noch lange im Gedächtnis bleiben. Auf der einen Seite steht das überwältigende Naturerlebnis am Feldrand, die Freude beim gemeinsamen Beobachten mit meiner Mutter und meiner Tante und die tolle Resonanz im Twitch-Stream mit der Community von *das__mufflon*. 

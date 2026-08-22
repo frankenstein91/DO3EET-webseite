@@ -155,6 +155,36 @@ We urgently need binding international regulations for satellite operators: low-
 
 ---
 
+## Deep Dive: Location Scouting & Solar Trajectory Projection with Python
+
+A successful astronomical observation – especially for a celestial event occurring low on the horizon like this solar eclipse just before sunset – hinges entirely on choosing the right location. When the Sun is only a few degrees above the horizon, even a distant tree line, power lines, or gentle terrain elevation can obscure the critical minutes of eclipse maximum.
+
+To leave nothing to chance during preliminary location scouting, I took panorama test shots of potential sites with my smartphone on **August 5, 2026**, and processed them using a custom Python workflow.
+
+### How the Solar Trajectory Projection Works:
+
+1. **GPS Coordinates & Ephemeris Calculation**: The exact shooting location (latitude, longitude, altitude) and GPS timestamp are extracted from the smartphone photo's EXIF metadata. Using high-precision astronomical ephemerides, Python calculates the Sun's precise celestial coordinates (azimuth and elevation) for any moment on eclipse day (August 12, 2026).
+2. **Optical Sun Detection & Calibration**: The script detects the actual Sun in the reference photograph using computer vision (brightness and color segmentation). By matching the Sun's detected pixel coordinates against its theoretical astronomical position at the exact moment of capture, the camera's field of view, focal geometry, and horizontal alignment are calibrated with high precision.
+3. **Trajectory Projection**: Using this geometric transformation, the script projects the future solar path for August 12 directly onto the landscape photo as a colored trajectory line with timestamp annotations.
+
+### Practical Benefit in the Field
+
+With the projected trajectory overlaid directly onto the landscape, it was immediately apparent when the Sun would dip behind particular treetops or hills, and precisely where an unobstructed line of sight for the eclipse maximum was guaranteed:
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Sonnenfinsternis2026/PXL_20260805_171642355_trajectory_20260812.jpg" alt="Location Scouting Site 1: Solar trajectory projection for August 12, 2026" width="1200" >}}
+<p style="font-size: 0.85rem; color: #a9b1d6; margin-top: -0.5rem; margin-bottom: 1.5rem; text-align: center;">
+  <strong>Scouting Location 1</strong>: Simulation of the eclipse solar trajectory plotted across the horizon.
+</p>
+
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Sonnenfinsternis2026/PXL_20260805_172054182_trajectory_20260812.jpg" alt="Location Scouting Site 2: Wide-angle panorama projection of solar trajectory" width="1200" >}}
+<p style="font-size: 0.85rem; color: #a9b1d6; margin-top: -0.5rem; margin-bottom: 1.5rem; text-align: center;">
+  <strong>Scouting Location 2</strong>: Wide-angle line-of-sight analysis to safeguard against local horizon obstacles.
+</p>
+
+This data-driven scouting method provided complete confidence on August 12 to head directly to the field edge near Colditz, guaranteeing an unobstructed view right down to the evening horizon.
+
+---
+
 ## Conclusion of an Unforgettable Day
 
 August 12, 2026, will stay with me for a long time. On one side stands the overwhelming experience in nature at the edge of the fields, the shared joy of observing together with my mother and aunt, and the wonderful response in the Twitch stream with the community of *das__mufflon*.
