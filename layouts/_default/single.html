@@ -7,18 +7,13 @@
             <span class="sr-only">{{ T "heading_end" }}</span>
         </h1>
     </header>
-    {{ if .Params.toc }}
-    <aside>
-    </aside>
-    {{ end }}
     <div class="content__body">
         {{ .Content }}
     </div>
-    <footer class="content__footer">{{ partial "post/giscus.html" . }}</footer>
-    {{ partial "clt_egg.html" . }}
+    <footer class="content__footer"></footer>
 {{ end }}
 
-{{define "aside" }}
+{{ define "aside" }}
     {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
     {{ if or (.Params.author) (.Params.date) }}
         <p>

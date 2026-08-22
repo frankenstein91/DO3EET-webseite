@@ -386,15 +386,19 @@ code {
 }
 
 .tree-list li {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 0.2rem 0;
     position: relative;
+    max-width: 100%;
 }
 
 .tree-list li::before {
     content: "├── ";
     color: var(--terminal-border);
     font-family: monospace;
+    flex-shrink: 0;
+    white-space: pre;
 }
 
 .tree-list li:last-child::before {
@@ -404,6 +408,11 @@ code {
 .tree-list li a {
     color: var(--accent-color);
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
 }
 
 .tree-list li a:hover {
@@ -417,6 +426,7 @@ code {
     font-size: 0.9rem;
     margin-right: 0.3rem;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .tree-list.is-files li a::before {
@@ -427,6 +437,7 @@ code {
     color: #008f11;
     margin-right: 0.5rem;
     font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
 /* Pagination Styling */
@@ -508,6 +519,13 @@ code {
     margin-top: 0.5rem;
     color: var(--highlight-color);
 }
+
+.meta-lastmod {
+    color: var(--fg-color, #c0caf5);
+    opacity: 0.85;
+    margin-left: 0.35rem;
+}
+
 
 .post-entry-summary {
     margin-top: 1rem;
@@ -864,3 +882,15 @@ img {
     margin: 0;
     display: inline-block;
 }
+
+/* Post Metadata: Lastmod */
+.post-lastmod {
+    font-size: 0.85rem;
+    color: var(--off-fg, #7aa2f7);
+    margin-top: 0.25rem;
+}
+.post-lastmod .lastmod-label {
+    color: var(--accent-color, #00ff41);
+    font-weight: bold;
+}
+

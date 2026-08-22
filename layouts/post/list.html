@@ -26,7 +26,7 @@
                 <span class="sr-only">{{ T "heading_end" }}</span>
             </h2>
             <div class="post-entry-meta">
-               <span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$</span> stat {{ .Date.Format "2006-01-02" }}
+               <span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$</span> stat {{ .Date.Format "2006-01-02" }}{{ if and (not .Lastmod.IsZero) (gt .Lastmod.Unix .Date.Unix) }} <span class="meta-lastmod" title="{{ T "updated_on" | default "Aktualisiert am" }}: {{ .Lastmod.Format "2006-01-02" }}">[mtime: {{ .Lastmod.Format "2006-01-02" }}]</span>{{ end }}
             </div>
 
         </header>

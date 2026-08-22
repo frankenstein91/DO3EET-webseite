@@ -12,3 +12,10 @@
   translation: "Start of heading level {{ .Level }}:"
 - id: heading_end
   translation: "End of heading."
+- id: updated_on
+  translation: "Updated on"
+- id: published_by
+  translation: "By"
+- id: on_this_page
+  translation: "On this page:"
+

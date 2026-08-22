@@ -12,3 +12,10 @@
   translation: "Überschrift Grad {{ .Level }} Anfang:"
 - id: heading_end
   translation: "Ende der Überschrift."
+- id: updated_on
+  translation: "Aktualisiert am"
+- id: published_by
+  translation: "Von"
+- id: on_this_page
+  translation: "Auf dieser Seite:"
+
