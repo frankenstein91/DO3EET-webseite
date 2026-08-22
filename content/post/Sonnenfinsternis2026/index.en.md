@@ -1,6 +1,7 @@
 +++
 title = 'Solar Eclipse 2026 at the Field Edge: Between Eclipse Fever, Twitch Stream, and Satellite Anger'
 date = "2026-08-22T16:03:02+02:00"
+lastmod = "2026-08-22T16:28:24+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [

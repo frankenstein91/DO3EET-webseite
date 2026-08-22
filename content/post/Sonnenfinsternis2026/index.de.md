@@ -1,6 +1,7 @@
 +++
 title = 'Sonnenfinsternis 2026 am Feldrand: Zwischen Finsternis-Fieber, Twitch-Stream und Satelliten-Wut'
 date = "2026-08-13T19:46:58+02:00"
+lastmod = "2026-08-22T16:28:24+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
