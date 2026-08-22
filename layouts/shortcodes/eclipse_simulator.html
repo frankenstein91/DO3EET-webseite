@@ -1,3 +1,4 @@
+{{ $isEn := eq .Page.Lang "en" }}
 <div class="sofi-sim-wrapper" id="sofi-sim-app">
   <div class="sofi-terminal-window">
     <!-- Matrix Terminal Header -->
@@ -10,14 +11,14 @@
       <div class="sofi-term-title">
         <span class="term-prompt">frank@do3eet:~/astro/sofi2026$</span> ./run_simulation.sh
       </div>
-      <div class="sofi-term-badge">LIVE HIMMELSMECHANIK</div>
+      <div class="sofi-term-badge">{{ if $isEn }}LIVE CELESTIAL MECHANICS{{ else }}LIVE HIMMELSMECHANIK{{ end }}</div>
     </div>
 
     <div class="sofi-sim-body">
       <div class="sofi-sim-heading">
-        <h3 class="sofi-title">☀️ Sonnenfinsternis-Simulator 2026 (Sachsen)</h3>
+        <h3 class="sofi-title">{{ if $isEn }}☀️ Solar Eclipse Simulator 2026 (Saxony){{ else }}☀️ Sonnenfinsternis-Simulator 2026 (Sachsen){{ end }}</h3>
         <p class="sofi-subtitle">
-          Beobachtungsstandort: <span class="coord-val">51.1749° N, 12.7595° E</span> (Nahe Colditz) • <span class="date-val">12. August 2026</span>
+          {{ if $isEn }}Observation Site: <span class="coord-val">51.1749° N, 12.7595° E</span> (Near Colditz) • <span class="date-val">August 12, 2026</span>{{ else }}Beobachtungsstandort: <span class="coord-val">51.1749° N, 12.7595° E</span> (Nahe Colditz) • <span class="date-val">12. August 2026</span>{{ end }}
         </p>
       </div>
 
@@ -27,14 +28,14 @@
         <div class="sofi-panel">
           <div class="sofi-panel-header">
             <span class="panel-icon">🛰️</span>
-            <span>[ORBIT-GEO] Geometrie im Weltraum (Umbra & Penumbra)</span>
+            <span>{{ if $isEn }}[ORBIT-GEO] Space Orbit Geometry (Umbra & Penumbra){{ else }}[ORBIT-GEO] Geometrie im Weltraum (Umbra & Penumbra){{ end }}</span>
           </div>
           <div class="sofi-canvas-box">
             <canvas id="sofiOrbitCanvas" width="560" height="320"></canvas>
             <div class="sofi-legend">
-              <span class="legend-item"><span class="dot umbra-dot"></span> Kernschatten (Umbra)</span>
-              <span class="legend-item"><span class="dot penumbra-dot"></span> Halbschatten (Penumbra)</span>
-              <span class="legend-item"><span class="dot obs-dot"></span> Standort Sachsen (~87%)</span>
+              <span class="legend-item"><span class="dot umbra-dot"></span> {{ if $isEn }}Umbra (Total Shadow){{ else }}Kernschatten (Umbra){{ end }}</span>
+              <span class="legend-item"><span class="dot penumbra-dot"></span> {{ if $isEn }}Penumbra (Partial Shadow){{ else }}Halbschatten (Penumbra){{ end }}</span>
+              <span class="legend-item"><span class="dot obs-dot"></span> {{ if $isEn }}Saxony Site (~87%){{ else }}Standort Sachsen (~87%){{ end }}</span>
             </div>
           </div>
         </div>
@@ -43,14 +44,14 @@
         <div class="sofi-panel">
           <div class="sofi-panel-header">
             <span class="panel-icon">🔭</span>
-            <span>[OPTIC-FEED] Teleskop-Anblick (Seestar S30 Pro)</span>
+            <span>{{ if $isEn }}[OPTIC-FEED] Telescope View (Seestar S30 Pro){{ else }}[OPTIC-FEED] Teleskop-Anblick (Seestar S30 Pro){{ end }}</span>
           </div>
           <div class="sofi-canvas-box">
             <canvas id="sofiSkyCanvas" width="320" height="320"></canvas>
             <div class="sofi-overlay-stats">
               <div class="stat-row">
                 <span class="stat-lbl">TIME:</span>
-                <span class="stat-val" id="sofi-stat-time">20:10 MESZ</span>
+                <span class="stat-val" id="sofi-stat-time">20:10 {{ if $isEn }}CEST{{ else }}MESZ{{ end }}</span>
               </div>
               <div class="stat-row">
                 <span class="stat-lbl">COVER:</span>
@@ -72,21 +73,21 @@
       <!-- Controls Bar -->
       <div class="sofi-controls">
         <div class="sofi-slider-row">
-          <button id="sofiPlayBtn" class="sofi-btn play-btn" title="Simulation starten / pausieren">
+          <button id="sofiPlayBtn" class="sofi-btn play-btn" title="{{ if $isEn }}Start / Pause simulation{{ else }}Simulation starten / pausieren{{ end }}">
             <span id="sofiPlayIcon">▶</span> PLAY
           </button>
-          <input type="range" id="sofiTimeSlider" min="0" max="1000" value="625" class="sofi-slider" aria-label="Zeitregler Sonnenfinsternis">
-          <span class="sofi-time-badge" id="sofiSliderTime">20:10 MESZ</span>
+          <input type="range" id="sofiTimeSlider" min="0" max="1000" value="625" class="sofi-slider" aria-label="{{ if $isEn }}Solar Eclipse Time Slider{{ else }}Zeitregler Sonnenfinsternis{{ end }}">
+          <span class="sofi-time-badge" id="sofiSliderTime">20:10 {{ if $isEn }}CEST{{ else }}MESZ{{ end }}</span>
         </div>
 
         <div class="sofi-presets">
           <button class="sofi-preset-btn" data-progress="0">
             <span class="preset-time">19:14</span>
-            <span class="preset-name">1. Kontakt (Ingress)</span>
+            <span class="preset-name">{{ if $isEn }}1st Contact (Ingress){{ else }}1. Kontakt (Ingress){{ end }}</span>
           </button>
           <button class="sofi-preset-btn" data-progress="330">
             <span class="preset-time">19:45</span>
-            <span class="preset-name">Halbzeit (~45%)</span>
+            <span class="preset-name">{{ if $isEn }}Halfway (~45%){{ else }}Halbzeit (~45%){{ end }}</span>
           </button>
           <button class="sofi-preset-btn active" data-progress="625">
             <span class="preset-time">20:10</span>
@@ -94,7 +95,7 @@
           </button>
           <button class="sofi-preset-btn" data-progress="1000">
             <span class="preset-time">20:46</span>
-            <span class="preset-name">Sonnenuntergang</span>
+            <span class="preset-name">{{ if $isEn }}Sunset{{ else }}Sonnenuntergang{{ end }}</span>
           </button>
         </div>
       </div>
@@ -407,6 +408,7 @@
 
 <script>
 (function() {
+  const isEn = {{ if $isEn }}true{{ else }}false{{ end }};
   const orbitCanvas = document.getElementById("sofiOrbitCanvas");
   const skyCanvas = document.getElementById("sofiSkyCanvas");
   if (!orbitCanvas || !skyCanvas) return;
@@ -440,10 +442,11 @@
     let m = Math.floor(curMinTotal % 60);
     let s = Math.floor((curMinTotal % 1) * 60);
     
-    let timeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')} MESZ`;
-    let shortTimeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')} MESZ`;
+    const tz = isEn ? "CEST" : "MESZ";
+    let timeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')} ${tz}`;
+    let shortTimeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')} ${tz}`;
 
-    const maxT = 56.0 / 92.0; // 20:10 MESZ
+    const maxT = 56.0 / 92.0; // 20:10 MESZ / CEST
     let cov = 0;
     if (tNorm < maxT) {
       cov = Math.sin((tNorm / maxT) * (Math.PI / 2)) * 86.8;
@@ -454,10 +457,10 @@
 
     let alt = Math.max(0, 15.2 - (elapsedMinutes / totalMinutes) * 15.2);
 
-    let phaseName = "Partielle Phase";
-    if (tNorm < 0.03) phaseName = "1. Kontakt (Ingress)";
-    else if (Math.abs(tNorm - maxT) < 0.04) phaseName = "⭐ Finsternis-Maximum";
-    else if (tNorm > 0.96) phaseName = "🌅 Sonnenuntergang";
+    let phaseName = isEn ? "Partial Phase" : "Partielle Phase";
+    if (tNorm < 0.03) phaseName = isEn ? "1st Contact (Ingress)" : "1. Kontakt (Ingress)";
+    else if (Math.abs(tNorm - maxT) < 0.04) phaseName = isEn ? "⭐ Eclipse Maximum" : "⭐ Finsternis-Maximum";
+    else if (tNorm > 0.96) phaseName = isEn ? "🌅 Sunset" : "🌅 Sonnenuntergang";
 
     return {
       timeStr,
@@ -515,11 +518,11 @@
     orbitCtx.arc(sunX, sunY, sunR, 0, Math.PI * 2);
     orbitCtx.fill();
 
-    // Label Sonne
+    // Label Sonne / Sun
     orbitCtx.fillStyle = "#00ff41";
     orbitCtx.font = "bold 11px monospace";
     orbitCtx.textAlign = "center";
-    orbitCtx.fillText("SONNE", sunX, sunY + sunR + 18);
+    orbitCtx.fillText(isEn ? "SUN" : "SONNE", sunX, sunY + sunR + 18);
 
     // 2. Earth (Right)
     const earthX = w - 90;
@@ -597,12 +600,12 @@
     orbitCtx.fillStyle = "#00ff41";
     orbitCtx.font = "10px monospace";
     orbitCtx.textAlign = "left";
-    orbitCtx.fillText("📍 Sachsen (51.17°N)", obsX + 8, obsY - 4);
+    orbitCtx.fillText(isEn ? "📍 Saxony (51.17°N)" : "📍 Sachsen (51.17°N)", obsX + 8, obsY - 4);
 
     orbitCtx.fillStyle = "#00ff41";
     orbitCtx.font = "bold 11px monospace";
     orbitCtx.textAlign = "center";
-    orbitCtx.fillText("ERDE", earthX, earthY + earthR + 18);
+    orbitCtx.fillText(isEn ? "EARTH" : "ERDE", earthX, earthY + earthR + 18);
 
     // 6. Draw Moon
     const moonGrad = orbitCtx.createRadialGradient(moonX - 2, moonY - 2, 1, moonX, moonY, moonR);
@@ -619,7 +622,7 @@
 
     orbitCtx.fillStyle = "#c0caf5";
     orbitCtx.font = "10px monospace";
-    orbitCtx.fillText("Mond", moonX, moonY - moonR - 6);
+    orbitCtx.fillText(isEn ? "Moon" : "Mond", moonX, moonY - moonR - 6);
   }
 
   function drawSky(tNorm) {
@@ -712,7 +715,7 @@
       skyCtx.stroke();
       skyCtx.fillStyle = "#00ff41";
       skyCtx.font = "bold 9px monospace";
-      skyCtx.fillText("🌅 Westhorizont", 10, horizY - 4);
+      skyCtx.fillText(isEn ? "🌅 Western Horizon" : "🌅 Westhorizont", 10, horizY - 4);
     }
 
     // Reticle & Scale Guide with Matrix Green styling
