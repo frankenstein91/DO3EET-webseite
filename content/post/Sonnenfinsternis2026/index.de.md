@@ -145,7 +145,7 @@ Um dieses Desaster greifbar zu machen, habe ich alle 58 betroffenen Einzelaufnah
 
 Was man hier sieht, ist keine Science-Fiction-Illustration, sondern die traurige Realität unseres Nachthimmels im August 2026. Innerhalb von nur einer halben Stunde kreuzten dutzende Satelliten von Mega-Konstellationen (wie Starlink, Kuiper & Co.) das Sichtfeld unseres Teleskops. 
 
-Helle, grelle Striche ziehen sich kreuz und quer durch das Sternenfeld, überstrahlen schwache Himmelsobjekte und ruinieren wissenschaftliche wie astrofotografische Daten.
+Helle, grelle Striche ziehen sich kreuz und quer durch das Sternenfeld, überstrahlen schwache Himmelsobjekte und ruinieren wissenschaftliche wie astrofotografische Daten. Wer sich das beängstigende Ausmaß dieser Satellitenschwärme einmal in Echtzeit vor Augen führen möchte, sollte einen Blick auf [satellitemap.space](https://satellitemap.space/) werfen – der erdnahe Orbit gleicht mittlerweile einem dicht gewebten, künstlichen Spinnennetz.
 
 ### Warum das jeden etwas angeht
 Der Nachthimmel ist das älteste gemeinsame Kulturgut der gesamten Menschheit. Jahrmillionen lang blickten Menschen ungehindert in die Weiten des Kosmos. Innerhalb von nicht einmal einem Jahrzehnt verwandeln private Konzerne diesen freien Blick in ein gigantisches, blinkendes Industriegebiet im erdnahen Orbit – ohne nennenswerte internationale Auflagen, ohne effektive Grenzwerte für Helligkeitsreflexionen und ohne Rücksicht auf die bodengebundene Astronomie.

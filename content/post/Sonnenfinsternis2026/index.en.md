@@ -145,7 +145,7 @@ To make this issue tangible, I stacked all 58 affected individual exposures into
 
 What you see here is no sci-fi illustration, but the sober reality of our night sky in August 2026. Within just half an hour, dozens of satellites from mega-constellations (such as Starlink, Kuiper, and others) traversed the telescope's field of view.
 
-Bright, piercing streaks cut in all directions across the star field, drowning out faint deep-sky targets and compromising both scientific research and astrophotography data.
+Bright, piercing streaks cut in all directions across the star field, drowning out faint deep-sky targets and compromising both scientific research and astrophotography data. Anyone wanting to visualize the alarming scale of these satellite swarms in real time should take a look at [satellitemap.space](https://satellitemap.space/) – low Earth orbit has turned into a dense, artificial spiderweb.
 
 ### Why This Concerns Everyone
 The night sky is humanity's oldest shared cultural heritage. For millions of years, people looked up unimpeded into the depths of the universe. In less than a decade, commercial corporations are turning this pristine view into a sprawling, glaring industrial zone in low Earth orbit – with no meaningful international regulations, no effective limits on surface reflectivity, and zero regard for ground-based astronomy.
