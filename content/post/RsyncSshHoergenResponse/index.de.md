@@ -225,6 +225,97 @@ find /daten -type f | parallel -j 8 rsync -avzP --delete -e "ssh -p 2222 -c aes1
 
 ---
 
+## Exkurs: rsync über reinen OpenSSL-Tunnel (socat & stunnel)
+
+Eine immer wieder diskutierte Überlegung lautet: *„Kann man rsync nicht über einen reinen OpenSSL- oder TLS-Tunnel betreiben, um den angeblichen Overhead von SSH komplett zu umgehen oder den rsync-Daemon abzusichern?“*
+
+> **Klares Fazit vorab: Für die normale Nutzung lohnt sich das absolut nicht!**  
+> Ein externer OpenSSL-Tunnel verkompliziert die Infrastruktur spürbar und halbiert in der Praxis sogar die Übertragungsrate gegenüber modernem SSH.
+
+Da `rsync` keine native OpenSSL-Unterstützung eingebaut hat, behilft man sich mit externen Tunnel-Tools wie **`socat`** (für Ad-hoc-Verbindungen) oder **`stunnel`** (für dauerhafte Hintergrund-Dienste). Das Prinzip ist immer identisch: Auf dem Server läuft ein unverschlüsselter `rsync`-Daemon (`rsync --daemon`) auf `localhost`. Das Tunnel-Tool verschlüsselt den Port nach außen via TLS, und der Client entschlüsselt ihn lokal wieder.
+
+### Die beiden Varianten in der Praxis
+
+#### Variante 1: Der Ad-hoc-Weg mit `socat`
+1. **Selbstsigniertes Zertifikat auf dem Server erstellen:**
+   ```bash
+   openssl req -new -x509 -days 365 -nodes -out server.crt -keyout server.key -subj "/CN=backup-server"
+   cat server.key server.crt > server.pem
+   chmod 600 server.pem
+   ```
+2. **Tunnel auf dem Server starten** (lauscht auf TLS-Port 8443 und leitet an lokalen `rsyncd` Port 873 weiter):
+   ```bash
+   socat OPENSSL-LISTEN:8443,reuseaddr,pf=ip4,fork,cert=server.pem,verify=0 TCP4:127.0.0.1:873 &
+   ```
+3. **Tunnel auf dem Client öffnen & rsync starten:**
+   ```bash
+   socat TCP4-LISTEN:8730,reuseaddr,pf=ip4,fork OPENSSL:SERVER_IP:8443,verify=0 &
+   rsync -a /lokale/daten/ rsync://localhost:8730/backup/
+   ```
+
+#### Variante 2: Der permanente Dienst mit `stunnel`
+Auf dem Server nimmt `stunnel` verschlüsselte TLS-Verbindungen auf Port 8731 entgegen und gibt sie an `127.0.0.1:873` weiter. Auf dem Client läuft `stunnel` mit `client = yes` und stellt unter `127.0.0.1:8731` einen lokalen Endpunkt bereit. `rsync` synchronisiert dann transparent via `rsync://localhost:8731/backup/`.
+
+### Die harten Messwerte aus dem Labor (RAM-Disk, 75,5 Gbit/s)
+
+Ich habe beide Tunnel-Varianten in meiner Docker-RAM-Disk gegen unverschlüsseltes `rsyncd` und unser optimiertes SSH antreten lassen:
+
+| Übertragungs-Methode | 1 GB Binärdaten | Reales 930 MB Projekt | 1 GB Logs mit `lz4` | Bewertung |
+| :--- | :---: | :---: | :---: | :--- |
+| **Unverschlüsselt (`rsyncd` TCP)** | **1,24s** (826 MB/s) | **0,94s** (989 MB/s) | **0,52s** (1969 MB/s) | Physikalisches Limit ohne Verschlüsselung |
+| **Modern SSH (`aes128-gcm`)** | **1,33s** (770 MB/s) | **1,02s** (912 MB/s) | **0,55s** (1862 MB/s) | 🏆 **Testsieger (nur 7% Krypto-Overhead)** |
+| **OpenSSL via `socat`** | 2,57s (398 MB/s) | 2,01s (463 MB/s) | 0,81s (1264 MB/s) | 🐌 **48% langsamer als SSH** |
+| **OpenSSL via `stunnel`** | 2,62s (391 MB/s) | 2,08s (447 MB/s) | 0,84s (1219 MB/s) | 🐌 **49% langsamer als SSH** |
+
+### Warum verliert OpenSSL so deutlich gegen OpenSSH?
+
+Obwohl OpenSSL die gleiche AES-NI Hardwarebeschleunigung der CPU anspricht wie OpenSSH, bricht der Durchsatz um die Hälfte ein. Der Grund ist rein architektonisch:
+
+```goat
+.-----------------------------------------------------------------.
+|   OpenSSL-Tunnel Architektur: 4x TCP-Sockets & Puffer-Kopien    |
+|                                                                 |
+|   [ CLIENT ]                                                    |
+|   .---------------------------------------------------------.   |
+|   | rsync (Client-Prozess)                                  |   |
+|   '----------------------------+----------------------------'   |
+|                                | TCP Loopback (127.0.0.1:8730)  |
+|                                v                                |
+|   .---------------------------------------------------------.   |
+|   | socat / stunnel (Verschlüsselung via OpenSSL / TLS 1.3) |   |
+|   '----------------------------+----------------------------'   |
+|                                |                                |
+|                                | Virtuelles Netzwerk (Port 8443)|
+|                                v                                |
+|   [ SERVER ]                                                    |
+|   .---------------------------------------------------------.   |
+|   | socat / stunnel (Entschlüsselung via OpenSSL)           |   |
+|   '----------------------------+----------------------------'   |
+|                                | TCP Loopback (127.0.0.1:873)   |
+|                                v                                |
+|   .---------------------------------------------------------.   |
+|   | rsync-Daemon (rsync --daemon)                           |   |
+|   '---------------------------------------------------------'   |
+'-----------------------------------------------------------------'
+```
+
+1. **Kernel-Pipes vs. 4-facher Socket-Overhead:**  
+   OpenSSH wird von `rsync` direkt als Kindprozess gestartet. Die Daten fließen über eine anonyme Kernel-Pipe direkt in den SSH-Prozess und sofort auf die Netzwerkkarte.  
+   Bei `socat` oder `stunnel` muss jedes Byte hingegen durch **vier separate TCP-Sockets und User-Space-Puffer** geschleust werden (siehe Architektur-Diagramm oben).
+2. **Syscall-Gewitter:**  
+   Jeder zusätzliche Socket-Hop erzwingt zusätzliche `poll()`-, `read()`- und `write()`-Syscalls. Selbst mit getunten TCP-Puffern (`so-rcvbuf=1MB`) limitiert der Userspace-Event-Loop den Durchsatz bei rund 400 MB/s.
+3. **SSH-Overhead ist heute vernachlässigbar:**  
+   Mit `aes128-gcm` liegt der Krypto-Overhead von SSH gegenüber komplett unverschlüsseltem `rsyncd` bei winzigen **7%**. Ein externer Tunnel spart also nichts ein, sondern verdoppelt die CPU-Laufzeit.
+
+### Wann lohnt sich ein OpenSSL-Tunnel trotzdem?
+
+Ein OpenSSL-Tunnel ist kein Performance-Tuning, sondern ein **administratives Spezialwerkzeug** für ganz bestimmte Randfälle:
+* **Kein Shell-Zugang erlaubt:** Wenn auf einer strikten Backup-Appliance oder in unprivilegierten Containern aus Sicherheitsgründen kein SSH-Dienst und keine Shell laufen darf.
+* **Firewall-Restriktionen:** Wenn Port 22 blockiert ist und der Backup-Traffic zwingend als HTTPS getarnt über Port 443 laufen muss.
+* **Bestehende rsync-Daemon-Infrastruktur:** Wenn man eine bestehende, gewachsene `rsyncd`-Farm nach außen hin absichern will, ohne SSH-Schlüssel für alle Clients verwalten zu müssen.
+
+---
+
 ## Interaktiver rsync & SSH Befehls-Generator
 
 Damit du nicht mühsam alle Parameter manuell zusammenkopieren musst, habe ich einen interaktiven Generator im Terminal-Stil gebaut. Wähle einfach dein Szenario oder passe die Pfade an:
