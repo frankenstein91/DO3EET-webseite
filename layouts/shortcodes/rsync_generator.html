@@ -1,0 +1,747 @@
+<div class="rsync-gen-wrapper" id="rsync-gen-app">
+  <div class="rsync-terminal-window">
+    <!-- Matrix / Mac Terminal Header -->
+    <div class="rsync-term-header">
+      <div class="rsync-term-buttons">
+        <span class="win-btn close"></span>
+        <span class="win-btn minimize"></span>
+        <span class="win-btn maximize"></span>
+      </div>
+      <div class="rsync-term-title">
+        <span class="term-prompt">frank@do3eet:~/backup$</span> ./generate_rsync.sh --2026-edition
+      </div>
+      <div class="rsync-term-badge">INTERAKTIVER BEFEHLS-GENERATOR</div>
+    </div>
+
+    <div class="rsync-gen-body">
+      <div class="rsync-gen-heading">
+        <h3 class="rsync-title">⚡ High-Performance rsync & SSH Befehls-Generator (2026 Edition)</h3>
+        <p class="rsync-subtitle">
+          Konfiguriere deinen optimierten Übertragungsbefehl – basierend auf echten Hardware-Benchmarks (Intel AES-NI, lz4, xxh3, no-pty).
+        </p>
+      </div>
+
+      <!-- Presets Selector -->
+      <div class="rsync-section-title">Wähle ein Szenario-Preset:</div>
+      <div class="rsync-presets">
+        <button type="button" class="rsync-preset-btn active" data-preset="lan">
+          <span class="preset-icon">🏠</span>
+          <div class="preset-text">
+            <span class="preset-name">Gigabit LAN (1 Gbit/s)</span>
+            <span class="preset-desc">lz4 + xxh3 + whole-file</span>
+          </div>
+        </button>
+        <button type="button" class="rsync-preset-btn" data-preset="wan">
+          <span class="preset-icon">🌐</span>
+          <div class="preset-text">
+            <span class="preset-name">Internet / WAN (&le; 100M)</span>
+            <span class="preset-desc">zstd (Level 3) + Bandbreiten-Sparer</span>
+          </div>
+        </button>
+        <button type="button" class="rsync-preset-btn" data-preset="media">
+          <span class="preset-icon">🎬</span>
+          <div class="preset-text">
+            <span class="preset-name">Reine Medien / Archive</span>
+            <span class="preset-desc">Inkompressibel, --no-compress</span>
+          </div>
+        </button>
+        <button type="button" class="rsync-preset-btn" data-preset="script">
+          <span class="preset-icon">🤖</span>
+          <div class="preset-text">
+            <span class="preset-name">Automatisiertes Skript</span>
+            <span class="preset-desc">Fail-Safe, BatchMode & Rekey-Tuning</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Grid for Inputs and Toggles -->
+      <div class="rsync-grid">
+        <!-- Connection & Path Details -->
+        <div class="rsync-panel">
+          <div class="rsync-panel-header">
+            <span class="panel-icon">📁</span>
+            <span>Pfade & Verbindungsparameter</span>
+          </div>
+          <div class="rsync-inputs">
+            <div class="input-group">
+              <label for="rsync-src">Quellverzeichnis (Lokal):</label>
+              <input type="text" id="rsync-src" value="/home/benutzer/daten/" class="rsync-input" spellcheck="false">
+            </div>
+            <div class="input-row">
+              <div class="input-group flex-2">
+                <label for="rsync-userhost">Zielbenutzer & Host:</label>
+                <input type="text" id="rsync-userhost" value="backup@192.168.1.50" class="rsync-input" spellcheck="false">
+              </div>
+              <div class="input-group flex-1">
+                <label for="rsync-port">SSH Port:</label>
+                <input type="number" id="rsync-port" value="22" min="1" max="65535" class="rsync-input">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="rsync-dest">Zielverzeichnis (Remote):</label>
+              <input type="text" id="rsync-dest" value="/mnt/backup/" class="rsync-input" spellcheck="false">
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Options -->
+        <div class="rsync-panel">
+          <div class="rsync-panel-header">
+            <span class="panel-icon">⚙️</span>
+            <span>Tuning-Optionen & Flags</span>
+          </div>
+          <div class="rsync-toggles">
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-compress" checked>
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Moderne rsync-Kompression (<span id="lbl-algo">lz4</span>)</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-xxh3" checked>
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Vektor-Hash <code>--checksum-choice=xxh3</code></span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-wholefile" checked>
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Kein Delta-Transfer <code>--whole-file</code></span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-inplace" checked>
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Direkt schreiben <code>--inplace</code></span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-nopty" checked>
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Kein Pseudoterminal <code>ssh -T</code></span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-delete">
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Spiegeln mit Löschen <code>--delete</code></span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-scriptopts">
+              <span class="toggle-box"></span>
+              <span class="toggle-label">Skript-Härtung (BatchMode, RekeyLimit 50G)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Generated Command Output Box -->
+      <div class="rsync-output-box">
+        <div class="output-header">
+          <span class="out-title">Dein optimierter rsync-Befehl:</span>
+          <button type="button" id="rsync-copy-btn" class="copy-btn">
+            <span id="copy-icon">📋</span> <span id="copy-text">Kopieren</span>
+          </button>
+        </div>
+        <div class="output-code-container">
+          <pre class="output-pre"><code id="rsync-output-cmd">rsync ...</code></pre>
+        </div>
+      </div>
+
+      <!-- Interactive Parameter Explanation -->
+      <div class="rsync-explain-box">
+        <div class="explain-header">💡 Warum ist diese Konfiguration so schnell?</div>
+        <ul id="rsync-explain-list" class="explain-list">
+          <!-- Dynamisch generiert -->
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+/* Scoped Styling for Rsync Generator - Matched to DO3EET Matrix Terminal Theme */
+.rsync-gen-wrapper {
+  margin: 2.5rem 0;
+  font-family: var(--font-monospace, monospace);
+  font-size: 0.9rem;
+  color: var(--fg-color, #c0caf5);
+}
+
+.rsync-terminal-window {
+  background: #000000;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 65, 0.08);
+  overflow: hidden;
+}
+
+.rsync-term-header {
+  background: #001200;
+  border-bottom: 1px solid var(--terminal-border, #003b00);
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rsync-term-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.win-btn {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.win-btn.close { background: #ff5555; }
+.win-btn.minimize { background: #ffaa00; }
+.win-btn.maximize { background: #00ff41; }
+
+.rsync-term-title {
+  font-size: 0.85rem;
+  color: var(--accent-color, #00ff41);
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rsync-term-title .term-prompt {
+  color: var(--off-fg, #566f56);
+}
+
+.rsync-term-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: rgba(0, 255, 65, 0.12);
+  color: var(--accent-color, #00ff41);
+  border: 1px solid var(--accent-color, #00ff41);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.rsync-gen-body {
+  padding: 1.25rem;
+}
+
+.rsync-title {
+  margin: 0 0 0.4rem 0;
+  color: var(--accent-color, #00ff41);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+
+.rsync-subtitle {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.85rem;
+  color: var(--off-fg, #566f56);
+  line-height: 1.4;
+}
+
+.rsync-section-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+/* Presets Grid */
+.rsync-presets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.rsync-preset-btn {
+  background: #001400;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  color: var(--fg-color, #c0caf5);
+}
+
+.rsync-preset-btn:hover {
+  background: #002200;
+  border-color: var(--accent-color, #00ff41);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.2);
+}
+
+.rsync-preset-btn.active {
+  background: rgba(0, 255, 65, 0.15);
+  border-color: var(--accent-color, #00ff41);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.35);
+}
+
+.preset-icon {
+  font-size: 1.3rem;
+}
+
+.preset-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.preset-name {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+}
+
+.preset-desc {
+  font-size: 0.72rem;
+  color: var(--off-fg, #566f56);
+}
+
+/* Grid for Inputs and Toggles */
+.rsync-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .rsync-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsync-panel {
+  background: rgba(0, 20, 0, 0.35);
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.rsync-panel-header {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--terminal-border, #003b00);
+  padding-bottom: 0.4rem;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+.rsync-inputs .input-group {
+  margin-bottom: 0.65rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.rsync-inputs label {
+  font-size: 0.75rem;
+  color: var(--off-fg, #566f56);
+  margin-bottom: 0.25rem;
+}
+
+.rsync-input {
+  background: #000800;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 4px;
+  color: var(--accent-color, #00ff41);
+  font-family: inherit;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.6rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.rsync-input:focus {
+  border-color: var(--accent-color, #00ff41);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+  background: #001000;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.65rem;
+}
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+
+/* Toggles */
+.rsync-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--fg-color, #c0caf5);
+  user-select: none;
+}
+
+.toggle-item input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-box {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 3px;
+  background: #000800;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.toggle-item input[type="checkbox"]:checked + .toggle-box {
+  background: var(--accent-color, #00ff41);
+  border-color: var(--accent-color, #00ff41);
+  box-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+}
+
+.toggle-item input[type="checkbox"]:checked + .toggle-box::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.toggle-label code {
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  color: var(--accent-color, #00ff41);
+  font-size: 0.75rem;
+}
+
+/* Output Box */
+.rsync-output-box {
+  background: #000800;
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 0.85rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.out-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+.copy-btn {
+  background: rgba(0, 255, 65, 0.15);
+  border: 1px solid var(--accent-color, #00ff41);
+  color: var(--accent-color, #00ff41);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.copy-btn:hover {
+  background: var(--accent-color, #00ff41);
+  color: #000000;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.copy-btn.copied {
+  background: var(--highlight-color, #00cc33);
+  border-color: var(--highlight-color, #00cc33);
+  color: #000000;
+}
+
+.output-pre {
+  margin: 0;
+  padding: 0.75rem;
+  background: #000400;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--accent-color, #00ff41);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  border: 1px solid var(--terminal-border, #003b00);
+}
+
+/* Explanation Box */
+.rsync-explain-box {
+  background: rgba(0, 20, 0, 0.35);
+  border: 1px solid var(--terminal-border, #003b00);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.explain-header {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+.explain-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--fg-color, #c0caf5);
+  line-height: 1.45;
+}
+
+.explain-list li {
+  margin-bottom: 0.35rem;
+}
+
+.explain-list strong {
+  color: var(--accent-color, #00ff41);
+}
+</style>
+
+<script>
+(function() {
+  const presets = {
+    lan: {
+      compress: true,
+      algo: "lz4",
+      xxh3: true,
+      wholefile: true,
+      inplace: true,
+      nopty: true,
+      delete: false,
+      scriptopts: false
+    },
+    wan: {
+      compress: true,
+      algo: "zstd",
+      xxh3: true,
+      wholefile: true,
+      inplace: true,
+      nopty: true,
+      delete: false,
+      scriptopts: false
+    },
+    media: {
+      compress: false,
+      algo: "none",
+      xxh3: true,
+      wholefile: true,
+      inplace: true,
+      nopty: true,
+      delete: false,
+      scriptopts: false
+    },
+    script: {
+      compress: true,
+      algo: "lz4",
+      xxh3: true,
+      wholefile: true,
+      inplace: true,
+      nopty: true,
+      delete: false,
+      scriptopts: true
+    }
+  };
+
+  let currentAlgo = "lz4";
+
+  const srcInput = document.getElementById("rsync-src");
+  const userhostInput = document.getElementById("rsync-userhost");
+  const portInput = document.getElementById("rsync-port");
+  const destInput = document.getElementById("rsync-dest");
+
+  const chkCompress = document.getElementById("toggle-compress");
+  const chkXxh3 = document.getElementById("toggle-xxh3");
+  const chkWholefile = document.getElementById("toggle-wholefile");
+  const chkInplace = document.getElementById("toggle-inplace");
+  const chkNopty = document.getElementById("toggle-nopty");
+  const chkDelete = document.getElementById("toggle-delete");
+  const chkScript = document.getElementById("toggle-scriptopts");
+
+  const lblAlgo = document.getElementById("lbl-algo");
+  const outCode = document.getElementById("rsync-output-cmd");
+  const explainList = document.getElementById("rsync-explain-list");
+  const copyBtn = document.getElementById("rsync-copy-btn");
+  const copyText = document.getElementById("copy-text");
+
+  function updateCommand() {
+    const src = srcInput.value.trim() || "/quelle/";
+    const userhost = userhostInput.value.trim() || "user@server";
+    const port = portInput.value.trim();
+    const dest = destInput.value.trim() || "/ziel/";
+
+    const isCompress = chkCompress.checked;
+    const isXxh3 = chkXxh3.checked;
+    const isWhole = chkWholefile.checked;
+    const isInplace = chkInplace.checked;
+    const isNopty = chkNopty.checked;
+    const isDel = chkDelete.checked;
+    const isScript = chkScript.checked;
+
+    lblAlgo.textContent = isCompress ? currentAlgo : "deaktiviert";
+
+    // Build SSH command
+    let sshParts = ["ssh"];
+    if (port && port !== "22") {
+      sshParts.push(`-p ${port}`);
+    }
+    if (isNopty) {
+      sshParts.push("-T");
+    }
+    sshParts.push("-c aes128-gcm@openssh.com");
+    sshParts.push("-o Compression=no");
+    sshParts.push("-o IPQoS=throughput");
+
+    if (isScript) {
+      sshParts.push("-o BatchMode=yes");
+      sshParts.push("-o ObscureKeystrokeTiming=no");
+      sshParts.push("-o RekeyLimit=50G");
+      sshParts.push("-o ClearAllForwardings=yes");
+      sshParts.push("-o ConnectTimeout=10");
+      sshParts.push("-o ServerAliveInterval=15");
+    }
+
+    const sshString = sshParts.join(" ");
+
+    // Build rsync flags
+    let rsyncParts = ["rsync", "-aHAX"];
+    if (isInplace) rsyncParts.push("--inplace");
+    if (isWhole) rsyncParts.push("--whole-file");
+    rsyncParts.push("--numeric-ids");
+
+    if (isCompress) {
+      if (currentAlgo === "zstd") {
+        rsyncParts.push("--compress-choice=zstd --compress-level=3 -z");
+      } else {
+        rsyncParts.push("--compress-choice=lz4 -z");
+      }
+    } else {
+      rsyncParts.push("--no-compress");
+    }
+
+    if (isXxh3) {
+      rsyncParts.push("--checksum-choice=xxh3");
+    }
+    if (isDel) {
+      rsyncParts.push("--delete");
+    }
+
+    rsyncParts.push("--info=progress2");
+    rsyncParts.push(`-e "${sshString}"`);
+    rsyncParts.push(src);
+    rsyncParts.push(`${userhost}:${dest}`);
+
+    const fullCmd = rsyncParts.join(" \\\n  ");
+    outCode.textContent = fullCmd;
+
+    // Update explanations
+    let exp = [];
+    if (isCompress) {
+      if (currentAlgo === "lz4") {
+        exp.push("<li><strong>--compress-choice=lz4 -z:</strong> Extrem schnelle Kompression (über 2 GB/s pro Kern). Halbiert die Datenmenge von Text, Code und Logs ohne spürbare CPU-Last.</li>");
+      } else {
+        exp.push("<li><strong>--compress-choice=zstd --compress-level=3 -z:</strong> Maximale Kompressionsrate für langsame WAN-Leitungen (&le; 100 Mbit/s) bei moderner CPU-Effizienz.</li>");
+      }
+    } else {
+      exp.push("<li><strong>--no-compress:</strong> Spart CPU-Zyklen bei inkompressiblen Daten wie JPEGs, MP4-Videos und TGZ-Archiven.</li>");
+    }
+
+    if (isXxh3) {
+      exp.push("<li><strong>--checksum-choice=xxh3:</strong> Verwendet Vektor-Hashing (AVX2). Ist mit über 30 GB/s zehnmal schneller als altes MD5.</li>");
+    }
+    if (isWhole) {
+      exp.push("<li><strong>--whole-file:</strong> Umgeht rsyncs Delta-Transfer-Prüfung – beschleunigt Transfers bei schnellen Verbindungen und Erstübertragungen enorm.</li>");
+    }
+    if (isInplace) {
+      exp.push("<li><strong>--inplace:</strong> Schreibt direkt in Zieldateien statt in temporäre Dateien – spart I/O-Locks und atomare Rename-Operationen.</li>");
+    }
+    if (isNopty) {
+      exp.push("<li><strong>ssh -T:</strong> Verhindert Pseudoterminal-Allokation. Schützt vor Datenkorruption durch Terminal-Steuerzeichen und beschleunigt den Verbindungsaufbau.</li>");
+    }
+    exp.push("<li><strong>-c aes128-gcm@openssh.com:</strong> Nutzt Intel AES-NI Hardwarebeschleunigung in Silizium. Ist 50% schneller als arcfour oder ChaCha20.</li>");
+    exp.push("<li><strong>-o Compression=no:</strong> Verhindert die synchrone Single-Thread OpenSSH-Bremse (verhindert 19-fachen Einbruch).</li>");
+    if (isScript) {
+      exp.push("<li><strong>Skript-Härtung:</strong> BatchMode verhindert Passwortabfragen, RekeyLimit 50G verhindert Übertragungspausen und ServerAliveInterval hält Firewalls offen.</li>");
+    }
+
+    explainList.innerHTML = exp.join("");
+  }
+
+  // Preset button listeners
+  document.querySelectorAll(".rsync-preset-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+      document.querySelectorAll(".rsync-preset-btn").forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+      const p = presets[this.dataset.preset];
+      if (p) {
+        chkCompress.checked = p.compress;
+        currentAlgo = p.algo;
+        chkXxh3.checked = p.xxh3;
+        chkWholefile.checked = p.wholefile;
+        chkInplace.checked = p.inplace;
+        chkNopty.checked = p.nopty;
+        chkDelete.checked = p.delete;
+        chkScript.checked = p.scriptopts;
+        updateCommand();
+      }
+    });
+  });
+
+  // Inputs and Checkbox listeners
+  [srcInput, userhostInput, portInput, destInput].forEach(inp => {
+    inp.addEventListener("input", updateCommand);
+  });
+
+  [chkCompress, chkXxh3, chkWholefile, chkInplace, chkNopty, chkDelete, chkScript].forEach(chk => {
+    chk.addEventListener("change", updateCommand);
+  });
+
+  // Copy button
+  copyBtn.addEventListener("click", function() {
+    const rawCmd = outCode.textContent.replace(/ \\\n  /g, " ");
+    navigator.clipboard.writeText(rawCmd).then(() => {
+      copyBtn.classList.add("copied");
+      copyText.textContent = "Kopiert!";
+      setTimeout(() => {
+        copyBtn.classList.remove("copied");
+        copyText.textContent = "Kopieren";
+      }, 2000);
+    });
+  });
+
+  // Initial call
+  updateCommand();
+})();
+</script>

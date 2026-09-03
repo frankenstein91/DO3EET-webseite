@@ -864,3 +864,103 @@ img {
     margin: 0;
     display: inline-block;
 }
+
+/* Hugo Native GoAT Diagrams (ASCII to SVG) - Matched to DO3EET Matrix Theme */
+.goat.svg-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1.25rem;
+    background: #000000;
+    border: 1px solid var(--terminal-border, #003b00);
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 65, 0.08);
+}
+
+.goat.svg-container svg {
+    max-width: 100%;
+    height: auto;
+    color: var(--accent-color, #00ff41);
+}
+
+.goat.svg-container svg text {
+    fill: var(--fg-color, #c0caf5);
+    font-size: 13px;
+    font-family: var(--font-monospace, monospace);
+}
+
+/* Zertretene Schnecke (Squashed Snail) für langsame Verbindungen */
+.snail {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: bottom center;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), 
+                text-shadow 0.15s ease-out,
+                filter 0.15s ease-out;
+}
+
+.snail:hover {
+    transform: scale(1.2);
+}
+
+.squashed-snail, .snail.squashed {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: bottom center;
+    transform: scaleX(1.7) scaleY(0.22) skewX(-20deg);
+    text-shadow: 
+        0px 2px 4px rgba(107, 142, 35, 0.8),
+        -3px 0px 6px rgba(139, 69, 19, 0.6),
+        3px 0px 6px rgba(139, 69, 19, 0.6);
+    filter: grayscale(0.4) brightness(0.85);
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), 
+                text-shadow 0.15s ease-out,
+                filter 0.15s ease-out;
+}
+
+.squashed-snail:hover, .snail.squashed:hover {
+    filter: grayscale(0.2) brightness(0.95);
+    text-shadow: 
+        0px 3px 6px rgba(107, 142, 35, 1),
+        -4px 0px 8px rgba(139, 69, 19, 0.8),
+        4px 0px 8px rgba(139, 69, 19, 0.8);
+}
+
+/* Zitternde Rakete (Shaking Rocket) für die schnellste Verbindung */
+.shaking-rocket {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: center center;
+    animation: rocket-vibrate 0.08s linear infinite alternate;
+    filter: drop-shadow(0 0 4px rgba(255, 140, 0, 0.85)) drop-shadow(0 2px 8px rgba(255, 60, 0, 0.6));
+    transition: transform 0.2s;
+}
+
+@keyframes rocket-vibrate {
+    0% {
+        transform: translate(-1px, 1px) rotate(-1.5deg);
+    }
+    25% {
+        transform: translate(1.5px, -1px) rotate(1.5deg);
+    }
+    50% {
+        transform: translate(-1.5px, -0.5px) rotate(-1deg);
+    }
+    75% {
+        transform: translate(1px, 1.5px) rotate(1.5deg);
+    }
+    100% {
+        transform: translate(0.5px, -1.5px) rotate(-0.5deg);
+    }
+}
+
+.shaking-rocket:hover {
+    animation-duration: 0.04s;
+    filter: drop-shadow(0 0 6px rgba(255, 220, 0, 1)) drop-shadow(0 4px 12px rgba(255, 60, 0, 0.95));
+    transform: scale(1.35);
+}
+
