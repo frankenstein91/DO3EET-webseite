@@ -2,7 +2,7 @@
 title = 'Cisco 3750G im Homelab: Ein steiniger Weg zu IOS 15.0'
 date = 2026-03-21T21:50:43+01:00
 draft = false
-tags = ["Cisco", "Switch", "Networking", "Homelab", "IOS"]
+tags = ["Cisco", "Switch", "Netzwerk", "Homelab", "IOS"]
 categories = ["IT"]
 +++
 

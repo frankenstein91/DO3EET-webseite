@@ -6,7 +6,7 @@ author = "Frank Tornack"
 tags = [
     "ISS",
     "Space",
-    "Funk",
+    "Ham Radio",
     "SSTV",
     "Hobby",
 ]

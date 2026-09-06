@@ -4,10 +4,10 @@ date = 2026-03-23T20:27:00+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Privacy",
+    "Datenschutz",
     "Fotografie",
     "Offlinetags",
-    "OpenSource",
+    "Open Source",
 ]
 +++
 

@@ -8,7 +8,7 @@ tags = [
     "Audio",
     "Hardware",
     "PipeWire",
-    "Optimization",
+    "Optimierung",
 ]
 +++
 

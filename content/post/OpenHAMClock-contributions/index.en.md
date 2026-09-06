@@ -4,7 +4,7 @@ date = 2026-03-20T22:50:00+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Funk",
+    "Ham Radio",
     "Hobby",
     "Software",
     "Open Source",

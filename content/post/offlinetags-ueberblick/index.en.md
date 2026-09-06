@@ -7,7 +7,7 @@ tags = [
     "Privacy",
     "Photography",
     "Offlinetags",
-    "OpenSource",
+    "Open Source",
 ]
 +++
 

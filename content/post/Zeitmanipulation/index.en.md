@@ -9,7 +9,7 @@ tags = [
     "Hardware",
     "GPS",
     "NTP",
-    "Zeit",
+    "Time",
 ]
 +++
 

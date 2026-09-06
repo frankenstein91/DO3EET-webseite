@@ -10,8 +10,7 @@ tags = [
     "Benchmark",
     "Performance",
     "Backup",
-    "Sysadmin",
-    "OpenSSH"
+    "Sysadmin"
 ]
 description = "Ein technischer Deep-Dive und Benchmark-Härtetest moderner rsync- und SSH-Pipelines: Warum historische Tuning-Mythen wie arcfour oder generelle Kompressions-Verbote auf modernen Multi-Core-CPUs mit AES-NI nicht mehr gelten."
 summary = "Ein technischer Deep-Dive und Benchmark-Härtetest moderner rsync- und SSH-Pipelines: Warum historische Tuning-Mythen wie arcfour oder generelle Kompressions-Verbote auf modernen Multi-Core-CPUs mit AES-NI nicht mehr gelten."

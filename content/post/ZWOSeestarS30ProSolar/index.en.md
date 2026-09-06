@@ -4,12 +4,12 @@ date = "2026-07-19T23:34:00+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Astronomie",
-    "Smart-Teleskop",
+    "Astronomy",
+    "Smart Telescope",
     "Seestar S30 Pro",
     "ZWO",
-    "Sonnenbeobachtung",
-    "Sonnenflecken"
+    "Solar Observation",
+    "Sunspots"
 ]
 +++
 

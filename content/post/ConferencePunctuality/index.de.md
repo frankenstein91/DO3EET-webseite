@@ -4,7 +4,9 @@ date = "2026-05-05T14:41:25+02:00"
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Arbeitswelt",
+    "Arbeit",
+    "Meinung",
+    "Pünktlichkeit",
 ]
 +++
 

@@ -6,6 +6,7 @@ draft = false
 author = "Frank Tornack"
 tags = [
     "Astronomy",
+    "Smart Telescope",
     "Solar Eclipse",
     "Seestar S30 Pro",
     "Twitch",

@@ -7,7 +7,7 @@ tags = [
     "Linux",
     "Hardware",
     "Open Source",
-    "Tastatur",
+    "Keyboard",
     "Hobby",
 ]
 +++
