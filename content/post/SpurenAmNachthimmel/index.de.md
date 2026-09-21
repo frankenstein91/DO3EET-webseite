@@ -87,7 +87,7 @@ Die Sterne bewegen sich natürlich nicht in rasanter Eile im Kreis – **es ist 
 Um dieses stetige Wachsen der Sternbahnen erlebbar zu machen, habe ich aus den 817 Rohbildern unserer gestrigen Beobachtungsnacht ein 4K-Zeitraffervideo erstellt:
 
 {{< rawhtml >}}
-<div style="max-width: 540px; margin: 2rem auto; position: relative; padding-top: 177.78%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.6);">
+<div style="max-width: 540px; margin: 2rem auto; position: relative; padding-top: 88.89%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.6);">
   <iframe title="Startrails 2026.09.20" width="100%" height="100%" src="https://tube.tchncs.de/videos/embed/3hf3ARy6vJFtaAcLbdZPiw?loop=1&muted=1&title=0&peertubeLink=0" style="border: 0px; position: absolute; inset: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 </div>
 {{< /rawhtml >}}
