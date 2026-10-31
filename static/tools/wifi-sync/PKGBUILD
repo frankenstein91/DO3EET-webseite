@@ -1,0 +1,28 @@
+# Maintainer: Frank Tornack <planung@dreamofjapan.de>
+pkgname=do3eet-wifi-sync
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Syncs DO3EET Blog WiFi hotspots to NetworkManager"
+arch=('any')
+url="https://do3eet.pages.dev/wifi/"
+license=('MIT')
+depends=('python' 'networkmanager')
+makedepends=('curl')
+
+source=(
+    "https://do3eet.pages.dev/tools/wifi-sync/do3eet-wifi-sync.py"
+    "https://do3eet.pages.dev/tools/wifi-sync/do3eet-wifi-sync.service"
+    "https://do3eet.pages.dev/tools/wifi-sync/do3eet-wifi-sync.timer"
+)
+
+# SKIP, damit du nicht bei jedem Update die Checksums neu berechnen musst
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+    # 1. Python Skript installieren (Umbenennen ohne .py für /usr/bin)
+    install -Dm755 "do3eet-wifi-sync.py" "$pkgdir/usr/bin/do3eet-wifi-sync"
+
+    # 2. Systemd Units installieren
+    install -Dm644 "do3eet-wifi-sync.service" "$pkgdir/usr/lib/systemd/user/do3eet-wifi-sync.service"
+    install -Dm644 "do3eet-wifi-sync.timer" "$pkgdir/usr/lib/systemd/user/do3eet-wifi-sync.timer"
+}

@@ -19,7 +19,7 @@ Ihr ladet euch zuerst die Android App PassAndroid ([Google Play Store](https://p
 
 So schaut es dann aus (hier keine echten Daten):
 
-{{< imgwebp src="Screenshot_20240103-201136.png" alt="Screenshot der App" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/RailpassHint1/Screenshot_20240103-201136.png" alt="Screenshot der App" width="800" height="600" >}}
 
 
 Noch ein kleiner Hinweis zum Schluss… den so erstellten Pass könnt ihr nicht an den Ticketgates nutzen,Er dient einfach für die Sitzplatzreservierung. 

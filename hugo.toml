@@ -1,11 +1,13 @@
 baseURL = 'https://do3eet.pages.dev'
-languageCode = 'de-DE'
+locale = 'de-DE'
 defaultContentLanguage = 'de'
+i18nDir = 'i18n'
 enableMissingTranslationPlaceholders = true
 title = 'The Blog of DO3EET'
 theme = ["hugo-video", "risotto"]
-pagination.pagerSize = 3
+pagination.pagerSize = 5
 enableInlineShortcodes = true
+mainSections = ["post"]
 [menu]
 [[menu.main]]
   name = "posts"
@@ -15,6 +17,10 @@ enableInlineShortcodes = true
   name = "tags"
   url = "/tags/"
   weight = 30
+[[menu.main]]
+  name = "GPG Policy"
+  url = "/keysigning/"
+  weight = 40
 
 [params]
 noindex = false
@@ -29,7 +35,7 @@ title = "DO3EET"
 description = "Ich bin Frank. Ein Informatiker und Funkamateur aus Deutschland. Außerdem reise ich gern nach Japan."
 
 [params.author]
-name = 'DO3EET'
+name = 'Frank Tornack'
 
 
 [markup.goldmark.renderer]
@@ -87,20 +93,30 @@ title = "Mastodon"
 url = "https://mastodon.hams.social/@DO3EET"
 
 [[params.socialLinks]]
+icon = "fa-solid fa-camera"
+title = "AstroImg"
+url = "https://www.astroimg.com/user/627588482457407491"
+
+[[params.socialLinks]]
 icon = "fa-solid fa-rss"
 title = "RSS"
 url = "https://do3eet.pages.dev/index.xml"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-square-rss"
+title = "Atom"
+url = "https://do3eet.pages.dev/atom.xml"
 
 [params.giscus]
 repo = "frankenstein91/DO3EET-webseite"
 repoID = "R_kgDOKsmxqw"
 category = "Announcements"
 categoryID = "DIC_kwDOKsmxq84Ca5h5"
-mapping = "pathname"
+mapping = "specific"
 reactionsEnabled = "1"
 emitMetadata = "1"
 inputPosition = "top"
-theme = "dark_protanopia"
+theme = "transparent_dark"
 lang = "de"
 loading = "lazy"
 
@@ -110,20 +126,38 @@ loading = "lazy"
 
     path = 'github.com/hugomods/images'
 
+[mediaTypes]
+  [mediaTypes."application/rss+xml"]
+    suffixes = ["xml"]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.WIFI_RSS]
+    mediaType = "application/rss+xml"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.atom]
+    mediaType = "application/atom+xml"
+    baseName = "atom"
+    isPlainText = false
+
 [outputs]
-section = ['html', 'rss', 'amp']
-page = ['html', 'rss', 'amp']
+home = ['html', 'rss', 'atom']
+section = ['html', 'rss', 'atom']
+page = ['html', 'WIFI_RSS']
 
 [Author]
 name = "Frank Tornack"
 
 [languages]
   [languages.de]
-    languageName = "Deutsch"
+    label = "Deutsch"
     weight = 10
 
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 20
 
 

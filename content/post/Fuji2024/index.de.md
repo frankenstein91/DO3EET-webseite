@@ -13,12 +13,12 @@ Am Fuji war ich dieses Jahr auch im Ort Shin-Fuji. Leider dieses Jahr ohne diese
 <!--more-->
 Ich teile gern zwei der Fotos mit euch:
 
-{{< imgwebp src="PXL_20241110_022731588.LONG_EXPOSURE-01.COVER.jpg" alt="rote Holzlaterne am Wasser" width="600" height="600" >}}
-{{< imgwebp src="PXL_20241110_023035414.jpg" alt="Ente mit Kopf im unterwasser" width="600" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Fuji2024/PXL_20241110_022731588.LONG_EXPOSURE-01.COVER.jpg" alt="rote Holzlaterne am Wasser" width="600" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Fuji2024/PXL_20241110_023035414.jpg" alt="Ente mit Kopf im unterwasser" width="600" height="600" >}}
 
 und schon Angst gehabt, es gibt nicht noch mehr Bilder?...
 
 Die Anlage war wegen dem japanischem 3-5-7 Fest leider sehr voll, daher gibt es noch ein Bild von Ende der Besichtugung.
-{{< imgwebp src="PXL_20241110_023410749.LONG_EXPOSURE-01.COVER.jpg" alt="Ente mit Kopf im unterwasser" width="1400" height="1400" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Fuji2024/PXL_20241110_023410749.LONG_EXPOSURE-01.COVER.jpg" alt="Ente mit Kopf im unterwasser" width="1400" height="1400" >}}
 
 Es ging im Anschluss noch in das Fuji-Museum. Dessen Spegelung im Wasser soll den Fuji zeigen. Das Gebäude ist einfach der Fuji auf dem Kopf.

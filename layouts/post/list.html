@@ -1,0 +1,67 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">
+        <span class="sr-only">{{ T "heading_start" (dict "Level" 1) }}</span>
+        <span class="heading-hashtag" aria-hidden="true">#</span>
+        ls -la /{{ .Title | lower | urlize }}
+        <span class="sr-only">{{ T "heading_end" }}</span>
+    </h1>
+
+    {{ .Content }}
+
+    {{/* Paginator initialisieren */}}
+    {{ $paginator := .Paginator }}
+
+    <div class="posts-expanded">
+    {{ range $index, $page := $paginator.Pages }}
+    {{ if $index }}<hr class="post-separator">{{ end }}
+    <article class="post-entry-terminal">
+        <header class="post-entry-header">
+            <span class="nav-prompt">cat</span>
+            {{ $author := .Params.author | default .Site.Params.author.name | default "do3eet" }}
+            {{ $author_slug := replace $author " " "_" }}
+            <h2>
+                <span class="sr-only">{{ T "heading_start" (dict "Level" 2) }}</span>
+                <span class="heading-hashtag" aria-hidden="true">##</span>
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                <span class="sr-only">{{ T "heading_end" }}</span>
+            </h2>
+            <div class="post-entry-meta">
+               <span class="terminal-prompt" aria-hidden="true"><span class="prompt-user">{{ $author_slug }}@do3eet.pages.dev</span>:<span class="prompt-dir">~</span>$</span> stat {{ .Date.Format "2006-01-02" }}{{ if and (not .Lastmod.IsZero) (gt .Lastmod.Unix .Date.Unix) }} <span class="meta-lastmod" title="{{ T "updated_on" | default "Aktualisiert am" }}: {{ .Lastmod.Format "2006-01-02" }}">[mtime: {{ .Lastmod.Format "2006-01-02" }}]</span>{{ end }}
+            </div>
+
+        </header>
+
+        <section class="post-entry-summary">
+            {{ .Summary }}
+            <div class="read-more">
+                <a href="{{ .Permalink }}">READ_MORE...</a>
+            </div>
+        </section>
+    </article>
+    {{ end }}    </div>
+
+    {{/* Terminal-Style Pagination */}}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination-terminal">
+        <span class="nav-prompt">page {{ $paginator.PageNumber }}/{{ $paginator.TotalPages }}</span>
+        <div class="pagination-links">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="nav-terminal-item">PREV</a>
+            {{ else }}
+            <span class="nav-dimmed">PREV</span>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="nav-terminal-item">NEXT</a>
+            {{ else }}
+            <span class="nav-dimmed">NEXT</span>
+            {{ end }}
+        </div>
+    </nav>
+    {{ end }}
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}

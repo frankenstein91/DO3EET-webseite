@@ -6,7 +6,7 @@ author = "Frank Tornack"
 tags = [
     "Datenschutz",
     "Chat",
-    "Verschlüsslung",
+    "Verschlüsselung",
 ]
 +++
 

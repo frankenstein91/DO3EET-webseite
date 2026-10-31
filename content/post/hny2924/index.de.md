@@ -11,4 +11,4 @@ Das Jahr 2023 war ein Jahr voller Herausforderungen, aber auch ein Jahr voller H
 
 Ich habe die Prüfung bestanden und kann mich nun Amateurfunker nennen. Damit werde ich nach meiner Rückkehr aus Japan richtig loslegen.
 
-{{< imgwebp src="PXL_20231231_045323264.jpg" alt="Blumen, Regenschirme und eine Statue eines Drachen" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/hny2924/PXL_20231231_045323264.jpg" alt="Blumen, Regenschirme und eine Statue eines Drachen" width="800" height="600" >}}

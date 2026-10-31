@@ -18,7 +18,7 @@ Was man schnell merkt, ist, dass diese Identität kein Zufallsprodukt der Geschi
 ## Die Burg Utsunomiya und die Last der Geschichte
 Mein erster Weg führte mich zum Utsunomiya Castle Site Park, einem Ort, der die komplexe Seele der Stadt perfekt widerspiegelt. Heute ist das Areal eine grüne Oase der Ruhe, ein Ort der Entspannung für die Bürger. Doch unter dem friedlichen Rasen und den sorgfältig restaurierten Mauern liegt eine Geschichte voller Macht, Intrigen und brutaler Zerstörung. 
 
-{{< imgwebp src="PXL_20250831_025552795.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250831_025552795.jpg" alt="" width="1000" height="1000" >}}
 
 Die Ursprünge der Burg reichen bis in die Heian-Zeit um das Jahr 1063 zurück. Über die Jahrhunderte wuchs sie zu einer der sieben großen Festungen der Kanto-Region heran und diente als wichtiger Stützpunkt für die Tokugawa-Shogune auf ihrer Reise zum heiligen Nikko. Doch ihr Schicksal besiegelte der Boshin-Krieg im Jahr 1868. In einer verheerenden Schlacht zwischen kaiserlichen Truppen und den letzten Anhängern des Shogunats wurde die Burg fast vollständig niedergebrannt.  
 Was heute zu sehen ist, ist keine original erhaltene Anlage, sondern eine Rekonstruktion – und genau das macht den Ort so besonders. Die beiden Wachtürme, Seimeidai und Fujimi Yagura, die mächtigen Erd- und Steinwälle sowie der teilweise wiederhergestellte Burggraben sind nicht nur historische Nachbildungen. Sie sind ein Denkmal für den Willen der Gemeinschaft. Nach dem Krieg und einer Phase städtischer Expansion, in der Teile des Geländes einfach zugeschüttet wurden, war es der „Enthusiasmus der Bürger“, der in der Heisei-Ära die Wiederherstellung vorantrieb. Ein Spaziergang über die Erd-Wälle ist daher mehr als nur Sightseeing. Es ist das Erleben eines Stücks zurückeroberter Identität, ein Zeugnis dafür, wie eine Gemeinschaft ihre Geschichte aus den Trümmern von Krieg und Fortschritt wiederauferstehen lässt.
@@ -31,21 +31,21 @@ Am anderen Ende der Brücke wartet der Utsunomiya Tower. Für eine geringe Gebü
 
 {{< instagram DOFW-E_kpwN >}}
 
-{{< imgwebp src="PXL_20250902_021944213.jpg" alt="" width="1000" height="1000" >}}
-{{< imgwebp src="PXL_20250902_030431202.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250902_021944213.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250902_030431202.jpg" alt="" width="1000" height="1000" >}}
 
 ## Ein Schauspiel aus dem 15. Stock --> der Himmel spricht
 Der dramatische Höhepunkt meines Besuchs ereignete sich am Abend des zweiten Septembers. Mein Ziel war die Aussichtsplattform im 15. Stock des Regierungsgebäudes der Präfektur Tochigi, dem 栃木県庁本館15階・展望ロビー. Der Zugang ist kostenlos, eine Geste, die diesen spektakulären Blick für jedermann zugänglich macht.
 
-{{< imgwebp src="PXL_20250902_085028514.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250902_085028514.jpg" alt="" width="1000" height="1000" >}}
 
 Zunächst bot sich mir die erwartete „Millionen-Dollar-Aussicht“: ein funkelndes Lichtermeer, das sich in alle Himmelsrichtungen erstreckte, ein 360-Grad-Panorama der nächtlichen Stadt.
 
-{{< imgwebp src="PXL_20250902_093423396.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250902_093423396.jpg" alt="" width="1000" height="1000" >}}
 
 Doch während ich die ruhige Schönheit auf mich wirken ließ, begann am Horizont ein anderes Schauspiel. Langsam schob sich eine Gewitterfront auf die Stadt zu. Von meinem sicheren Beobachtungsposten aus wurde ich zum Zeugen eines atemberaubenden Naturschauspiels. Blitze zuckten durch die Wolkentürme und tauchten für Sekundenbruchteile die darunterliegende Stadt in ein gleißendes, unheimliches Licht. Die Dunkelheit zwischen den Blitzen wirkte tiefer, die Lichter der Stadt verletzlicher. Es war eine dieser seltenen, ungeplanten Konvergenzen von Ort und Zeit, die eine gewöhnliche touristische Aktivität in ein unvergessliches Erlebnis verwandeln.
 
-{{< imgwebp src="PXL_20250902_100205058.NIGHT.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250902_100205058.NIGHT.jpg" alt="" width="1000" height="1000" >}}
 *Ja, das links in den Wolken ist ein Blitz bzw. nahes Wetterleuchten*
 
 Der Epilog dieser himmlischen Inszenierung folgte später im Hotel. Plötzlich erloschen alle Lichter. Für zwei Minuten herrschte absolute Dunkelheit und Stille, bevor der Strom zurückkehrte. Dieser kurze Stromausfall war die direkte, greifbare Konsequenz des Schauspiels, das ich aus der Ferne beobachtet hatte. Er holte das epische Ereignis vom Himmel herunter und brachte es direkt in mein Zimmer, machte die Erfahrung komplett und schuf eine nachhaltige, persönliche Verbindung zu der rohen Kraft, die ich an diesem Abend über Utsunomiya hatte aufziehen sehen. Der Onsen im Außenbereich auf dem Dach, habe ich natürlich erst weit in die Nacht nach dem Gewitter genutzt.
@@ -56,7 +56,7 @@ Kirasse ist weniger ein Restaurant als vielmehr ein „Gyoza-Themenpark“. Das 
 
 Die Atmosphäre ist lebhaft und unkompliziert, eine Mischung aus Einheimischen und Touristen, die sich alle dem gleichen Genuss hingeben. Man bestellt an den verschiedenen Ständen und stellt sich sein eigenes Degustationsmenü zusammen. Kirasse ist die perfekte Lösung für das „Paradox of Choice“, das einen als Besucher sonst überfordern würde. Es ist eine Art kulinarische Botschaft der Stadt, die sicherstellt, dass jeder Gast Utsunomiya mit einer klaren und köstlichen Vorstellung davon verlässt, warum dieser Ort seinen Titel als Gyoza-Hauptstadt zu Recht trägt.
 
-{{< imgwebp src="PXL_20250831_095450906.jpg" alt="" width="1000" height="1000" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanSommer2025-Utsunomiya/PXL_20250831_095450906.jpg" alt="" width="1000" height="1000" >}}
 
 ## Fazit
 Utsunomiya ist unendlich viel mehr als nur Gyoza. Die Stadt lebt von ihren Kontrasten. Sie ist ein Ort, der seine von Zerstörung gezeichnete Vergangenheit mit Stolz wiederaufgebaut hat und sie im Burgpark ehrt. Gleichzeitig blickt sie im Hachimanyama-Park unbeschwert in die Zukunft und schafft moderne Lebensqualität für ihre Bürger. Sie bietet die stille Kontemplation einer nächtlichen Skyline, die sich im nächsten Moment in die dramatische Bühne für ein aufziehendes Gewitter verwandeln kann.  

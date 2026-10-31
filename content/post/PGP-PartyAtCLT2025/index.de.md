@@ -8,8 +8,8 @@ tags = [
     "PGP",
     "Open Source",
     "Chemnitz",
-    "Kryptographie",
-    ]
+    "Verschlüsselung",
+]
 +++
 
 Dieses Jahr bietet sich zusätzlich zu einem Stand auf den [Chemnitzer Linuxtagen](https://chemnitzer.linux-tage.de/), auch die Herausforderung die [Keysigning-Party](https://chemnitzer.linux-tage.de/2025/de/addons/pgp) zu übernehmen. Diese war zwischenzeitlich abgesagt, was wir (Martin und ich) sehr schade fanden und die Organisation übernommen haben.

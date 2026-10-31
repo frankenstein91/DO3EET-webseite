@@ -1,0 +1,12 @@
+[Unit]
+Description=Sync DO3EET Blog WiFi hotspots to NetworkManager
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/do3eet-wifi-sync
+StandardOutput=journal
+
+[Install]
+WantedBy=default.target

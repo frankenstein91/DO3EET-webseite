@@ -16,7 +16,7 @@ Da ich mich allgemien für Technik interessiere und auch gern Reise, habe ich in
 # Einrichtung
 Die Einrichtung der Verbindung zwischen Tracker und Google Account war einfach, wenn die Website mit der Anleitung erreichbar war. Leider hatte ich hier an meinem ersten Tag mit dieser etwas Probleme. Hier konnte mir aber die Bekanntschaft helfen, da er seine Tracker bereits einen oder zwei Tage eher eingerichtet hatte.
 
-{{< imgwebp src="Screenshot_20240618-134158.png" alt="Schreenshot der Website im Wartungsmodus" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/FindMyDeviceNetwork1/Screenshot_20240618-134158.png" alt="Schreenshot der Website im Wartungsmodus" width="800" height="600" >}}
 
 Hier haben die "alten" Papieranleitungen einen Vorteil gegenüber einen aufgeklepten QR-Code.
 
@@ -27,11 +27,11 @@ Wie jeder Nerd, habe ich natürlich gleich beide Tags mit meinem Handy verbunden
 ## Ortungsperiodizität
 Der Vorteil der Tracker soll die Ortung über fremde Telefone sein. Da ich die Funktion vor dem Urlaub testen wollte, habe ich einem Familienmitglied mit Android-Telefon einen meiner Tracker mit zum Einkaufen gegeben. Ich hatte die App auf dem "fremden" Handy entsprechend der Hinweise von Google auf die Stufe "alle Orte" geändert und nicht den Default "stark frequentierte Gebiete". Da das Telefon und der Tracker zusammen unterwegs waren, hatte ich auf eine häufige Aktualisierung gehofft. Doch am Anfang sah ich nicht mal mehr eine Karte, sondern nur der Hinweis "zu letzt Zuhause gesehen".
 
-{{< imgwebp src="Screenshot_20240702-112714.png" alt="Schreenshot der Meldung" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/FindMyDeviceNetwork1/Screenshot_20240702-112714.png" alt="Schreenshot der Meldung" width="800" height="600" >}}
 
 Später schaute ich weitere Male in die App und konnte auch eine Ortung erkennen. Was an dieser Ortung ungünstig war, Sie hat sich bis 18 Uhr nicht verändert. Obwohl die Person schon mit dem Auto wieder bei mir war (in meiner Abwesenheit) und auch noch in einem anderen Haushalt.
 
-{{< imgwebp src="Screenshot_20240702-151402.png" alt="Schreenshot der Ortung" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/FindMyDeviceNetwork1/Screenshot_20240702-151402.png" alt="Schreenshot der Ortung" width="800" height="600" >}}
 
 Ich kann mir also nur Vorstellen, dass nur aktiv genutzte Smartphones zur Ortung beitragen und nicht Telefone in Hosen- und Handtaschen.
 

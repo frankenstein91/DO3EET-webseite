@@ -1,0 +1,40 @@
+<div id="easteregg-achievement" aria-live="polite" role="status">
+    <div class="close-achievement" onclick="this.parentElement.classList.remove('show')">×</div>
+    <div class="icon" aria-hidden="true">🏆</div>
+    <div class="text-content">
+        <div class="title">Achievement Unlocked</div>
+        <p><strong>Screen Burn-In</strong><br>Glückwunsch! Deine Pixel sind jetzt offiziell eins mit meiner Website. 📺✨</p>
+    </div>
+</div>
+
+<script>
+(function() {
+    let idleTimer;
+    const idleTimeLimit = 5 * 60 * 1000; // 5 Minuten
+    const achievement = document.getElementById('easteregg-achievement');
+    let hasShown = false;
+
+    function showAchievement() {
+        if (!hasShown) {
+            achievement.classList.add('show');
+            hasShown = true;
+            console.log("Achievement: Screen Burn-In unlocked!");
+        }
+    }
+
+    function resetTimer() {
+        if (hasShown) return;
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(showAchievement, idleTimeLimit);
+    }
+
+    // Aktivitäten überwachen
+    const activityEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+    activityEvents.forEach(event => {
+        document.addEventListener(event, resetTimer, true);
+    });
+
+    // Initialer Start
+    resetTimer();
+})();
+</script>

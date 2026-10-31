@@ -6,7 +6,6 @@ author = "Frank Tornack"
 tags = [
     "Software",
     "Internet",
-    "API",
 ]
 +++
 

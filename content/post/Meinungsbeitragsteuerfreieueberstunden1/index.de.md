@@ -8,7 +8,6 @@ tags = [
     "Politik",
     "Meinung",
     "Arbeit",
-    "work life balance",
 ]
 +++
 

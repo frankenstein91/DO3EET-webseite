@@ -6,8 +6,8 @@ tags = [
     "ISS",
     "Space",
     "Funk",
-    "Mailbox",
     "Linux",
+    "Hobby",
 ]
 +++
 

@@ -4,7 +4,7 @@ date = 2023-11-19T15:19:53+01:00
 draft = false
 author = "Frank Tornack"
 tags = [
-    "Computer",
+    "Hardware",
 ]
 +++
 
@@ -39,4 +39,4 @@ Den SSD und Festplattenspeicher habe ich mit Absicht weggelassen.
 Ich nutze ArchLinux als Betriebsystem und BTRFS als Dateisystem. Soll ich dazu mal etwas schreiben?
 
 Hier noch mein aktuelles Hintergrundbild:
-{{< imgwebp src="DSC_0305_upload.jpg" alt="Bild der AN225 beim Landen in Leipzig" width="800" height="600" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/myComputer20231119/DSC_0305_upload.jpg" alt="Bild der AN225 beim Landen in Leipzig" width="800" height="600" >}}

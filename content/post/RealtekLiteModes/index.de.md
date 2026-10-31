@@ -6,7 +6,6 @@ author = "Frank Tornack"
 tags = [
     "Hardware",
     "Netzwerk",
-    "Realtek",
 ]
 +++
 

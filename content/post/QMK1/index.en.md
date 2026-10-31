@@ -6,8 +6,9 @@ author = "Frank Tornack"
 tags = [
     "Linux",
     "Hardware",
-    "open source",
-    "Tastatur",
+    "Open Source",
+    "Keyboard",
+    "Hobby",
 ]
 +++
 

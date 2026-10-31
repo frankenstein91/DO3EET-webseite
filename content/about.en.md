@@ -12,6 +12,8 @@ Responsible for the content of this private website, with the exception of comme
     Badstraße 7
     04668 Grimma
 
+This also applies to the complementary domain `do3eet-media.dreamofjapan.de`, which is used to provide media content (images) for this website.
+
 You can best reach me via my email address on the right sidebar.
 
 # Framework
@@ -19,6 +21,14 @@ Hugo is a static website framework based on Golang. A static website is a websit
 
 # Source Code
 The source code of this private website is available on Github and can be viewed there. The website is implemented using Hugo, an open-source static site generator. Hugo converts the source code stored on Github into static HTML, CSS, and JavaScript files that are optimized for display in a web browser. This process enables efficient and fast delivery of content while ensuring a clear separation of content and presentation. With regard to the HTML source code, we would like to point out that the person responsible for the content has no direct influence on the generated HTML source code, as it is automatically created by the Hugo generator. The focus of the content manager is primarily on the creation and maintenance of the website's content components. If you have any questions or comments regarding the HTML source code, we recommend contacting the developer or maintainer of the Hugo theme directly.
+
+Additionally, I use a small client-side JavaScript to personalize the design of this website (terminal look). This script detects the browser you are using and the hostname to display the header in terminal style (e.g., `[Firefox@do3eet.pages.dev /var/www]#`). Another small Easter egg activates if the page remains open without interaction for a longer period (5 minutes) – as a small homage to old monitors, an "achievement" for a (simulated, of course) screen burn-in will then appear. Those who scroll all the way to the bottom will also find the "Ark of Truth". **No** data is stored, logged, or transmitted to me or third parties; the process takes place exclusively locally in your browser – at most, an "Ancient" might be looking over your shoulder.
+
+# FITS Viewer (Astronomical Image Data)
+On some pages (e.g., posts about my ZWO Seestar smart telescope), an interactive FITS viewer is used. This viewer was specially developed for this website and runs **entirely client-side** in your web browser:
+- The astronomical image files (`.fit`/`.fits`) are loaded from the webserver and unpacked, stretched (MTF), and rendered on a canvas element directly in your browser using JavaScript.
+- There is **no data transmission** of image contents, metadata, or personal settings to me or third parties. All adjustments (brightness, contrast, color channels) take place locally.
+- The button to redirect to **Stellarium Web** is a standard outgoing link. The metadata contained in the FITS header (object name, time of observation, and the GPS coordinates of the observing site) are simply passed as URL parameters to the link, so that Stellarium can simulate the correct star constellation for that moment and location.
 
 # HTTP headers
 In summary, these headers work together to create a more secure Browse experience by preventing clickjacking attacks, controlling device access rights, protecting against XSS attacks, and restricting where the website can load resources from.
@@ -36,7 +46,10 @@ This header controls how the website you visit can access the referrer informati
 This header relates to Cross-Site Scripting (XSS) attacks, where malicious scripts are injected into a website. This setting instructs the browser to enable XSS protection in "block" mode. This means that the browser will try to detect and block potential XSS attacks.
 
 ## Content-Security-Policy
-This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from.
+This is the most complex header and defines a Content Security Policy (CSP). A CSP restricts where the browser can load resources (such as fonts, stylesheets, scripts) from. For the terminal design of this page, inline scripts (`unsafe-inline`) are explicitly allowed. In addition, external resources from trusted sources such as `cdnjs.cloudflare.com` (fonts/icons) and `cdn.jsdelivr.net` (for scripts and fonts from MathJax), as well as the use of web workers (`blob:`), are permitted. Inline styles are also enabled for the correct rendering of complex content like mathematical formulas. All design elements and Easter eggs have been optimized to function smoothly.
+
+### Note on IP Transmission
+When loading resources from external CDNs such as `cdnjs.cloudflare.com` (fonts/icons), `cdn.jsdelivr.net` (MathJax), or `giscus.app` (comments), your IP address is transmitted to the respective providers. For users who wish to prevent this, I recommend browser extensions such as **Decentraleyes** or **LocalCDN**. These load common web libraries locally in the browser instead of requesting them from external servers.
 
 ## X-Content-Type-Options: nosniff
 The HTTP header `X-Content-Type-Options: nosniff` is a security measure that web servers can employ to instruct browsers not to "guess" or change the declared Content-Type of a resource.
@@ -52,10 +65,8 @@ The comment function on this private website is provided via Github. The operato
 - [Datenschutzrichtlinien Deutsch](https://docs.github.com/de/site-policy/privacy-policies)
 - [Data protection policy English](https://docs.github.com/en/site-policy/privacy-policies)
 
-# Chat Function
-The chat function of this website is based on Matrix chat technology and is provided by the Cactus.Chat software. Matrix is an open standard for decentralized, secure, and interoperable real-time communication over the internet. Cactus.Chat uses this advanced Matrix infrastructure to create a secure and user-friendly chat environment. Matrix enables end-to-end encryption, which means that communication between users is confidential and protected. In addition, the Matrix platform offers the possibility to interact via various chat clients, which enables flexible and versatile use. We attach great importance to data protection and security and recommend that users familiarize themselves with the data protection guidelines of Matrix and Cactus.Chat in order to gain a comprehensive understanding of how their data is protected.
-
-Matrix is a decentralized communication protocol in which users can choose their own servers (homeservers). Each homeserver operator can define their own privacy policies and security measures. Since there is no central authority that dictates the privacy policy for all homeservers, it is difficult to offer uniform privacy information. Every user who connects to your Matrix server is subject to the privacy policy of the specific homeserver they choose. It is recommended that users who wish to learn about the privacy policy of their Matrix homeserver contact the operator of the respective homeserver directly or search for the relevant information on the homeserver's website.
+# Mastodon Embeds
+This website occasionally embeds short messages ("Toots") from the decentralized Mastodon network. When viewing these posts, the text content is loaded on the server side, but the profile pictures (avatars) of the authors are loaded directly from the respective Mastodon instance (e.g., `mastodon.social`) into your browser. In this process, your IP address is transmitted to the server of the Mastodon instance.
 
 # YouTube Embedding
 The embedded YouTube videos used on this website are subject to the copyright of YouTube and the respective rights holders. The embedding takes place within the permitted framework of the YouTube terms of use.
@@ -67,7 +78,7 @@ Please note that YouTube has its own privacy policy over which I have no influen
 To protect your privacy, I have configured the embedding of YouTube videos to use YouTube's enhanced privacy mode. Please note that YouTube's enhanced privacy mode may not be activated until you play the video. However, data transfer to YouTube can also take place without active video playback.
 
 # PeerTube Embedding
-Videos from the PeerTube platform are embedded on this website. PeerTube is a decentralized video platform based on the peer-to-peer principle. This means that the videos are not stored on a central server, but on a network of computers operated by the users of the platform. This function is deactivated to the best of my knowledge and belief. However, the PeerTube server operator will still see your IP and browser data.
+Videos from the PeerTube platform are embedded on this website. PeerTube is a decentralized video platform based on the peer-to-peer principle. This means that videos can normally be loaded not only from a server but also from other viewers. The P2P part (sharing the video through your browser) is deactivated for these embeds to the best of my knowledge and belief. However, the PeerTube server operator will still see your IP and browser data.
 
 ## Data processing by PeerTube
  - Your IP address
@@ -78,10 +89,23 @@ Videos from the PeerTube platform are embedded on this website. PeerTube is a de
  - The duration of video playback
  - Whether you watched the video in its entirety
 
+# Private Nature of the Website
+This website is a purely private, non-commercial project. It serves exclusively to present my personal hobbies (ham radio, Linux, technology, travel) and for informal exchange. No economic interests are pursued.
+
 # Hosting
 Cloudflare serves as a Content Delivery Network (CDN), hosting, and provides security and performance improvements for the delivery of this website. Note that Cloudflare's hosting infrastructure is used to optimize the availability and speed of the website. Cloudflare may collect anonymized statistical data about access to this website. For more information on Cloudflare's privacy practices, please refer to their privacy policy:
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
 
+For specific questions regarding data processing by the Cloudflare infrastructure (e.g., global security logs), you can contact Cloudflare's Data Protection Officer directly: `privacy@cloudflare.com`. Cloudflare's EU representative is Cloudflare Germany GmbH, Rosental 7, 80331 Munich, Germany.
+
+# Data Protection Rights (GDPR)
+Even though this is a private website, I take the protection of your data seriously. Under the GDPR, you have the following rights regarding the (technically unavoidable) processing of your data (e.g., IP address when accessing the site):
+- **Access (Art. 15 GDPR):** You can find out what data is technically processed for a short time.
+- **Rectification, Erasure & Objection (Art. 16, 17, 21 GDPR):** You can request the correction or deletion of your data or object to its processing.
+
+Please direct such requests primarily to me (see contact above). Since I do not maintain a user database myself and IP logs are generally deleted or anonymized by the host within 7 days at the latest, the amount of data I possess is minimal.
+
+# Disclaimer
 # Data Protection in Connection with Cloudflare SSL Certificates
 The use of Cloudflare SSL certificates serves to protect the data transmitted between the user and this website. SSL (Secure Sockets Layer) ensures encrypted communication, which guarantees the confidentiality and integrity of the transmitted information. Cloudflare generally undertakes to respect the privacy of users and to comply with applicable data protection regulations. However, when using Cloudflare SSL certificates, certain anonymized information about data traffic may be collected in order to improve the performance, security, and analysis of the website. It is advisable to consult Cloudflare's privacy policy to obtain detailed information about what data is collected, how it is processed, and what protective measures are in place.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)

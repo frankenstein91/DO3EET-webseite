@@ -3,8 +3,14 @@
 {{ $width := .Get "width" | default "800" | int}}
 {{ $height := .Get "height" | default "600" | int}}
 
-{{ with .Page.Resources.Get $imgPath }}
-{{ with .Fit (printf "%dx%d webp" $width $height) }}
-<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-{{ end }}
+{{ if or (strings.HasPrefix $imgPath "http://") (strings.HasPrefix $imgPath "https://") }}
+  {{/* Remote Image (R2 / External) */}}
+  <img src="{{ $imgPath }}" alt="{{ $altText }}" width="{{ $width }}" height="{{ $height }}" loading="lazy">
+{{ else }}
+  {{/* Local Image (Page Resource) */}}
+  {{ with .Page.Resources.Get $imgPath }}
+    {{ with .Fit (printf "%dx%d webp" $width $height) }}
+    <img src="{{ .RelPermalink }}" alt="{{ $altText }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy">
+    {{ end }}
+  {{ end }}
 {{ end }}

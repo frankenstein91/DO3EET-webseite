@@ -1,9 +1,995 @@
-/* Override this file to customise the theme's CSS for your site */
+/* Accessibility Helper */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 1rem;
+    z-index: 999999;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+
+    /* Visuell verstecken, aber für Fokus behalten */
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.skip-link:focus {
+    /* Wieder einblenden bei Fokus */
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    overflow: visible;
+    outline: 3px solid #ffffff;
+    color: #000000 !important; /* Explizit Schwarz für maximalen Kontrast */
+    font-size: 1rem !important;
+    display: block !important;
+    text-align: center;
+}
 @font-face {
     font-family: 'OpenDyslexicMono';
     src: url('/fonts/OpenDyslexicMono-Regular.otf') format('opentype');
   }
 
 :root {
+    color-scheme: dark;
     --font-monospace: "OpenDyslexicMono", monospace;
+    --bg-color: #1a1b26;        /* Klassisches Tokyo Night Dunkelblau (Beibehalten) */
+    --fg-color: #c0caf5;        /* Helles Silbergrau für beste Lesbarkeit */
+    --accent-color: #00ff41;    /* Matrix Hellgrün für Prompts */
+    --highlight-color: #00cc33; /* Matrix Mittelgrün für Aktives */
+    --terminal-border: #003b00; /* Dunkelgrüner Rahmen */
+
+    /* Override Theme Variables */
+    --link: var(--accent-color);
+    --hover: var(--highlight-color);
+    --highlight: var(--highlight-color);
+    --logo: var(--accent-color);
+    --off-fg: #566f56; /* Greenish gray for dimmed text */
 }
+
+body {
+    background-color: var(--bg-color);
+    background-image: linear-gradient(rgba(0, 255, 65, 0.05) 50%, transparent 50%);
+    background-size: 100% 4px; /* Sehr subtile Scanlines in Grün */
+    color: var(--fg-color);
+    font-family: var(--font-monospace);
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 80rem; /* Von 66rem auf 80rem erhöht */
+    margin: 3rem auto;
+    padding: 1.8rem 2rem 0.5rem 2rem;
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid var(--terminal-border);
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
+}
+
+/* Optional: Hauptinhalt im Grid noch etwas mehr Platz geben */
+@media (min-width: 45rem) {
+    .page {
+        grid-template-columns: minmax(0, 1fr) 18rem; /* Sidebar von 15rem auf 18rem leicht erhöht */
+        grid-column-gap: 3rem; /* Mehr Abstand zwischen Inhalt und Sidebar */
+    }
+}
+
+/* Dezentere Terminal-Kopfzeile */
+.terminal-header-top {
+    position: absolute;
+    top: -2rem;
+    left: -1px;
+    right: -1px;
+    height: 2rem;
+    background: #001a00; /* Sehr dunkles Grün für die Kopfzeile */
+    border: 1px solid var(--terminal-border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 0 1rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Nicht markierbar machen */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none; /* Verhindert auch Interaktionen, falls gewünscht */
+}
+
+/* Kompaktes Menü in einer Zeile */
+.terminal-header-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--terminal-border);
+    padding-bottom: 1rem;
+}
+
+.page__logo-inner {
+    color: #ffffff !important; /* Strahlendes Weiß für den Titel */
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--accent-color);
+    background: transparent !important; /* Grünen Hintergrund vom Theme entfernen */
+    padding: 0 !important;
+}
+
+.page__logo-inner::before {
+    content: "" !important; /* Eckige Klammern vom Theme entfernen */
+}
+
+.page__logo-inner::after {
+    content: "_" !important;
+    animation: terminal-blink 1s step-end infinite !important;
+    color: var(--accent-color) !important;
+    display: inline-block !important;
+    margin-left: 0.5rem;
+}
+
+@keyframes terminal-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.terminal-menu-inline {
+    margin-left: 1rem;
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+@media (max-width: 48rem) {
+    .terminal-header-line {
+        gap: 0.5rem;
+    }
+    
+    .terminal-menu-inline {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-list {
+        gap: 1rem;
+    }
+
+    .page__logo-inner {
+        font-size: 1.1rem;
+    }
+}
+
+.nav-main-item {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-prefix {
+    color: var(--muted) !important;
+    margin-right: 0.1rem;
+}
+
+.nav-main-item:hover {
+    color: var(--highlight-color) !important;
+    text-decoration: underline;
+}
+
+.terminal-prompt {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.prompt-user {
+    color: var(--accent-color);
+}
+
+.prompt-dir {
+    color: var(--fg-color);
+}
+
+/* Sidebar / Aside */
+.page__aside {
+    border-left: 1px dashed var(--terminal-border);
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+    z-index: 100;
+    background-color: var(--bg-color);
+    padding-bottom: 2rem;
+    max-height: calc(100vh - 4rem) !important;
+    overflow-y: auto !important;
+}
+
+.page__body {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 45rem) {
+    .page__aside {
+        position: static !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+        border-left: none;
+        border-top: 1px dashed var(--terminal-border);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+.nav-prompt {
+    display: block;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.page__footer {
+    clear: both;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid var(--terminal-border);
+}
+
+@media (max-width: 48rem) {
+    #ark-of-truth, #easteregg-achievement {
+        width: calc(100% - 40px) !important;
+        left: 20px !important;
+        right: 20px !important;
+        bottom: 10px !important;
+    }
+}
+
+.aside__social {
+    margin-top: 1.5rem;
+}
+
+.aside__social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.aside__social-links li {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.aside__social-links li::before {
+    content: "├── ";
+    color: var(--terminal-border);
+}
+
+.aside__social-links li:last-child::before {
+    content: "└── ";
+}
+
+.link-label {
+    margin-left: 0.5rem;
+}
+
+.aside__social-links i {
+    width: 1rem;
+    text-align: center;
+}
+
+.aside__social-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.aside__social-links a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+/* Code Blöcke */
+pre {
+    background: #000800 !important; /* Fast schwarzes Grün */
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    padding: 1rem !important;
+    overflow-x: auto;
+}
+
+@media (max-width: 48rem) {
+    .page {
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .terminal-header-top {
+        display: none; /* Hide decorative terminal top on very small screens to save space */
+    }
+}
+
+/* Headings - Disable default hashtags from theme */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: none !important;
+}
+
+/* Accessible Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.heading-hashtag {
+    color: var(--muted);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-right: 0.5rem;
+}
+
+code {
+    font-family: var(--font-monospace) !important;
+    color: #00ff41;
+}
+
+/* Folder Tree for Lists */
+.tree-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.tree-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0;
+    position: relative;
+    max-width: 100%;
+}
+
+.tree-list li::before {
+    content: "├── ";
+    color: var(--terminal-border);
+    font-family: monospace;
+    flex-shrink: 0;
+    white-space: pre;
+}
+
+.tree-list li:last-child::before {
+    content: "└── ";
+}
+
+.tree-list li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+
+.tree-list li a:hover {
+    background: var(--terminal-border);
+    color: var(--accent-color) !important;
+}
+
+/* Icons: Default is folder, override for posts */
+.tree-list li a::before {
+    content: "📁 ";
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.tree-list.is-files li a::before {
+    content: "📄 ";
+}
+
+.post-date {
+    color: #008f11;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Pagination Styling */
+.pagination-terminal {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--terminal-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.pagination-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-terminal-item {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background: rgba(0, 255, 65, 0.05);
+    transition: all 0.3s ease;
+    
+    /* CRT Glow-Effekt */
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
+    
+    animation: crt-flicker 3s infinite;
+}
+
+.nav-terminal-item:hover {
+    color: #fff;
+    background: var(--accent-color);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav-dimmed {
+    color: #003b00;
+    opacity: 0.5;
+    cursor: not-allowed;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #003b00;
+    border-radius: 4px;
+}
+
+/* Expanded Post Entries */
+.post-entry-terminal {
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+}
+
+.post-entry-header h2 {
+    display: inline;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    border-bottom: none;
+}
+
+.post-entry-meta {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: var(--highlight-color);
+}
+
+.meta-lastmod {
+    color: var(--fg-color, #c0caf5);
+    opacity: 0.85;
+    margin-left: 0.35rem;
+}
+
+
+.post-entry-summary {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.read-more a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background: rgba(0, 255, 65, 0.05);
+    transition: all 0.3s ease;
+    
+    /* CRT Glow-Effekt */
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.5);
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 10px rgba(0, 255, 65, 0.2);
+    
+    animation: crt-flicker 3s infinite;
+}
+
+.read-more a:hover {
+    color: #fff;
+    background: var(--accent-color);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.8),
+        0 0 40px rgba(0, 255, 65, 0.4);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 0.95; }
+    5% { opacity: 0.85; }
+    10% { opacity: 0.98; }
+    15% { opacity: 0.9; }
+    20% { opacity: 0.99; }
+    25% { opacity: 0.88; }
+    30% { opacity: 1; }
+    35% { opacity: 0.92; }
+    40% { opacity: 0.96; }
+    45% { opacity: 0.87; }
+    50% { opacity: 0.98; }
+    100% { opacity: 1; }
+}
+
+.post-separator {
+    border: none;
+    border-top: 1px dashed var(--terminal-border);
+    margin: 1rem 0;
+}
+
+.post-separator::after {
+    content: none !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border: 2px solid var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight-color);
+    box-shadow: 0 0 10px var(--highlight-color);
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+/* Achievement Unlocked - Easter Egg */
+#easteregg-achievement {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: #1a1b26;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--fg-color);
+    font-family: var(--font-monospace);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    z-index: 9999;
+    
+    /* Animation-Setup */
+    display: none; /* Versteckt es initial komplett für CSP-Sicherheit */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#easteregg-achievement.show {
+    display: flex; /* Wird erst durch JS auf flex gesetzt */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    align-items: center;
+    gap: 15px;
+}
+
+#easteregg-achievement .icon {
+    font-size: 2rem;
+    color: #e0af68; /* Gold/Orange */
+    text-shadow: 0 0 10px rgba(224, 175, 104, 0.5);
+}
+
+#easteregg-achievement .text-content {
+    flex: 1;
+}
+
+#easteregg-achievement .title {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--highlight-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#easteregg-achievement p {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.close-achievement {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    color: #566f56;
+}
+
+.close-achievement:hover {
+    color: var(--fg-color);
+}
+
+/* Mastodon Toot Styles */
+.toot-blockquote {
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 2rem 0;
+    font-family: var(--font-monospace);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.05);
+    color: var(--fg-color);
+    animation: toot-pulse 4s infinite ease-in-out;
+}
+
+@keyframes toot-pulse {
+    0% {
+        border-color: var(--terminal-border);
+        box-shadow: 0 0 5px rgba(0, 255, 65, 0.1);
+    }
+    50% {
+        border-color: var(--highlight-color);
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+    }
+    100% {
+        border-color: var(--terminal-border);
+        box-shadow: 0 0 5px rgba(0, 255, 65, 0.1);
+    }
+}
+
+.toot-blockquote::before {
+    content: none !important;
+}
+
+.toot-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed var(--terminal-border);
+    padding-bottom: 0.8rem;
+}
+
+.toot-profile img {
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    background: var(--bg-color);
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.toot-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.toot-author-name {
+    font-weight: bold;
+    color: #ffffff !important;
+    text-shadow: 0 0 5px var(--accent-color);
+    text-decoration: none !important;
+}
+
+.toot-author-handle {
+    font-size: 0.8rem;
+    color: var(--highlight-color) !important;
+    text-decoration: none !important;
+}
+
+.toot-prompt {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.toot-prompt .prompt-user {
+    color: var(--accent-color);
+}
+
+.toot-prompt .prompt-host {
+    color: var(--fg-color);
+}
+
+.toot-prompt .prompt-separator {
+    color: var(--fg-color);
+}
+
+.toot-prompt .prompt-dir {
+    color: var(--fg-color);
+}
+
+.toot-prompt .prompt-char {
+    color: var(--highlight-color);
+}
+
+.toot-blockquote p {
+    margin: 0.8rem 0;
+}
+
+.toot-blockquote a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.toot-blockquote a:hover {
+    text-decoration: underline;
+}
+
+.toot-footer {
+    margin-top: 1.2rem;
+    border-top: 1px dashed var(--terminal-border);
+    padding-top: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--off-fg);
+}
+
+.toot-date {
+    color: var(--accent-color) !important;
+    text-decoration: none !important;
+}
+
+.toot-date:hover {
+    text-decoration: underline !important;
+}
+
+.pokey {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.ctr.legal {
+    text-align: center;
+    color: var(--off-fg);
+    font-style: italic;
+}
+
+/* Linux Easter Egg */
+.linux-egg {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --- Media & Image Optimization (Anti-Glare / CRT Style) --- */
+img {
+    /* Verhindert das weiße Aufblitzen durch Nutzung der Theme-Hintergrundfarbe */
+    background-color: var(--bg-color); 
+    
+    /* Integration in das Terminal-Design */
+    border: 1px solid var(--terminal-border);
+    border-radius: 4px;
+    
+    /* Sanftes "Aufwärmen" beim Erscheinen (wie ein CRT-Monitor) */
+    animation: imgWarmup 1.2s ease-out forwards;
+    
+    /* Falls das Bild nicht lädt: Alt-Text in Matrix-Grün */
+    color: var(--highlight-color);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@keyframes imgWarmup {
+    0% { 
+        opacity: 0; 
+        filter: brightness(1.5) blur(10px);
+    }
+    10% {
+        opacity: 0.1;
+        filter: brightness(2) blur(8px);
+    }
+    100% { 
+        opacity: 1; 
+        filter: brightness(1) blur(0);
+    }
+}
+
+/* Zentrierung für Bilder im Hauptinhalt */
+.page__body img {
+    margin: 2rem auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Spezialfall: Keine Animation für kleine Icons in Listen oder Social Links */
+.menu-item img, .aside__social-links img, .toot-profile img {
+    animation: none;
+    margin: 0;
+    display: inline-block;
+}
+
+/* Post Metadata: Lastmod */
+.post-lastmod {
+    font-size: 0.85rem;
+    color: var(--off-fg, #7aa2f7);
+    margin-top: 0.25rem;
+}
+.post-lastmod .lastmod-label {
+    color: var(--accent-color, #00ff41);
+    font-weight: bold;
+}
+
+/* Hugo Native GoAT Diagrams (ASCII to SVG) - Matched to DO3EET Matrix Theme */
+.goat.svg-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1.25rem;
+    background: #000000;
+    border: 1px solid var(--terminal-border, #003b00);
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 65, 0.08);
+}
+
+.goat.svg-container svg {
+    max-width: 100%;
+    height: auto;
+    color: var(--accent-color, #00ff41);
+}
+
+.goat.svg-container svg text {
+    fill: var(--fg-color, #c0caf5);
+    font-size: 13px;
+    font-family: var(--font-monospace, monospace);
+}
+
+/* Zertretene Schnecke (Squashed Snail) für langsame Verbindungen */
+.snail {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: bottom center;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), 
+                text-shadow 0.15s ease-out,
+                filter 0.15s ease-out;
+}
+
+.snail:hover {
+    transform: scale(1.2);
+}
+
+.squashed-snail, .snail.squashed {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: bottom center;
+    transform: scaleX(1.7) scaleY(0.22) skewX(-20deg);
+    text-shadow: 
+        0px 2px 4px rgba(107, 142, 35, 0.8),
+        -3px 0px 6px rgba(139, 69, 19, 0.6),
+        3px 0px 6px rgba(139, 69, 19, 0.6);
+    filter: grayscale(0.4) brightness(0.85);
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), 
+                text-shadow 0.15s ease-out,
+                filter 0.15s ease-out;
+}
+
+.squashed-snail:hover, .snail.squashed:hover {
+    filter: grayscale(0.2) brightness(0.95);
+    text-shadow: 
+        0px 3px 6px rgba(107, 142, 35, 1),
+        -4px 0px 8px rgba(139, 69, 19, 0.8),
+        4px 0px 8px rgba(139, 69, 19, 0.8);
+}
+
+/* Zitternde Rakete (Shaking Rocket) für die schnellste Verbindung */
+.shaking-rocket {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: center center;
+    animation: rocket-vibrate 0.08s linear infinite alternate;
+    filter: drop-shadow(0 0 4px rgba(255, 140, 0, 0.85)) drop-shadow(0 2px 8px rgba(255, 60, 0, 0.6));
+    transition: transform 0.2s;
+}
+
+@keyframes rocket-vibrate {
+    0% {
+        transform: translate(-1px, 1px) rotate(-1.5deg);
+    }
+    25% {
+        transform: translate(1.5px, -1px) rotate(1.5deg);
+    }
+    50% {
+        transform: translate(-1.5px, -0.5px) rotate(-1deg);
+    }
+    75% {
+        transform: translate(1px, 1.5px) rotate(1.5deg);
+    }
+    100% {
+        transform: translate(0.5px, -1.5px) rotate(-0.5deg);
+    }
+}
+
+.shaking-rocket:hover {
+    animation-duration: 0.04s;
+    filter: drop-shadow(0 0 6px rgba(255, 220, 0, 1)) drop-shadow(0 4px 12px rgba(255, 60, 0, 0.95));
+    transform: scale(1.35);
+}
+

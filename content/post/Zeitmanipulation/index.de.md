@@ -10,7 +10,7 @@ tags = [
     "GPS",
     "NTP",
     "Zeit",
-    ]
+]
 +++
 
 Ich glaube jeder Mensch beschäftigt sich mindestens einmal in seinem Leben mit der Zeit. Dabei geht die Faszination nicht nur von Chronométrophilia aus, sondern einfach auch vom normalen Zeit geprägtem Leben. Der eine wartet auf die Liebe seines Lebens am Bahnhof, der andere nur auf den Feierabend. Für beide tickt die Uhr.  
@@ -47,7 +47,7 @@ Aber auch wie bei GPS gibt es Angreifer die NTP-Pakete ab fangen und die Zeitste
 Meine Idee ist es einen möglichen Angriff auf eines dieser Signale zu erkennen, in dem man den Drift zum anderen Signal überwacht. Natürlich braucht man dafür viele Daten, um für seinen Standort und seine Internetverbindung eine normale Schwankung im Drift von einem Angriff zu unterscheiden. Aber den Anfang habe ich schon geamcht und möchte ihn nicht verstecken.
 
 ## Grafische Anzeige
-{{< imgwebp src="1.jpg" alt="Die GUI" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/Zeitmanipulation/1.jpg" alt="Die GUI" width="1024" height="1024" >}}
 Ganz oben wird die aktuelle Uhrzeit angezeigt, die direkt von einem GPS-Empfänger stammt. Darunter listet das Tool die Uhrzeiten auf, die es von verschiedenen NTP-Servern (Network Time Protocol) erhalten hat. Untenstehend wird die Differenz zwischen der GPS-Zeit und der Zeit jedes einzelnen NTP-Servers berechnet und in Millisekunden (ms) angezeigt. Ein kleiner Drift ist normal und entsteht durch Netzwerklaufzeiten und die Verarbeitungsgeschwindigkeit der Systeme.
 ```html
 <!DOCTYPE html>

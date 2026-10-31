@@ -7,8 +7,7 @@ tags = [
     "Linux",
     "Open Source",
     "Hardware",
-    "RISC-V",
-    ]
+]
 +++
 
 Ich freue mich riesig, euch heute auf eine spannende Reise mitzunehmen. Vor kurzem habe ich mir das brandneue Milk-V Jupiter Board zugelegt, und ich kann es kaum erwarten, die ersten Schritte der Installation mit euch zu teilen. In diesem Blogbeitrag werde ich euch durch den gesamten Prozess führen, von der Vorbereitung der Hardware bis zur erfolgreichen Inbetriebnahme des Boards... so wie ich Ihn gerade erlebe. Ich hoffe, meine Erfahrungen werden euch hilfreich sein und mir eine gute Erinnerung, falls ich da nochmal durch muss.
@@ -19,7 +18,7 @@ Wie einigen vielleicht bekannt ist, habe ich eine Kwumsy K3 Tastatur mit SSD. Di
 
 Danach die SSD in den Anschluss im Motherboard eingebaut. Dabei hatte ich das erste Problem, die Schraube passte nicht in die Mutter... nachden ich die Schraube einmal von der anderen Seite durch das Board geschraubt hatte, löste sich das Problem sschnell.
 
-{{< imgwebp src="PXL_20250313_173415561.jpg" alt="Milk-V Jupiter mit SSD und Lüfter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/RISC-V-Learning-to-run/PXL_20250313_173415561.jpg" alt="Milk-V Jupiter mit SSD und Lüfter" width="1024" height="1024" >}}
 
 # Vorbereitung erster Boot
 
@@ -120,4 +119,4 @@ ant clean all
 Im Verlauf des Bastelns war ich ziemlich erschrocken, weil das WiFi unter Fedora, Ubuntu und Bianbu nicht gefunden wurde. Der erste Verdacht war die Hardware, aber aktuell läuft WiFi unter Irradium. Ich frage mich, ob es bei [geerlingguy](https://www.youtube.com/watch?v=YxtFctEsHy0) ein ähnliches Problem war und er eigentlich kein neues Board brauchte...
 
 Und damit bleibt nur noch ein Punkt übrig, System runterfahren und RTC-Batterie einbauen.  
-{{< imgwebp src="HTOP.png" alt="htop auf dem Milk-V Jupiter" width="1024" height="1024" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/RISC-V-Learning-to-run/HTOP.png" alt="htop auf dem Milk-V Jupiter" width="1024" height="1024" >}}

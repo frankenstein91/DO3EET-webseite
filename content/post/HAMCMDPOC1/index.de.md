@@ -6,8 +6,9 @@ author = "Frank Tornack"
 tags = [
     "Linux",
     "Sicherheit",
-    "Python",
-    "Amateurfunk",
+    "Software",
+    "Funk",
+    "Hobby",
 ]
 +++
 
