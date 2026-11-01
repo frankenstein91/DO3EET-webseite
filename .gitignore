@@ -25,4 +25,10 @@ DO3EET_keyslips.html
 *.fit
 *.fts
 
+# Web-Archive / Beweisdateien
+*.wacz
+*.wacz.asc
+*.warc
+*.warc.gz
+
 .wrangler/

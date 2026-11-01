@@ -10,6 +10,7 @@ tags = [
     "Bahn",
     "Politik",
     "Datenschutz",
+    "Infrastruktur",
     "Meinung",
 ]
 +++
@@ -55,6 +56,14 @@ Dass das Umfeld des Bahnhofs Aufwertung verdient, steht außer Frage. Auch die V
 
 Wenn Stadtverwaltung und die planende STEG Stadtentwicklung GmbH Millionen an Fördergeldern in die Hand nehmen, muss am Ende ein echter Mehrwert für die Bürgerschaft und die Pendler herauskommen – und nicht bloß eine architektonische Kulisse, die im Alltag praktische Hürden schafft.
 
+### Vor der nächsten Megabaustelle: Erst die alten Hausaufgaben erledigen
+
+Dass man im Grimmaer Rathaus dazu neigt, Großprojekte mit glanzvollen Versprechungen zu starten, sich dann aber jahrelang in der Realität zu verheddern, ist leider kein Einzelfall. Man muss nur auf das noch immer unvollendete Großprojekt der Stadt blicken: den [städtischen Glasfaserausbau](https://www.grimma.de/portal/seiten/glasfaserausbau-900000204-27290.html). 
+
+Als eigenständiges Betreibermodell mit viel Getöse und Millionen an Fördermitteln gestartet, geriet das Projekt nach Bauunternehmer-Insolvenzen, Baustopps und organisatorischen Verzögerungen zum Geduldsspiel für unzählige Bürger in den Ortsteilen. Viele Haushalte warten seit Jahren auf funktionierendes „Licht im Netz“, während sich die endgültige Fertigstellung und Inbetriebnahme immer weiter nach hinten verschoben hat.
+
+Bevor die Stadt nun die nächste gigantische Baustelle am Bahnhofsquartier aufreißt und Millionen in Prestigeprojekte pumpt, sollte man erst einmal beweisen, dass man laufende Infrastrukturvorhaben sauber und verlässlich ins Ziel bringen kann. Grimma braucht keine neuen Dauerbaustellen und hübschen Luftschlösser, während grundlegende Infrastrukturprojekte der Daseinsvorsorge seit Jahren hinter den Zeitplänen herhinken.
+
 ### Fazit: Wir sehen genau hin
 
 Das Abschalten der Kommentarfunktion auf den städtischen Social-Media-Kanälen mag für die Verantwortlichen im Rathaus bequem sein, um sich unbequemen Fragen nicht stellen zu müssen. Ein zukunftsfähiges Stadtentwicklungskonzept schafft man so jedoch nicht.
@@ -63,3 +72,21 @@ Dieser Beitrag versteht sich als sachlicher, aber deutlicher Hinweis an die Stad
 
 ---
 *Quelle und Übersicht der Pläne:* [Beitrag der Stadt Grimma auf Facebook](https://www.facebook.com/100064843352694/posts/1687625556742207/)
+
+<!--
+GPG-Signatur der Beweisdatei (Web-Archiv):
+Dateiname: fuerblog.wacz
+SHA256: b777a7490e180fcfad6fe1b52658df2ae9e6b4146d3f5a22cdedd648be7018f9
+Signiert von: Eckhard Frank Tornack (Amateur Radio) <do3eet@magenta.de>
+Schlüssel-ID: 83C577D642DFD542
+Fingerprint: 83C577D642DFD5422B142EB253481A1D51D844C2FBC24D06760B69BA8CFA577C
+
+-----BEGIN PGP SIGNATURE-----
+
+iKkFABYKACkiIQWDxXfWQt/VQisULrJTSBodUdhEwvvCTQZ2C2m6jPpXfAUCaud8
+bQAAiuoByNqHPDZ0E8uiP+7C1m0Zv4yQqQ33O7raUgtyju1fnA0/pNh5gbOGuzXn
+WtckzfMLtFUhM77uWOttAAHIlkAk4rPJzwIAKaZX3L0BHRtOusDX39FKc8o3krqM
+kzQXL1WUsUXFqKouYKafFqle71/p9B0JqgIA
+=pUQK
+-----END PGP SIGNATURE-----
+-->
