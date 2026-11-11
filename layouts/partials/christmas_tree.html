@@ -1,0 +1,675 @@
+<!-- CSS3 Weihnachtsbaum Styles -->
+<style>
+        /* ==========================================================
+           START DES REINEN CSS3-WEIHNACHTSBAUMS (OHNE GRAFIKEN)
+           ========================================================== */
+        :root {
+            --tree-scale: 1;
+        }
+
+        .christmas-tree-wrapper {
+            --tree-scale: 0.74;
+            width: 100%;
+            max-width: 100%;
+            height: calc(470px * var(--tree-scale));
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: hidden;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        @media (max-width: 45rem) {
+            .christmas-tree-wrapper {
+                --tree-scale: 0.82;
+            }
+        }
+
+        @media (max-width: 25rem) {
+            .christmas-tree-wrapper {
+                --tree-scale: 0.70;
+            }
+        }
+
+        .christmas-scene {
+            position: relative;
+            width: 340px;
+            height: 470px;
+            margin: 0 auto;
+            transform: scale(var(--tree-scale));
+            transform-origin: top center;
+            user-select: none;
+            flex-shrink: 0;
+        }
+
+        /* --- Hintergrund-Leuchten hinter dem Baum --- */
+        .tree-ambient-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 280px;
+            height: 320px;
+            transform: translate(-50%, -45%);
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(250, 204, 21, 0.08) 45%, transparent 72%);
+            filter: blur(18px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* --- Bodenschatten & Schneedecke --- */
+        .snow-base {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 270px;
+            height: 34px;
+            background: radial-gradient(ellipse at center, #f8fafc 0%, #cbd5e1 65%, rgba(148, 163, 184, 0) 100%);
+            border-radius: 50%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* --- Baumstamm & Topf --- */
+        .tree-trunk {
+            position: absolute;
+            bottom: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 46px;
+            height: 64px;
+            background: linear-gradient(90deg, #3e1f0d 0%, #6b3818 45%, #4a2511 100%);
+            border-radius: 6px;
+            box-shadow: inset 0 12px 14px rgba(0, 0, 0, 0.65);
+            z-index: 2;
+        }
+
+        /* --- Tannenschichten (mit gezackten Spitzen per clip-path) --- */
+        .tree-layer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(0 12px 10px rgba(0, 0, 0, 0.45));
+        }
+
+        .tree-layer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, rgba(255,255,255,0.09) 0%, transparent 45%, rgba(0,0,0,0.28) 100%);
+            pointer-events: none;
+        }
+
+        /* Unterste Schicht (Schicht 4) */
+        .layer-bottom {
+            bottom: 78px;
+            width: 300px;
+            height: 150px;
+            background: linear-gradient(180deg, #064e3b 0%, #065f46 55%, #047857 100%);
+            clip-path: polygon(
+                50% 0%, 
+                18% 35%, 26% 35%, 
+                0% 100%, 17% 92%, 29% 100%, 42% 93%, 50% 100%, 58% 93%, 71% 100%, 83% 92%, 100% 100%, 
+                74% 35%, 82% 35%
+            );
+            z-index: 3;
+        }
+
+        /* Mittlere Schicht (Schicht 3) */
+        .layer-middle {
+            bottom: 158px;
+            width: 245px;
+            height: 135px;
+            background: linear-gradient(180deg, #065f46 0%, #047857 60%, #059669 100%);
+            clip-path: polygon(
+                50% 0%, 
+                16% 36%, 24% 36%, 
+                0% 100%, 19% 91%, 34% 100%, 50% 92%, 66% 100%, 81% 91%, 100% 100%, 
+                76% 36%, 84% 36%
+            );
+            z-index: 4;
+        }
+
+        /* Obere Schicht (Schicht 2) */
+        .layer-top {
+            bottom: 232px;
+            width: 190px;
+            height: 118px;
+            background: linear-gradient(180deg, #047857 0%, #059669 60%, #10b981 100%);
+            clip-path: polygon(
+                50% 0%, 
+                15% 38%, 23% 38%, 
+                0% 100%, 22% 91%, 39% 100%, 50% 92%, 61% 100%, 78% 91%, 100% 100%, 
+                77% 38%, 85% 38%
+            );
+            z-index: 5;
+        }
+
+        /* Baumspitze (Schicht 1) */
+        .layer-crown {
+            bottom: 300px;
+            width: 130px;
+            height: 98px;
+            background: linear-gradient(180deg, #059669 0%, #10b981 65%, #34d399 100%);
+            clip-path: polygon(
+                50% 0%, 
+                0% 100%, 25% 90%, 50% 100%, 75% 90%, 100% 100%
+            );
+            z-index: 6;
+        }
+
+        /* --- Leuchtender Weihnachtsstern an der Spitze --- */
+        .star-wrapper {
+            position: absolute;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 58px;
+            height: 58px;
+            z-index: 15;
+            filter: drop-shadow(0 0 12px rgba(253, 224, 71, 0.95)) drop-shadow(0 0 25px rgba(245, 158, 11, 0.8));
+            animation: starPulse 2.8s infinite ease-in-out;
+        }
+
+        .star-shape {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 45%, #ffffff 0%, #fef08a 30%, #facc15 65%, #d97706 100%);
+            clip-path: polygon(
+                50% 0%, 63% 34%, 98% 35%, 70% 57%, 81% 91%, 
+                50% 71%, 19% 91%, 30% 57%, 2% 35%, 37% 34%
+            );
+        }
+
+        @keyframes starPulse {
+            0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); filter: drop-shadow(0 0 12px rgba(253, 224, 71, 0.9)) drop-shadow(0 0 24px rgba(245, 158, 11, 0.7)); }
+            50% { transform: translateX(-50%) scale(1.08) rotate(3deg); filter: drop-shadow(0 0 18px rgba(255, 255, 255, 1)) drop-shadow(0 0 36px rgba(250, 204, 21, 0.95)); }
+        }
+
+        /* --- Lametta / Goldene Girlanden --- */
+        .garland {
+            position: absolute;
+            left: 50%;
+            border-bottom: 3px dotted rgba(253, 224, 71, 0.75);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 7;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
+        }
+        .garland-1 { width: 95px; height: 34px; top: 112px; transform: translateX(-50%) rotate(5deg); }
+        .garland-2 { width: 148px; height: 48px; top: 168px; transform: translateX(-50%) rotate(-4deg); }
+        .garland-3 { width: 205px; height: 58px; top: 234px; transform: translateX(-50%) rotate(4deg); }
+        .garland-4 { width: 255px; height: 68px; top: 306px; transform: translateX(-50%) rotate(-3deg); }
+
+        /* --- Lichterketten-Kabel (dezent geschwungen) --- */
+        .wire {
+            position: absolute;
+            left: 50%;
+            border-bottom: 2px solid rgba(20, 40, 30, 0.75);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 8;
+        }
+        .wire-1 { width: 88px; height: 28px; top: 102px; transform: translateX(-50%) rotate(-4deg); }
+        .wire-2 { width: 138px; height: 42px; top: 155px; transform: translateX(-50%) rotate(5deg); }
+        .wire-3 { width: 192px; height: 52px; top: 218px; transform: translateX(-50%) rotate(-4deg); }
+        .wire-4 { width: 245px; height: 62px; top: 292px; transform: translateX(-50%) rotate(3deg); }
+
+        /* --- Weihnachtskugeln (mit Glanzpunkt & Krönchen) --- */
+        .bauble {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            z-index: 9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset -3px -3px 6px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease;
+        }
+        .bauble:hover {
+            transform: scale(1.2) rotate(8deg);
+        }
+        /* Aufhänger-Krönchen */
+        .bauble::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 4px;
+            background: linear-gradient(90deg, #ca8a04, #fef08a, #ca8a04);
+            border-radius: 1px;
+        }
+        /* Glanzreflexion auf der Kugel */
+        .bauble::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 80%);
+        }
+
+        .bauble.red { background: radial-gradient(circle at 35% 30%, #fca5a5, #ef4444 45%, #991b1b 100%); }
+        .bauble.gold { background: radial-gradient(circle at 35% 30%, #fef9c3, #eab308 45%, #854d0e 100%); }
+        .bauble.blue { background: radial-gradient(circle at 35% 30%, #bae6fd, #0284c7 45%, #1e3a8a 100%); }
+        .bauble.silver { background: radial-gradient(circle at 35% 30%, #ffffff, #cbd5e1 45%, #475569 100%); }
+        .bauble.purple { background: radial-gradient(circle at 35% 30%, #f5d0fe, #c026d3 45%, #581c87 100%); }
+
+        /* Positionen der Weihnachtskugeln */
+        .b-1  { top: 112px; left: 142px; }
+        .b-2  { top: 138px; left: 185px; }
+        .b-3  { top: 175px; left: 118px; }
+        .b-4  { top: 192px; left: 205px; }
+        .b-5  { top: 215px; left: 158px; }
+        .b-6  { top: 245px; left: 95px; }
+        .b-7  { top: 258px; left: 222px; }
+        .b-8  { top: 278px; left: 142px; }
+        .b-9  { top: 315px; left: 74px; }
+        .b-10 { top: 332px; left: 188px; }
+        .b-11 { top: 342px; left: 118px; }
+        .b-12 { top: 325px; left: 246px; }
+
+        /* --- Zuckerstangen (Candy Canes) --- */
+        .candy-cane {
+            position: absolute;
+            width: 14px;
+            height: 30px;
+            border: 4px solid #ffffff;
+            border-bottom: none;
+            border-right: none;
+            border-radius: 10px 10px 0 0;
+            background: repeating-linear-gradient(
+                45deg,
+                #ffffff,
+                #ffffff 4px,
+                #dc2626 4px,
+                #dc2626 8px
+            );
+            -webkit-mask: 
+                radial-gradient(circle at 7px 7px, transparent 3px, black 3.5px),
+                linear-gradient(to right, black 4px, transparent 4px);
+            mask-composite: intersect;
+            z-index: 9;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+        }
+        /* Einfachere, 100% browserkompatible Zuckerstange per Border & Gradient */
+        .cane {
+            position: absolute;
+            width: 16px;
+            height: 32px;
+            z-index: 9;
+            filter: drop-shadow(0 3px 3px rgba(0,0,0,0.45));
+        }
+        .cane::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 5px;
+            height: 30px;
+            border-radius: 4px;
+            background: repeating-linear-gradient(45deg, #fff 0 4px, #ef4444 4px 8px);
+        }
+        .cane::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 14px;
+            border-radius: 10px 10px 0 0;
+            border: 5px solid transparent;
+            border-top-color: #ef4444;
+            border-left-color: #ffffff;
+            box-sizing: border-box;
+        }
+        .cane-1 { top: 158px; left: 152px; transform: rotate(-14deg); }
+        .cane-2 { top: 238px; left: 185px; transform: rotate(16deg) scaleX(-1); }
+        .cane-3 { top: 308px; left: 155px; transform: rotate(-10deg); }
+
+        /* --- Animierte Lichterkette (LEDs) --- */
+        .light {
+            position: absolute;
+            width: 10px;
+            height: 14px;
+            border-radius: 50% 50% 45% 45%;
+            z-index: 12;
+            animation: twinkle 1.8s infinite ease-in-out alternate;
+        }
+        /* Kleine Fassung oben an jeder LED */
+        .light::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 3px;
+            background: #1e293b;
+            border-radius: 1px;
+        }
+
+        /* Lichtfarben */
+        .light.warm {
+            background-color: #fef08a;
+            color: #facc15;
+            box-shadow: 0 0 10px 2px #facc15, 0 0 20px 4px rgba(250, 204, 21, 0.6);
+        }
+        .light.red {
+            background-color: #fecaca;
+            color: #ef4444;
+            box-shadow: 0 0 10px 2px #ef4444, 0 0 20px 4px rgba(239, 68, 68, 0.6);
+        }
+        .light.cyan {
+            background-color: #bae6fd;
+            color: #38bdf8;
+            box-shadow: 0 0 10px 2px #38bdf8, 0 0 20px 4px rgba(56, 189, 248, 0.6);
+        }
+        .light.green {
+            background-color: #bbf7d0;
+            color: #4ade80;
+            box-shadow: 0 0 10px 2px #4ade80, 0 0 20px 4px rgba(74, 222, 128, 0.6);
+        }
+        .light.pink {
+            background-color: #fbcfe8;
+            color: #f472b6;
+            box-shadow: 0 0 10px 2px #f472b6, 0 0 20px 4px rgba(244, 114, 182, 0.6);
+        }
+
+        /* Zeitversetztes Blinken */
+        .light:nth-child(5n+1) { animation-delay: 0.0s; animation-duration: 1.5s; }
+        .light:nth-child(5n+2) { animation-delay: 0.4s; animation-duration: 1.9s; }
+        .light:nth-child(5n+3) { animation-delay: 0.8s; animation-duration: 1.6s; }
+        .light:nth-child(5n+4) { animation-delay: 1.2s; animation-duration: 2.1s; }
+        .light:nth-child(5n+5) { animation-delay: 1.6s; animation-duration: 1.7s; }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.35;
+                transform: scale(0.85);
+                box-shadow: 0 0 4px 1px currentColor;
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.15);
+                box-shadow: 0 0 12px 3px currentColor, 0 0 24px 6px currentColor;
+            }
+        }
+
+        /* Beleuchtungs-Modi per Klasse steuerbar */
+        .lights-off .light {
+            animation: none !important;
+            opacity: 0.2 !important;
+            box-shadow: none !important;
+        }
+        .lights-fast .light {
+            animation-duration: 0.45s !important;
+        }
+        .lights-warm-only .light {
+            background-color: #fef08a !important;
+            color: #facc15 !important;
+        }
+
+        /* --- Morsecode Modus (CW) --- */
+        .lights-morse .light {
+            animation: none !important;
+            transition: opacity 0.04s ease, transform 0.04s ease, box-shadow 0.04s ease;
+            opacity: 0.2;
+            transform: scale(0.85);
+            box-shadow: none !important;
+        }
+        .lights-morse .star-wrapper {
+            animation: none !important;
+            transition: opacity 0.04s ease, transform 0.04s ease, filter 0.04s ease;
+            opacity: 0.35;
+            filter: none !important;
+            transform: translateX(-50%) scale(0.95);
+        }
+        .lights-morse.morse-key-down .light {
+            opacity: 1 !important;
+            transform: scale(1.22) !important;
+            box-shadow: 0 0 14px 4px currentColor, 0 0 28px 8px currentColor !important;
+        }
+        .lights-morse.morse-key-down .star-wrapper {
+            opacity: 1 !important;
+            transform: translateX(-50%) scale(1.12) !important;
+            filter: drop-shadow(0 0 20px rgba(255, 235, 100, 1)) drop-shadow(0 0 40px rgba(255, 190, 0, 0.95)) !important;
+        }
+
+        /* Positionierung der 22 Lichter entlang der Girlanden */
+        /* Reihe 1 (Krone) */
+        .l-1  { top: 112px; left: 132px; }
+        .l-2  { top: 121px; left: 164px; }
+        .l-3  { top: 118px; left: 196px; }
+        /* Reihe 2 (Oben) */
+        .l-4  { top: 168px; left: 108px; }
+        .l-5  { top: 181px; left: 138px; }
+        .l-6  { top: 187px; left: 172px; }
+        .l-7  { top: 182px; left: 205px; }
+        .l-8  { top: 169px; left: 226px; }
+        /* Reihe 3 (Mitte) */
+        .l-9  { top: 235px; left: 82px; }
+        .l-10 { top: 251px; left: 114px; }
+        .l-11 { top: 260px; left: 150px; }
+        .l-12 { top: 261px; left: 186px; }
+        .l-13 { top: 252px; left: 220px; }
+        .l-14 { top: 238px; left: 248px; }
+        /* Reihe 4 (Unten) */
+        .l-15 { top: 306px; left: 56px; }
+        .l-16 { top: 325px; left: 88px; }
+        .l-17 { top: 338px; left: 122px; }
+        .l-18 { top: 344px; left: 158px; }
+        .l-19 { top: 344px; left: 194px; }
+        .l-20 { top: 337px; left: 228px; }
+        .l-21 { top: 324px; left: 258px; }
+        .l-22 { top: 309px; left: 280px; }
+
+        /* --- Geschenkpakete unter dem Baum --- */
+        .gift {
+            position: absolute;
+            bottom: 24px;
+            z-index: 11;
+            border-radius: 3px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
+        }
+        /* Vertikales & horizontales Geschenkband */
+        .gift::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 7px;
+            background: rgba(254, 240, 138, 0.92);
+        }
+        .gift::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 7px;
+            background: rgba(254, 240, 138, 0.92);
+        }
+
+        .gift-red {
+            width: 48px;
+            height: 40px;
+            left: 74px;
+            background: linear-gradient(135deg, #ef4444, #991b1b);
+        }
+        .gift-blue {
+            width: 56px;
+            height: 48px;
+            right: 68px;
+            bottom: 22px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+        }
+        .gift-gold {
+            width: 36px;
+            height: 30px;
+            left: 112px;
+            bottom: 18px;
+            z-index: 12;
+            background: linear-gradient(135deg, #eab308, #a16207);
+        }
+        .gift-gold::before, .gift-gold::after {
+            background: #dc2626;
+            width: 5px;
+            height: 5px;
+        }
+        .gift-gold::before { height: 100%; }
+        .gift-gold::after { width: 100%; }
+
+        /* --- Optionaler CSS-Schneefall im Vorschaubereich --- */
+        .snow-stage {
+            position: relative;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -12px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.75;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+        @keyframes snowfall {
+            0% { transform: translateY(-10px) translateX(0); }
+            50% { transform: translateY(240px) translateX(12px); }
+            100% { transform: translateY(520px) translateX(-8px); }
+        }
+        /* ==========================================================
+           ENDE DES REINEN CSS3-WEIHNACHTSBAUMS
+           ========================================================== */
+</style>
+
+<!-- CSS3 Weihnachtsbaum HTML (Klasse "lights-morse" aktiviert den DO3EET Morse-Modus) -->
+<div class="christmas-tree-wrapper" role="img" aria-label="Festlicher Weihnachtsbaum mit morseblinkender Lichterkette">
+    <div class="christmas-scene lights-morse" id="christmas-tree">
+        <!-- Hintergrund-Schimmer -->
+        <div class="tree-ambient-glow"></div>
+
+        <!-- Leuchtender Stern -->
+        <div class="star-wrapper">
+            <div class="star-shape"></div>
+        </div>
+
+        <!-- 4 Tannenschichten -->
+        <div class="tree-layer layer-crown"></div>
+        <div class="tree-layer layer-top"></div>
+        <div class="tree-layer layer-middle"></div>
+        <div class="tree-layer layer-bottom"></div>
+
+        <!-- Lametta / Goldene Girlanden -->
+        <div class="garland garland-1"></div>
+        <div class="garland garland-2"></div>
+        <div class="garland garland-3"></div>
+        <div class="garland garland-4"></div>
+
+        <!-- Kabel der Lichterkette -->
+        <div class="wire wire-1"></div>
+        <div class="wire wire-2"></div>
+        <div class="wire wire-3"></div>
+        <div class="wire wire-4"></div>
+
+        <!-- 22 Animierte Lichter (LEDs) -->
+        <div class="light warm l-1"></div>
+        <div class="light red l-2"></div>
+        <div class="light cyan l-3"></div>
+
+        <div class="light green l-4"></div>
+        <div class="light warm l-5"></div>
+        <div class="light pink l-6"></div>
+        <div class="light cyan l-7"></div>
+        <div class="light red l-8"></div>
+
+        <div class="light warm l-9"></div>
+        <div class="light cyan l-10"></div>
+        <div class="light red l-11"></div>
+        <div class="light green l-12"></div>
+        <div class="light warm l-13"></div>
+        <div class="light pink l-14"></div>
+
+        <div class="light red l-15"></div>
+        <div class="light warm l-16"></div>
+        <div class="light green l-17"></div>
+        <div class="light cyan l-18"></div>
+        <div class="light pink l-19"></div>
+        <div class="light warm l-20"></div>
+        <div class="light red l-21"></div>
+        <div class="light cyan l-22"></div>
+
+        <!-- 12 Glänzende Weihnachtskugeln -->
+        <div class="bauble red b-1"></div>
+        <div class="bauble gold b-2"></div>
+        <div class="bauble blue b-3"></div>
+        <div class="bauble silver b-4"></div>
+        <div class="bauble red b-5"></div>
+        <div class="bauble purple b-6"></div>
+        <div class="bauble gold b-7"></div>
+        <div class="bauble blue b-8"></div>
+        <div class="bauble red b-9"></div>
+        <div class="bauble silver b-10"></div>
+        <div class="bauble gold b-11"></div>
+        <div class="bauble purple b-12"></div>
+
+        <!-- 3 Gestreifte Zuckerstangen -->
+        <div class="cane cane-1"></div>
+        <div class="cane cane-2"></div>
+        <div class="cane cane-3"></div>
+
+        <!-- Baumstamm & Schneeboden -->
+        <div class="tree-trunk"></div>
+        <div class="snow-base"></div>
+
+        <!-- Geschenke unter dem Baum -->
+        <div class="gift gift-red"></div>
+        <div class="gift gift-gold"></div>
+        <div class="gift gift-blue"></div>
+    </div>
+</div>
+
+<!-- Selbstlaufendes CW Morse-Skript für DO3EET -->
+<script>
+(function() {
+    function startMorse() {
+        const tree = document.getElementById("christmas-tree");
+        if (!tree || !tree.classList.contains("lights-morse")) return;
+        const msg = "Fröhliche Weihnachten wünscht DO3EET";
+        const map = {"A":".-","B":"-...","C":"-.-.","D":"-..","E":".","F":"..-.","G":"--.","H":"....","I":"..","J":".---","K":"-.-","L":".-..","M":"--","N":"-.","O":"---","P":".--.","Q":"--.-","R":".-.","S":"...","T":"-","U":"..-","V":"...-","W":".--","X":"-..-","Y":"-.--","Z":"--..","Ä":".-.-","Ö":"---.","Ü":"..--","0":"-----","1":".----","2":"..---","3":"...--","4":"....-","5":".....","6":"-....","7":"--...","8":"---..","9":"----."};
+        const unit = 100; // 12 WPM (100ms pro Dit)
+        const steps = [];
+        msg.toUpperCase().split("").forEach(function(c) {
+            if (c === " ") { steps.push([0, 4]); return; }
+            const code = map[c];
+            if (!code) return;
+            code.split("").forEach(function(s, idx, arr) {
+                steps.push([1, s === "-" ? 3 : 1]);
+                if (idx < arr.length - 1) steps.push([0, 1]);
+            });
+            steps.push([0, 3]);
+        });
+        steps.push([0, 10]);
+        let i = 0;
+        function tick() {
+            const step = steps[i];
+            tree.classList.toggle("morse-key-down", !!step[0]);
+            i = (i + 1) % steps.length;
+            setTimeout(tick, step[1] * unit);
+        }
+        tick();
+    }
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startMorse);
+    } else {
+        startMorse();
+    }
+})();
+</script>
