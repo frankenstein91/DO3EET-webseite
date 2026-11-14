@@ -1,5 +1,5 @@
 +++
-title = 'Shizuoka Tag 1: Vom Shinkansen-Schreckmoment zum Tachikoma, auf den Shizuhata-Berg und zufälligem Album-Cover'
+title = 'Shizuoka: Vom Shinkansen-Schreckmoment zum Tachikoma, auf den Shizuhata-Berg und zufälligem Album-Cover'
 date = "2026-11-13T20:10:00+09:00"
 draft = false
 author = "Frank Tornack"
@@ -110,6 +110,6 @@ Von dort oben erstreckte sich das nächtliche Shizuoka als glitzerndes Lichterme
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-ShizuokaTag1/PXL_20261113_082716802.NIGHT.jpg" alt="Nächtlicher Ausblick aus dem 21. Stock der Präfekturverwaltung Shizuoka über die beleuchtete Innenstadt" width="1200" height="675" >}}
 
-Den ruhigen Abschluss dieses langen Tages bildete ein Abendspaziergang durch die Innenstadt entlang der **Aoba Symbol Road** (青葉シンボルロード). Diese breite, von Bäumen und kleinen Wasserläufen gesäumte Flaniermeile zieht sich quer durchs Zentrum und findet ihren stimmungsvollen Abschluss direkt am **Tokiwa-Park** (常磐公園). Im Dunkeln tanzten dort die beleuchteten Wasserfontänen vor dem halbrunden Säulenpavillon – während rechts über den Bäumen sogar eine schmale Mondsichel am Nachthimmel stand. Nach dem morgendlichen Shinkansen-Schreckmoment ein rundum versöhnlicher Ausklang für unseren ersten Tag in Shizuoka.
+Den ruhigen Abschluss dieses langen Tages bildete ein Abendspaziergang durch die Innenstadt entlang der **Aoba Symbol Road** (青葉シンボルロード). Diese breite, von Bäumen und kleinen Wasserläufen gesäumte Flaniermeile zieht sich quer durchs Zentrum und findet ihren stimmungsvollen Abschluss direkt am **Tokiwa-Park** (常磐公園). Im Dunkeln tanzten dort die beleuchteten Wasserfontänen vor dem halbrunden Säulenpavillon – während rechts über den Bäumen sogar eine schmale Mondsichel am Nachthimmel stand. Nach dem morgendlichen Shinkansen-Schreckmoment ein rundum versöhnlicher Ausklang für unseren Tag in Shizuoka.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-ShizuokaTag1/PXL_20261113_090359438.jpg" alt="Beleuchteter Brunnen mit hohen Wasserfontänen im nächtlichen Tokiwa-Park am Ende der Aoba Symbol Road" width="1200" height="675" >}}
