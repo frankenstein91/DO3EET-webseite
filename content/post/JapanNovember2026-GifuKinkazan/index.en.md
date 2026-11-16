@@ -1,6 +1,6 @@
 +++
 title = 'Sunny Gifu & Night Light Trails: From the Great Buddha and Kawaramachi to Mt. Kinka Sunset and Tower 43'
-date = "2026-11-16T23:55:00+09:00"
+date = "2026-11-16T22:13:23+09:00"
 draft = false
 author = "Frank Tornack"
 tags = [
