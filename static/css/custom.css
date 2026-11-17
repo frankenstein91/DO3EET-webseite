@@ -993,3 +993,241 @@ img {
     transform: scale(1.35);
 }
 
+/* Interactive Japanese Temple Bell (Bonshō) Audio Player */
+.bonsho-widget {
+    margin: 2rem auto;
+    max-width: 34rem;
+    text-align: center;
+}
+
+.bonsho-stage {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1rem 1.25rem 0.5rem;
+    background:
+        radial-gradient(circle at 35% 58%, rgba(0, 255, 65, 0.08) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(15, 23, 30, 0.95) 0%, rgba(20, 28, 24, 0.92) 100%);
+    border: 1px solid var(--terminal-border, #003b00);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), inset 0 0 20px rgba(0, 255, 65, 0.04);
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+    font-family: inherit;
+    color: inherit;
+}
+
+.bonsho-stage:hover,
+.bonsho-stage:focus-visible {
+    border-color: var(--accent-color, #00ff41);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7), 0 0 16px rgba(0, 255, 65, 0.2);
+    outline: none;
+}
+
+.bonsho-stage:active {
+    transform: scale(0.992);
+}
+
+/* Subtle diagonal rain animation in background */
+.bonsho-rain {
+    position: absolute;
+    inset: -20% 0 0 0;
+    pointer-events: none;
+    opacity: 0.28;
+    background-image:
+        repeating-linear-gradient(
+            102deg,
+            transparent 0px,
+            transparent 18px,
+            rgba(180, 215, 235, 0.28) 18px,
+            rgba(180, 215, 235, 0.28) 19px,
+            transparent 19px,
+            transparent 46px
+        );
+    background-size: 120px 120px;
+    animation: bonsho-rain-fall 1.4s linear infinite;
+}
+
+@keyframes bonsho-rain-fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -24px 120px;
+    }
+}
+
+.bonsho-svg {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* Wooden sign typography & hover cue */
+.bonsho-sign-group {
+    transform-origin: 308px 190px;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+}
+
+.bonsho-stage:hover .bonsho-sign-group,
+.bonsho-stage:focus-visible .bonsho-sign-group {
+    transform: rotate(-2.5deg) translateY(-2px);
+    filter: drop-shadow(0 0 6px rgba(255, 215, 130, 0.45));
+}
+
+.bonsho-sign-text {
+    fill: #241307;
+    font-family: var(--font-monospace, monospace);
+    font-size: 9.8px;
+    font-weight: 800;
+    letter-spacing: 0px;
+}
+
+.bonsho-sign-sub {
+    fill: #4f2f17;
+    font-family: var(--font-monospace, monospace);
+    font-size: 7.8px;
+    font-weight: 700;
+}
+
+/* Striker (Shumoku) & Bell (Bonshō) physics */
+.bonsho-striker-group {
+    transform-origin: 185px 60px;
+    transition: transform 0.25s ease;
+}
+
+.bonsho-stage:hover .bonsho-striker-group {
+    transform: translateX(4px) rotate(-2.5deg);
+}
+
+.bonsho-bell-group {
+    transform-origin: 120px 62px;
+}
+
+/* Strike animation: pull back -> hit at 180ms -> rebound */
+.bonsho-widget.is-striking .bonsho-striker-group {
+    animation: bonsho-striker-hit 0.95s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes bonsho-striker-hit {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    12% {
+        transform: translateX(14px) rotate(-7deg);
+    }
+    20% {
+        transform: translateX(-8px) rotate(4.2deg);
+    }
+    38% {
+        transform: translateX(7px) rotate(-3.5deg);
+    }
+    62% {
+        transform: translateX(-2px) rotate(1deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+/* Impact flash at striking medallion */
+.bonsho-widget.is-ringing .bonsho-impact {
+    animation: bonsho-impact-flash 0.7s ease-out forwards;
+}
+
+@keyframes bonsho-impact-flash {
+    0% {
+        opacity: 0.95;
+        transform: scale(0.5);
+        transform-origin: 151px 140px;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.8);
+        transform-origin: 151px 140px;
+    }
+}
+
+/* Damped pendulum swing + warm bronze glow while ringing */
+.bonsho-widget.is-ringing .bonsho-bell-group {
+    animation: bonsho-bell-swing 6.5s ease-out forwards;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.32));
+}
+
+@keyframes bonsho-bell-swing {
+    0%   { transform: rotate(0deg); }
+    4%   { transform: rotate(-5.5deg); }
+    12%  { transform: rotate(4.2deg); }
+    22%  { transform: rotate(-3.1deg); }
+    34%  { transform: rotate(2.2deg); }
+    48%  { transform: rotate(-1.5deg); }
+    64%  { transform: rotate(0.9deg); }
+    82%  { transform: rotate(-0.4deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Expanding acoustic soundwave rings */
+.bonsho-waves {
+    position: absolute;
+    left: 33%;
+    top: 56%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bonsho-wave {
+    position: absolute;
+    inset: -45px;
+    border: 2px solid rgba(0, 255, 65, 0.55);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.bonsho-widget.is-ringing .bonsho-wave--1 {
+    animation: bonsho-wave-pulse 2.8s ease-out 0s 4;
+}
+
+.bonsho-widget.is-ringing .bonsho-wave--2 {
+    animation: bonsho-wave-pulse 2.8s ease-out 0.9s 4;
+}
+
+.bonsho-widget.is-ringing .bonsho-wave--3 {
+    animation: bonsho-wave-pulse 2.8s ease-out 1.8s 3;
+}
+
+@keyframes bonsho-wave-pulse {
+    0% {
+        transform: scale(0.35);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(4.2);
+        opacity: 0;
+    }
+}
+
+.bonsho-caption {
+    margin-top: 0.55rem;
+    font-size: 0.85rem;
+    color: var(--off-fg, #566f56);
+}
+
+.bonsho-caption__status {
+    color: var(--accent-color, #00ff41);
+    font-weight: bold;
+}
+
+.bonsho-audio {
+    display: none;
+}
+
+
