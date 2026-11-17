@@ -1,0 +1,205 @@
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" | default "" }}
+{{ $type := .Get "type" | default "audio/mp4" }}
+{{ $signText := .Get "sign" | default "klick mich" }}
+{{ $uid := printf "bonsho-%d" .Ordinal }}
+
+<figure class="bonsho-widget" id="{{ $uid }}">
+  <button type="button" class="bonsho-stage" aria-label="{{ if $title }}{{ $title }} – {{ end }}{{ $signText }}" aria-pressed="false">
+    <!-- Subtle rain streaks in background -->
+    <span class="bonsho-rain" aria-hidden="true"></span>
+
+    <!-- Soundwave ripples -->
+    <span class="bonsho-waves" aria-hidden="true">
+      <span class="bonsho-wave bonsho-wave--1"></span>
+      <span class="bonsho-wave bonsho-wave--2"></span>
+      <span class="bonsho-wave bonsho-wave--3"></span>
+    </span>
+
+    <!-- Japanese Bell Tower (Shōrō) & Bonshō SVG -->
+    <svg class="bonsho-svg" viewBox="0 0 380 230" role="img" aria-hidden="true">
+      <defs>
+        <!-- Aged Bronze / Verdigris Gradient for Bonshō -->
+        <linearGradient id="bonshoBronze-{{ $uid }}" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1f312b"/>
+          <stop offset="22%" stop-color="#3d5a4f"/>
+          <stop offset="48%" stop-color="#5d7c6d"/>
+          <stop offset="75%" stop-color="#2f473e"/>
+          <stop offset="100%" stop-color="#172420"/>
+        </linearGradient>
+        <!-- Dark Cedar Wood Gradient -->
+        <linearGradient id="shoroWood-{{ $uid }}" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#2c190e"/>
+          <stop offset="50%" stop-color="#4e2f1d"/>
+          <stop offset="100%" stop-color="#24140b"/>
+        </linearGradient>
+        <!-- Hinoki Wood Sign Gradient -->
+        <linearGradient id="kifudaWood-{{ $uid }}" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e8c89b"/>
+          <stop offset="50%" stop-color="#d7af7a"/>
+          <stop offset="100%" stop-color="#be925b"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Stone base / foundation -->
+      <rect x="28" y="206" width="214" height="12" rx="3" fill="#3a3f47" stroke="#22262c" stroke-width="1.5"/>
+      <rect x="40" y="198" width="190" height="9" rx="2" fill="#4b525c"/>
+
+      <!-- Left & Right Wooden Pillars of Shōrō -->
+      <rect x="48" y="48" width="14" height="152" fill="url(#shoroWood-{{ $uid }})" stroke="#1a0e07" stroke-width="1.2"/>
+      <rect x="208" y="48" width="14" height="152" fill="url(#shoroWood-{{ $uid }})" stroke="#1a0e07" stroke-width="1.2"/>
+
+      <!-- Upper Crossbeam -->
+      <rect x="38" y="44" width="194" height="12" rx="2" fill="url(#shoroWood-{{ $uid }})" stroke="#1a0e07" stroke-width="1.2"/>
+      <rect x="44" y="56" width="182" height="6" fill="#382012"/>
+
+      <!-- Curved Traditional Japanese Roof (Kawara) -->
+      <path d="M 14 46 Q 135 28 256 46 L 242 26 Q 135 8 28 26 Z" fill="#23272e" stroke="#111418" stroke-width="1.5"/>
+      <path d="M 28 26 Q 135 12 242 26 L 135 6 Z" fill="#2e343d" stroke="#111418" stroke-width="1.5"/>
+      <!-- Ridge Ornament (Onigawara) -->
+      <rect x="127" y="2" width="16" height="8" rx="2" fill="#454d59" stroke="#111418" stroke-width="1.2"/>
+
+      <!-- Hanging Bonshō (Temple Bell) Group -->
+      <g class="bonsho-bell-group">
+        <!-- Suspension chain / mount -->
+        <rect x="116" y="60" width="8" height="10" rx="2" fill="#3b3228"/>
+        <!-- Dragon head hook (Ryūzu) -->
+        <path d="M 111 78 C 111 66, 129 66, 129 78 Z" fill="none" stroke="#617f70" stroke-width="4.5"/>
+        <circle cx="120" cy="70" r="3" fill="#8ca899"/>
+
+        <!-- Main Bell Body (Bonshō) -->
+        <path d="M 94 78
+                 Q 120 74 146 78
+                 L 154 156
+                 Q 156 164 158 168
+                 L 82 168
+                 Q 84 164 86 156
+                 Z"
+              fill="url(#bonshoBronze-{{ $uid }})"
+              stroke="#14201c"
+              stroke-width="1.8"/>
+
+        <!-- Horizontal Molding Bands (Kesa-datami) -->
+        <line x1="93" y1="88" x2="147" y2="88" stroke="#789888" stroke-width="2"/>
+        <line x1="90" y1="118" x2="150" y2="118" stroke="#789888" stroke-width="2.5"/>
+        <line x1="89" y1="124" x2="151" y2="124" stroke="#496658" stroke-width="1.5"/>
+        <line x1="86" y1="154" x2="154" y2="154" stroke="#789888" stroke-width="2.2"/>
+        <line x1="83" y1="165" x2="157" y2="165" stroke="#8cb09e" stroke-width="2.5"/>
+
+        <!-- Vertical Panel Divider -->
+        <line x1="120" y1="88" x2="120" y2="154" stroke="#243830" stroke-width="2"/>
+
+        <!-- Bronze Studs / Bosses (Chichi) Left & Right -->
+        <g fill="#88a898">
+          <circle cx="101" cy="96" r="2"/><circle cx="107" cy="96" r="2"/><circle cx="113" cy="96" r="2"/>
+          <circle cx="101" cy="103" r="2"/><circle cx="107" cy="103" r="2"/><circle cx="113" cy="103" r="2"/>
+          <circle cx="101" cy="110" r="2"/><circle cx="107" cy="110" r="2"/><circle cx="113" cy="110" r="2"/>
+
+          <circle cx="127" cy="96" r="2"/><circle cx="133" cy="96" r="2"/><circle cx="139" cy="96" r="2"/>
+          <circle cx="127" cy="103" r="2"/><circle cx="133" cy="103" r="2"/><circle cx="139" cy="103" r="2"/>
+          <circle cx="127" cy="110" r="2"/><circle cx="133" cy="110" r="2"/><circle cx="139" cy="110" r="2"/>
+        </g>
+
+        <!-- Lotus Striking Point (Tsukiza) on the right rim where the beam hits -->
+        <circle cx="145" cy="140" r="7" fill="#3c594d" stroke="#9ec2b0" stroke-width="1.8"/>
+        <circle cx="145" cy="140" r="3" fill="#9ec2b0"/>
+      </g>
+
+      <!-- Impact spark / flash at striking point -->
+      <circle class="bonsho-impact" cx="151" cy="140" r="10" fill="none" stroke="#ffd166" stroke-width="2.5" opacity="0"/>
+
+      <!-- Suspended Wooden Striker Log (Shumoku / 撞木) -->
+      <g class="bonsho-striker-group">
+        <!-- Two suspension ropes from the top beam -->
+        <line x1="172" y1="60" x2="170" y2="136" stroke="#c8b08a" stroke-width="2"/>
+        <line x1="200" y1="60" x2="198" y2="136" stroke="#c8b08a" stroke-width="2"/>
+        <!-- Heavy wooden log -->
+        <rect x="156" y="134" width="52" height="12" rx="4" fill="#6e472b" stroke="#2b180c" stroke-width="1.5"/>
+        <!-- Metal bands on striker log -->
+        <rect x="160" y="134" width="4" height="12" fill="#2b3036"/>
+        <rect x="198" y="134" width="4" height="12" fill="#2b3036"/>
+        <!-- Hanging pull rope (red & white temple rope) -->
+        <path d="M 182 146 Q 180 168 185 186" fill="none" stroke="#d94e4e" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 182 146 Q 180 168 185 186" fill="none" stroke="#f4f1ea" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>
+      </g>
+
+      <!-- Typical Japanese Wooden Sign (Tatefuda / Kifuda) with "klick mich" -->
+      <g class="bonsho-sign-group">
+        <!-- Small stone base for signpost -->
+        <rect x="296" y="210" width="24" height="8" rx="2" fill="#3a3f47" stroke="#22262c" stroke-width="1.2"/>
+        <!-- Signpost stake -->
+        <rect x="303" y="138" width="10" height="73" fill="url(#shoroWood-{{ $uid }})" stroke="#1a0e07" stroke-width="1.2"/>
+        <!-- Small pitched wooden roof cap (Kasagi) over sign -->
+        <path d="M 254 88 L 308 74 L 362 88 L 356 93 L 308 81 L 260 93 Z" fill="#3b2314" stroke="#1a0e07" stroke-width="1.2"/>
+        <!-- Wooden plaque (Kifuda) -->
+        <rect x="262" y="88" width="92" height="54" rx="3" fill="url(#kifudaWood-{{ $uid }})" stroke="#4a2c18" stroke-width="2"/>
+        <!-- Inner traditional border frame -->
+        <rect x="266" y="92" width="84" height="46" rx="1.5" fill="none" stroke="#7a5230" stroke-width="1" stroke-dasharray="2 1"/>
+        <!-- Decorative corner nails -->
+        <circle cx="270" cy="96" r="1.5" fill="#3b2314"/>
+        <circle cx="346" cy="96" r="1.5" fill="#3b2314"/>
+        <circle cx="270" cy="134" r="1.5" fill="#3b2314"/>
+        <circle cx="346" cy="134" r="1.5" fill="#3b2314"/>
+        <!-- Sign Text: "klick mich" -->
+        <text x="308" y="114" text-anchor="middle" class="bonsho-sign-text">{{ $signText }}</text>
+        <text x="308" y="130" text-anchor="middle" class="bonsho-sign-sub">(( 飛騨の里 ))</text>
+      </g>
+    </svg>
+  </button>
+
+  {{- if $title }}
+  <figcaption class="bonsho-caption">
+    <span class="bonsho-caption__text">{{ $title }}</span>
+    <span class="bonsho-caption__status" aria-live="polite"></span>
+  </figcaption>
+  {{- end }}
+
+  <audio preload="auto" class="bonsho-audio">
+    <source src="{{ $src }}" type="{{ $type }}">
+    <a href="{{ $src }}">{{ $title | default "Audio" }}</a>
+  </audio>
+</figure>
+
+<script>
+(function() {
+  const root = document.getElementById("{{ $uid }}");
+  if (!root) return;
+  const btn = root.querySelector('.bonsho-stage');
+  const audio = root.querySelector('.bonsho-audio');
+  const statusEl = root.querySelector('.bonsho-caption__status');
+  let strikeTimer = null;
+
+  function triggerBell() {
+    root.classList.remove('is-striking', 'is-ringing');
+    // Force reflow so rapid clicks re-trigger the striker animation cleanly
+    void btn.offsetWidth;
+    root.classList.add('is-striking');
+    btn.setAttribute('aria-pressed', 'true');
+
+    if (strikeTimer) clearTimeout(strikeTimer);
+    // Striker hits the bell at 180ms
+    strikeTimer = setTimeout(function() {
+      root.classList.add('is-ringing');
+      try {
+        audio.currentTime = 0;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function() {});
+        }
+      } catch (e) {}
+    }, 180);
+  }
+
+  btn.addEventListener('click', triggerBell);
+
+  audio.addEventListener('play', function() {
+    if (statusEl) statusEl.textContent = ' (( 🔔 ))';
+  });
+
+  audio.addEventListener('ended', function() {
+    root.classList.remove('is-striking', 'is-ringing');
+    btn.setAttribute('aria-pressed', 'false');
+    if (statusEl) statusEl.textContent = '';
+  });
+})();
+</script>
