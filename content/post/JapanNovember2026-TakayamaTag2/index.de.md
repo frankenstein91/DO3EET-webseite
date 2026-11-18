@@ -141,3 +141,5 @@ Direkt im Anschluss legte ich auf dem Weg zurück noch einen kurzen Stopp bei **
 ## Ankunft im Hotel: Fuß-Onsen und ein Origami-Herz zum Ausklang
 
 Als ich am späten Nachmittag schließlich wieder im Hotel ankam, waren die Füße nach diesem langen Stadtrundgang ordentlich durchgelaufen. Genau zur rechten Zeit ging es deshalb direkt in den **Fuß-Onsen** des Hotels: Schuhe aus, ins heiße Wasser eintauchen und einfach spüren, wie die Müdigkeit langsam aus den Beinen weicht. Und zum ruhigen Ausklang des Tages habe ich mir dort – mit einer kostenlosen **heißen Schokolade** in Reichweite – noch etwas bereitliegendes Papier geschnappt und in aller Ruhe ein kleines **Origami-Herz** gefaltet – der perfekte, entspannte Schlusspunkt unter einen rundum gelungenen Tag in Takayama.
+
+{{< instagram Df4HB9Dh8iB >}}
