@@ -23,7 +23,7 @@ Der heutige Tag gehörte ganz und gar **Takayama** – und zwar komplett zu Fuß
 
 ## Vormittags im Takayama Jinya: Edo-Verwaltung, Samurai-WC und Nagel-Hasen
 
-Gegen kurz vor neun Uhr morgens startete meine Runde am **Takayama Jinya (高山陣屋)** – dem einzigen bis heute erhaltenen historischen Regierungsgebäude seiner Art aus der Edo-Zeit. Von **1692 bis 1868** diente der weitläufige Holzkomplex als Niederlassung der Edo-Bakufu-Regierung, nachdem die Hida-Region als sogenanntes *Tenryō* unter direkte Kontrolle gestellt worden war. Über 25 Generationen hinweg wurden von Edo aus Statthalter (*Daikan*, später *Gundai*) entsandt, um hier Steuern, Finanzen, Polizei, Gerichtswesen und die Waldverwaltung zu organisieren.
+Gegen kurz vor neun Uhr morgens startete meine Runde am **Takayama Jinya** – dem einzigen bis heute erhaltenen historischen Regierungsgebäude seiner Art aus der Edo-Zeit. Von **1692 bis 1868** diente der weitläufige Holzkomplex als Niederlassung der Edo-Bakufu-Regierung, nachdem die Hida-Region als sogenanntes *Tenryō* unter direkte Kontrolle gestellt worden war. Über 25 Generationen hinweg wurden von Edo aus Statthalter (*Daikan*, später *Gundai*) entsandt, um hier Steuern, Finanzen, Polizei, Gerichtswesen und die Waldverwaltung zu organisieren.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_003122002.jpg" alt="Eingangsbereich und Kieshof des historischen Verwaltungsgebäudes Takayama Jinya" width="1200" height="675" >}}
 
@@ -45,7 +45,7 @@ Auch für kleine optische Ruhepunkte ist gesorgt, etwa an einem bemoosten steine
 
 ## Vorbei am Retro Museum: Alte Klassiker und Kurbeltelefon
 
-Auf dem weiteren Weg durch die Stadt kam ich am **Hida Takayama Retro Museum (飛騨高山レトロミュージアム)** vorbei. Hineingegangen bin ich zwar nicht, aber schon das Vorbeilaufen vor der Tür lohnte sich für ein paar Schnappschüsse: Zwischen nostalgischen Emailleschildern und einem alten runden roten Briefkasten stehen dort ein kleiner weißer **Daihatsu-Midget-Dreiradtransporter** mit Patina, ein knuffiger **Subaru 360** und sogar ein altes hölzernes Kurbeltelefon an der Wand. Wenn man die alten japanischen Kleinwagen so sieht, drängt sich ein Gedanke sofort auf: Die sind wohl zuverlässiger als der eGolf.
+Auf dem weiteren Weg durch die Stadt kam ich am **Hida Takayama Retro Museum** vorbei. Hineingegangen bin ich zwar nicht, aber schon das Vorbeilaufen vor der Tür lohnte sich für ein paar Schnappschüsse: Zwischen nostalgischen Emailleschildern und einem alten runden roten Briefkasten stehen dort ein kleiner weißer **Daihatsu-Midget-Dreiradtransporter** mit Patina, ein knuffiger **Subaru 360** und sogar ein altes hölzernes Kurbeltelefon an der Wand. Wenn man die alten japanischen Kleinwagen so sieht, drängt sich ein Gedanke sofort auf: Die sind wohl zuverlässiger als der eGolf.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_015848139.jpg" alt="Alter weißer Dreirad-Kleintransporter vor nostalgischen japanischen Werbeschildern beim Retro Museum" width="1200" height="675" >}}
 
@@ -55,7 +55,7 @@ Auf dem weiteren Weg durch die Stadt kam ich am **Hida Takayama Retro Museum (�
 
 ## Im Yoshijima Traditional House: Lackierte Balken und Sake-Tradition
 
-Ebenfalls auf dem Programm stand das **Yoshijima Traditional House (吉島家住宅)**, ein als Wichtiges Kulturgut eingestuftes historisches Kaufmannshaus, das **1907** vom Meisterzimmerer **Nishida Isaburō** erbaut wurde. Die Familie Yoshijima gehörte einst zu den angesehenen Sakebrauern und Geldverleihern der Stadt – und genau diese Kombination aus Geschäft, Handwerk und Wohnkultur spiegelt die Architektur bis heute wider.
+Ebenfalls auf dem Programm stand das **Yoshijima Traditional House**, ein als Wichtiges Kulturgut eingestuftes historisches Kaufmannshaus, das **1907** vom Meisterzimmerer **Nishida Isaburō** erbaut wurde. Die Familie Yoshijima gehörte einst zu den angesehenen Sakebrauern und Geldverleihern der Stadt – und genau diese Kombination aus Geschäft, Handwerk und Wohnkultur spiegelt die Architektur bis heute wider.
 
 Herzstück des Hauses ist der hohe, offene Raum über dem gestampften Lehmboden (*Doma*), über dem gewaltige, frei gespannte Holzbalken thronen. Die gesamte Anlage gliedert sich in fünf Bereiche:
 * den vorderen Geschäftsbereich samt Büro und Verkaufsraum,
@@ -68,7 +68,7 @@ Besonders fasziniert hat mich ein Detail zur Pflege des Holzes: Alle Säulen und
 
 ## Sakurayama Hachiman-gū & der „Madman Stone“
 
-Gegen Mittag ging es nordöstlich der Altstadt zum traditionsreichen **Sakurayama Hachiman-gū (櫻山八幡宮)**, eingebettet zwischen hohen Nadelbäumen und herbstlich gefärbten Blättern. Schon die bemooste Steinlaterne am Eingang stimmt wunderbar auf die ruhige Waldatmosphäre ein, bevor sich dahinter der weite Vorplatz mit der großen hölzernen Haupthalle öffnet.
+Gegen Mittag ging es nordöstlich der Altstadt zum traditionsreichen **Sakurayama Hachiman-gū**, eingebettet zwischen hohen Nadelbäumen und herbstlich gefärbten Blättern. Schon die bemooste Steinlaterne am Eingang stimmt wunderbar auf die ruhige Waldatmosphäre ein, bevor sich dahinter der weite Vorplatz mit der großen hölzernen Haupthalle öffnet.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_034152702.jpg" alt="Stark bemooste Steinlaterne am Zugang zum Schrein Sakurayama Hachiman-gū" width="600" height="1067" >}}
 
@@ -102,17 +102,17 @@ Nicht weniger beeindruckend ist der angrenzende Bereich **Sakurayama Nikkō-kan*
 
 Etwas rätselhaft waren mir dort allerdings die vielen Hinweisschilder im Gebäude mit der Warnung, man solle „im Dunkeln vorsichtig sein“. Ich vermute, dass die Ausstellung eigentlich einen simulierten Tag- und Nachtverlauf mit wechselnder Beleuchtung hat – in den rund zwanzig Minuten, die ich dort war, hat sich am Licht allerdings leider nichts verändert.
 
-Zwischendurch war dann erst einmal Zeit für eine kleine Aufwärmpause – stilecht mit einer heißen Flasche **Georgia „Zeitaku Milk Cocoa“ (贅沢ミルクココア)**, die an kühlen Novembertagen wie eine kleine Zentralheizung für die Hände funktioniert.
+Zwischendurch war dann erst einmal Zeit für eine kleine Aufwärmpause – stilecht mit einer heißen Flasche **Georgia „Zeitaku Milk Cocoa“**, die an kühlen Novembertagen wie eine kleine Zentralheizung für die Hände funktioniert.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_051823124.jpg" alt="Heiße Flasche Georgia Zeitaku Milk Cocoa in der Hand" width="600" height="1067" >}}
 
 ## Holzskulptur an der Yayoi-Brücke & der 1.250-jährige Ginkgo am Hida Kokubun-ji
 
-Auf dem Rückweg durch die Stadt kam ich bei der **Yayoi-Brücke (弥生橋)** an einer markanten geschnitzten Holzsäule aus japanischer Eibe vorbei – ein Beispiel der traditionellen Takayama-Schnitzkunst **Ichii Ittō-bori (一位一刀彫)** mit dem Titel *„Joy, Anger, Melancholy, Fun Part II“*, die komplett auf zusätzliche Farbe verzichtet und allein durch die Maserung des Holzes wirkt.
+Auf dem Rückweg durch die Stadt kam ich bei der **Yayoi-Brücke** an einer markanten geschnitzten Holzsäule aus japanischer Eibe vorbei – ein Beispiel der traditionellen Takayama-Schnitzkunst **Ichii Ittō-bori** mit dem Titel *„Joy, Anger, Melancholy, Fun Part II“*, die komplett auf zusätzliche Farbe verzichtet und allein durch die Maserung des Holzes wirkt.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_054050045.jpg" alt="Geschnitzte Holzsäule aus japanischer Eibe der Serie Joy, Anger, Melancholy, Fun Part II an der Yayoi-Brücke" width="600" height="1067" >}}
 
-Wenig später stand ich dann vor einem der eindrucksvollsten Naturdenkmäler Takayamas: dem Tempel **Hida Kokubun-ji (飛騨国分寺)** mit seiner dreistöckigen Pagode und dem gigantischen, leuchtend goldgelben **Ginkgobaum**. Wie die lustig gestaltete „FAQ“-Tafel direkt vor Ort erklärt, soll der Baum um das Jahr **746** bei der Gründung des Tempels von Gyōki Bosatsu persönlich gepflanzt worden sein – er zählt damit stolze **1.250 Jahre**!
+Wenig später stand ich dann vor einem der eindrucksvollsten Naturdenkmäler Takayamas: dem Tempel **Hida Kokubun-ji** mit seiner dreistöckigen Pagode und dem gigantischen, leuchtend goldgelben **Ginkgobaum**. Wie die lustig gestaltete „FAQ“-Tafel direkt vor Ort erklärt, soll der Baum um das Jahr **746** bei der Gründung des Tempels von Gyōki Bosatsu persönlich gepflanzt worden sein – er zählt damit stolze **1.250 Jahre**!
 
 Wegen seiner charakteristischen, vom Stamm herabhängenden Auswüchse trägt er den Beinamen **„Chichi Ichō“** (*Brust-Ginkgo*) und wird traditionell von Müttern aufgesucht, die für ihre Kinder und eine gute Geburt beten. Und noch ein praktischer Fakt von der Tafel: Da es sich um einen **männlichen Baum** handelt, trägt er **keine [Ginkgonüsse]({{< ref "/post/JapanNovember2026-TokioTag4" >}})** – man muss rund um den Tempel also nicht befürchten, wie in Tokio wieder in unangenehm riechendes Fallobst zu treten. Seine maximale Herbstfärbung erreicht er laut Tafel meist um den **20. November**; heute am 18. November leuchtete die Krone bereits wie eine riesige goldene Fackel vor dem Himmel.
 
@@ -122,7 +122,7 @@ Wegen seiner charakteristischen, vom Stamm herabhängenden Auswüchse trägt er 
 
 ## Stiller Nachmittag am Hida Sōsha, Apfel-Zimt-Crêpe, Digda-Donut & Starbucks
 
-Nur ein kurzes Stück nordwestlich tauchte ich noch einmal in eine ganz ruhige Schrein-Atmosphäre ein: am **Hida Sōsha (飛騨総社)**. Zwischen hohen, moosbewachsenen Zedern führt ein schnurgerader Steinpfad, flankiert von alten Steinlaternen und einer leuchtend roten Holzlaterne, auf die dunkle Haupthalle mit ihrem dicken *Shimenawa*-Seil zu. Am Reinigungsbecken speit ein grimmig dreinblickender steinerner Drache frisches Wasser aus seinem Maul.
+Nur ein kurzes Stück nordwestlich tauchte ich noch einmal in eine ganz ruhige Schrein-Atmosphäre ein: am **Hida Sōsha**. Zwischen hohen, moosbewachsenen Zedern führt ein schnurgerader Steinpfad, flankiert von alten Steinlaternen und einer leuchtend roten Holzlaterne, auf die dunkle Haupthalle mit ihrem dicken *Shimenawa*-Seil zu. Am Reinigungsbecken speit ein grimmig dreinblickender steinerner Drache frisches Wasser aus seinem Maul.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-TakayamaTag2/PXL_20261118_064613411.jpg" alt="Steinerner Drachen-Wasserspeier am Reinigungsbecken Chōzuya des Schreins Hida Sōsha" width="1200" height="675" >}}
 
