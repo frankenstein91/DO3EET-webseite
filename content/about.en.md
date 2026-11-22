@@ -30,6 +30,12 @@ On some pages (e.g., posts about my ZWO Seestar smart telescope), an interactive
 - There is **no data transmission** of image contents, metadata, or personal settings to me or third parties. All adjustments (brightness, contrast, color channels) take place locally.
 - The button to redirect to **Stellarium Web** is a standard outgoing link. The metadata contained in the FITS header (object name, time of observation, and the GPS coordinates of the observing site) are simply passed as URL parameters to the link, so that Stellarium can simulate the correct star constellation for that moment and location.
 
+# Interactive Blog Widgets & Ambient Light Sensor
+Individual posts (e.g., travel reports from Japan) include small interactive HTML/JavaScript widgets such as an animated elevator display or a digital stone lantern. These also run **exclusively locally** in your web browser:
+- If supported by your browser and permitted by you, the stone lantern widget queries the `AmbientLightSensor` API solely to detect darkness (below 50 lux) and switch on its flame automatically.
+- If no ambient light sensor is available or access is blocked, the widget falls back locally to your browser's system clock (flame active between 20:00 and 07:00).
+- **No** sensor readings, brightness values, or timestamps are stored, logged, or transmitted to me or any third party.
+
 # HTTP headers
 In summary, these headers work together to create a more secure Browse experience by preventing clickjacking attacks, controlling device access rights, protecting against XSS attacks, and restricting where the website can load resources from.
 
