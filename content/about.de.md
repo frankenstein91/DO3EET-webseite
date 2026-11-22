@@ -30,6 +30,12 @@ Auf manchen Seiten (z. B. Beiträgen über mein ZWO Seestar Smart-Teleskop) komm
 - Es findet **keinerlei Datenübertragung** von Bildinhalten, Metadaten oder persönlichen Einstellungen an mich oder Dritte statt. Sämtliche Anpassungen (Helligkeit, Kontrast, Farbkanäle) geschehen lokal.
 - Der Button zur Weiterleitung an **Stellarium Web** ist ein normaler ausgehender Link. Dem Link werden lediglich die im FITS-Header enthaltenen Metadaten (Objektname, Aufnahmezeitpunkt sowie die GPS-Koordinaten des Aufnahmeorts) als URL-Parameter übergeben, damit Stellarium die korrekte Sternenkonstellation für diesen Moment und Ort simulieren kann.
 
+# Interaktive Blog-Widgets & Umgebungslichtsensor
+In einzelnen Beiträgen (z. B. zur Japanreise) kommen kleine interaktive HTML-/JavaScript-Widgets wie eine animierte Aufzugsanzeige oder eine digitale Steinlaterne zum Einsatz. Auch diese laufen **ausschließlich lokal** in Ihrem Webbrowser:
+- Das Steinlaternen-Widget versucht – sofern Ihr Browser die `AmbientLightSensor`-API unterstützt und Sie dies freigegeben haben – die Umgebungshelligkeit auszulesen, um bei Dunkelheit (unter 50 Lux) die Flamme automatisch einzuschalten.
+- Ist kein Lichtsensor verfügbar oder blockiert, greift das Widget stattdessen lokal auf die Systemuhrzeit Ihres Browsers zurück (Flamme zwischen 20:00 und 07:00 Uhr aktiv).
+- Es werden **keinerlei** Sensorwerte, Helligkeitsdaten oder Uhrzeiten gespeichert, protokolliert oder an mich bzw. Dritte übertragen.
+
 # HTTP Header
 Zusammenfassend lässt sich sagen, dass diese Header zusammenarbeiten, um ein sichereres Browsing-Erlebnis zu schaffen, indem sie Clickjacking-Angriffe verhindern, die Zugriffsrechte für Geräte kontrollieren, vor XSS-Angriffen schützen und einschränken, von wo die Website Ressourcen laden kann.
 ## X-Frame-Options: DENY
