@@ -72,7 +72,7 @@ Kurz vor zwölf verließ ich das Burggelände und warf noch einen letzten Blick 
 
 Auf dem Weg durch die Innenstadt fiel mir gegen Mittag ein besonders liebevoll gestalteter **Kanaldeckel** auf. Utsunomiya gilt als einer der historischen Ursprungsorte der berühmten Gedichtsammlung *Ogura Hyakunin Isshu* bzw. des Kartenspiels *Utsunomiya Karuta* – entsprechend ziert eine klassische Karuta-Spielkarte samt dem Stadtmaskottchen *Miyari-chan* den Gussdeckel im Gehweg.
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/PXL_20261123_030916483.jpg" alt="Farbiger Kanaldeckel in Utsunomiya mit klassischem Karuta-Gedichtkarten-Motiv und dem Stadtmaskottchen Miyari-chan" width="1200" height="675" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/PXL_20261123_030916483.jpg" alt="Farbiger Kanaldeckel in Utsunomiya mit klassischem Karuta-Gedichtkarten-Motiv und dem Stadtmaskottchen Miyari-chan" width="600" height="1067" >}}
 
 Nur wenige Minuten später stand ich vor einem der ungewöhnlichsten Bauwerke der Stadt: der **Katholischen Matsugamine-Kirche** (*Matsugamine Kyōkai*). Die 1932 fertiggestellte Kirche wurde vom Schweizer Architekten **Max Hinder** entworfen und von **Miyauchi Hatsutarō** erbaut. Ihre neuromanische Fassade mit den beiden **26,95 Meter** hohen Zwillingstürmen (witzige Randnotiz aus dem Stadtplan: nur zwei Zentimeter höher als die bekannte 26,93-Meter-Statue *Ōya Heiwa Kannon*) ist komplett mit dem für Utsunomiya typischen, porösen **Ōya-Stein** verkleidet und steht als Materielles Kulturgut unter Denkmalschutz.
 
@@ -106,9 +106,9 @@ Ein Stück seitlich auf dem Schreingelände leuchtete schließlich noch eine dic
 
 ## Feiertagshunger: Pepper Lunch statt Gyoza
 
-Eigentlich stand für das späte Mittagessen natürlich genau das auf dem Wunschzettel, wofür ganz Japan Utsunomiya kennt: **Gyoza**. Am Nationalfeiertag war jedoch gefühlt die halbe Region auf den Beinen, und vor den bekannten Gyoza-Läden bildeten sich entsprechend lange Schlangen. Bevor der Magen zu sehr knurrte, entschieden wir uns spontan für eine pragmatische Alternative und kehrten bei **Pepper Lunch** ein – eine heiße Gusseisenplatte mit saftigem Patty, Knoblauchchips und Frühlingszwiebeln bringt schließlich auch ordentlich Wärme für die Nachmittagsrunde.
+Eigentlich stand für das späte Mittagessen natürlich genau das auf dem Wunschzettel, wofür ganz Japan Utsunomiya kennt: **Gyoza**. Am Nationalfeiertag war jedoch gefühlt die halbe Region auf den Beinen, und vor den bekannten Gyoza-Läden bildeten sich entsprechend lange Schlangen. Bevor der Magen zu sehr knurrte, entschieden wir uns spontan für eine pragmatische Alternative und kehrten bei **Pepper Lunch** ein – eine heiße Gusseisenplatte mit **Super Garimayo Pepper Rice [Black]** (*スーパーガリマヨペッパーライス［ブラック］*), reichlich Knoblauch, cremiger Sauce, schwarzem Pfeffer und Frühlingszwiebeln bringt schließlich auch ordentlich Wärme für die Nachmittagsrunde.
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/threema-20261123-143515.jpg" alt="Dampfende Gusseisenplatte bei Pepper Lunch mit Burger-Patty, Sauce, Röstknoblauch und Frühlingszwiebeln" width="507" height="423" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/threema-20261123-143515.jpg" alt="Dampfende Gusseisenplatte bei Pepper Lunch mit Super Garimayo Pepper Rice Black, Knoblauchsauce, Röstknoblauch und Frühlingszwiebeln" width="507" height="423" >}}
 
 ## Präfekturverwaltung Tochigi: Erdbeer-Königreich und der geschlossene Sendeturm
 
