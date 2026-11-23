@@ -135,3 +135,12 @@ Von den großen Panoramafenstern aus richtete sich mein Blick direkt hinüber zu
 Gegen **16:16 Uhr** verabschiedete sich der Feiertag dann mit einem stimmungsvollen Sonnenuntergang: Über der Skyline von Utsunomiya tauchte die tiefstehende Sonne die Wolken und den dunklen Höhenzug am Horizont in warmes Gold und Orange.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/PXL_20261123_071617463.jpg" alt="Sonnenuntergang über den Dächern von Utsunomiya mit gold-orangen Wolken über dem dunklen Bergrücken am Horizont" width="1200" height="675" >}}
+
+Als es gegen **16:50 Uhr** schließlich dunkel wurde und die Straßenbeleuchtung sowie die angestrahlten Ginkgobäume an der Kreuzung unterhalb der Präfekturverwaltung leuchteten, fing ich den Abendverkehr von oben noch in einem kurzen Zeitraffer ein:
+
+{{< rawhtml >}}
+<video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 4px;">
+  <source src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/PXL_20261123_075050956.mp4" type="video/mp4">
+  Dein Browser unterstützt kein eingebettetes AV1-Video – du kannst es <a href="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-Utsunomiya/PXL_20261123_075050956.mp4">hier herunterladen</a>.
+</video>
+{{< /rawhtml >}}
