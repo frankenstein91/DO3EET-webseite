@@ -3,6 +3,7 @@ title = 'Von Kōriyama nach Aizu-Wakamatsu: Strahlungsmessung mit 23 CPM, ein Go
 date = "2026-11-25T18:00:00+09:00"
 draft = false
 author = "Frank Tornack"
+summary = "Zwei Tage in Fukushima: Per Shinkansen nach Kōriyama mit 23 CPM am eigenen Geigerzähler, Pixel-Kamera-Bug vom Big-i und weiter ins nasskalte Aizu-Wakamatsu mit Burg Tsuruga-jō, interaktiven Samurai-Hausregeln und Classic Camera Museum."
 tags = [
     "Japan",
     "Reise",
@@ -26,6 +27,8 @@ Der Vormittag startete ganz geordnet direkt am Hotel neben dem Bahnhof [Utsunomi
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_003749352.jpg" alt="Figur des Musikstadt-Maskottchens Onpu-chan im Bahnhof Kōriyama" width="600" height="1067" >}}
 
+Gleich daneben durfte natürlich auch ihr großer Bruder **Gakuto-kun** (がくとくん) nicht fehlen – stilecht mit Noten-Mütze, während *Onpu-chan* passend zur Musikstadt sogar einen Klaviertasten-Rock trägt.
+
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_003753249.jpg" alt="Figur des Kōriyama-Maskottchens Gakuto-kun im Bahnhof Kōriyama" width="600" height="1067" >}}
 
 Nachdem ich mein Gepäck rund 500 Meter weiter im **Dormy Inn EXPRESS Koriyama** abgegeben hatte, begann die Runde zu Fuß durch das westliche Stadtzentrum. Schon auf dem Weg zum ersten Schrein fiel mir an der historischen **Junkissa Monami** (*純喫茶モナミ*) weniger das Café selbst als vielmehr das herrlich verwitterte alte **Coca-Cola-Werbeschild** über dem Eingang ins Auge – ein Stück Shōwa-Patina mitten in der Innenstadt, das am nächsten Tag in Aizu-Wakamatsu noch ein unerwartetes Echo bekommen sollte.
@@ -34,27 +37,35 @@ Nachdem ich mein Gepäck rund 500 Meter weiter im **Dormy Inn EXPRESS Koriyama**
 
 ### Asaka-Kunituko-Schrein und der Tempel Nyohō-ji
 
-Direkt nebenan liegt der traditionsreiche **Asaka-Kunituko-Schrein** (*安積国造神社*). Neben der schön geschnitzten Haupthalle lohnen hier vor allem die kleinen Details am Rand des Geländes: zwei kleine, aus Stein gemeißelte **ringende Frösche** auf einem Sockel und eine große lachende **Okame-Maske** über dem Eingang eines Nebengebäudes.
+Direkt nebenan liegt der traditionsreiche **Asaka-Kunituko-Schrein** (*安積国造神社*). Noch bevor man vor dem Hauptbau steht, fallen am Rande des Geländes zwei kleine, aus Stein gemeißelte **ringende Frösche** auf ihrem Sockel auf:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_012213137.jpg" alt="Steinerne Skulptur zweier ringender Frösche auf dem Gelände des Asaka-Kunituko-Schreins" width="1200" height="675" >}}
+
+Ein paar Schritte weiter blickt außerdem eine große lachende **Okame-Maske** über dem Eingang eines hölzernen Nebengebäudes hervor – bevor dahinter im klaren Vormittagslicht die schön geschnitzte Haupthalle wartet.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_012321018.jpg" alt="Große lächelnde Okame-Maske an einem hölzernen Nebengebäude des Asaka-Kunituko-Schreins" width="600" height="1067" >}}
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_012354882.jpg" alt="Haupthalle des Asaka-Kunituko-Schreins in Kōriyama im morgendlichen Sonnenlicht" width="1200" height="675" >}}
 
-Nur wenige Gehminuten südwestlich steht der alte Shingon-Tempel **Nyohō-ji** (*高嶽山 如宝寺*), der auf das Jahr 807 zurückgehen soll. Die Anlage wirkt weitläufig und ruhig – vom modernen Holzbau der Empfangshalle über die klassische Haupthalle mit zwei wuchtigen Bronzelaternen und weißem Lotos-Räuchergefäß bis hin zur separaten Kannon-Halle (*Batō Kannon*) direkt daneben.
+Nur wenige Gehminuten südwestlich steht der alte Shingon-Tempel **Nyohō-ji** (*高嶽山 如宝寺*), der auf das Jahr 807 zurückgehen soll. Gleich hinter dem modernen Holzbau der Empfangshalle wirkt das Areal angenehm weitläufig und ruhig.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_013733481.jpg" alt="Holzbau der Empfangshalle des Tempels Nyohō-ji in Kōriyama" width="1200" height="675" >}}
 
+Im Zentrum erhebt sich die dunkle Haupthalle mit zwei wuchtigen Bronzelaternen und einem weißen Lotos-Räuchergefäß davor:
+
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_013838297.jpg" alt="Haupthalle des Tempels Nyohō-ji mit großen Bronzelaternen und Lotos-Räuchergefäß" width="1200" height="675" >}}
+
+Und direkt daneben schließt die separate Kannon-Halle (*Batō Kannon*) mit ihrem großen bronzenen Räuchergefäß im Vorhof das Ensemble ab:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_014751336.jpg" alt="Kannon-Halle des Tempels Nyohō-ji mit großem Räuchergefäß im Vorhof" width="1200" height="675" >}}
 
 ### 21st Century Memorial Park, Public Hall & Strahlungsmessung
 
-Weiter westlich öffnet sich die Stadt zum **21st Century Memorial Park Hayama no Mori** (*21世紀記念公園 麓山の杜*) und dem benachbarten Hayama-Park. Nach meinem [Sommerbesuch 2025]({{< ref "/post/JapanSommer2025-Koriyama" >}}) – damals noch mit dem Blick vom *Big Eye* aus der Ferne – war ich diesmal wieder direkt vor Ort: erst beim weiten Teichpanorama, später beim kleinen Wasserfall (als Langzeitbelichtung) und schließlich vor der historischen **Kōriyama City Public Hall** (*郡山市公会堂*) von 1924.
+Weiter westlich öffnet sich die Stadt zum **21st Century Memorial Park Hayama no Mori** (*21世紀記念公園 麓山の杜*) und dem benachbarten Hayama-Park. Nach meinem [Sommerbesuch 2025]({{< ref "/post/JapanSommer2025-Koriyama" >}}) – damals noch mit dem Blick vom *Big-i* aus der Ferne – war ich diesmal wieder direkt vor Ort: zunächst beim weiten Teichpanorama im Park,
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_022728302.PANO.jpg" alt="Panorama des Teichs im 21st Century Memorial Park Hayama no Mori in Kōriyama" width="1200" height="369" >}}
+
+danach an einem kleinen Wasserfall zwischen Herbststräuchern (ideal für eine kurze Langzeitbelichtung) und schließlich vor der historischen **Kōriyama City Public Hall** (*郡山市公会堂*) von 1924 mit ihrem markanten Uhrenturm.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_025417919.LONG_EXPOSURE-01.jpg" alt="Langzeitbelichtung eines kleinen Wasserfalls zwischen Herbststräuchern im Hayama-Park" width="600" height="1067" >}}
 
@@ -64,7 +75,7 @@ Beim Stichwort **Kōriyama / Präfektur Fukushima** kommt mir aus meinem alten B
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20231123_134812926.jpg" alt="Altes gelbes Strahlenwarnschild mit der Ziffer 1 an einer Backsteinwand aus dem Bildarchiv" width="600" height="1067" >}}
 
-Die Realität vor Ort in Kōriyama sieht dagegen ganz entspannt und völlig unspektakulär aus. Am Parkgebäude steht – wie an vielen öffentlichen Plätzen in der Stadt – eine solarbetriebene **Strahlungsmessstation** (Fuji Electric, Posten **0206**) mit offener LED-Anzeige in `µSv/h`. Und weil ich diesmal selbst meinen kleinen **GQ GMC-500+ Geigerzähler** in der Tasche hatte, gab es direkt daneben den eigenen Gegencheck: **23 CPM** (`CPM1: 22, CPM2: 1`), Status **Normal**, **0,14 µSv/h** – vollkommen im Bereich ganz gewöhnlicher natürlicher Hintergrundstrahlung. Alles hier wirkt ruhig und sicher.
+Die Realität vor Ort in Kōriyama sieht dagegen ganz entspannt und völlig unspektakulär aus. Am Parkgebäude steht – wie an vielen öffentlichen Plätzen in der Stadt – eine solarbetriebene **Strahlungsmessstation** (Fuji Electric, Posten **0206**) mit offener LED-Anzeige in `µSv/h`. Auf dem Foto flimmern die gemultiplexten roten 7-Segment-Ziffern im Tageslicht zwar etwas, doch weil ich diesmal selbst meinen kleinen **GQ GMC-500+ Geigerzähler** in der Tasche hatte, gab es direkt daneben den eigenen Gegencheck: **23 CPM** (`CPM1: 22, CPM2: 1`), Status **Normal**, **0,14 µSv/h**. Dass so ein kompaktes Geiger-Müller-Zählrohr ohne Energiekompensation leicht höhere Werte ausgibt als die geeichten Szintillations- bzw. Ionisationssonden der offiziellen Messposten (die in Kōriyama üblicherweise noch etwas darunter liegen), ist technisch völlig normal – unterm Strich bleibt es ganz gewöhnliche natürliche Hintergrundstrahlung. Alles hier wirkt ruhig und sicher.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_023413664.jpg" alt="Öffentliche solarbetriebene Strahlungsmessstation 0206 von Fuji Electric vor dem Parkgebäude in Kōriyama" width="600" height="1067" >}}
 
@@ -74,33 +85,37 @@ Wer sich die offiziellen Live-Werte der japanischen Messstationen selbst auf der
 
 ### Zurück im Kaiseizan Park: Lucky Park, Kaiseizan Daijingu & Kurioses
 
-Am frühen Nachmittag zog es mich noch einmal in den **Kaiseizan Park** (*開成山公園*). Im **Lucky Park** warten neben der großen **Chaneira-Figur** (*Lucky*) natürlich auch die passende **Schlurp-Rutsche** (*Beroringa*), deren Zunge direkt als Rutschbahn dient – und an einem Aushang vor Ort bedankt sich *Gakuto-kun* höflich für die Rücksichtnahme beim Rauchverbot auf dem Gelände.
+Am frühen Nachmittag zog es mich noch einmal in den **Kaiseizan Park** (*開成山公園*). Im **Lucky Park** wartet neben der großen **Chaneira-Figur** (*Lucky*) natürlich auch die passende **Schlurp-Rutsche** (*Beroringa*), deren rosa Zunge direkt als Rutschbahn dient:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_035103530.jpg" alt="Große rosa Schlurp-Rutsche im Lucky Park von Kōriyama" width="1200" height="675" >}}
+
+Gleich gegenüber thront Namensgeberin **Chaneira** mitten auf dem Spielplatz – und an einem Aushang am Rand der städtischen Anlage bedankt sich *Gakuto-kun* höflich für die Rücksichtnahme beim Rauchverbot.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_035651855.jpg" alt="Große rosa Pokémon-Figur Chaneira im Lucky Park im Kaiseizan Park" width="600" height="1067" >}}
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_040109413.jpg" alt="Rauchverbotsschild auf einer städtischen Anlage in Kōriyama mit dem Maskottchen Gakuto-kun" width="600" height="1067" >}}
 
-Direkt am Nordwestrand des Parks liegt der **Kaiseizan Daijingu** (*開成山大神宮*), der 1876 gegründet wurde und bis heute den Beinamen „Ise-Schrein des Tōhoku“ trägt. Auf dem Rückweg durch den Park ging es schließlich noch an der Skulptur *„Freundschaft“* (*友愛*, *Yūai*) und der markanten roten Bogenbrücke über den Teich vorbei.
+Direkt am Nordwestrand des Parks liegt der **Kaiseizan Daijingu** (*開成山大神宮*), der 1876 gegründet wurde und bis heute den Beinamen „Ise-Schrein des Tōhoku“ trägt. Sowohl die schlichte Architektur des Schreins als auch die breiten Stufen vor der Haupthalle verbreiten hier eine ganz ruhige Atmosphäre:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_042122450.jpg" alt="Schreingebäude des Kaiseizan Daijingu in Kōriyama" width="1200" height="675" >}}
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_042611611.jpg" alt="Haupthalle des Schreins Kaiseizan Daijingu mit Wächterlöwen" width="1200" height="675" >}}
 
+Auf dem Rückweg durch den Park ging es schließlich noch an der Bronzeskulptur *„Freundschaft“* (*友愛*, *Yūai*) und der markanten roten Bogenbrücke über den Teich vorbei.
+
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_043536267.jpg" alt="Bronzeskulptur Freundschaft Yūai im Kaiseizan Park" width="600" height="1067" >}}
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_043836195.jpg" alt="Rote Bogenbrücke über den Teich im Kaiseizan Park in Kōriyama" width="1200" height="675" >}}
 
-Zwei kleine Alltagsfunde durften an diesem Tag ebenfalls nicht fehlen: zum einen eine Collage zweier herrlich retro-futuristischer **Roboter-Toilettenpiktogramme** mit kleinen Antennen auf dem Kopf, zum anderen ein wunderbares Hinweisschild direkt in der Kabine: *„Bitte benutzen Sie kein Smartphone auf der Toilette. Der Nächste wartet schon.“*
+### Im Big-i: Roboter-WCs, Abendstimmung und ein ehrlicher Google-Pixel-Kamera-Bug
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/20261124_160225-COLLAGE.jpg" alt="Collage zweier blauer und roter Toiletten-Piktogramme im Retro-Roboter-Look mit Antennen" width="1200" height="900" >}}
+Am späten Nachmittag ging es zurück Richtung Bahnhof – genauer gesagt in das Hochhaus **Big-i** (*„Big Eye“*), in dessen oberen Etagen sich das Wissenschaftszentrum *Space Park* und im 22. Stock die kostenlose Aussichtsplattform befinden – schon bei meinem Besuch 2025 eines meiner liebsten Highlights der Stadt. Passend zum Weltraum-Thema des Gebäudes fielen mir dort gleich die herrlich retro-futuristischen **Roboter-Toilettenpiktogramme** mit kleinen Antennen auf dem Kopf ins Auge – und direkt in der Kabine ein mindestens genauso wunderbares Hinweisschild: *„Bitte benutzen Sie kein Smartphone auf der Toilette. Der Nächste wartet schon.“*
 
-{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_070028727.jpg" alt="Zweisprachiges Verbotsschild in einer Toilette: Rauchen verboten und bitte kein Smartphone auf der Toilette benutzen" width="1200" height="675" >}}
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/20261124_160225-COLLAGE.jpg" alt="Collage zweier blauer und roter Toiletten-Piktogramme im Retro-Roboter-Look mit Antennen im Big-i" width="1200" height="900" >}}
 
-### Abendstimmung vom Big-i – und ein ehrlicher Google-Pixel-Kamera-Bug
+{{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_070028727.jpg" alt="Zweisprachiges Verbotsschild in einer Toilette des Big-i: Rauchen verboten und bitte kein Smartphone auf der Toilette benutzen" width="1200" height="675" >}}
 
-Am frühen Abend ging es noch einmal hinauf auf die kostenlose Aussichtsplattform im 22. Stock des Hochhauses **Big-i** (*„Big Eye“*) direkt am Bahnhof Kōriyama – schon bei meinem Besuch 2025 eines meiner liebsten Highlights der Stadt. Durch die Panoramascheiben entstanden dort ein paar Aufnahmen des Feierabendverkehrs tief unten auf der Straße. Zuerst eine ganz reguläre **Langzeitbelichtung**, bei der die Rücklichter der Autos als rote Leuchtspuren durch die Straße ziehen:
+Am frühen Abend entstanden oben durch die Panoramascheiben im 22. Stock noch ein paar Aufnahmen des Feierabendverkehrs tief unten auf der Straße. Zuerst eine ganz reguläre **Langzeitbelichtung**, bei der die Rücklichter der Autos als rote Leuchtspuren durch die Straße ziehen:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_085911785.LONG_EXPOSURE-01.jpg" alt="Abendliche Langzeitbelichtung einer Kreuzung in Kōriyama mit roten Lichtspuren des Verkehrs" width="600" height="1067" >}}
 
@@ -333,17 +348,21 @@ Statt einfach ein Foto der Schautafel zu zeigen, habe ich den klassischen Text d
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_035152352.jpg" alt="Historischer Samurai-Helm Kabuto mit langer Verzierung in der Ausstellung der Burg Tsuruga-jō" width="600" height="1067" >}}
 
-Ganz oben auf der Aussichtsetage des Burgturms öffnet sich der Blick über die herbstliche Ebene von Aizu bis in die tief hängenden Wolken an den umliegenden Bergen.
+Ganz oben auf der Aussichtsetage des Burgturms öffnet sich der Blick über die herbstliche Ebene von Aizu bis in die tief hängenden Wolken an den umliegenden Bergen:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_042226140.jpg" alt="Blick von der Burg Tsuruga-jō auf nebelverhangene Herbstberge in Aizu" width="1200" height="675" >}}
+
+Im weiten Panorama zeigt sich das gesamte Burggelände unterhalb des Turms, bevor der Blick weiter hinüber über die Dächer von Aizu-Wakamatsu wandert:
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_042247866.PANO.jpg" alt="Panorama-Ausblick vom Turm der Burg Tsuruga-jō über die Stadt Aizu-Wakamatsu und den Burgpark" width="1200" height="343" >}}
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_042419196.jpg" alt="Dächer von Aizu-Wakamatsu aus der Vogelperspektive der Burg Tsuruga-jō" width="1200" height="675" >}}
 
-Sympathisches Detail auf dem Rückweg nach draußen: ein handgezeichneter Hinweispfeil (*„出口はこちらです Exit – きけん！迷走“* – frei übersetzt: *„Ausgang hier entlang – Vorsicht, nicht verlaufen!“*). Und unten im Shop- und Ausstellungsbereich war zudem das Mecha-Projekt **Oshirobots** (*城郭合体オシロボッツ*) präsent, bei dem bekannte japanische Burgen kurzerhand zu gigantischen Robotern werden – inklusive Poster und lebensgroßer Aufsteller.
+Sympathisches Detail auf dem Rückweg nach draußen: ein handgezeichneter Hinweispfeil (*„出口はこちらです Exit – きけん！迷走“* – frei übersetzt: *„Ausgang hier entlang – Vorsicht, nicht verlaufen!“*).
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_042709414.jpg" alt="Handgeschriebener Pfeil zum Ausgang in der Burg Tsuruga-jō mit Warnung vor dem Verlaufen" width="1200" height="675" >}}
+
+Unten im Shop- und Ausstellungsbereich war zudem das Mecha-Projekt **Oshirobots** (*城郭合体オシロボッツ*) präsent, bei dem bekannte japanische Burgen kurzerhand zu gigantischen Robotern werden – inklusive Poster und lebensgroßer Aufsteller.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-KoriyamaAizu/PXL_20261125_045514898.jpg" alt="Poster des Anime- und Mecha-Projekts Oshirobots in Aizu-Wakamatsu" width="600" height="1067" >}}
 
