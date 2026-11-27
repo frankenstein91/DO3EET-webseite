@@ -111,7 +111,6 @@ Even though this is a private website, I take the protection of your data seriou
 
 Please direct such requests primarily to me (see contact above). Since I do not maintain a user database myself and IP logs are generally deleted or anonymized by the host within 7 days at the latest, the amount of data I possess is minimal.
 
-# Disclaimer
 # Data Protection in Connection with Cloudflare SSL Certificates
 The use of Cloudflare SSL certificates serves to protect the data transmitted between the user and this website. SSL (Secure Sockets Layer) ensures encrypted communication, which guarantees the confidentiality and integrity of the transmitted information. Cloudflare generally undertakes to respect the privacy of users and to comply with applicable data protection regulations. However, when using Cloudflare SSL certificates, certain anonymized information about data traffic may be collected in order to improve the performance, security, and analysis of the website. It is advisable to consult Cloudflare's privacy policy to obtain detailed information about what data is collected, how it is processed, and what protective measures are in place.
 - [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)

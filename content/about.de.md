@@ -115,4 +115,3 @@ Die Verwendung von Cloudflare SSL-Zertifikaten dient dem Schutz der übermittelt
 
 # Haftungsausschluss
 Die Inhalte dieser privaten Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Ich als Betreiber bin nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich die betreffenden Inhalte umgehend entfernen.
- betreffenden Inhalte umgehend entfernen.
