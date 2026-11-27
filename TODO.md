@@ -2,6 +2,17 @@
 
 ## Videos auf PeerTube migrieren
 
+- [ ] **Risshaku-ji (Yamadera) Zeitraffer-Video auf PeerTube hochladen**
+  - **Beitrag:** `content/post/JapanNovember2026-RisshakujiUndSendaiTag1/index.de.md`
+  - **Aktuell gehostet auf Cloudflare R2:** `DO3EET-r3:do3eet-assets/posts/JapanNovember2026-RisshakujiUndSendaiTag1/PXL_20261127_025556669.mp4` (1080p AV1, 4,4 MiB, ohne Ton/Metadaten)
+  - **Aufgaben:**
+    1. Video auf PeerTube (`tube.tchncs.de`) hochladen.
+    2. Den `<video>`-Block in `content/post/JapanNovember2026-RisshakujiUndSendaiTag1/index.de.md` durch das PeerTube-`<iframe>` ersetzen (mit `p2p=0`, wie in den anderen Beiträgen).
+    3. Danach die Videodatei auf R2 löschen, um Free-Tier-Speicher und Requests zu sparen:
+       ```bash
+       rclone deletefile DO3EET-r3:do3eet-assets/posts/JapanNovember2026-RisshakujiUndSendaiTag1/PXL_20261127_025556669.mp4 --s3-no-check-bucket
+       ```
+
 - [ ] **Kōriyama Abendverkehr-Video auf PeerTube hochladen**
   - **Beitrag:** `content/post/JapanNovember2026-KoriyamaAizu/index.de.md`
   - **Aktuell gehostet auf Cloudflare R2:** `DO3EET-r3:do3eet-assets/posts/JapanNovember2026-KoriyamaAizu/PXL_20261124_084804283.mp4` (1080p AV1, 4,0 MiB, ohne Ton/Metadaten)
