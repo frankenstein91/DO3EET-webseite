@@ -20,7 +20,7 @@ tags = [
 
 ## Morgenstart im Hotel Monterey und auf zum Ōsaki Hachimangū
 
-Der zweite Tag in **Sendai** begann erst einmal mit einem netten kleinen Detail im Hotel: Statt der üblichen weißen Plastikkarte gab es im **Hotel Monterey Sendai** eine hölzerne Zimmerkarte mit eingebranntem Logo.
+Der zweite Tag in **Sendai** begann erst einmal mit einem netten kleinen Detail im Hotel: Statt der üblichen weißen Plastikkarte gab es im **Hotel Monterey Sendai** eine hölzerne Zimmerkarte mit eingebranntem Logo – technisch dürfte darunter wie bei den meisten Hotelsystemen dieser Art ein **MIFARE Classic 1K EV1** stecken.
 
 {{< imgwebp src="https://do3eet-media.dreamofjapan.de/posts/JapanNovember2026-SendaiTag2/PXL_20261127_222755052.jpg" alt="Hölzerne Zimmerkarte der Hotel Monterey Group in der Hand" width="600" height="1067" >}}
 
